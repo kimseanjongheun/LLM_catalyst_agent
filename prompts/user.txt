@@ -1,0 +1,18 @@
+[Context]
+When the absolute value of the adsorption energy is close to 0 eV, high catalytic activity can be achieved.
+This analysis focuses on *H adsorption energy.
+Constraint: Among the 50 candidate compositions below, please use prior knowledge, general catalytic chemistry principles, and the given context to select only the top 1–3 most promising candidates.
+
+While you are encouraged to rely on scientific reasoning and chemical intuition, you may use DFT calculations selectively to support or validate critical decisions — avoid brute-force evaluation of all candidates.
+
+[Search Group]
+{{ search_group.description }}
+There are a total of {{ search_group.count }} candidate compositions.
+
+Example compositions:
+{% for comp in search_group.compositions %}
+
+{{ comp }}
+{% endfor %}
+
+Based on the above information, please suggest the optimal catalyst composition(s), and explain your reasoning.

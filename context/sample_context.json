@@ -1,0 +1,7 @@
+{
+  "project": "LLM Catalyst Agent",
+  "description": "A system where an LLM explores optimal catalyst compositions using MCP-based DFT tools.",
+  "target": "To discover the optimal catalyst composition with hydrogen adsorption energy close to 0 eV.",
+  "status": "Initialized",
+  "current_step": 0
+}
