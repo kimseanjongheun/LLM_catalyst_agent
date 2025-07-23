@@ -6,6 +6,7 @@ import json
 import logging
 from dotenv import load_dotenv
 import pandas as pd
+from agent.output_parsers import create_composition_parser
 
 # Set up logging for MCP tool tracking
 logging.basicConfig(level=logging.INFO)
@@ -26,6 +27,9 @@ class LLMAgent:
         
         # MCP tool usage tracking
         self.tool_usage_log = []
+        
+        # OutputParser 초기화
+        self.composition_parser = create_composition_parser(validation=True)
         
         logger.info(f"LLMAgent 초기화: MCP tools {'사용' if use_mcp_tools else '미사용'}")
         
@@ -81,11 +85,14 @@ class LLMAgent:
         # LLM 호출 및 응답 반환 (새로운 API 사용)
         messages = [{"role": "user", "content": prompt}]
         
+        # 목적에 맞게 사용
+        model_type = "gpt-4o"
+        
         if self.use_mcp_tools:
             logger.info("MCP tools를 사용하여 LLM 호출 시작")
             # MCP tools를 사용하는 경우
             response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo", #"gpt-3.5-turbo"
+                model=model_type, #"gpt-3.5-turbo"
                 messages=messages,
                 tools=self.mcp_tools,
                 tool_choice="auto"
@@ -103,7 +110,7 @@ class LLMAgent:
             logger.info("기본 모드로 LLM 호출")
             # 기본 모드
             response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo", #"gpt-3.5-turbo"
+                model=model_type, #"gpt-3.5-turbo"
                 messages=messages
             )
             return response.choices[0].message.content
@@ -224,53 +231,25 @@ class LLMAgent:
     
     def parse_composition(self, llm_output):
         """
-        LLM 출력에서 조성 정보(dictionary)만 추출합니다.
-        다양한 형태의 답변을 처리할 수 있습니다.
+        LLM 출력에서 조성 정보를 추출합니다.
+        OutputParser를 사용하여 구조화된 파싱을 수행합니다.
+        
+        Args:
+            llm_output: LLM의 출력 텍스트
+            
+        Returns:
+            촉매 조성 딕셔너리 또는 None (파싱 실패시)
         """
-        if isinstance(llm_output, dict):
-            return llm_output
+        logger.info("OutputParser를 사용한 조성 추출 시작")
+        composition = self.composition_parser.parse(llm_output)
         
-        # 1. 직접 dictionary 형태인지 확인
-        try:
-            # 문자열을 dictionary로 파싱 시도
-            composition = ast.literal_eval(llm_output.strip())
-            if isinstance(composition, dict):
-                return composition
-        except:
-            pass
-        
-        # 2. 코드 블록 내의 dictionary 찾기
-        code_block_pattern = r'```(?:python)?\s*(\{.*?\})\s*```'
-        matches = re.findall(code_block_pattern, llm_output, re.DOTALL)
-        for match in matches:
-            try:
-                composition = ast.literal_eval(match)
-                if isinstance(composition, dict):
-                    return composition
-            except:
-                continue
-        
-        # 3. 조성: {dictionary} 형태 찾기
-        composition_pattern = r'조성\s*[:：]\s*(\{.*?\})'
-        matches = re.findall(composition_pattern, llm_output, re.DOTALL)
-        for match in matches:
-            try:
-                composition = ast.literal_eval(match)
-                if isinstance(composition, dict):
-                    return composition
-            except:
-                continue
-        
-        # 4. {dictionary} 형태 직접 찾기
-        dict_pattern = r'\{[^{}]*"[A-Za-z]+"[^{}]*:[^{}]*\d+\.?\d*[^{}]*\}'
-        matches = re.findall(dict_pattern, llm_output)
-        for match in matches:
-            try:
-                composition = ast.literal_eval(match)
-                if isinstance(composition, dict):
-                    return composition
-            except:
-                continue
-        
-        # 5. 실패 시 None 반환
-        return None
+        if composition:
+            logger.info(f"조성 추출 성공: {composition}")
+        else:
+            logger.warning("조성 추출 실패")
+            
+        return composition
+    
+    def get_parser_format_instructions(self):
+        """OutputParser의 형식 지침을 반환"""
+        return self.composition_parser.get_format_instructions()

@@ -12,8 +12,22 @@ class PromptManager:
         return Template(text)
 
     def build_prompt(self, context: Any, search_group: Any) -> str:
-        # context, search_group 등 필요한 정보를 템플릿에 전달
-        return self.user_template.render(context=context, search_group=search_group)
+        """System prompt와 User prompt를 결합하여 완전한 prompt를 생성합니다."""
+        # System prompt 렌더링
+        system_prompt = self.system_template.render()
+        
+        # User prompt 렌더링 (context, search_group 정보 포함)
+        user_prompt = self.user_template.render(context=context, search_group=search_group)
+        
+        # System과 User prompt를 결합
+        combined_prompt = f"{system_prompt}\n\n---\n\n{user_prompt}"
+        
+        return combined_prompt
 
     def get_system_prompt(self) -> str:
-        return self.system_template.render() 
+        """System prompt만 반환합니다."""
+        return self.system_template.render()
+    
+    def get_user_prompt(self, context: Any, search_group: Any) -> str:
+        """User prompt만 반환합니다."""
+        return self.user_template.render(context=context, search_group=search_group) 
