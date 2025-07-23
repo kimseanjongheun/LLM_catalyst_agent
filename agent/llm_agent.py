@@ -85,7 +85,7 @@ class LLMAgent:
             logger.info("MCP tools를 사용하여 LLM 호출 시작")
             # MCP tools를 사용하는 경우
             response = self.client.chat.completions.create(
-                model="gpt-4o", #"gpt-3.5-turbo"
+                model="gpt-3.5-turbo", #"gpt-3.5-turbo"
                 messages=messages,
                 tools=self.mcp_tools,
                 tool_choice="auto"
@@ -103,7 +103,7 @@ class LLMAgent:
             logger.info("기본 모드로 LLM 호출")
             # 기본 모드
             response = self.client.chat.completions.create(
-                model="gpt-4o", #"gpt-3.5-turbo"
+                model="gpt-3.5-turbo", #"gpt-3.5-turbo"
                 messages=messages
             )
             return response.choices[0].message.content
