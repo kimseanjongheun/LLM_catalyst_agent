@@ -14,6 +14,7 @@ LLM 기반 촉매 설계 자동화 시스템으로, 대화형 AI 에이전트를
 2. **Executor Agent**: 가설을 바탕으로 조사할 촉매 후보군을 선정
 3. **Simulation Node**: 선정된 후보군의 흡착 에너지를 계산
 4. **Validation Node**: 결과를 분석하여 루프 계속 여부를 결정
+5. **Summary Node**: 최종 결과를 요약하고 정리
 
 ### 워크플로우
 
@@ -56,17 +57,30 @@ START → Hypothesis Agent → Executor Agent → Simulation → Validation
 ```
 LLM_Catalyst_Agent/
 ├── main.py                          # 메인 실행 파일
-├── hypo_model/
-│   ├── nodes.py                     # LangGraph 노드 정의
-│   ├── prompts/                     # 프롬프트 템플릿
-│   │   ├── main_system_prompt.txt   # Hypothesis Agent 시스템 프롬프트
-│   │   ├── sub_system_prompt.txt    # Executor Agent 시스템 프롬프트
-│   │   ├── DB_info.txt             # 데이터베이스 정보
-│   │   └── user_prompt.txt         # 사용자 프롬프트
-│   ├── results/                     # 실행 결과 저장
-│   ├── visualization_result/        # 시각화 결과
-│   └── results_performance_validate.py  # 성능 분석 및 시각화
+├── node_models.py                   # 데이터 모델 및 상태 정의
+├── hypothesis_node.py               # 가설 생성 노드
+├── sub_agent_node.py                # 실행자 에이전트 노드
+├── simulation_node.py               # 시뮬레이션 노드
+├── validation_node.py               # 검증 노드
+├── summary_node.py                  # 요약 노드
+├── prompts/                         # 프롬프트 템플릿
+│   ├── main_system_prompt.txt       # Hypothesis Agent 시스템 프롬프트
+│   ├── sub_system_prompt.txt        # Executor Agent 시스템 프롬프트
+│   ├── DB_info.txt                  # 데이터베이스 정보
+│   ├── user_prompt.txt              # 사용자 프롬프트
+│   ├── user 프롬프트 후보.txt        # 사용자 프롬프트 후보들
+│   └── main_프롬프트_1.txt           # 메인 프롬프트 템플릿
 ├── data/                           # 데이터 파일들
+│   └── MamunHighT2019/             # 촉매 데이터베이스
+├── data_processing/                # 데이터 처리 스크립트들
+├── results/                        # 실행 결과 저장
+│   ├── main_gpt-4o_sub_gpt-4o/     # GPT-4o 모델 결과
+│   ├── main_gpt-4o-mini_sub_gpt-4o-mini/  # GPT-4o-mini 모델 결과
+│   ├── main_gpt-5_sub_gpt-5/       # GPT-5 모델 결과
+│   ├── main_gpt-5-mini_sub_gpt-5-mini/    # GPT-5-mini 모델 결과
+│   └── main_gpt-5-nano_sub_gpt-5-nano/    # GPT-5-nano 모델 결과
+├── validation_results/             # 검증 결과 및 시각화
+├── paper_writing/                  # 논문 작성 관련 파일들
 ├── requirements.txt                # 의존성 패키지
 └── README.md                      # 프로젝트 문서
 ```
@@ -98,15 +112,35 @@ OPENAI_API_KEY=your_openai_api_key_here
 python main.py
 ```
 
+## 🔧 주요 설정
+
+### 모델 설정 (`node_models.py`)
+```python
+SUB_AGENT_MODEL_NAME = "gpt-4o-mini"
+MAIN_AGENT_MODEL_NAME = "gpt-4o-mini"
+EXPERIMENT_REPEAT = 6
+```
+
+### 데이터 모델
+- **CatalystCandidate**: 이원금속 촉매 후보 정보
+- **SubAgentQuery**: 서브 에이전트 쿼리 모델
+- **SimulationResult**: DFT 시뮬레이션 결과
+- **TokenUsage**: LLM 토큰 사용량 추적
+
+### 제약 조건
+- **조성 제약**: Metal1_Composition은 0.75 또는 0.5만 허용
+- **사이트 제약**: top, bridge, hollow 중 하나만 허용
+- **중복 방지**: 이전에 테스트된 후보는 재선택 금지
+
 ## 📊 성능 분석 및 시각화
 
-`results_performance_validate.py`를 통해 다음과 같은 분석을 수행할 수 있습니다:
+`validation_results/` 폴더에서 다음과 같은 분석을 수행할 수 있습니다:
 
 ### 분석 기능
 - **Step별 성공률 분석**: 각 단계별 성공한 후보 수 추적
 - **흡착 에너지 분포**: 성공한 후보들의 에너지 분포 시각화
 - **토큰 사용량 분석**: Main Agent와 Sub Agent의 토큰 사용량 추적
-- **비용 분석**: GPT-4o-mini 모델 사용 비용 계산
+- **비용 분석**: 다양한 GPT 모델 사용 비용 계산
 - **중복 후보 검증**: 동일한 후보가 여러 번 나타나는지 확인
 
 ### 생성되는 그래프
@@ -115,18 +149,27 @@ python main.py
 3. **Token Usage by Step**: Main/Sub Agent 토큰 사용량 히스토그램
 4. **Cost by Step**: Step별 비용 분석 그래프
 
-## 🔧 주요 설정
+## 🔬 실험 구성
 
-### 모델 설정
-- **LLM Model**: GPT-4o-mini
-- **가격**: Input $0.15/1M tokens, Output $0.075/1M tokens
+### 모델별 실험
+- **GPT-4o**: 고성능 모델 (3회 반복)
+- **GPT-4o-mini**: 표준 모델 (6회 반복)
+- **GPT-5**: 최신 모델 (3회 반복)
+- **GPT-5-mini**: 중간 성능 모델 (5회 반복)
+- **GPT-5-nano**: 경량 모델 (4회 반복)
 
-### 임계값 설정 (`nodes.py`)
-```python
-OPTIMAL_ENERGY = -0.5  # 최적 흡착 에너지 (eV)
-OPTIMAL_ENERGY_THRESHOLD = 0.1  # 허용 오차 범위 (eV)
-MIN_SUCCESS_COUNT = 3  # 최소 성공 후보 수
-RECENT_CANDIDATES_COUNT = 5  # 최근 후보 수
+### 결과 저장 구조
+```
+results/
+├── main_{MAIN_MODEL}_sub_{SUB_MODEL}/
+│   ├── repeat_1/
+│   ├── repeat_2/
+│   └── ...
+└── validation_results/
+    ├── main_{MAIN_MODEL}_sub_{SUB_MODEL}/
+    │   ├── avg_repeat/
+    │   ├── repeat_1/
+    │   └── ...
 ```
 
 ## 📈 결과 해석
@@ -140,6 +183,24 @@ RECENT_CANDIDATES_COUNT = 5  # 최근 후보 수
 - **Step별 비용**: 각 단계별 AI 모델 사용 비용
 - **총 비용**: 전체 프로젝트 비용
 - **성공당 비용**: 성공한 후보 1개당 평균 비용
+
+## 🧪 데이터 처리
+
+### 데이터베이스 정보
+- **MamunHighT2019**: 이원금속 촉매 데이터베이스
+- **조성 제약**: 0.75:0.25 또는 0.5:0.5만 허용
+- **사이트**: top, bridge, hollow
+
+### 데이터 처리 스크립트
+- `data_processing/`: 데이터 검사, 통합, 시각화 스크립트
+- `data_processing_for_validation_result/`: 검증 결과 데이터 처리
+
+## 📝 논문 작성
+
+`paper_writing/` 폴더에는 논문 작성 관련 파일들이 포함되어 있습니다:
+- `main_paper.tex`: 메인 논문 텍스트
+- `figures/`: 논문용 그림들
+- `llm_catalyst_workflow.docx`: 워크플로우 설명서
 
 ## 🤝 기여 방법
 
