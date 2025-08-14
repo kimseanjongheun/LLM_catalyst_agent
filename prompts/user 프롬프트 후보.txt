@@ -1,0 +1,27 @@
+[basic user prompt]
+프롬프트 설명: 가장 기본
+Among the bimetallic catalysts in the database, find the one with the best hydrogen evolution reaction (HER) performance. A catalyst whose **H adsorption energy is closest to -0.27 eV** is considered optimal.
+
+[user prompt: validation loop 기준 명시]
+프롬프트 설명: validation loop 기준을 명시함. -> 기준치 이상의 촉매 조합 10개를 찾아라
+Among the bimetallic catalysts in the database, find the 10 catalysts with the best hydrogen evolution reaction (HER) performance. Catalysts whose H adsorption energy is closest to -0.27 eV are considered optimal.
+
+[user prompt for "new record metric": validation loop 기준 명시]
+프롬프트 설명: 작업 목표를 명시함 -> 10번의 반복 loop 동안 가장 좋은 촉매를 찾아라.
+Over the course of 10 iterative loops, identify the bimetallic catalyst with the best hydrogen evolution reaction (HER) performance in each loop. In each iteration, evaluate candidates in the database and select the one whose H adsorption energy is closest to -0.27 eV, as this is considered optimal.
+
+[user prompt: success ratio 용도]
+프롬프트 설명: 작업 목표를 명시함 -> 매 step 마다 새롭고, 성능이 좋은 촉매를 찾아라. 너가 새운 가설을 바탕으로 sub agent가 -0.27 eV 근처에 들어오는 새로운 촉매를 제시할 수 있어야 한다. 제시한 촉매 후보들 중에서 threshold 안에 들어온 후보 개수의 비율이 높을 수록 좋다.
+Over the course of 10 iterative loops, identify a new bimetallic catalyst with high hydrogen evolution reaction (HER) performance in each loop, based on your current hypothesis. In every iteration, evaluate candidates from the database and propose catalysts whose H adsorption energy is close to –0.27 eV (considered optimal). Aim to maximize the proportion of proposed candidates that fall within the target threshold across all loops.
+
+[user prompt: 작업 흐름 가이드]
+프롬프트 설명: 작업 흐름을 명시함 -> 10번의 steps에서 최적의 촉매를 찾아라. 이때 초반 steps에서는 여러 domain의 후보들을 시험하고, 후반 steps에는 앞서 얻은 정보를 바탕으로 fine하게 가장 좋은 candidates를 구해보자
+Over the course of 10 iterative loops, identify the bimetallic catalyst with the best hydrogen evolution reaction (HER) performance in each loop. In the early steps, explore a wide range of candidates from different domains to gather diverse performance data. In the later steps, use the insights gained from previous iterations to refine the search and focus on the most promising candidates whose H adsorption energy is closest to –0.27 eV, considered optimal.
+
+[user prompt: 가격 언급]
+프롬프트 설명: 가장 기본 + 가격 언급 -> 성능도 좋은 동시에, 가격도 저렴한 촉매를 찾아봐라
+Among the bimetallic catalysts in the database, find the one that offers both high hydrogen evolution reaction (HER) performance and low cost. A catalyst whose H adsorption energy is closest to –0.27 eV is considered optimal for performance, but preference should be given to candidates with lower estimated material costs.
+
+[user prompt for "materials screening"]
+프롬프트 설명: 작업 목표를 명시함 -> 10회의 반복 루프를 통해 다양한 조합의 후보군을 평가하며 우수한 촉매를 선별하라. 이 과정을 통해 추가 분석에 활용할 수 있는 촉매를 가능한 한 많이 발굴하는 것을 목표로 한다.
+Over the course of 10 iterative loops, evaluate diverse combinations of bimetallic catalyst candidates from the database and identify as many high-performing catalysts as possible for the hydrogen evolution reaction (HER). In each iteration, prioritize candidates whose H adsorption energy is closest to –0.27 eV, as this is considered optimal, and compile them for further analysis.

@@ -1,0 +1,71 @@
+가설 수정 결과: Revised hypothesis (v2), grounded in the new results
+
+Key corrections to the original assumptions:
+- S–R bridges at 0.50/0.50 indeed overbind, and the magnitude is large: Pd–W-0.50-bridge (−0.657 eV) and Co–Mo-0.50-bridge (−0.483 eV) confirm this. The “avoid 0.50/0.50 bridge on S–R” rule stands.
+- Co–Mo top sites are much weaker than anticipated. Contrary to the prior expectation that top on S at 0.50–0.75 S would approach −0.27 eV, Co–Mo-0.50-top is +0.191 eV and Co–Mo-0.75-top is +0.215 eV. Mo’s ligand/ensemble effects depress Co top-site binding more than predicted; the site response is highly non-monotonic: top is too weak, bridge is too strong.
+- Ir–Au coordination compensation is validated. Ir–Au-0.75-top is too weak (+0.362 eV), while Ir–Au-0.75-hollow strengthens to −0.312 eV, as hypothesized. The unseen bridge at this composition likely lies between these values and would be near optimal if available.
+- Pd–W top at 0.75/0.25 is closer to target than expected. Pd–W-0.75-top is −0.328 eV (weaker than our −0.35 to −0.55 eV expectation), suggesting W strengthens Pd top moderately but not excessively at 0.75/0.25. Higher coordination on Pd–W will overshoot.
+
+Updated site/composition logic:
+- S–R binaries (S ∈ [Pd, Co], R ∈ [W, Mo]):
+  - 0.50/0.50 bridge is systematically too negative; deprioritize for targeting −0.27 eV.
+  - The S identity matters:
+    - Late S (Pd) with W: top at 0.75/0.25 is already near target (−0.33 eV). Increasing coordination will overshoot; increasing S fraction beyond 0.75 (if available) would fine-tune toward −0.27.
+    - Early S (Co) with Mo: top is unexpectedly too weak (+0.19 to +0.22 eV) while bridge overbinds (−0.48 eV). Hollow will likely be even more negative than bridge. Co–Mo thus appears to lack a Goldilocks site in the current composition/site grid; deprioritize for hitting −0.27 eV.
+- Very strong S diluted with coinage (Ir–Au):
+  - Top at 0.75/0.25 is too weak; increasing coordination at the same composition strengthens toward target (validated by hollow = −0.312 eV).
+  - To nudge hollow toward −0.27, decrease Ir fraction (more Au) at hollow; alternatively, bridge at 0.75/0.25 (if available) would likely land between +0.36 and −0.31, close to −0.27.
+
+Refined, testable predictions for the observed pairs:
+- Ir–Au:
+  - 0.25/0.75-hollow: −0.15 to −0.28 eV (most likely −0.22 to −0.27); prime candidate to hit target.
+  - 0.50/0.50-hollow: −0.22 to −0.30 eV; also promising.
+  - 0.25/0.75-bridge: −0.05 to −0.20 eV (use only if hollow is too negative).
+- Co–Mo:
+  - 0.50/0.50-hollow: ≤ −0.60 eV; overshoot expected.
+  - 0.75/0.25-bridge/hollow: −0.40 to −0.60 eV; still likely too strong.
+  - 0.25/0.75-top: ≥ +0.25 eV; too weak. Overall: low probability to reach −0.27 within available sites/compositions.
+- Pd–W:
+  - 0.75/0.25-top: −0.33 eV (observed; near target). Higher coordination (bridge/hollow) will be more negative; 0.50/0.50-top (if present) would likely be −0.40 to −0.55 eV. Best bet within this pair remains top at 0.75/0.25.
+
+Knowledge accumulated from this iteration:
+- Site sensitivity is pair-specific for S–R:
+  - Pd–W: top at 0.75/0.25 is moderately strong and near optimal; bridge at 0.50/0.50 grossly overbinds (−0.657 eV).
+  - Co–Mo: top is unexpectedly weak at both 0.50 and 0.75 S; bridge overbinds. This split behavior implies strong ensemble and ligand effects that differ by coordination on Co–Mo.
+- Coinage dilution of very strong binders (Ir–Au) can be compensated by coordination. Ir–Au top is too weak at 0.75/0.25, but hollow recovers near-target adsorption (−0.312 eV).
+- Database availability constraints: Many previously suggested entries are absent (e.g., Ir–Au-0.75-bridge, Pd–W-0.75-bridge, Co–Mo-0.75-bridge, Pd–Mo variants). Within the covered space, Ir–Au and Pd–W remain actionable anchors; Co–Mo appears unfavorable for −0.27 eV.
+
+Guidance to the intern: next candidates to probe (no duplicates; query only if present)
+Do not repeat any previously tested entries:
+- Pd–W-0.50-0.50-bridge
+- Ir–Au-0.75-0.25-top
+- Co–Mo-0.50-0.50-bridge
+- Ir–Au-0.75-0.25-hollow
+- Co–Mo-0.50-0.50-top
+- Co–Mo-0.75-0.25-top
+- Pd–W-0.75-0.25-top
+
+Prioritize in this order:
+
+Ir–Au (goal: fine-tune hollow toward −0.27 eV)
+1) Ir–Au-0.25-0.75-hollow (Metal1 = Ir) — primary target; predicted −0.22 to −0.27 eV.
+2) Ir–Au-0.50-0.50-hollow (Metal1 = Ir) — secondary; predicted −0.22 to −0.30 eV.
+3) Ir–Au-0.25-0.75-bridge (Metal1 = Ir) — tertiary; use if hollow is too negative.
+
+Pd–W (goal: confirm that higher coordination overshoots; keep 0.75/0.25-top as benchmark)
+4) Pd–W-0.75-0.25-hollow (Metal1 = Pd) — predicted −0.45 to −0.60 eV; for trend validation.
+5) Pd–W-0.50-0.50-top (Metal1 = Pd) — only if present; predicted −0.40 to −0.55 eV; expected to be worse than 0.75/0.25-top.
+
+Co–Mo (goal: map extremes to close this branch)
+6) Co–Mo-0.50-0.50-hollow (Metal1 = Co) — predicted ≤ −0.60 eV; confirms overshoot at high coordination.
+7) Co–Mo-0.75-0.25-hollow (Metal1 = Co) — predicted −0.40 to −0.60 eV; likely too strong.
+
+How these tests will falsify v2:
+- If Ir–Au-0.25-0.75-hollow remains ≤ −0.35 eV (i.e., does not weaken vs 0.75/0.25-hollow), our assumption that Au weakens hollow-site H* binding is incorrect; we must revisit the coordination/composition interplay and seek Ir–Ag or Rh–Au (if present).
+- If Pd–W-0.75-0.25-hollow is not substantially more negative than top (e.g., stronger than −0.40 eV), the expected coordination trend is weaker than assumed; we may re-examine Pd–W at alternative ensembles or explore Pd–Mo if entries appear.
+- If Co–Mo-0.50/0.75-hollow do not overbind (e.g., land near −0.3 eV), then our view of Co–Mo’s site-sensitivity is incomplete, and Co–Mo would re-enter the candidate set.
+
+Operational notes:
+- Always set Metal1 to the intended adsorption atom for top-site tests.
+- Maintain priority: strengthen Ir–Au by increasing coordination and tuning Au content; retain Pd–W 0.75/0.25 top as the best S–R exemplar; deprioritize Co–Mo for target seeking unless hollow unexpectedly falls near −0.27 eV.
+- Continue to avoid 0.50/0.50 bridge on S–R due to systematic overbinding.

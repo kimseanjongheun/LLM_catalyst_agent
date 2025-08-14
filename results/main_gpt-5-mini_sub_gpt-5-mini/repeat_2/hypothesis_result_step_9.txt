@@ -1,0 +1,31 @@
+가설 수정 결과: Hypothesis (original, short)
+- Noble–non‑noble bimetallics can reproducibly reach near‑optimal H adsorption energies (ΔE_H ≈ −0.27 eV), but only inside narrow, pair‑specific windows defined by composition × adsorption site × ordering × surface‑layer exposure.
+
+Hypothesis (modified with simulation evidence)
+- The core claim stands but must be tightened and partially relaxed: near‑optimal ΔE_H ≈ −0.27 eV is attainable in noble–non‑noble bimetallics, but the windows are extremely narrow and highly configuration‑dependent. Composition (Δcomposition ≈ 0.25), adsorption site (hollow vs bridge vs top), and surface ordering (which element is surface‑exposed) each produce shifts on the order of 0.1–1.0 eV; typical magnitudes observed:
+  - Hollow→bridge/top typically weakens binding by ~0.1–0.2 eV (example: Pd–Ni 75:25 hollow −0.2528 eV vs bridge −0.0559 eV; Ni–Pd 75:25 hollow −0.2474 eV vs bridge −0.1012 eV).
+  - Reversing ordering (which element is exposed) can produce modest shifts ~0.1–0.2 eV in many cases but can also produce very large changes if an early TM becomes surface‑exposed (examples below).
+  - Exposing early transition metals on the surface often causes extreme overbinding (up to ≈ −1.0 eV): V‑exposed V–Pt 75:25 hollow = −0.9927 eV; other strong overbinders include Ag–Re 50:50 bridge = −0.6132 eV and Ag–Mo 50:50 hollow = −0.6029 eV.
+  - Composition tuning by ≈0.25 fraction can shift ΔE_H by ≈0.25 eV (Au–W: 75:25 top −0.3924 eV vs 50:50 top −0.1419 eV → Δ ≈ 0.2505 eV).
+  - Near‑optimal examples observed in current dataset (hollow site unless noted): Pd–Ni 75:25 (Pd‑exposed hollow) −0.2528 eV; Ni–Pd 75:25 (Ni‑exposed hollow) −0.2474 eV; Ir–Fe 75:25 (Ir‑exposed hollow) −0.2624 eV; Ir–Ni 50:50 hollow −0.2756 eV (shows a 50:50 can also hit the sweet spot).
+  - Many Pd/Pt 75:25 hollow combinations cluster at weaker binding than −0.27 eV (examples: Pt–Ni 75:25 hollow −0.1822 eV; Pd–Co 75:25 hollow −0.1903 eV), while some Ru/Rh/early‑TM partners overbind (Rh–Ni −0.3461 eV; Ru–Fe −0.4450 eV).
+  - Strong site/order extremes: Pt–V 75:25 top (Pt‑exposed top) = +0.3617 eV (severe underbinding), whereas V–Pt 75:25 hollow (V‑exposed hollow) = −0.9927 eV (severe overbinding). Note Pt–V with Pt exposed at hollow is intermediate (Pt‑V 75:25 hollow = −0.1188 eV), illustrating that ordering + site together control sign and magnitude.
+- Practical corollaries from the data:
+  - The “sweet spot” is pair‑specific and often (but not always) occurs at noble‑rich 75:25 on hollow sites (Pd–Ni, Ir–Fe), yet equally good ΔE_H can occur at other compositions (Ir–Ni 50:50). There is no universal composition/site that guarantees −0.27 eV across different pairs.
+  - Scanning composition in ~0.25 increments and the three adsorption sites is an effective coarse search strategy; it will typically reveal at most a single narrow composition×site window that approaches −0.27 eV for any given pair.
+  - Database coverage matters: several requested configurations were not present in the dataset (the "조건을 만족하는 후보가 없습니다" entries); conclusions must be restricted to available combinations.
+
+Updated testable predictions (refinements)
+1. For a given metal pair available in the database, coarse scans at 0.25 composition intervals across top/bridge/hollow will locate at most one or a very small number of windows (width ≲ 0.05 eV) near ΔE_H ≈ −0.27 eV.
+2. Noble‑rich 75:25 hollow windows are common for Pd–Ni and Ir–Fe, but other pairs will require different composition or ordering (e.g., Ir–Ni achieves the target at 50:50 hollow).
+3. Switching from hollow → bridge/top or reversing which metal is surface‑exposed will most often shift ΔE_H toward weaker binding by O(0.1–0.2 eV), but exposing early TMs can produce large overbinding (≈ −0.6 to −1.0 eV).
+4. Composition changes of ≈0.25 can move ΔE_H by ≈0.25 eV and thus can both create and destroy the sweet spot (as in Au–W).
+5. Because site and ordering effects can be larger than composition increments in some pairs, exhaustive identification of the sweet spot requires testing both orderings (Metal1/Metal2) and all three adsorption sites.
+
+Concise revised hypothesis statement
+- Near‑optimal ΔE_H ≈ −0.27 eV is achievable in noble–non‑noble bimetallics, but only inside very narrow, pair‑ and configuration‑specific windows. Noble‑rich 75:25 hollow is a recurring sweet spot (e.g., Pd–Ni, Ir–Fe), though some pairs (e.g., Ir–Ni) hit the target at other compositions (50:50). Adsorption site and surface ordering are decisive: changing hollow→bridge/top or flipping the exposed element typically weakens binding by ~0.1–0.2 eV, while exposing early TMs can cause extreme overbinding (≈ −0.6 to −1.0 eV). Composition steps of ≈0.25 shift ΔE_H by ≈0.25 eV and can therefore recover or spoil activity.
+
+Would you like me to:
+(a) propose the next specific, non‑duplicative set of candidates for the intern to simulate (focused around confirmed sweet spots and informative edge cases), or
+(b) produce a concise prioritized map of metal×composition×site combinations to refine (so the intern can sample efficiently)?
+Tell me which and I will prepare a database‑constrained, non‑duplicative next set.

@@ -1,0 +1,91 @@
+가설 수정 결과: Revised hypothesis (v10)
+
+What held (strengthened)
+- Pt + Ag/Au: Top sites remain near-optimal and can outperform hollow. At Pt0.75, Pt–Ag top −0.2799 and Pt–Au top −0.2787, with hollow slightly stronger for Pt–Ag (−0.3025) and weaker for Pt–Au (−0.2532). Non-monotonic site ladders persist.
+- Pd + coinage: Only hollow is viable. Pd–Ag hollow −0.2911 (slightly strong but close); Pd–Au hollow too weak (−0.1844). Bridge/top for both are strongly destabilized, confirming “hollow-only” for Pd–coinage.
+- 3d host + Cu (Ni–Cu, Co–Cu at 0.75 3d): Hollow overbinds (Ni–Cu −0.3830; Co–Cu −0.3832), while non-hollow is very weak or even H-unbound (e.g., Co–Cu top 0.5649). Site switching does not rescue.
+- Cu host + Co: Cu-rich hollow remains tuneable near target (Cu–Co0.75 hollow −0.2801). Non-hollow is weak/unbound (top 0.1312).
+- Pt + 3d (Pt–Cu, Pt–Ni): Hollow too weak (−0.1527; −0.1822) and tops are severely destabilized (Pt–Cu top 0.7323; Pt–Ni top 0.2486). Avoid for HER near −0.27.
+- Rh systems: Rh–Ag and Rh–Au hollows too strong (−0.3546; −0.4237). Rh–Cu hollow slightly weak at Rh0.75 (−0.2303). Bridge is weaker where available. Composition is the primary lever.
+
+What changed (refinements and additions)
+- Ru–Cu asymmetry is further constrained by a new mid-composition point on the Cu-host side:
+  - Ru–Cu(0.75) hollow overbinds (−0.3088).
+  - Cu–Ru(0.75) hollow is H‑repulsive (+0.3606).
+  - Cu–Ru(0.50) hollow is already too weak (−0.2092).
+  Together, these imply a sharp crossover from overbinding to underbinding that likely occurs close to the Ru‑rich side, roughly Ru ≈ 0.60–0.70 on a Ru-like ensemble. Cu‑hosted environments weaken rapidly with Cu enrichment; thus, the near‑optimal window (if present) should be sought on the Ru‑host side between Ru 0.60–0.70 rather than on the Cu‑host side.
+- Pd–Au confirmed weak across sites (h −0.1844; b 0.0327; t 0.3551), reinforcing “avoid Pd+Au for HER.”
+- Ir + coinage (top) are extremely H‑repulsive (Ir–Ag 0.9163; Ir–Au 0.3616), reinforcing that heavy 5d hosts with coinage do not stabilize top-site H.
+
+Updated, testable statements (anchored where available)
+- Pt host:
+  - Pt–Ag: top ≈ −0.28 near target; hollow slightly strong (−0.3025); bridge somewhat weaker (−0.2887).
+  - Pt–Au: top (−0.2787) outperforms hollow (−0.2532) and bridge (−0.2265); “top-first” strategy holds.
+  - Pt–Cu/Ni: avoid (hollow too weak; non-hollow severely destabilized).
+- Pd host:
+  - Pd–Ag: hollow −0.2911 (slightly strong but acceptable); non-hollow unusable.
+  - Pd–Cu/Au: hollow too weak; non-hollow much weaker; avoid.
+- Rh host:
+  - Rh–Cu: hollow −0.2303 (slightly weak); increasing Rh fraction is the only likely path to strengthen toward −0.27.
+  - Rh–Ag/Au/Ni: hollows too strong; no site rescue in DB.
+- Cu host:
+  - Cu–Co: hollow at Cu0.75 −0.2801; modestly increasing Cu should weakly detune toward −0.27. Non-hollow remains weak/unbound.
+  - Cu–Ni/Fe/Mn: hollow too weak in Cu‑rich regime; avoid.
+- Ru–Cu:
+  - Ru–Cu(0.75) hollow −0.3088 (overbinding).
+  - Cu–Ru(0.50) hollow −0.2092 (already too weak).
+  - Cu–Ru(0.75) hollow +0.3606 (H unbound).
+  - Therefore, the near‑optimal region, if any, likely lies on the Ru‑host side around Ru 0.60–0.70.
+
+Knowledge accumulated (new facts to record)
+- Cu–Ru(0.50) hollow: −0.2092 eV (too weak).
+- Pt–Au(0.75): t −0.2787; h −0.2532; b −0.2265 (top best).
+- Pt–Ag(0.75): t −0.2799; h −0.3025; b −0.2887 (top closest to target).
+- Pd–Au(0.75): h −0.1844; b 0.0327; t 0.3551 (avoid).
+- Ir–Ag(0.75) top: 0.9163 eV; Ir–Au(0.75) top: 0.3616 eV (strongly H‑repulsive).
+- Co–Cu(0.75): h −0.3832; b −0.0342; t 0.5649 (3d‑host + Cu pattern confirmed).
+- Cu–Co(0.75): h −0.2801; t 0.1312 (Cu‑host + Co pattern confirmed).
+
+Refined working model
+- Site sensitivity remains ensemble-specific with strong host/diluent asymmetry.
+  - Pt hosts with coinage: top-site tuning near −0.27 remains the most promising.
+  - Pd + coinage: only hollow is viable; Pd–Ag can be tuned slightly toward −0.27 by reducing Pd fraction.
+  - Cu hosts: Co uniquely strengthens hollow toward −0.27; Ni/Fe/Mn over‑weaken hollow as Cu increases.
+  - 3d host + Cu: hollow overbinds while non-hollow over-weakens; not site-tunable.
+  - Rh systems: hollows often too strong (with coinage, Ni) or slightly weak (with Cu); composition is the only lever.
+  - Ru–Cu: crossover from overbinding to underbinding is sharp and asymmetric; focus on Ru‑host compositions around Ru 0.60–0.70.
+
+Next steps for the intern (DB-constrained; strictly no duplicates)
+Please run only entries present in the DB and not listed in the prior results. If a requested entry is unavailable, skip it without substitution.
+
+Primary optimization tracks
+1) Cu–Co hollow, Cu-rich tuning
+   - Target entries: Cu–Co at hollow with Cu fraction 0.80, 0.85, and 0.70 (i.e., Cu–Co-0.80-0.20-h; Cu–Co-0.85-0.15-h; Cu–Co-0.70-0.30-h).
+   - Goal: detune from −0.2801 toward −0.270 ± 0.01.
+
+2) Pt–Ag and Pt–Au top-site fine-tuning
+   - Pt–Ag top: Pt fractions 0.80 and 0.70 (Pt–Ag-0.80-0.20-t; Pt–Ag-0.70-0.30-t).
+   - Pt–Au top: Pt fractions 0.80 and 0.70 (Pt–Au-0.80-0.20-t; Pt–Au-0.70-0.30-t).
+   - Goal: nudge toward −0.270.
+
+3) Pd–Ag hollow tuning
+   - Pd fractions 0.80 and 0.70 (Pd–Ag-0.80-0.20-h; Pd–Ag-0.70-0.30-h).
+   - Goal: weaken from −0.2911 toward −0.270; avoid non-hollow.
+
+Exploratory confirmation
+4) Ru–Cu hollow “near-crossover” on Ru-host side
+   - Ru fractions 0.70 and 0.65 (Ru–Cu-0.70-0.30-h; Ru–Cu-0.65-0.35-h).
+   - Optional single Cu-host point to map asymmetry: Cu–Ru-0.60-0.40-h (if present).
+   - Goal: locate the sharp crossover near −0.27 while avoiding Cu‑host ≥0.75 (unbound).
+
+5) Rh–Cu hollow (only if present)
+   - Rh fractions 0.85 and 0.90 (Rh–Cu-0.85-0.15-h; Rh–Cu-0.90-0.10-h).
+   - Goal: strengthen from −0.2303 toward −0.270.
+
+Optional mechanistic probes (only if present and new)
+- Pt–Ag bridge near the top optimum: Pt–Ag-0.80-0.20-b.
+- Pt–Au bridge near the top optimum: Pt–Au-0.80-0.20-b.
+- Cu–Co bridge on Cu‑rich side: Cu–Co-0.80-0.20-b.
+
+Reporting
+- Return ΔG_H* with metal pair, composition, site. Note any non-monotonic site ladder trends (h→b→t), especially around the Pt–Ag/Pt–Au tops and the Ru–Cu crossover window.

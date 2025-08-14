@@ -1,0 +1,82 @@
+가설 수정 결과: Updated hypothesis (specific, testable)
+
+When alloying a strong H-binding metal (Pt, Pd, Ni, Ru, Rh, Ir) with a weaker H-binding partner (Au, Ag, Cu, Zn, Cd, Hg) at surface-enriching compositions (0.75:0.25 or 0.50:0.50), ligand and ensemble effects will in general tune ΔE_H toward the optimal −0.27 eV — but with metal-specific offsets and non-monotonic behavior that must be accounted for. Concretely:
+
+1. Pt-based alloys with late noble weak-binders (Au, Ag) reliably produce ΔE_H values close to −0.27 eV at 0.75:0.25 (top sites gave −0.2787 and −0.2799 eV for Pt0.75–Au0.25 and Pt0.75–Ag0.25), so Pt:Au and Pt:Ag remain high-priority families.
+2. Pd-based alloys can deviate substantially from Pt trends: Pd0.75–Au0.25 (top) produced an unexpectedly weak (positive) ΔE_H (+0.3551 eV), so Pd–Au alloys may over-weaken H binding at top sites (surface segregation/ligand shift stronger than predicted). Thus Pd alloys require expanded composition/site sampling (including 0.50:0.50 and more-coordinated sites) before being classified as promising.
+3. The hollow > bridge > top site binding trend remains valid in most systems, but metal-specific electronic/segregation effects can invert or compress these site-dependent differences for some alloys (evidence: Pd0.75–Au0.25 top is much weaker than anticipated). Therefore site sampling remains essential, but we must expect exceptions.
+4. Composition dependence is generally monotonic for Pt-based pairs (0.75→0.50 should move ΔE_H toward the weak-binder endpoint), but Pd-containing and some other families may show non-monotonic or abrupt shifts due to surface segregation or strong ligand shifts; hence both 0.75:0.25 and 0.50:0.50 must be tested for these metals.
+5. Therefore the highest density of near-optimal catalysts will still likely be among Pt–(Au,Ag,Cu) and similar Pt–weak pairs at 0.75:0.25 (top/bridge), but Pd-containing systems require extra caution — sample both compositions and more coordinated sites to capture possible strong weakening.
+
+Evidence-driven testable refinements (explicit predictions)
+
+- Pt0.50–Au0.50 (top) will be slightly weaker (more positive) than Pt0.75–Au0.25(top) but should remain within ~0.05–0.10 eV of −0.27 eV (i.e., ~ −0.22 to −0.33 eV).
+- Pt0.50–Ag0.50 (top/bridge) will behave similarly to Pt0.50–Au0.50, with top slightly weaker than bridge; at least one of these sites will be within ±0.10 eV of −0.27 eV.
+- Pd0.50–Au0.50 (top and bridge) will be less weak (i.e., more negative) than Pd0.75–Au0.25(top = +0.3551 eV); if Pd–Au weakening arises from surface enrichment of Au at 0.75:0.25, the 0.50:0.50 composition should move ΔE_H back toward negative values — this is testable.
+- Pt0.50–Cu0.50 (top) is predicted to be stronger-binding than Pt0.50–Au0.50 (Cu is a stronger binder than Au/Ag) and may overshoot −0.27 eV toward more negative values; bridge/hollow sites should be checked only if top is still too strong.
+- For any Pd-containing alloy that shows too-weak binding at top, bridge/hollow sites and the 0.50 composition are predicted to be systematically more negative (stronger binding) than the 0.75:0.25 top, possibly bringing ΔE_H closer to −0.27 eV.
+
+Knowledge update from simulation results
+
+- Confirmed patterns:
+  - Pt0.75–Au0.25 (top): ΔE_H = −0.2787 eV (within 0.01 eV of −0.27). Pt–Au at 0.75:0.25 (top) is a near-optimal candidate.
+  - Pt0.75–Ag0.25 (top): ΔE_H = −0.2799 eV (also near-optimal).
+- Unexpected finding:
+  - Pd0.75–Au0.25 (top): ΔE_H = +0.3551 eV — a large, unexpected weakening of H binding versus the original prediction. This indicates a metal-specific electronic/segregation effect for Pd–Au at this composition and site that invalidates a blanket strong/weak pairing rule for Pd.
+- Missing/DB-limited candidates (no data returned):
+  - Ni0.50–Au0.50 (bridge) not available in DB
+  - Ru0.75–Cu0.25 (top) not available in DB
+  - Pd0.50–Cu0.50 (top) not available in DB
+  - These absences indicate we must check DB availability before proposing candidates and provide fallback alternatives.
+
+Implications and refinement of screening strategy
+
+- Keep Pt–(Au,Ag,Cu) at 0.75:0.25 and 0.50:0.50 as high-priority families (top and bridge sites first), because Pt behavior matched prediction very well.
+- Treat Pd-containing alloys as a separate class: do denser composition/site sampling (0.50:0.50 and bridge/hollow) because Pd–Au produced anomalous weak binding at 0.75:0.25 top.
+- Deprioritize proposing combos that the system/database lacks (use DB check step up-front); if a requested candidate is missing, substitute a nearest neighbor metal (Ag for Au, Cu for Ag) or a different composition that exists.
+- Continue to enforce "no duplicate candidates" — the following next-candidate list intentionally excludes all iteration-1 candidates (even if some produced no data).
+
+Directed next tests for intern (iteration 2) — check DB availability first, then run DFT simulations for the available/new candidates only (no duplicates)
+
+Priority set A (Pt-family, explore 0.50 composition and Cu partner)
+- Pt0.50–Au0.50: top, bridge, hollow
+- Pt0.50–Ag0.50: top, bridge
+- Pt0.50–Cu0.50: top
+
+Rationale: Pt0.75–Au/Ag (top) are near-optimal; sampling 0.50:0.50 will quantify composition trend and robustness across sites, and Pt–Cu tests the effect of a slightly stronger weak-binder.
+
+Priority set B (Pd-family, probe composition dependence)
+- Pd0.50–Au0.50: top, bridge
+- Pd0.50–Ag0.50: top
+
+Rationale: Pd0.75–Au0.25(top) was unexpectedly too weak; testing 0.50 compositions and Ag partner will reveal whether the effect is compositional or specific to Au.
+
+Fallback rules if candidate absent in DB
+- If any requested Pt0.50–X0.50 or Pd0.50–X0.50 is not in DB, try the 0.75:0.25 composition for the same pair only if that exact candidate was not part of iteration 1; otherwise substitute metal X → nearest neighbor (Au↔Ag↔Cu sequence) that exists in DB.
+- If Pt0.50–Cu0.50 not available, test Pt0.75–Cu0.25 only if it was not in iteration 1; otherwise test Pt0.50–Ag0.50.
+
+Data recording and analysis instructions
+- For every returned candidate, record: metal pair, composition, adsorption site, ΔE_H (eV), |ΔE_H+0.27|, and any notes on convergence/geometry anomalies (e.g., H migrates site, large reconstruction).
+- Flag candidates with |ΔE_H + 0.27| ≤ 0.10 for immediate higher-fidelity follow-up.
+- If any Pd-based candidate again produces anomalously positive ΔE_H at top while Pt analog is near −0.27, explicitly report that contrast as it will shape the next hypothesis iteration.
+
+Immediate testable predictions for iteration 2 (to be validated by intern)
+- At least one Pt0.50–(Au/Ag/ Cu) candidate (top or bridge) will have |ΔE_H + 0.27| ≤ 0.10.
+- Pd0.50–Au0.50(top) will be more negative (stronger binding) than Pd0.75–Au0.25(top = +0.3551 eV); if not, Pd–Au systems are systematically anomalous and should be re-prioritized.
+
+Log of iteration-1 results (for KB)
+- Pt0.75–Au0.25 (top): ΔE_H = −0.2787 eV — near-optimal (recorded)
+- Pt0.75–Ag0.25 (top): ΔE_H = −0.2799 eV — near-optimal (recorded)
+- Pd0.75–Au0.25 (top): ΔE_H = +0.3551 eV — anomalous weak binding (critical counterexample)
+- Missing entries noted in DB: Ni0.50–Au0.50 (bridge), Ru0.75–Cu0.25 (top), Pd0.50–Cu0.50 (top)
+
+Next actions for intern (concise)
+1. Verify DB availability for the priority sets above. If any candidate is missing, apply the fallback rules and report substitutions before running simulations.
+2. Run DFT adsorption calculations for the available new candidates (no duplicates with iteration 1).
+3. Return results in the same format (one-line entries) plus a short note on whether any H relaxed off the intended adsorption site or any geometry issues occurred.
+4. Highlight candidates with |ΔE_H + 0.27| ≤ 0.10 for immediate follow-up.
+
+Summary sentence of modification
+Pt–Au and Pt–Ag at 0.75:0.25 (top) validated the original tuning concept (ΔE_H ≈ −0.28), but Pd–Au at 0.75:0.25 (top) is a clear counterexample that requires expanded compositional and site sampling for Pd; iteration 2 should therefore focus on Pt0.50–(Au/Ag/Cu) and Pd0.50–(Au/Ag) families (checking DB availability first) to quantify composition-dependent offsets and to test whether Pd anomalies are compositional or metal-specific.
+
+If you want, I will now (a) check the database for availability of the exact candidates I listed and produce a final, DB-validated runlist for the intern, or (b) proceed assuming availability and produce the exact input strings to submit to the simulator. Which do you prefer?

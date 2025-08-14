@@ -1,0 +1,986 @@
+[
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Cu",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.1526912382605303,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Ni",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.1821683780644605,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Co",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Pt, Metal2=Co, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Fe",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.1121528070570718,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Nb",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.1102803917592325,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Ir",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Pt, Metal2=Ir, Composition=(0.50:0.50), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Pd",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Pt, Metal2=Pd, Composition=(0.50:0.50), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Ru",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.0846980173582494,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Ni",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Ti, Metal2=Ni, Composition=(0.50:0.50), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Fe",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Nb, Metal2=Fe, Composition=(0.50:0.50), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Pt",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.5507386811577533,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Pt",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0496916498586586,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Pt",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.955903805758652,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Pt",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9926591743560208,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.974713946960918,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.094180493760149,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Ni",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9371754347584726,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Rh",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.2554468660591453,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ir",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.2647530232634096,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ru",
+      "metal_2": "Ti",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.5193055871559125,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Ni",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.8630139373589998,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Co",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Nb, Metal2=Co, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Cu",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.026397208660427,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Co",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0623380043607256,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Cu",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.6020812562591971,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Fe",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Ti, Metal2=Fe, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Cu",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0128132858580727,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Co",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Zr, Metal2=Co, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Ni",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0122951810580787,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Co",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0710604774567116,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Fe",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9777507374555796,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Ti",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.051363109057064,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "V",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.1575975762598034,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Nb",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.988968902557616,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "V",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0513364419593645,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Fe",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9414829968581842,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Ti",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.020667035357263,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "V",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9162028048549188,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Fe",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=V, Metal2=Fe, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Zr",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.988418824354966,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Rh",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9724783957562692,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Nb",
+      "metal_2": "Ir",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0972035424592548,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Rh",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.046727377760334,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Ir",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.023088712560792,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Rh",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0930215608559308,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ti",
+      "metal_2": "Ir",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0285699016594378,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Rh",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.7787413699579417,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Ir",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0334248206590644,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Cu",
+      "metal_2": "Zr",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.1517962558437204,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Ir",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.4791755988417492,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Rh",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Zn, Metal2=Rh, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Mo",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.878596400259056,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Cr",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9649200256598932,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Hf",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0112069978558509,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Mo",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Zn, Metal2=Mo, Composition=(0.50:0.50), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Cr",
+      "metal_1_composition": 0.5,
+      "metal_2_composition": 0.5,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Zn, Metal2=Cr, Composition=(0.50:0.50), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Os",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.2979015229566073,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Re",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.5701920995624903,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "W",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.8237469580626282,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ta",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.011778028753696,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Y",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.0800679897610903,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Sc",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.159178149459848,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "La",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.6709029277580782,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Co",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.5095173802610304,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ni",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.5048955266601922,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Fe",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.3159396771380045,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Pt",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Pt, Metal2=Zn, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Tc",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.596463874257978,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Mn",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Mn, Metal2=Zn, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "V",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -1.065601193556148,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ru",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.3313749265643935,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zr",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.9981677108580412,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Pd",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.201806289557652,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Ag",
+      "metal_2": "Zn",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.3950823544446677,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Os",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.6540998982464146,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Ru",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Zn, Metal2=Ru, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Ta",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.5540522114524435,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Y",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.6088992045415864,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Sc",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.154202966753445,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "La",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": -0.010895710262929,
+    "is_success": true,
+    "error_message": ""
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Co",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 10000.0,
+    "is_success": false,
+    "error_message": "조건을 만족하는 후보가 없습니다: Metal1=Zn, Metal2=Co, Composition=(0.75:0.25), Site=hollow"
+  },
+  {
+    "candidate": {
+      "metal_1": "Zn",
+      "metal_2": "Ni",
+      "metal_1_composition": 0.75,
+      "metal_2_composition": 0.25,
+      "site": "hollow"
+    },
+    "adsorption_energy_eV": 0.1043096698495276,
+    "is_success": true,
+    "error_message": ""
+  }
+]

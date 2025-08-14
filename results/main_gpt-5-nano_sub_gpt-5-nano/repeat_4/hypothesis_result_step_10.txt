@@ -1,0 +1,57 @@
+가설 수정 결과: Thanks for the detailed results. Below is a focused update to Version 8 of the hypothesis, aligned with the latest hollow-geometry data and the non-duplicate constraint. I’ve kept the guidance execution-oriented for the intern.
+
+Updated Version 8 Hypothesis (adjusted to current hollow results)
+
+1) Global assessment update (concise)
+- Hollow 0.50/50 Ir-based subdomain: Ir-based 0.50/50 hollow candidates remain non-competitive relative to the best known Ir–Ni hollow entry. The strongest Ir-based hollow candidate to date is Ir–Ni–0.50–0.50–hollow with E_H ≈ -0.2756 eV. No new non-duplicate Ir-based 0.50/50 hollow candidates beat this value; the subdomain is effectively exhausted for non-duplicate tests in hollow geometry.
+- Hollow 0.75/25 Ir-based domain: Near-target values persist for Ir-based 0.75/25 hollow candidates, with Ir–Zn–0.75–0.25–hollow ≈ -0.2648 eV and Ir–Fe–0.75–0.25–hollow ≈ -0.2624 eV. Ir–Co–0.75–0.25–hollow ≈ -0.2103 eV (less favorable). Rh–Zn remains near target around -0.255 to -0.260 eV, but not surpassing Ir–Zn/Ir–Fe.
+- Hollow 0.75/25 non-Ir routes: Several 0.75/25 hollow candidates exist in the DB but are not clearly beating the Ir-based near-targets; modest progress is expected if we introduce genuinely new non-duplicate non-Ir pairs with favorable hollow-geometry adsorption trends (e.g., Cu/Ni/Co combinations with specific site preferences).
+- Important constraint: advance only non-duplicate candidates in hollow geometry.
+
+2) Revised, testable hypotheses (Version 8)
+- H1 (0.50/50 hollow, Ir-based, non-duplicate): There will be no new non-duplicate Ir-based 0.50/50 hollow candidate that outperforms Ir–Ni–0.50–0.50–hollow (E_H ≈ -0.2756 eV). The 0.50/50 Ir-based hollow subdomain is effectively exhausted for new non-duplicate tests.
+- H2 (0.75/25 hollow, Ir-based): Hollow 0.75/25 Ir–Zn and Ir–Fe will continue to yield near-target E_H values within roughly ±0.01 eV of -0.27 eV (observed -0.2648 and -0.2624 eV). Rh–Zn remains near target around -0.255 to -0.260 eV. Other Ir-based 0.75/25 entries (e.g., Ir–Co) will be further from target (e.g., ~ -0.210 eV) and should be deprioritized unless they reveal unexpected trends.
+- H3 (0.75/25 hollow, non-Ir routes): Other 0.75/25 hollow candidates not yet tested in hollow geometry may offer modest progress toward -0.27 eV, but expect smaller gains unless the entries are genuinely non-duplicates with favorable adsorption-site trends (e.g., specific Cu/Ni/Co pairings with hollow-site advantages).
+- H4 (Non-duplicate guardrails): Any claim of “closest to -0.27 eV” must come from hollow 50/50 Ir-based or hollow 75/25 Ir-based candidates that are truly new to the DB and not previously tested in hollow geometry.
+
+3) Clear, testable predictions (Version 8)
+- P-A: In hollow 0.50/50 domain, no new non-duplicate Ir-based candidates will beat Ir–Ni–0.50–0.50–hollow; the best achievable with non-duplicates will be around -0.2756 eV or worse.
+- P-B: Hollow 0.75/25 Ir–Zn and Ir–Fe tests will stay clustered around the -0.262 to -0.265 eV range; Rh–Zn will remain near target but typically around -0.255 to -0.260 eV; Ir–Co remains farther (~ -0.210 eV).
+- P-C: Non-Ir 0.75/25 hollow candidates that are genuine non-duplicates may yield modest improvements, but beating the Ir-based near-targets is unlikely unless a particularly favorable Cu/Ni/Co combination emerges with hollow-geometry advantages.
+- P-D: Pt/Pd 0.50/50 hollow remains non-competitive per current data.
+
+4) Non-duplicate next-step plan for the intern (execution-oriented)
+- Step 1: Confirm hollow 0.50/50 Ir-based subdomain exhaustion
+  - Check the DB to confirm there are no untested, non-duplicate Ir–M hollow 0.50/50 entries. If exhausted, formally mark this subdomain as exhausted and move to Step 2.
+- Step 2: Compile a focused, non-duplicate set of hollow 0.75/25 candidates that exist in the DB but have NOT yet been tested in hollow geometry
+  - Prioritize Ir–Zn and Ir–Fe first, then Rh–Zn; then consider other 0.75/25 pairs that are true non-duplicates in hollow geometry.
+  - Candidate targets to consider (must be true non-duplicates in hollow geometry): Ir–Cu–0.75–0.25–hollow, Ir–Ni–0.75–0.25–hollow, Pt–Co–0.75–0.25–hollow, Pt–Zn–0.75–0.25–hollow, Cu–Fe–0.75–0.25–hollow, Cu–Co–0.75–0.25–hollow, Ni–Fe–0.75–0.25–hollow, Ni–Co–0.75–0.25–hollow, Ni–Pt–0.75–0.25–hollow, Cu–Pt–0.75–0.25–hollow (verify non-duplicate status in hollow geometry for each).
+- Step 3: Execute hollow tests for Step 2 candidates
+  - For each test, record: E_H (eV), |E_H + 0.27|, adsorption site (hollow), Metal1, Metal2, composition, DB entry status, anomalies.
+  - After each result, annotate whether it “supports,” “contradicts,” or is “inconclusive with respect to” Version 8 predictions.
+- Step 4: Knowledge capture
+  - Add concise notes on the closest near-target values by domain (0.50/50 Ir-based vs 0.75/25 Ir-based), metal-pair tendencies, site effects, and any outliers.
+- Step 5: Knowledge-base update and iteration planning
+  - If new non-duplicate 0.50/50 Ir-based candidates appear later, re-evaluate their ranking versus Ir–Ni.
+  - If 0.75/25 Ir–Zn or Ir–Fe tests remain closest to -0.27 consistently, broaden the 0.75/25 hollow search to other non-duplicate 0.75/25 pairs in DB (e.g., Ir–Cu, Ir–Ni if not yet explored in hollow) but only if they are true non-duplicates in hollow geometry.
+  - If a strong non-Ir hollow candidate emerges, reweight H2 expectations accordingly.
+
+5) Knowledge accumulation notes (updated)
+- Hollow 0.50/50 Ir–Ni remains the strongest near-target among tested 0.50/50 candidates; no new non-duplicate Ir-based 0.50/50 hollow entries beat -0.2756 eV.
+- Hollow 0.50/50 domain contains non-Ir entries with energies like Co–Ni ≈ -0.3152 eV, but these do not beat the Ir–Ni result for the specified near-target value.
+- Hollow 0.75/25 domain continues to offer the strongest near-target leverage, with Ir–Zn and Ir–Fe giving -0.2648 and -0.2624 eV; Rh–Zn remains near-target at -0.2554 to -0.260 eV.
+- Pt/Pd 0.50/50 hollow domains remain non-competitive in the current dataset.
+
+6) Practical output you can use immediately
+- I can draft an executable, non-duplicate candidate list for the next hollow round, focusing on Step 2 targets above (non-duplicate in hollow geometry). If you want, I can generate precise DB IDs for the next set once you confirm the exact DB indexing you want me to rely on, and I’ll keep the list strictly non-duplicate.
+- I can also provide a compact data-capture checklist and a short Interactions-to-Knowledge notes template to accelerate updates to the knowledge base.
+
+Would you like me to generate the exact non-duplicate candidate IDs for the next hollow round based on the latest DB dump? If you share the precise DB IDs or confirm the indexing you want me to use, I’ll tailor the next test set and update Version 8 accordingly.
+
+Notes on the provided simulation results (quick interpretation)
+- Best Ir-based hollow entries in 0.50/50: Ir–Ni–0.50–0.50–hollow ≈ -0.2756 eV.
+- Best Ir-based hollow entries in 0.75/25: Ir–Zn ≈ -0.2648 eV; Ir–Fe ≈ -0.2624 eV; Rh–Zn ≈ -0.2554 eV; Ir–Co ≈ -0.2103 eV.
+- Non-Ir 0.75/25 hollow candidates show modest proximity but not consistently beating Ir-based near-targets (e.g., Pd–Ni ≈ -0.2528 eV; Pd–Zn ≈ -0.2018 eV).
+- 0.50/50 hollow non-Ir options yield mixed energies (e.g., Co–Ni ≈ -0.3152 eV), but still not closer to -0.27 than Ir-based candidates.
+
+If you want, I’ll proceed to generate the exact non-duplicate candidate IDs for Step 2 once you share the DB indexing conventions, then I’ll run through the next hollow tests and update the knowledge base accordingly.

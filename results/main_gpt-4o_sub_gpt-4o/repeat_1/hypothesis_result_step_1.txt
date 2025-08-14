@@ -1,0 +1,11 @@
+**Hypothesis:**
+
+Bimetallic catalysts composed of primary transition metals from groups 8 and 9 (such as Pt, Rh, Ir, and Ru) combined with secondary transition or post-transition metals (such as Cu, Ag, or Zn) in site-specific geometric configurations can exhibit hydrogen adsorption energies near -0.27 eV, optimal for the hydrogen evolution reaction (HER). Specifically, catalysts with primary metals Pt or Rh at a 0.75 composition in combination with secondary metals Cu or Ag at a 0.25 composition, utilizing "bridge" adsorption sites, will provide enhanced catalytic performance for HER. This combination is hypothesized due to the electronic and geometric synergies present in these metals, along with their historic good performance in catalytic reactions.
+
+**Rationale:**
+- **Transition Metal Selection**: Transition metals like Pt, Rh, Ir, and Ru are known for their high catalytic activity and have been widely reported as active sites for HER due to their unique d-electron configurations which can optimize the adsorption of hydrogen.
+- **Addition of Secondary Metals**: Incorporating metals like Cu, Ag, or Zn can influence the electronic density and geometrical arrangement of active sites, potentially bringing the overall hybrid system closer to the desired adsorption energy. These secondary metals can also contribute to reducing catalyst cost and increasing stability.
+- **Compositional Optimization**: Using a composition where the primary metal constitutes 75% allows for the retention of the catalytic characteristics of the primary metal, while the addition of 25% of the secondary metal provides beneficial modifications to the catalyst surface properties.
+- **Adsorption Site Selection**: Bridge sites are hypothesized to facilitate optimal stabilization of reaction intermediates through dual-site interaction, which can enhance reaction rates and equilibrium conditions for HER.
+
+By focusing on combinations that align with this hypothesis and have not yet been tested, we can identify potentially high-performing bimetallic catalysts for HER, driving the development of more efficient energy conversion systems.

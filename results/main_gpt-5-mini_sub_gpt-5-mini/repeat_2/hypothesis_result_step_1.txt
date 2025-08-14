@@ -1,0 +1,44 @@
+Hypothesis (concise statement)
+- Bimetallic alloys that pair a noble/late transition metal (Pt, Pd, Au, Ag, Cu) with a less-noble/early or mid transition metal (Mo, W, Re, Ru, Ni, Co, Fe, Cr, V, Ti) and that place adsorption on less-coordinated sites (top or bridge rather than hollow) will tune H adsorption energies toward the target of −0.27 eV. Specifically, (a) increasing the fraction of the noble metal (from 50:50 → 75:25) will systematically weaken H binding, and (b) for a given alloy composition, top sites will be closer to −0.27 eV than hollow sites. Therefore, by iteratively sampling across (i) noble–non-noble metal pairs, (ii) the two allowed compositions (0.75/0.25 and 0.50/0.50), and (iii) the three adsorption sites (top, bridge, hollow) we will identify multiple high-performing catalysts whose H adsorption energy lies within ±0.05–0.10 eV of −0.27 eV within 10 iterations.
+
+Scientific rationale and mechanistic basis
+- Electronic/thermodynamic trends: Noble metals (Pt, Pd, Au, Ag, Cu) have more filled d-bands and generally bind H more weakly than early/less-noble transition metals (Mo, W, Re, V, Cr, Ti). Alloying these classes tunes the d-band center and thus adsorption strength. Mixing a more noble metal into a stronger-binding host typically shifts the d-band downward and weakens H adsorption, allowing tuning toward −0.27 eV.
+- Composition effect: Changing the molar fraction (0.50 vs 0.75 of Metal1) is a coarse but effective lever for tuning binding strength in pre-screening; a higher noble-metal fraction is expected to move ΔG_H closer to zero (less negative).
+- Site geometry: For H on transition-metal surfaces, adsorption energy generally follows hollow (strongest binding) > bridge > top (weakest). Thus, for alloys that tend to overbind H at hollow sites, testing bridge and top sites will reveal configurations closer to −0.27 eV.
+- Diversity & complementarity: Sampling across noble/non-noble pairings and both compositions captures orthogonal tuning directions (electronic and ensemble effects) and reduces the chance of missing good candidates due to site-specific effects.
+
+Testable predictions (explicit)
+1. Alloys with Pt or Pd as one component will more often produce ΔE_H values nearer −0.27 eV than alloys composed solely of strongly oxophilic early TMs (e.g., pure Mo, W dominated pairs).
+2. For a given metal pair, the 0.75 noble : 0.25 non-noble composition will produce weaker H binding (ΔE_H less negative) than the 0.50:0.50 composition.
+3. For a given alloy composition, top-site adsorption energies will be shifted ~0.1–0.4 eV toward less negative values compared with hollow sites (directional prediction—exact magnitude to be measured).
+4. Iterative exploitation (focus on pairs that approach −0.27 eV) plus exploration (sampling distinct metal classes and sites) across 10 iterations should yield multiple unique catalysts within ±0.10 eV of −0.27 eV and at least a few within ±0.05 eV.
+
+Operational plan for 10 iterative loops (instructions for intern)
+- Iteration 1 (broad sampling): Select ~12 unique candidate entries across the database that (a) pair a noble metal (Pt, Pd, Au, Ag, Cu) with a non-noble TM (Mo, W, Re, Ni, Co, Fe, V, Cr, Ti), (b) include both compositions (0.75/0.25 and 0.50/0.50), and (c) sample all three sites (top, bridge, hollow). Ensure these are all distinct entries.
+- Iterations 2–4 (early refinement): From iteration 1 results, rank candidates by absolute |ΔE_H − (−0.27 eV)|. For the top 25% performers, explore their partner metals at the alternate composition and the two other sites (if not already tested). For diversity, retain at least 25% new, chemically distinct pairs per iteration.
+- Iterations 5–7 (focused exploitation): Concentrate on 6–10 metal pairs that have consistently small |ΔE_H + 0.27|. For each, test the remaining allowed site/composition combinations in the database to find the best geometry/composition.
+- Iterations 8–10 (fine-mapping and confirmation): For the top-performing pairs, exhaust remaining untested site/composition permutations (obeying “no duplicates” rule). Aim to confirm reproducibility and record best entries. If multiple families (e.g., Pt–Mo and Pd–Ni) show promise, run parallel fine-mapping on both families.
+- Per iteration: always select only entries not previously tested in earlier iterations (no duplicates). Report for each tested entry: Metal1, Metal2, composition, site, ΔE_H (measured), and distance from −0.27 eV.
+
+Selection priorities and constraints
+- Priority order for selection within each iteration: (1) candidates predicted by the hypothesis to be near −0.27 eV (noble + non-noble pair; higher noble fraction; top/bridge sites), (2) unexplored combinations that increase chemical diversity (different metal families), (3) permutations (site/composition) of promising metal pairs.
+- Do not re-test any exact Metal1–Metal2–composition–site tuple that has been simulated previously.
+- All candidate choices must be present in the provided database (use only allowed Metal1/Metal2 and composition values).
+
+Success criteria and data collection
+- Primary metric: absolute deviation |ΔE_H − (−0.27 eV)|. Flag entries within ±0.05 eV as “high-performing,” within ±0.10 eV as “promising.”
+- Target outcome after 10 iterations: identify multiple (ideally ≥5) high-performing entries (±0.05 eV) or a larger set (≥15) of promising entries (±0.10 eV). Document trends linking metal class, composition, and site to ΔE_H.
+- For each iteration, update a running knowledge base with: tested entries, ΔE_H, site-dependent shifts, composition trends, and any surprising deviations from the predicted trend (to guide hypothesis refinement).
+
+Contingencies and refinement triggers
+- If early results systematically contradict the directional predictions (e.g., noble-metal enrichment strengthens binding rather than weakens it for a given set of pairs), broaden exploration to include more mid-row pairings (e.g., Re, Ru, Hf, Zr) and increase fraction of exploratory (chemically distinct) candidates per iteration to avoid overfitting.
+- If site dependence is weaker than predicted, shift emphasis to composition and ensemble effects (e.g., test more 50:50 alloys across different metal classes).
+- Always log anomalous cases; these are useful for updating mechanistic understanding (electronic vs geometric vs ensemble effects).
+
+Expected knowledge to accumulate
+- A ranked set of bimetallic entries with ΔE_H values and their distance to −0.27 eV
+- Empirical trends quantifying how composition (0.50 vs 0.75) and site (top/bridge/hollow) shift ΔE_H for different metal families
+- Identification of metal pairs that consistently produce near-optimal adsorption energies and families that never approach the target
+
+Conclusion (one-line)
+- By iteratively sampling noble + non-noble metal pairs across the two allowed compositions and three adsorption sites and prioritizing entries that reduce |ΔE_H + 0.27|, we will systematically converge on multiple high-performing bimetallic HER catalysts within 10 iterations, while simultaneously building a mechanistic knowledge base linking metal identity, composition, and adsorption site to H binding strength.

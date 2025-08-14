@@ -1,0 +1,122 @@
+가설 수정 결과: Revised hypothesis (v8.1), updated with the new results
+
+What changed this round
+- New data were returned for coinage-terminated, coinage-rich surfaces: Ag–Ir-0.75/0.25 (Ag term.), Au–Ir-0.75/0.25 (Au term.), and Au–Rh-0.75/0.25 (Au term.). These reveal a termination-driven inversion of site preference relative to Ir/Rh-terminated cases at similar compositions.
+- No new points were returned for the Pd–W 0.25/0.75 and Co–Mo/Mo–Co 0.25/0.75 corners proposed last round; conclusions there remain as in v8.
+
+Core claims (updated)
+- Pd–W: Ensemble- and termination-sensitive antagonism persists and extends beyond hollow vs top to include bridge.
+  - Pd–W-0.50/0.50 exhibits a deep bridge well while hollow is near-thermoneutral (bridge −0.657 eV; hollow −0.2766 eV), confirming distinct ensembles control the two sites.
+  - Pd-rich Pd–W-0.75/0.25 retains a small top–hollow split with both too strong (top −0.328 eV; hollow −0.362 eV).
+  - W-rich W–Pd-0.75/0.25 (W term.) shows extreme antagonism (hollow −0.892 eV vs top +0.312 eV). Termination dictates the magnitude of site splitting.
+  - Practical lever: under W termination, lowering W fraction should weaken hollow/top while keeping bridge relatively strong; under Pd termination, increasing W should deepen bridge and hollow while top weakens.
+- Co–Mo: Robust, composition-insensitive bifurcation remains under both terminations sampled.
+  - Co–Mo-0.50/0.50: top weakly positive (+0.191 eV), bridge/hollow strongly negative (−0.483/−0.593 eV).
+  - Co–Mo-0.75/0.25: top weakly positive (+0.215 eV), hollow strong (−0.525 eV); bridge missing at this composition in DB.
+  - Mo–Co-0.75/0.25: top weak positive (+0.053 eV), hollow very strong (−0.844 eV).
+- Termination-driven site inversion in coinage pairs (new):
+  - Ir–Ag vs Ag–Ir at Ir-rich composition: Ir–Ag-0.75/0.25 (Ir term.) has hollow < bridge << top (−0.346 < −0.300 << +0.916 eV), but Ag–Ir-0.75/0.25 (Ag term.) flips to top binding and hollow repulsive: top −0.549 eV; hollow +0.360 eV. Bridge at this Ag–Ir point is absent in DB.
+  - Ir–Au vs Au–Ir at Ir-rich composition: Ir–Au-0.75/0.25 (Ir term.) gives hollow near target (−0.312 eV) and top weak (+0.362 eV), whereas Au–Ir-0.75/0.25 (Au term.) inverts strongly: top binds (−0.469 eV), bridge repulsive (+0.333 eV), hollow repulsive (+0.632 eV).
+  - Rh–Au vs Au–Rh at Rh-rich composition: Rh–Au-0.75/0.25 has hollow overbinding (−0.424 eV; top/bridge absent), but Au–Rh-0.75/0.25 (Au term.) suppresses hollow (hollow +0.558 eV) while top/bridge are near thermoneutral (−0.043/−0.063 eV).
+  - Implication: coinage termination stabilizes low-coordination H (top/bridge) and destabilizes multi-coordination (hollow), reversing the Ir/Rh-terminated ordering at coinage-rich compositions. This provides a powerful termination lever for site selectivity.
+
+DB coverage constraints (updated)
+- Equiatomic W–Pd (Metal1 = W) appears absent for all sites; avoid targeting.
+- Ir–Au: 0.75/0.25-bridge, 0.50/0.50-all, and 0.25/0.75-hollow are absent; confine Ir–Au at 0.25/0.75 to top/bridge only.
+- Mo–Co-0.50/0.50-all absent; do not target.
+- Co–Mo-0.75/0.25-bridge absent in current DB.
+- W–Pd-0.75/0.25-bridge absent in current DB.
+- Ag–Ir-0.75/0.25-bridge absent in current DB.
+
+Refined, testable predictions (restricted to DB-plausible, untested ranges)
+- Pd–W, W-rich with Pd termination (Metal1 = Pd, 0.25/0.75):
+  - Hollow ≤ −0.70 eV; Bridge ≤ −0.80 eV; Top 0.00 to +0.25 eV.
+- W–Pd, W termination at low W fraction (Metal1 = W, 0.25/0.75):
+  - Hollow −0.50 to −0.70 eV; Bridge −0.60 to −0.85 eV; Top −0.05 to +0.25 eV.
+- Co–Mo, Mo-rich with Co termination (Metal1 = Co, 0.25/0.75):
+  - Top +0.05 to +0.30 eV; Hollow ≤ −0.70 eV; Bridge ≤ −0.55 eV.
+- Mo–Co, Co-rich with Mo termination (Metal1 = Mo, 0.25/0.75):
+  - Top 0.00 to +0.20 eV; Hollow −0.70 to −0.95 eV; Bridge −0.45 to −0.70 eV.
+- Ir–Ag, Ag-rich with Ir termination (Metal1 = Ir, 0.25/0.75):
+  - Top ≥ +0.85 eV; Bridge −0.20 to −0.40 eV; Hollow −0.40 to −0.55 eV.
+- Ir–Au, Au-rich with Ir termination (Metal1 = Ir, 0.25/0.75):
+  - Top +0.40 to +0.70 eV; Bridge −0.20 to −0.40 eV. (Hollow absent in DB.)
+- Rh–Au, Au-rich with Rh termination (Metal1 = Rh, 0.25/0.75):
+  - Top −0.05 to +0.15 eV; Bridge −0.40 to −0.65 eV; Hollow −0.45 to −0.70 eV.
+- Ag–Ir, Ir-rich with Ag termination (Metal1 = Ag, 0.25/0.75) [untested]:
+  - Expect partial inversion vs Ir termination but weaker than at Ag 75%: Top −0.25 to 0.00 eV; Bridge −0.10 to +0.15 eV (if present); Hollow 0.00 to +0.25 eV.
+- Au–Ir, Ir-rich with Au termination (Metal1 = Au, 0.25/0.75) [untested]:
+  - Top −0.30 to −0.05 eV; Bridge +0.10 to +0.40 eV; Hollow +0.30 to +0.70 eV.
+- Au–Rh, Rh-rich with Au termination (Metal1 = Au, 0.25/0.75) [untested]:
+  - Top −0.10 to +0.10 eV; Bridge −0.10 to +0.15 eV; Hollow +0.30 to +0.70 eV.
+
+How tests will falsify v8.1
+- Pd–W (Metal1 = Pd, 0.25/0.75): If top stays significantly binding (≤ −0.30 eV) or hollow fails to strengthen vs equiatomic (> −0.45 eV in magnitude), then W-induced antagonism under Pd termination is weaker than posited.
+- W–Pd (Metal1 = W, 0.25/0.75): If top is not weak/near-zero and/or hollow is not notably stronger than Pd–W at similar composition, termination alone cannot explain antagonism; segregation/ensemble models must be revised.
+- Co–Mo (Metal1 = Co, 0.25/0.75): If top becomes thermoneutral/negative, a narrow near-optimal window could exist; Co–Mo should be reconsidered for HER optimality.
+- Coinage termination inversion: If Ag–Ir or Au–Ir at coinage termination (Metal1 = Ag/Au) does not flip hollow to near-zero/positive and top to more binding than Ir termination, the termination-induced inversion claim fails.
+- Rh–Au/Au–Rh: If Au termination at Rh-rich fails to suppress hollow relative to Rh termination, composition-only explanations might suffice and the termination lever is weaker than proposed.
+
+Knowledge accumulated this iteration
+- Pd–W (Pd term.): 0.50/0.50 bridge strongly binding (−0.657 eV) while hollow is near-thermoneutral (−0.2766 eV); 0.75/0.25 top/hollow moderately too strong (−0.328/−0.362 eV).
+- W–Pd (W term.): 0.75/0.25 hollow overbinds (−0.8916 eV) and top is weak positive (+0.312 eV).
+- Co–Mo and Mo–Co: Persistent bifurcation; Mo-leading hollow very strong (to −0.844 eV) and top weak positive (0.05–0.22 eV).
+- Ir–Ag (Ir term., 0.75/0.25): Hollow slightly stronger than bridge (−0.346 vs −0.300 eV); top extremely weak (+0.916 eV).
+- Ag–Ir (Ag term., 0.75/0.25): Top strongly binding (−0.549 eV) and hollow repulsive (+0.360 eV); bridge absent. Clear inversion vs Ir termination.
+- Ir–Au (Ir term., 0.75/0.25): Hollow near target (−0.312 eV), top too weak (+0.362 eV).
+- Au–Ir (Au term., 0.75/0.25): Top binding (−0.469 eV), bridge and hollow repulsive (+0.333/+0.632 eV). Strong inversion vs Ir termination.
+- Rh–Au (Rh term., 0.75/0.25): Hollow overbinds (−0.424 eV).
+- Au–Rh (Au term., 0.75/0.25): Hollow repulsive (+0.558 eV), top/bridge near thermoneutral (−0.043/−0.063 eV).
+- DB gaps: Confirmed absences as listed above; plan around missing bridge entries for several coinage/Co–Mo corners.
+
+Guidance to the intern: next candidates to probe
+Important constraints:
+- Absolutely no duplicates of previously tested candidates.
+- Only query if present in the DB; skip any known-absent cells listed above.
+
+Priority A – Pd–W convexity and termination asymmetry away from equiatomic
+1) Pd–W-0.25/0.75-hollow (Metal1 = Pd)
+2) Pd–W-0.25/0.75-bridge (Metal1 = Pd)
+3) Pd–W-0.25/0.75-top (Metal1 = Pd)
+4) W–Pd-0.25/0.75-hollow (Metal1 = W)
+5) W–Pd-0.25/0.75-bridge (Metal1 = W)
+6) W–Pd-0.25/0.75-top (Metal1 = W)
+
+Priority B – Close the Co–Mo/Mo–Co bifurcation map at the missing corner
+7) Co–Mo-0.25/0.75-top (Metal1 = Co)
+8) Co–Mo-0.25/0.75-hollow (Metal1 = Co)
+9) Co–Mo-0.25/0.75-bridge (Metal1 = Co; optional if present)
+10) Mo–Co-0.25/0.75-top (Metal1 = Mo)
+11) Mo–Co-0.25/0.75-hollow (Metal1 = Mo)
+12) Mo–Co-0.25/0.75-bridge (Metal1 = Mo; optional if present)
+
+Priority C – Composition dependence in Ir–Ag (Ag-rich) under Ir termination
+13) Ir–Ag-0.25/0.75-top (Metal1 = Ir)
+14) Ir–Ag-0.25/0.75-bridge (Metal1 = Ir)
+15) Ir–Ag-0.25/0.75-hollow (Metal1 = Ir)
+
+Priority D – Au-rich limits in Ir–Au and Rh–Au (avoid known-absent cells)
+16) Ir–Au-0.25/0.75-top (Metal1 = Ir)
+17) Ir–Au-0.25/0.75-bridge (Metal1 = Ir)
+18) Rh–Au-0.25/0.75-top (Metal1 = Rh)
+19) Rh–Au-0.25/0.75-bridge (Metal1 = Rh)
+20) Rh–Au-0.25/0.75-hollow (Metal1 = Rh)
+
+Priority E – Test termination-induced inversion at lower coinage fraction
+21) Ag–Ir-0.25/0.75-top (Metal1 = Ag)
+22) Ag–Ir-0.25/0.75-hollow (Metal1 = Ag)
+23) Ag–Ir-0.25/0.75-bridge (Metal1 = Ag; optional if present)
+24) Au–Ir-0.25/0.75-top (Metal1 = Au)
+25) Au–Ir-0.25/0.75-bridge (Metal1 = Au)
+26) Au–Ir-0.25/0.75-hollow (Metal1 = Au)
+27) Au–Rh-0.25/0.75-top (Metal1 = Au)
+28) Au–Rh-0.25/0.75-bridge (Metal1 = Au)
+29) Au–Rh-0.25/0.75-hollow (Metal1 = Au)
+
+Rationale:
+- Priority A tests whether Pd–W maintains a hollow minimum near 0.50 while bridge strengthens toward W-rich under Pd termination, and the complementary W termination response at low W fraction.
+- Priority B maps the missing bifurcation corners in Co–Mo/Mo–Co.
+- Priority C/D quantify whether Ir–Ag’s hollow > bridge ordering and any Au-rich site relief persist under Ir/Rh termination.
+- Priority E explicitly probes the predicted termination-driven inversion at lower coinage fraction to establish trend continuity from 75% to 25% coinage.
+
+Please proceed in order, skipping any DB-absent cells.

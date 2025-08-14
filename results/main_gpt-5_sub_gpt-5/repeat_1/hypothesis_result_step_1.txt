@@ -1,0 +1,12 @@
+Hypothesis: Tuning hydrogen binding to the target ΔG_H ≈ −0.27 eV on bimetallic surfaces is best achieved by electronically diluting intrinsically strong H binders (Pt-group and late 3d metals) with weak-binding coinage metals, and by using adsorption sites whose local ensemble includes 2–3 atoms of the strong-binding metal. Specifically:
+
+- Site effect: For a given alloy, H binding strength follows hollow > bridge > top. Therefore, for strong-binding hosts (Pt, Pd, Rh, Ir, Ru, Ni, Co, Fe), bridge or hollow sites will be closer to −0.27 eV after alloying; for weak-binding hosts (Cu, Ag, Au, Zn), hollow sites are required to approach −0.27 eV, while top sites will remain too weak.
+- Metal1 role: Because Metal1 is the atom first encountered by adsorbates, using a strong binder as Metal1 will favor too-strong top adsorption; thus, when Metal1 is strong, the optimal sites will be bridge/hollow that include one or more weak-binding Metal2 neighbors. Conversely, when Metal1 is weak and Metal2 is strong, hollow sites that place H over a weak Metal1 atom but coordinated by strong Metal2 neighbors will tune ΔG_H toward −0.27 eV.
+- Composition effect: A 25% addition of a weak binder (Cu, Ag, Au, Zn) to a strong-binding host (Metal1_Composition = 0.75) will downshift the d-band by ~0.1–0.3 eV, often moving ΔG_H into the −0.32 to −0.22 eV window at bridge/hollow sites. If binding remains too strong, increasing dilution to equiatomic (0.50/0.50) will further weaken adsorption by ~0.1–0.2 eV.
+
+Testable predictions within the database:
+1) Pt-, Pd-, Rh-, Ir-, Ru-, Ni-, or Co-rich alloys (Metal1 = strong binder; Metal1_Composition = 0.75) diluted with coinage metals (Metal2 = Cu, Ag, Au, Zn) will yield bridge/hollow sites with ΔG_H within ±0.05 eV of −0.27 eV. Priority pairs: Pt–Cu/Ag/Au, Pd–Cu/Ag, Rh–Cu, Ir–Cu, Ni–Cu, Co–Cu.
+2) Weak-binding hosts (Metal1 = Cu, Ag, Au, Zn) strengthened by 25–50% of moderate/strong binders (Metal2 = Pd, Pt, Ni, Co) will produce near-optimal ΔG_H at hollow sites; equiatomic Ni–Cu and Co–Cu hollow sites are especially likely to be close to −0.27 eV.
+3) For very strong binders (Ir, Rh, Ru), top sites will typically remain too strong unless diluted to 0.50/0.50 with coinage metals; in those systems, top or bridge sites can approach −0.27 eV.
+
+This hypothesis is specific and testable across the database by comparing ΔG_H on top/bridge/hollow for the enumerated metal pairs at 0.75/0.25 and 0.50/0.50 compositions, prioritizing candidates predicted to lie within ±0.05 eV of −0.27 eV.

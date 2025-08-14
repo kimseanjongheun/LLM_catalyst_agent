@@ -1,0 +1,28 @@
+Hypothesis
+
+There is a compositional and site-dependent optimum for hydrogen adsorption energy (E_H) on bimetallic catalysts such that E_H is closest to the ideal value of –0.27 eV most reliably for hollow adsorption sites on heterometallic alloys formed by a Pt-group primary metal (Pt, Pd, Ir, or Rh) combined with a second transition metal (Cu, Ni, Co, Fe, or Zn) at a 1:1 composition (Metal1_Composition = 0.50, Metal2_Composition = 0.50). Specifically:
+
+- Hollow sites on Pt-group–Metal2 alloys will preferentially yield E_H values near –0.27 eV due to synergistic ensemble effects and d-band modulation from the second metal.
+- The same Pt-group–Metal2 combinations at 75/25 compositions will more often shift E_H away from –0.27 eV because reduced atomic ensemble mixing weakens or fragments the tuning of the adsorption landscape.
+- Top and bridge adsorption sites will show broader distributions of E_H and lower frequency of near––0.27 eV values, making hollow sites the most promising geometry for achieving the target energy in these heterometallic systems.
+
+Rationale (brief, mechanistic intuition)
+- In hollow sites, H interacts with three surface atoms, allowing stronger d-band and ensemble effects to tune adsorption in the desired range. The presence of a second metal that modulates the local electronic structure of the Pt-group primary metal should bring E_H closer to –0.27 eV.
+- The 1:1 composition yields a balanced ligand/ensemble effect between the two metals, maximizing the probability of achieving the target energy across the selected Pt-group–Metal2 pairs.
+- Deviating from 50/50 (e.g., 0.75/0.25) reduces the degree of heterometallic interaction at the adsorption ensemble, shifting E_H away from the optimum.
+- Top and bridge sites sample fewer atoms in the ensemble, so their E_H values will be more strongly governed by the primary metal’s intrinsic binding and are less likely to hit the precise –0.27 eV target across many candidates.
+
+Testable predictions
+- Among hollow-site candidates with Metal1 in [Pt, Pd, Ir, Rh] and Metal2 in [Cu, Ni, Co, Fe, Zn], there will be a higher fraction of entries with E_H within ±0.04 eV of –0.27 eV at 0.50/0.50 composition than at 0.75/0.25, and more so than for top or bridge sites.
+- The frequency of near––0.27 eV E_H values will be lowest for top and bridge sites across the same metal pair sets.
+- For each Pt-group–Metal2 pair, a subset of hollow-site entries at 0.50/0.50 will cluster around –0.27 eV, whereas many 0.25/0.75 counterparts will cluster farther from this value.
+
+Guidance for the intern (to implement the hypothesis)
+- Focus initial exploration on heterometallic combinations where Metal1 ∈ [Pt, Pd, Ir, Rh] and Metal2 ∈ [Cu, Ni, Co, Fe, Zn], ensuring Metal1 ≠ Metal2 and using Metal1_Composition = 0.50 with Metal2_Composition = 0.50. Prioritize Site = hollow.
+- As a control, include a smaller set with Metal1_Composition = 0.75 and Metal2_Composition = 0.25 (still with hollow sites) to test the predicted shift away from –0.27 eV.
+- For each metal pair, also test a subset at Site = top and Site = bridge to validate the site-dependence prediction.
+- Ensure all tested candidates are novel relative to previously explored entries (i.e., do not repeat any Metal1–Metal2–Site–Composition combination already evaluated in the database).
+- Record: the actual E_H, the deviation from –0.27 eV, the site geometry, the metal pair, and the composition. Note any anomalies (e.g., unusually broad energy distributions, outliers, or patterns linked to specific metal pairs).
+- Use the gathered results to refine the hypothesis, possibly expanding to adjacent metal families (e.g., extending Pt-group to include weaker-binding partners or exploring 0.25/0.75 compositions if 0.50/0.50 proves insufficient in some pairs).
+
+In summary, the proposed hypothesis targets hollow-site hollowenvironments of Pt-group–Metal2 heterometallics at equal composition as the most promising route to reach the optimal H adsorption energy near –0.27 eV, with top/bridge sites following a less favorable trend. This will guide the 10 iterative exploration toward novel, non-duplicate candidates while validating site- and composition-dependent trends.

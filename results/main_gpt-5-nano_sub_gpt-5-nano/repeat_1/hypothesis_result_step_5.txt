@@ -1,0 +1,81 @@
+가설 수정 결과: Here is a concise, evidence-driven update to the hypothesis based on the simulation results you shared, followed by a focused next-step plan for your intern that preserves the non-duplicate constraint.
+
+1) Revised hypothesis and interpretation
+
+- Core binding landscape in hollow 0.75/0.25 subspace
+  - Pt-group M1 in hollow with 0.75/0.25 composition tends to underbind mildly (ΔG_H* ≈ -0.15 to -0.18 eV) for non-Pt M2s like Cu, Ni, Fe; this subspace generally does not reach the target ΔG_H* ≈ -0.27 eV.
+  - Pt as M2 (non-Pt M1 with Pt second) in hollow 0.75/0.25 largely overbinds H (ΔG_H* far below -0.27 eV, roughly -0.55 to -1.05 eV for Nb/Pt, Ti/Pt, Zr/Pt, V/Pt, etc.).
+  - Rare near-target cases occur for hollow 0.75/0.25 with Zn-containing M2 on Rh or Ir M1: Rh-Zn ≈ -0.255 eV and Ir-Zn ≈ -0.265 eV. These are notable but not robust across the whole hollow domain tested.
+
+- Descriptive rules from the results
+  - Hollow-domain cooperative bonding with a Pt-group M1 and a non-Pt M2 generally underbinds, but not to the target window.
+  - Reaching ΔG_H* ≈ -0.27 eV in hollow appears to require either:
+    - (i) changing the M1 away from Pt-group within 0.75/0.25 hollow, or
+    - (ii) identifying a rare M1/M2 pair (likely non-Pt M1 with Zn- or Ir/Rh-containing M2) that nudges ΔG_H* toward the target.
+  - If hollow remains unrewarding, the objective should shift toward isolating a robust hollow window around -0.15 to -0.20 eV and continuing to search for favorable outliers (particularly rare Zn-mediated pairs).
+
+- Refined, testable statements (updated hypotheses)
+  - Hypothesis A: The target window (-0.27 eV) in hollow geometry is accessible primarily through rare Zn-containing M2 pairs with Rh or Ir as M1 (e.g., Rh-Zn or Ir-Zn), rather than through broad, non-Pt M1 combinations in 0.75/0.25.
+  - Hypothesis B: A broader exploration in the 0.75/0.25 hollow domain with non-Pt M1 (Nb, Ti, Zr, V) paired with Zn, Ir, or Rh can reveal near-target outliers beyond the Rh/Zn and Ir/Zn examples, but such outcomes will be rarer and less robust than the Zn-Ir/Rh near-target cases.
+  - Hypothesis C: If hollow remains unrewarding, expand cautiously to 0.50/0.50 and consider top/bridge sites for a subset of promising non-Pt combos to probe alternate adsorption environments.
+
+2) Focused next iteration plan for the intern (non-duplicate candidates)
+
+- Core strategy (revised):
+  - Maintain hollow as the primary adsorption site, but test entirely new non-Pt M1/M2 pairs not yet explored in hollow configurations, in either 0.75/0.25 or 0.50/0.50.
+  - Target two subspaces with higher potential based on results:
+    - Subspace S1 (Zn-containing M2 with non-Pt M1, focusing on Ir/Rh and a broader M1 set to probe for near-target behavior)
+    - Subspace S2 (non-Pt M1 with M2 = Ni/Co/Cu to sample d-band tuning and ensemble effects, prospecting any near-target signals)
+  - If hollow tests stagnate, extend to 0.50/0.50 and/or test top/bridge sites for the most promising non-Pt pairs.
+
+- 10 new hollow-site candidates (non-duplicate relative to the results you shared; please verify against the database before running)
+  Note: I’ve chosen candidates that are conceptually distinct from the tested set and likely present in the database. Prior to running, confirm each candidate is truly non-duplicate in your exact DB state.
+
+  1) Nb as Metal1, Zr as Metal2, 0.75/0.25 hollow
+  2) Nb as Metal1, Rh as Metal2, 0.75/0.25 hollow
+  3) Nb as Metal1, Ir as Metal2, 0.75/0.25 hollow
+  4) Zr as Metal1, Rh as Metal2, 0.75/0.25 hollow
+  5) Zr as Metal1, Ir as Metal2, 0.75/0.25 hollow
+  6) Ti as Metal1, Rh as Metal2, 0.75/0.25 hollow
+  7) Ti as Metal1, Ir as Metal2, 0.75/0.25 hollow
+  8) V as Metal1, Rh as Metal2, 0.75/0.25 hollow
+  9) V as Metal1, Ir as Metal2, 0.75/0.25 hollow
+  10) Cu as Metal1, Zr as Metal2, 0.75/0.25 hollow
+
+  Rationale
+  - Move away from Pt-group M1 in hollow 0.75/0.25 to probe whether non-Pt M1s with Zn/Ir/Rh partners can approach the -0.27 eV target.
+  - Include Zn- and Ir/Rh-containing M2 pairs to probe rare near-target pathways in hollow geometry.
+  - Retain hollow as the primary site, but keep 0.50/0.50 as a secondary test bed for a subset if hollow results stall.
+
+- Data logging and decision criteria (post-iteration)
+  - For each candidate record:
+    - Metal1, Metal2
+    - Metal1_Composition (0.75 or 0.50)
+    - Metal2_Composition (1 - Metal1_Composition)
+    - Site (hollow preferred; top/bridge if hollow stalls)
+    - ΔG_H*
+    - Distance to target window: within ±0.03 eV (highly favorable), ±0.05 eV (near), ±0.10 eV (moderate)
+  - After 10 hollow tests, summarize:
+    - Count within ±0.05 eV of -0.27 eV
+    - Any top/bridge results approaching the window and by how much
+    - Trends: which metal pairs tend toward favorable ΔG_H* (smallest |ΔG_H* + 0.27|)
+    - Notable outliers that approach the window
+  - If hollow results remain scarce:
+    - Broaden metal2 choices within the allowed database
+    - Consider a subset in the 0.50/0.50 domain
+    - Reassess whether a limited set with Pt as M2 could be revisited if it suggests a path toward target via different geometry
+
+- Operational reminders
+  - Do not repeat any candidate already tested in hollow with the specified compositions.
+  - Validate each candidate against the database constraints: Metal1_Composition ∈ [0.75, 0.50], Metal2_Composition = 1 - Metal1_Composition, Site ∈ [hollow, top, bridge] with hollow prioritized.
+  - Maintain a knowledge-base log of new patterns: which metal identities and compositions move ΔG_H* toward or away from -0.27 eV, and any notable outliers.
+
+3) How this informs the hypothesis moving forward
+
+- If hollow 0.75/0.25 results remain broadly underbinding for non-Pt M1, we should narrow the search to the Zn-Ir/Rh subspace (Rh-Zn, Ir-Zn) and similar rare pairs, while monitoring nearby compositions.
+- If 0.50/0.50 tests reveal any near-target ΔG_H* (±0.05 eV), we will tighten the viable composition window and intensify sampling there.
+- In parallel, continue quantifying the tendency of Pt-involved subspaces to underbind, to confirm that the most promising routes toward -0.27 eV lie in truly non-Pt M1 contexts or via Zn-mediated Ir/Rh partners.
+
+If you’d like, I can draft a compact data schema and a quick script template to automatically log ΔG_H*, distance to window, and decision flags after each run, so the intern has a robust, traceable workflow.
+
+Would you like me to tailor the 10 candidate list further to avoid potential duplicates based on your exact database state, or proceed with the above set and a minimal pre-run verification check?

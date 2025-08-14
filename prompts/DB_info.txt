@@ -1,0 +1,53 @@
+Database Overview:
+- This database contains 4,641 entries of bimetallic alloy catalysts
+- Each entry represents a potential adsorption site for hydrogen evolution reaction (HER)
+- The data is used for pre-DFT screening of catalyst performance
+
+Database Structure:
+The database has 5 columns with the following information:
+
+
+1. Metal1 (Primary Metal):
+   - The main metal component of the alloy
+   - Possible candidates: ['Cu', 'Ir', 'Pd', 'Pt', 'Ag', 'Re', 'Rh', 'Os', 'W', 'Mo', 'Au', 'Hf', 'Ru', 'Zr', 'Zn', 'Nb', 'Ti', 'Tc', 'Y', 'Sc', 'V', 'Ta', 'Cr', 'La', 'Co', 'Cd', 'Ni', 'Fe', 'Hg', 'Mn']
+   - This is the metal atom that adsorbates first encounter
+
+2. Metal2 (Secondary Metal):
+   - The secondary metal mixed with the primary metal
+   - Possible candidates: ['Cu', 'Ir', 'Pd', 'Pt', 'Ag', 'Re', 'Rh', 'Os', 'W', 'Mo', 'Au', 'Hf', 'Ru', 'Zr', 'Zn', 'Nb', 'Ti', 'Tc', 'Y', 'Sc', 'V', 'Ta', 'Cr', 'La', 'Co', 'Cd', 'Ni', 'Fe', 'Hg', 'Mn']
+   - Forms the bimetallic alloy with Metal1
+
+3. Metal1_Composition:
+   - Molar fraction of Metal1 in the alloy
+   - Possible number: 0.75, 0.50
+
+4. Metal2_Composition:
+   - Molar fraction of Metal2 in the alloy
+   - Must equal (1 - Metal1_Composition)
+   - Possible number: 0.25, 0.50
+
+5. Site (Adsorption Site Geometry):
+   - The geometric location where adsorption occurs
+   - Three possible values:
+     * "top": Adsorption atop a single metal atom
+     * "bridge": Adsorption between two adjacent metal atoms
+     * "hollow": Adsorption within the triangle formed by three metal atoms
+
+Data Validation Rules:
+- Metal1_Composition + Metal2_Composition must equal 1.0
+- Site must be one of: "top", "bridge", or "hollow"
+- All compositions must be between 0.00 and 1.00
+
+Usage Instructions:
+1. Filter the database to find specific alloy combinations
+2. Consider different adsorption sites for each alloy
+3. Use this data to identify promising catalysts for HER
+4. The goal is to find catalysts with H adsorption energy closest to zero
+
+Example Queries:
+- Find all Pt-based alloys
+- Find catalysts with specific composition ratios
+- Find catalysts with specific adsorption sites
+- Combine multiple criteria for targeted search
+
+This database is your primary resource for identifying and analyzing bimetallic catalyst candidates for hydrogen evolution reaction optimization.

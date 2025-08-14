@@ -1,0 +1,37 @@
+가설 수정 결과: Here is a concise, data-driven update to your hypothesis and a practical path for the next intern iteration that avoids duplicates and stays within the database constraints.
+
+Updated hypothesis (concise)
+- In hollow geometries with Metal1/Metal2 = 0.75/0.25, the near-target H-Eads values are not exclusive to Pd-based systems. Pd-Ni hollow remains close to the target (-0.2528 eV, within ±0.05 eV of -0.27 eV), but Ni-based hollow pairs also come very close: Ni-Co hollow at -0.2831 eV and Ni-Fe hollow at -0.2996 eV are within ±0.05 eV of the target. Pt-based hollow 0.75/0.25 combinations are consistently farther from -0.27 eV in the current dataset.
+- The closest hollow-geometry matches near -0.27 eV arise from Ni-containing ensembles (Ni-Co, Ni-Fe) and Pd-Ni, suggesting a broader hollow-ensemble effect centered on Ni presence, rather than Pd alone.
+
+Modified, testable predictions (updated)
+- Prediction A (hollow-site focus, updated): Among hollow 0.75/0.25 combinations in the database, Ni-Co and Ni-Fe will remain within ±0.05 eV of -0.27 eV; Pd-Ni will also stay within this window. Pt-based hollow 0.75/0.25 combinations will stay outside this window.
+- Prediction B (Pt-based hollow site behavior): Pt-based hollow 0.75/0.25 combinations will not achieve H-Eads within ±0.05 eV of -0.27 eV (e.g., Pt-Ni ≈ -0.182 eV, Pt-Co ≈ -0.190 eV, Pt-Fe ≈ -0.112 eV, Pt-Cu ≈ -0.153 eV).
+- Prediction C (composition sensitivity around the target): Broadening beyond 0.75/0.25 toward 0.60/0.40 or 0.50/0.50 for Pd-based alloys with Ni will likely reduce the fraction of near-target values (i.e., fewer entries within ±0.05 eV of -0.27 eV) based on current trends.
+- Prediction D (mechanistic rationale): The near-target H-Eads in Pd-Ni hollow arises from Pd-like d-band tuning plus Ni-induced three-atom ensemble effects at hollow sites; Pt-based variants lack this synergistic combination in the tested design space.
+
+Rationale (brief)
+- The latest simulation results show that Pd-Ni hollow is close to the target, but Ni-Co and Ni-Fe hollows at the same 0.75/0.25 composition are even closer to -0.27 eV, indicating a broader Ni-environment/enhanced ensemble effect in hollow sites. Pt-based hollows remain comparatively distant, reinforcing the idea that Ni-enriched hollow ensembles drive the near-target energetics in this composition window.
+
+Revised operational guidance for the intern (focused iteration plan)
+- Non-duplicate exploration within the database
+  - Step 1: Identify all existing 0.75/0.25 hollow entries for which the same metal pairs are present but on other adsorption sites (top, bridge) if such entries exist in the dataset. If yes, compare H-Eads to hollow results to evaluate site robustness of the near-target trend.
+  - Step 2: Look for any additional 0.75/0.25 hollow entries that exist in the database but have not yet been tested (including metal pairs that appear in the current results but in the opposite order, e.g., Co-Ni, Fe-Ni if present as Co-Ni or Fe-Ni rather than Ni-Co or Ni-Fe). If they exist, test them only if they are non-duplicates.
+  - Step 3: If there are any Pd-based hollow 0.75/0.25 entries with metals not yet tested (e.g., Pd-X with X not previously examined in hollow), test those only if they exist in the dataset and are not duplicates of prior Pd-based hollow results.
+- If no new 0.75/0.25 hollow candidates exist in the database
+  - Step 4: Expand composition space for Pd-based alloys with Ni as the second metal to nearby compositions (e.g., Pd-Ni at 0.60/0.40 and 0.50/50) if such entries exist; otherwise document their absence and plan data-collection if those entries appear later.
+  - Step 5: Expand composition space for Ni-based ensembles with other metals present in the dataset (e.g., Ni-Co, Ni-Fe explored here). If other Ni-containing pairs exist in the dataset but not yet tested for 0.75/0.25 hollow, test those as non-duplicate entries.
+- Knowledge accumulation and decision criteria
+  - Step 6: For every newly tested entry, record H-Eads, site, metal1/metal2 identities, and composition; compare with existing hollow entries and with any top/bridge data (if present) to quantify hollow-site advantage and the robustness of the Ni-environment effect.
+  - Step 7: Update the knowledge base with confirmed near-target results (within ±0.05 eV of -0.27 eV) and the observed lack of near-target behavior for Pt-based hollows.
+  - Step 8: Use the updated data to refine the mechanistic rationale (d-band tuning plus Ni ensemble effects) and to guide future exploration toward Ni-enriched hollow motifs or other ensembles that can reproduce the hollow-environment benefits.
+- Knowledge capture and next steps (repeatable loop)
+  - Maintain a running log of which combinations are near-target, which are far, and which sites show the strongest hollow-site preference.
+  - Use this to drive future hypothesis refinement toward Ni-containing hollow motifs or alternative ensemble partners that can reproduce the near-target energetics.
+
+Knowledge capture and next steps (summary)
+- Current data indicate that hollow 0.75/0.25 with Ni-containing ensembles (Ni-Co, Ni-Fe) and Pd-Ni are the closest to -0.27 eV, with Pt-based hollows consistently farther away.
+- The hollow-site effect appears particularly favorable for Ni-containing motifs within the current composition window.
+- Future iterations should systematically test any non-duplicate, database-available hollow-site variations for Ni-containing pairs, and consider incremental shifts away from 0.75/0.25 toward nearby Pd-based or Ni-based compositions if such entries exist.
+
+If you’d like, I can draft a precise set of 5–8 concrete candidate entries for the next intern iteration (non-duplicate, database-available combinations and sites) with explicit decision criteria and expected energy windows. I’ll tailor that list to the exact entries present in your database once you confirm which additional top/bridge entries (if any) exist for the current metal pairs in 0.75/0.25 hollow, or provide a refreshed list of all 0.75/0.25 hollow entries not yet tested for top/bridge in your dataset.

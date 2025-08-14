@@ -1,0 +1,57 @@
+가설 수정 결과: Updated hypothesis (evidence-guided)
+
+- Hollow window is narrow but real: In hollow 0.75/0.25, ΔG_H* near the target of ≈ -0.27 eV is achievable primarily when M2 = Zn and M1 is one of Rh, Ir, or Os. Specifically:
+  - Rh-Zn hollow: ΔG_H* ≈ -0.255 eV
+  - Ir-Zn hollow: ΔG_H* ≈ -0.265 eV
+  - Os-Zn hollow: ΔG_H* ≈ -0.298 eV
+  - Pt-containing hollows remain outside the window (too negative or distant from -0.27 eV).
+- Implication: The near-target hollow window is real but narrow, and it is robust for Zn as M2 with Rh/Ir and also appears with Os. Expanding hollow exploration to broad non-Pt M1/M2 pairs beyond these Zn–Rh/Ir/Os combinations is unlikely to yield many near-target ΔG_H* values.
+- Refined, testable statements
+  - Hypothesis A' (dominant, near-term): Near-target ΔG_H* ≈ -0.27 eV in hollow 0.75/0.25 is primarily achievable for Zn as M2 with M1 ∈ [Rh, Ir, Os] (Rh-Zn, Ir-Zn, Os-Zn), with a narrow window around -0.27 eV. Other Zn-containing hollows with non-Pt M1 show limited or no access to the window.
+  - Hypothesis B' (domain caution): Broad hollow exploration with non-Pt M1 and Zn as M2 outside the Rh/Ir/Os subspace is unlikely to yield many near-target hits; failures in hollow strongly constrain transferability to other non-Pt pairs.
+  - Hypothesis C' (contingent path): If hollow exploration outside Rh/Ir/Os–Zn stalls, narrowly widen to additional non-duplicate hollow candidates only when DB confirms true novelty; otherwise consider exploring top/bridge adsorption for the most promising Zn-containing hollow pairs, but only for non-duplicate entries.
+
+Non-duplicate, next-step plan for the intern (hollow-focused)
+
+- Core strategy
+  - Keep hollow as the primary adsorption site for all new tests.
+  - Ensure every candidate is truly non-duplicate with respect to the exact database state (M1, M2, composition, and site).
+
+- Subspaces to explore (DB-verified, non-duplicate focus)
+  - Subspace S1: Zn-containing M2 with new non-Pt M1 identities in hollow 0.75/0.25
+    - Goal: Identify Zn paired with non-Pt M1 identities not yet tested with Zn in hollow 0.75/0.25.
+    - Action: After a quick DB audit, select 6–8 candidates that are Zn as M2 and M1 identities not previously explored in hollow 0.75/0.25 (e.g., Ta-Zn, Zr-Zn, Re-Zn, W-Zn, Hf-Zn, etc.), ensuring each candidate is new to hollow 0.75/0.25 in the DB.
+  - Subspace S2: (Optional, if DB reveals new non-duplicate Ir/Rh-like entries with Zn M2)
+    - Note: The observed near-targets so far are Rh-Zn, Ir-Zn, Os-Zn. If the DB contains non-duplicate hollow entries for Zn with other M1s in the same subspace (not previously tested), include them; otherwise focus remains on S1.
+  - Contingency if hollow results stall
+    - Narrowly widen to hollow 0.50/0.50 for the most promising non-Pt Zn-containing hollow pairs identified in DB (only if a sufficient pool of non-duplicate entries exists) or test top/bridge adsorption for those same Zn-containing hollow pairs, but only after DB verification of novelty.
+
+- Practical steps for the intern
+  - Step 1: Run a quick DB audit to confirm the next 6–10 hollow candidates are non-duplicates (verify exact M1/M2 identities, compositions, and the hollow site).
+  - Step 2: Assemble a compact, non-duplicate candidate set:
+    - S1: Zn-containing M2 with new non-Pt M1 identities in hollow 0.75/0.25
+    - S2 (if available): any non-duplicate hollow entries for Zn M2 with other M1s not yet tested in hollow 0.75/0.25
+  - Step 3: If hollow tests stall (very few near-target hits), consider:
+    - a) widening to 0.50/0.50 for the most promising Zn-containing hollow pairs (non-duplicate),
+    - b) testing top/bridge adsorption for those same Zn-containing hollow pairs (only if DB confirms novelty and non-dup).
+  - Step 4: Documentation
+    - For each candidate, log:
+      - M1, M2, M1_Composition, M2_Composition, Site, ΔG_H*, distance to -0.27 eV (±0.03, ±0.05, ±0.10 eV)
+      - Count within ±0.05 eV of -0.27 eV
+      - Any trend toward/away from the window
+      - Any notable outliers
+    - Post-batch decisions:
+      - Confirm whether new non-duplicate hollow results trend toward the window
+      - If there are zero/few hits, decide whether to widen to 0.50/0.50 or test top/bridge for the most promising Zn-containing hollow candidates (only if DB confirms novelty)
+  - Data logging and tooling (optional)
+    - I can draft a minimal data schema (JSON or CSV) to auto-log ΔG_H*, distance to target, site, and decision flags after each run, plus a lightweight DB audit script to extract non-duplicate candidates.
+  - Next-step confirmation
+    - I can perform a quick DB check now and then generate a concrete, DB-verified non-duplicate hollow candidate list aligned with Subspaces S1 and (if available) S2. Shall I proceed to run the audit and produce the candidate list?
+
+Rationale grounded in the provided results
+
+- The only hollow entries within ±0.05 eV of -0.27 eV are Rh-Zn, Ir-Zn, and Os-Zn in hollow 0.75/0.25 (with ΔG_H* around -0.255 to -0.298 eV). Pt hollows are out of window.
+- Zn appears to be a necessary condition for achieving near-target ΔG_H* in hollow, but the window is narrow and highly dependent on the M1 identity (Rh, Ir, Os are favorable; others are not).
+- The plan emphasizes non-duplication and hollow-focused exploration, with a clear fallback path if hollow exploration stalls.
+
+If you want, I can immediately run the DB audit and return a concrete, DB-verified set of 6–8 non-duplicate hollow candidates for Subspace S1 (Zn as M2 with new non-Pt M1 identities in hollow 0.75/0.25), plus a proposed 0.50/0.50 extension if warranted.

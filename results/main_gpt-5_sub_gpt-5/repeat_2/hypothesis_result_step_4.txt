@@ -1,0 +1,94 @@
+가설 수정 결과: Modified hypothesis based on the new simulation results
+
+What held up and how it refines our rules
+- Hollow generally strengthens relative to bridge, but the magnitude is highly pair-dependent and can reverse or collapse for specific ensembles.
+- 3d-in-coinage ensembles are extremely site-sensitive. For Ni/Co in Ag the hollow→bridge shift is much larger than in Cu:
+  - Ni–Ag: +0.0725 (bridge) → −0.3703 eV (hollow), Δ ≈ −0.443 eV
+  - Co–Ag: +0.1177 (bridge) → −0.3658 eV (hollow), Δ ≈ −0.484 eV
+  This exceeds the ~0.25–0.30 eV shifts seen in Cu and highlights host-specific site amplification.
+- Weak-binder primaries (coinage) still require early transition metals and high coordination to approach −0.27 eV, but composition responses are not monotonic across early metals:
+  - Cu–Mo: 50/50 hollow −0.297 eV; at 75/25 (Cu-rich) hollow weakens drastically to −0.059 eV (diluting Mo weakens as expected).
+  - Cu–W: 50/50 hollow −0.282 eV; at 75/25 hollow becomes much stronger, −0.543 eV (diluting W strengthens anomalously). Thus W vs Mo show opposite composition trends in Cu.
+
+Key updates to the hypothesis
+1) 3d primaries in coinage hosts at 0.75/0.25 are even more site-sensitive for Ag than for Cu:
+- Bridge is far too weak (Ni–Ag +0.073 eV; Co–Ag +0.118 eV; Co–Cu −0.034 eV; Ni–Cu −0.082 eV).
+- Hollow overshoots (Ni–Ag −0.370 eV; Co–Ag −0.366 eV; Ni–Cu −0.383 eV; Co–Cu −0.383 eV).
+- Therefore, the optimum for 3d-in-coinage lies at intermediate composition and/or via careful site tuning, but “move to hollow” is not safe; the Ag host amplifies site sensitivity beyond Cu.
+
+2) Mo vs W as the early partner (noble + early, hollow):
+- Pd/Rh/Ir: W > Mo in strengthening holds, but the composition slope is steeper than anticipated:
+  - Pd–W 50/50 hollow is on target (−0.277 eV).
+  - Rh–W 50/50 hollow overshoots heavily (−0.461 eV).
+  - Ir–W 50/50 hollow overshoots (−0.350 eV).
+- Pt: W < Mo in strength holds; Pt–W 0.75/0.25 hollow remains weak (+0.121 eV). Increasing W to 50/50 should strengthen but may still under-shoot target; Mo at 50/50 would be preferred but appears absent in DB.
+
+3) Coinage + early at hollow: composition response is early-metal specific
+- W in Cu: dilution to 25% W can over-strengthen massively (Cu–W 75/25 hollow −0.543 eV), opposite to Mo.
+- Mo in Cu: dilution weakens strongly (Cu–Mo 75/25 hollow −0.059 eV), consistent with expectation.
+- Ag cases:
+  - Ag–W 50/50 hollow is optimal (−0.268 eV).
+  - Ag–Mo 50/50 hollow is very strong (−0.603 eV); unexpectedly, bridge does not weaken (−0.617 eV). Thus “use bridge to weaken” is not universal.
+
+Cross-cutting site guidance (revised)
+- Use hollow to strengthen when adsorption is too weak, but expect exceptionally large strengthening for 3d-in-Ag and substantial but smaller shifts for 3d-in-Cu. Overshoot risk is high.
+- Bridge often weakens relative to hollow for many pairs but can fail or even slightly strengthen (Ag–Mo 50/50). Site effects must be mapped per pair; there is no universal bridge-weakens rule.
+- If available, top sites should be considered only when both hollow and bridge overshoot (database permitting).
+
+Knowledge accumulated this iteration (new/updated)
+- Ni–Cu 0.75/0.25: bridge −0.082 eV; hollow −0.383 eV (Δ ≈ −0.30 eV).
+- Co–Cu 0.75/0.25: bridge −0.034 eV; hollow −0.383 eV.
+- Cu–Ni 0.50/0.50 hollow −0.121 eV (composition weakens vs Ni-rich 0.75/0.25 hollow).
+- Ru–Cu 0.75/0.25 bridge −0.297 eV (near-optimal at bridge).
+- Ni–Ag 0.75/0.25: bridge +0.073 eV; hollow −0.370 eV (Δ ≈ −0.443 eV).
+- Co–Ag 0.75/0.25: bridge +0.118 eV; hollow −0.366 eV (Δ ≈ −0.484 eV).
+- Ag–Co 0.50/0.50 hollow +0.044 eV (weak at lower 3d fraction).
+- Noble + early, 0.75/0.25 hollow:
+  - Pt–Mo +0.0375 eV; Pt–W +0.121 eV (W weaker than Mo for Pt).
+  - Pd–W −0.362 eV; Pd–Mo −0.070 eV (W > Mo for Pd).
+  - Rh–W −0.413 eV; Rh–Mo −0.389 eV (W ≥ Mo for Rh).
+  - Ir–W −0.167 eV; Ir–Mo −0.160 eV (W > Mo but modest at 0.75/0.25).
+- Noble + early, 0.50/0.50 hollow:
+  - Pd–W −0.277 eV (on target).
+  - Rh–W −0.461 eV; Ir–W −0.350 eV (overshoot at higher W).
+- Coinage + early hollow:
+  - Ag–W 0.50/0.50 −0.268 eV (optimal).
+  - Cu–Mo 0.50/0.50 −0.297 eV; Cu–Mo 0.75/0.25 −0.059 eV (dilution weakens for Mo).
+  - Cu–W 0.50/0.50 −0.282 eV; Cu–W 0.75/0.25 −0.543 eV (dilution strengthens for W; non-monotonic).
+  - Ag–Mo 0.50/0.50 −0.603 eV; bridge −0.617 eV (bridge does not weaken).
+
+Revised, testable hypothesis (actionable)
+- 3d-in-coinage systems at 0.75/0.25 are fundamentally site-oversensitive: bridge is too weak; hollow overshoots. The practical path to −0.27 eV is to lower 3d fraction toward 50/50 and use hollow (Co–Cu 50/50 hollow is a prime candidate).
+- For Pd/Rh/Ir with W at hollow, W strengthens more than Mo and the strengthening slope with composition is steepest for Rh > Ir > Pd. Move to bridge to de-strengthen overshoot (if available), or reduce W fraction.
+- For Pt with early metals, Mo > W in strengthening. Without Pt–Mo 50/50, Pt–W 50/50 hollow is worth mapping but may still underbind.
+- For coinage + early, composition trends are element-specific:
+  - With Mo: dilution strongly weakens (use 50/50 for Cu–Mo; reduce Mo for over-strong Ag–Mo).
+  - With W: dilution can dramatically strengthen (Cu–W 75/25 overshoots); W is “safe” only near 50/50 for Ag/Cu. Avoid dilute-W in coinage if hollow is used.
+
+Guidance for next tests (no duplicates; chosen from pairs already present in DB; if any is missing, adjust within the same mini-domain by switching site between bridge/hollow or between 0.50/0.50 and 0.75/0.25)
+
+A) Calibrate 3d-in-coinage at intermediate composition (seek hollow optima)
+- Co–Cu, 0.50/0.50, hollow. Prediction: −0.23 to −0.33 eV. Rationale: between very weak bridges and over-strong 0.75/0.25 hollow.
+- Ni–Ag, 0.50/0.50, hollow. Prediction: −0.10 to −0.20 eV. Rationale: test composition weakening relative to −0.370 eV at 0.75/0.25.
+
+B) Map site strengthening for a near-optimal 4d-in-coinage case
+- Ru–Cu, 0.75/0.25, hollow. Prediction: −0.40 to −0.50 eV. Rationale: quantify bridge→hollow gain from −0.297 eV baseline.
+
+C) Tune noble + early via composition/site
+- Pd–Mo, 0.50/0.50, hollow. Prediction: −0.22 to −0.32 eV. Rationale: strengthen from −0.070 (0.75/0.25).
+- Ir–Mo, 0.50/0.50, hollow. Prediction: −0.24 to −0.30 eV. Rationale: strengthen from −0.160 (0.75/0.25).
+- Pt–W, 0.50/0.50, hollow. Prediction: −0.05 to −0.15 eV. Rationale: map W-slope for Pt (Mo path blocked in DB).
+- Pd–W, 0.50/0.50, bridge. Prediction: −0.14 to −0.24 eV. Rationale: soften slightly from −0.277 hollow if bridge exists.
+- Rh–W, 0.50/0.50, bridge. Prediction: −0.28 to −0.38 eV. Rationale: de-strengthen from −0.461 hollow.
+- Ir–W, 0.50/0.50, bridge. Prediction: −0.20 to −0.28 eV. Rationale: de-strengthen from −0.350 hollow.
+
+D) Refine coinage + early hollow motifs around the target and expose non-monotonic W
+- Cu–W, 0.50/0.50, bridge. Prediction: −0.18 to −0.26 eV. Rationale: slight weakening from −0.282 hollow may land on target.
+- Cu–Mo, 0.50/0.50, bridge. Prediction: −0.18 to −0.25 eV. Rationale: soften −0.297 hollow toward −0.27.
+- Ag–W, 0.75/0.25, hollow. Prediction: −0.38 to −0.50 eV. Rationale: test if Ag mirrors Cu’s “dilute-W hyper-strong” behavior.
+- Ag–Mo, 0.75/0.25, hollow. Prediction: −0.35 to −0.50 eV. Rationale: reduce overshoot from −0.603 at 50/50.
+- Au–W, 0.75/0.25, hollow. Prediction: −0.05 to −0.25 eV. Rationale: strengthen from +0.042 at 50/50.
+
+Notes
+- All proposed pairs appear in the DB (each has at least one accepted entry above). Exact site and composition variants are chosen to avoid duplicates and to remain within the observed availability (0.50/0.50 and 0.75/0.25; bridge/hollow). If any specific variant is absent, please adjust within the same mini-domain (same pair; switch between bridge/hollow or between 0.50/0.50 and 0.75/0.25) to preserve intent.
+- After this batch, we will update the Mo↔W and bridge↔hollow tuning maps per primary family (3d-in-coinage vs noble+early vs coinage+early) and converge on the most controllable, near-−0.27 eV combinations.

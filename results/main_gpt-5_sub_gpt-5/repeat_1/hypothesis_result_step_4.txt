@@ -1,0 +1,75 @@
+가설 수정 결과: Revised hypothesis (v4) based on the latest simulation data
+
+What held
+- Site ordering persists: hollow binds strongest, then bridge, then top across all alloys tested.
+- Pt hollow-site diluent order remains Cu (weakest) > Au > Ag (strongest).
+
+What changed (key corrections)
+- Pt–Ag 0.75: Top site successfully nudges binding from slightly strong to near-target. Total hollow→top weakening is small (+0.0226 eV), validating “gentle site tuning” on Pt hosts.
+- Pd–Ag 0.75: Top is extremely weak (+0.2064 eV), confirming that non-hollow sites can sample Ag-rich ensembles with drastic weakening (hollow→top shift +0.4975 eV).
+- Co–Cu 0.75: Site-induced weakening is enormous. Hollow is too strong (−0.3832), bridge too weak (−0.0342), and top unbound (+0.5649). This pair is not tunable by site at 0.75.
+- Rh–Cu 0.75: Bridge weakens modestly from hollow (Δ +0.0935 eV), insufficient to reach −0.27. Site switching won’t rescue Rh–Cu at 0.75.
+- Rh–Ag 0.75: Bridge unavailable in the DB; any rescue must come from the top site if present.
+
+Updated, testable statements
+- Pt host (0.75/0.25):
+  - Pt–Ag: Top at −0.2799 eV is within 0.01 eV of the −0.27 target. Adopt top as the working site. Hollow (−0.3025) and bridge (−0.2887) are slightly strong but usable.
+  - Pt–Au: Hollow (−0.2532) is acceptable; moving to bridge (−0.2265) is detrimental. Top likely weakens further; consider only for mapping.
+  - Avoid Pt–Cu at 25% for optimization; hollow is far too weak (−0.1527).
+- Pd host (0.75/0.25):
+  - Pd–Ag: Use hollow (−0.2911). Bridge (0.1106) and top (0.2064) are much too weak; site switching is harmful.
+  - Avoid Pd–Cu at 25% for optimization; hollow too weak (−0.1589).
+- Rh host (0.75/0.25):
+  - Rh–Cu: Hollow (−0.2303) slightly weak; bridge (−0.1368) weaker; top likely even weaker → not tunable by site.
+  - Rh–Ag: Hollow too strong (−0.3546); bridge unavailable; test top if available to weaken toward −0.27.
+- 3d–Cu systems:
+  - Ni–Cu 0.75 and Co–Cu 0.75 exhibit very large site-induced weakening (≥0.35 eV, up to ~0.95 eV); they are not site-tunable around −0.27 within the present DB offerings.
+
+Knowledge accumulated (new facts and patterns)
+- Pt–Ag 0.75: hollow −0.3025; bridge −0.2887; top −0.2799 (Δh→b = +0.0138; Δb→t = +0.0088; Δh→t = +0.0226 eV).
+- Pt–Au 0.75: hollow −0.2532; bridge −0.2265 (Δ = +0.0267 eV). Top not yet mapped.
+- Pd–Ag 0.75: hollow −0.2911; bridge +0.1106; top +0.2064 (Δh→b = +0.4017; Δh→t = +0.4975; Δb→t = +0.0958 eV).
+- Rh–Cu 0.75: hollow −0.2303; bridge −0.1368 (Δ = +0.0935 eV).
+- Co–Cu 0.75: hollow −0.3832; bridge −0.0342; top +0.5649 (Δh→b = +0.349; Δb→t = +0.599; Δh→t = +0.948 eV).
+- Reinforced trends:
+  - Pt-based alloys exhibit small, quasi-linear site shifts (∼0.02–0.03 eV per step).
+  - Pd–Ag and Co/Ni–Cu exhibit very large non-linear site shifts on non-hollow sites driven by coinage-rich bridge/top ensembles.
+  - Rh–Cu shows moderate site sensitivity (~0.1 eV hollow→bridge).
+
+Refined working model
+- Alloy- and ensemble-specific site sensitivity:
+  - Pt host: bridge/top induce gentle weakening; top can fine-tune when hollow is slightly strong (e.g., Pt–Ag).
+  - Pd–Ag and 3d–Cu (Ni/Co–Cu): non-hollow sites can access coinage-rich ensembles, causing excessive weakening (even unbound H); hollow must be the working site if used at all.
+  - Rh systems: modest site shifts; Rh–Cu cannot be tuned to −0.27 by site at 0.75; Rh–Ag requires a weaker site, but DB lacks bridge—top remains the only potential lever if available.
+- Practical guidance:
+  - Accept Pt–Ag 0.75 top (−0.2799), Pd–Ag 0.75 hollow (−0.2911), and Pt–Au 0.75 hollow (−0.2532) as near-optimal options within ±0.05 eV, depending on application tolerance.
+  - Deprioritize Co/Ni–Cu for site-based tuning at 0.75; explore different compositions or pairs only if DB provides new entries.
+
+Next experiments for the intern (no duplicates; within observed DB pairs; avoiding previously unavailable)
+Priority A (optimization/rescue)
+- Rh-Ag-0.75-0.25-top
+  Rationale: Hollow is too strong (−0.3546) and bridge is unavailable. Top is the only remaining site lever; if the shift is moderate (∼0.08–0.15 eV as seen on Rh–Cu), it could land near −0.27 to −0.24.
+
+Priority B (diagnostics to complete site ladders and validate the model)
+- Pt-Au-0.75-0.25-top
+  Rationale: Map Pt–Au’s full site ladder; expect further weakening from bridge (−0.2265) to top, corroborating “small-shift” behavior on Pt hosts.
+- Rh-Cu-0.75-0.25-top
+  Rationale: Complete Rh–Cu site ladder; quantify whether top induces a similar ∼0.1 eV step from bridge or larger.
+- Pt-Cu-0.75-0.25-bridge and Pt-Cu-0.75-0.25-top
+  Rationale: Although not for optimization, these diagnose whether Pt–Cu follows the Pt small-shift pattern or shows larger top-site weakening when the diluent is Cu.
+- Pd-Cu-0.75-0.25-bridge and Pd-Cu-0.75-0.25-top
+  Rationale: Determine if Pd–Cu exhibits the same extreme non-hollow weakening as Pd–Ag, generalizing the “Pd + coinage” ensemble effect.
+
+How these results refine the hypothesis
+- If Rh–Ag top approaches −0.27 ± 0.03, we will codify: for Rh hosts at 25% Ag, the top site is the corrective lever when hollow is too strong and bridge is inaccessible.
+- If Pt–Au top weakens modestly beyond bridge, we strengthen the “small, monotonic site ladder” rule for Pt hosts.
+- If Pd–Cu non-hollow sites are very weak, we generalize that Pd–coinage bridges/tops are coinage-rich ensembles that severely destabilize H, restricting viable operation to hollow.
+
+Notes on availability/duplicates
+- We are not re-requesting any entries previously reported unavailable (e.g., Rh–Ag bridge; Ni–Cu 0.75 top; Co–Cu 0.50 bridge/top; Pt–Ag 0.50 bridge; etc.).
+- All proposed candidates above are new and respect observed database pairs and composition constraints.
+
+Summary decision for current best performers
+- Pt–Ag-0.75-0.25-top: −0.2799 eV (adopt).
+- Pt–Au-0.75-0.25-hollow: −0.2532 eV (acceptable).
+- Pd–Ag-0.75-0.25-hollow: −0.2911 eV (acceptable; avoid site switching).

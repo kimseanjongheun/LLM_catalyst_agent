@@ -1,0 +1,34 @@
+Hypothesis
+
+There is a distinct, under-explored region of the database where hollow adsorption on certain bimetallic alloys yields hydrogen adsorption energies (ΔG_H*) closest to the optimal value of –0.27 eV for HER. This optimal window is most likely to be realized when:
+
+- Metal1_Composition is 0.75 with Metal2_Composition 0.25, or Metal1_Composition is 0.50 with Metal2_Composition 0.50.
+- Metal1 is a Pt-group metal (Pt, Ir, Pd, Rh, Ru) to provide a strong, tunable d-band foundation, while Metal2 is a second metal that modulates the d-band and local ensemble effects (Cu, Ni, Co, Fe, Zn, Nb, Ti, V, etc.).
+- The adsorption site geometry is hollow, because the three-atom ensemble at hollow sites affords cooperative bonding that better tunes the d-band center and H bonding than single-atom (top) or two-atom (bridge) sites.
+
+Predictions and rationale
+
+- Hollow site performance: Across many Pt-group Metal1 / various Metal2 combinations, ΔG_H* at hollow sites will cluster around –0.27 eV with a higher hit rate than top or bridge sites, due to synergistic multi-metal bonding that effectively tunes the local electronic structure at the adsorption triangle.
+- Composition effect: For Metal1_Composition = 0.75 (0.25 Metal2), the target window will be accessible for a larger portion of Metal2 choices than for the 0.50/0.50 case, because the dominant Metal1 motif sets a robust d-band environment that is modulated by a minority second metal. The 0.50/0.50 domain should still yield many near-optimal candidates but with more dispersion.
+- Metal1 metal identity: Pt-group Metal1 combinations will more reliably approach the –0.27 eV goal in hollow sites than non-Pt-group Metal1 combinations, due to a balance of strong base binding and tuneability, though there will be notable non-noble-metal outliers.
+- Unexpected winners: Some non-noble-metal combinations (e.g., Nb/Fe, Ti/Ni, Zr/Co) in hollow sites may also approach or reach ΔG_H* ≈ –0.27 eV, offering potentially lower-cost catalysts.
+
+Implementation guidance for the intern (to test over 10 iterations)
+
+- Domain focus (avoid duplicates): In each iteration, select entirely new Metal1/Metal2 pairs and Site combinations not previously tested. Use the constraint Metal1_Composition ∈ [0.75, 0.50] with Metal2_Composition = 1 – Metal1_Composition, and Site ∈ [hollow, top, bridge] (prioritize hollow for initial testing).
+- Prioritized axis for the hypothesis:
+  - Primary axis: hollow site candidates with Metal1_Composition 0.75 (Metal2 0.25) and Metal1 in Pt-group (Pt, Ir, Pd, Rh, Ru)
+  - Secondary axis: hollow site candidates with Metal1_Composition 0.50 (Metal2 0.50), across Pt-group and a subset of non-Pt metals
+  - Tertiary axis: select a small set of non-Pt Metal1 pairs (e.g., Nb, Ti, Zr, V) with various Metal2 choices, focusing on hollow sites
+- Descriptor collection: For each candidate, record Metal1, Metal2, Metal1_Composition, Metal2_Composition, Site, and the resulting ΔG_H*. Note whether the value is within ±0.03 eV of –0.27 eV (highly favorable window) or just near it (±0.05 eV, etc.).
+- Knowledge accumulation: Maintain a running log to ensure no candidate repeats. After each iteration, summarize how many hollow-site candidates fell into the target window, and whether top/bridge candidates approached the window.
+- Iteration refinement: If hollow-site candidates rarely hit –0.27 eV, reassess whether the assumption about Pt-group Metal1 driving the window holds and consider expanding Metal1 to include adjacent d-band centers (while still respecting the 0.75/0.25 or 0.50/0.50 constraints).
+- Decision rules for next iteration: Prioritize new hollow-site combinations with ΔG_H* within ±0.05 eV of –0.27 eV; if insufficient hits, broaden Metal2 choices (within allowed database) or test the 0.50/0.50 domain with additional Pt-group Metal1s.
+
+Scientific rationale you can reference in discussion
+
+- d-band tuning and ensemble effects: Bimettallic ensembles modify the local d-band center and the bonding environment for H. Hollow sites involve three metal atoms, enabling cooperative interactions that often move ΔG_H* toward zero more effectively than isolated atop sites.
+- Composition strategies: The 0.75/0.25 motif tends to preserve the strong, favorable characteristics of a Pt-group primary metal while allowing the minority second metal to fine-tune adsorption energetics. The 0.50/0.50 domain tests whether dual-midpoint enrichment broadens the accessible ΔG_H* window without sacrificing too much stability.
+- Practical relevance: If hollow-site, Pt-group–dominated alloys consistently reach ΔG_H* ≈ –0.27 eV, these candidates emerge as high-priority targets for further DFT refinement and experimental validation, including potential cost-focused non-Pt outliers.
+
+In summary, the core hypothesis is: hollow-site hollow-environment bimetallic alloys with Pt-group Metal1 and carefully chosen Metal2—especially at 0.75/0.25 composition—will produce ΔG_H* values near –0.27 eV for HER, more reliably than top or bridge sites, with a subset of non-Pt combinations potentially offering comparable performance. Use this framework to drive the 10 iterative screening loops while avoiding duplicates and building a growing knowledge base of successful and near-successful candidates.

@@ -1,0 +1,31 @@
+Hypothesis
+
+In the pre-DFT screening database of 4,641 bimetallic adsorption sites for HER, the hydrogen adsorption energy (H-E ads) that is closest to the optimal value of -0.27 eV will be most reliably achieved in hollow adsorption geometries on metal1-rich Pt- and Pd-based alloys when the second metal is a light-to-mid transition metal (Ni, Co, Fe, or Cu) and the composition is strongly skewed toward Metal1 (Metal1_Composition = 0.75, Metal2_Composition = 0.25). This combination will exploit (i) favorable d-band tuning from Pt/Pd with a secondary late transition metal, and (ii) the three-atom ensemble effects that stabilize H adsorption at hollow sites, leading to the smallest deviations from -0.27 eV across newly tested, non-duplicate candidates.
+
+Specific, testable predictions
+
+- Prediction 1 (hollow-site focus): Among entries with Metal1 in [Pt, Pd] and Metal2 in [Ni, Co, Fe, Cu], a subset with Metal1_Composition = 0.75, Metal2_Composition = 0.25, and Site = hollow will yield H-Eads values within ±0.05 eV of -0.27 eV in multiple unique, previously untested combinations.
+
+- Prediction 2 (site comparison): For the same Pt/Pd–Ni/Co/Fe/Cu family, hollow sites will show closer-to-target energies than top or bridge sites; top and bridge energies will deviate by larger margins (e.g., >0.05–0.10 eV) from -0.27 eV under equivalent metal-pair conditions.
+
+- Prediction 3 (composition sensitivity): In the 0.50/0.50 composition regime, Pt- and Pd-based alloys with the same secondary metals will exhibit a broader distribution of H-Eads with fewer members near -0.27 eV, compared with the 0.75/0.25 regime.
+
+- Prediction 4 (metal identity effect): When Metal1 ∈ Pt or Pd and Metal2 ∈ Ni, Co, Fe, or Cu, there will be a stronger propensity for near -0.27 eV values at hollow sites than for other Metal1 classes (e.g., Ir/Ru or non-Pt/Pd noble/coinage metals) under similar compositions.
+
+- Prediction 5 (electronic-structure rationale): A smaller difference in electronegativity and a d-band center shift toward the H 1s interaction (as inferred from known Pt/Pd–Ni/Co/Fe/Cu alloying trends) will correlate with H-Eads values closer to -0.27 eV across the hollow-site entries, providing a predictive link between alloy electronic properties and adsorption performance.
+
+Rationale (why these predictions should hold)
+
+- The optimal HER descriptor a = -0.27 eV for H adsorption is often realized when the d-band center of the active site is tuned to balance adsorption strength. Bimetallic Pt-/Pd-based systems with a light-to-mid transition metal second component can shift the d-band center toward this optimum.
+- Hollow sites inherently involve three-atom ensembles, which enhance electronic and geometric ensemble effects that can stabilize H adsorption in a way that brings E(H) closer to the target value, especially when one metal dominates the surface (Metal1_Composition = 0.75).
+- Composition skew toward Metal1 should preserve the favorable Pt/Pd-like surface character while enabling tuning by the secondary metal, increasing the likelihood of hitting the -0.27 eV target across candidates that have not yet been tested.
+- Top and bridge sites may not harness the same ensemble effects to the same extent, leading to larger deviations from the optimum energy in many combinations.
+
+Operational guidance for the 10 iterative loops (brief)
+
+- Focus the search on non-duplicate entries within Pt- and Pd-based pairs with secondary metals Ni, Co, Fe, or Cu, using Metal1_Composition = 0.75 and Metal2_Composition = 0.25, and Site = hollow as the primary target. Expand to related pairs only after confirming the hollow-site trend.
+- In each loop, catalog candidates that meet the prediction thresholds (e.g., within ±0.05 eV of -0.27 eV for hollow Pt/Pd–Ni/Co/Fe/Cu) and ensure they are novel (not previously tested).
+- If hollow Pt/Pd-based combinations do not yield sufficient near-optimal entries, broaden to nearby second metals (e.g., Zn, Mn) or slightly adjust the composition toward 0.50/0.50, but with the expectation of a lower hit-rate near -0.27 eV.
+- Record every new finding (ads energy, metal pair, site, composition, and any observed trends) to refine the correlation between metal identity, site geometry, and proximity to -0.27 eV, feeding back into hypothesis refinement.
+
+This hypothesis provides a concrete, testable framework that directs the intern toward novel, non-duplicate Pt- and Pd-based bimetallic candidates with hollow adsorption sites and a metal1-rich composition, while offering clear expectations about site dependence, composition effects, and underlying electronic-structure rationale.

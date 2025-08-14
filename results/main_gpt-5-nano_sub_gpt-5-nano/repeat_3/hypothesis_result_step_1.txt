@@ -1,0 +1,55 @@
+Hypothesis
+
+In this pre-DFT screening database of 4,641 bimetallic adsorption-site candidates, hydrogen adsorption energy (H_ads) can be systematically steered toward the target of –0.27 eV by judiciously pairing Pt-group or Ir-group primary metals with carefully chosen secondary metals and adsorption geometries. The tuning arises from d-band center modification and multi-atom coordination effects that occur when alloying different metal pairs, with the hollow adsorption site (threefold coordination) providing the strongest opportunity for cross-metal electronic interaction. Specifically:
+
+- Composition matters: two distinct alloying regimes (Metal1_Composition = 0.75 with Metal2_Composition = 0.25, and Metal1_Composition = 0.50 with Metal2_Composition = 0.50) will yield different degrees of electronic coupling and strain, leading to different proximities to –0.27 eV. The 0.75/0.25 regime is expected to produce larger shifts in H_ads for many pairs, while the 0.50/0.50 regime should reveal balanced, synergistic effects that can also approach –0.27 eV.
+- Site dependence: hollow adsorption sites will, on average, bring H_ads closer to –0.27 eV for a broader set of Pt-group and Ir-group primary metals when alloyed with selected second metals, due to cooperative bonding with three adjacent metal atoms.
+- Metal pair logic: primary metals with strong d-band activity (e.g., Pt, Ir, Pd, Ru) alloyed with second metals that modulate the d-band center (e.g., Nb, Hf, Zr, Sc, La, Y, Cr, Ni, Cu) are the most promising to approach –0.27 eV. Some less-traditional pairs (including rare-earth containing second metals) may yield unexpectedly near-optimal H_ads via complex ligand and strain effects.
+- Non-duplication and novelty: within the 10 iterations, focus on completely new Metal1–Metal2 pairs and adsorption sites that have not been tested before in this database to maximize discovery potential.
+
+Testable predictions
+
+- Hollow-site candidates with Metal1_Composition = 0.75 and Metal2_Composition = 0.25 will frequently yield H_ads within ±0.05 eV of –0.27 eV for Pt- and Ir-based primary metals when the secondary metal is Nb, Hf, Zr, Sc, La, or Y (and similar late transition/rare-earth metals), more so than for top or bridge sites.
+- In the 0.50/0.50 regime, synergistic combinations where the two metals have moderately different d-band centers (e.g., Pt–Nb, Pt–Hf, Pt–Zr; Ir–Nb, Ir–La; Pd–Sc, Pd–Ti) will show H_ads near –0.27 eV across hollow and bridge sites, with hollow generally performing best.
+- Top-site energies will diverge more across metal pairs and are less likely to sit exactly at –0.27 eV, serving as a discriminant tool when screening for robustness across adsorption geometries.
+- Some novel pairs involving rare-earth metals (e.g., La, Y, Sc) as either Metal2 or Metal1 in combination with Pt/Ir/Pd as the primary will produce unexpected near-optimal H_ads due to unique electronic-lattice interactions, offering new avenues beyond conventional Pt-group alloys.
+
+Focused initial candidate domain for the intern (to operationalize iteration 1)
+
+Goal: identify a set of completely new, unexplored (in the context of this task) bimetallic candidates that meet the composition and site constraints, prioritizing hollow sites and the 0.75/0.25 composition first, then 0.50/0.50. Ensure no duplicates with previously tested candidates.
+
+Suggested Metal1 (Primary) choices (from allowed list): Pt, Ir, Pd, Ru, Rh, Os, Au, Ag, Cu, Fe, Co, Ni, V, Cr, Mo, W, Nb, Ta, Hf, Zr, La, Y, Sc, Mn, Ce/others not listed; focus on Pt, Ir, Pd, Ru as primary for strongest d-band tuning potential.
+
+Suggested Metal2 (Secondary) choices (prioritize less conventional or underexplored partners): Nb, Hf, Zr, Sc, La, Y, Sc, Nb, Ta, Cr, Ti, V, Zn, Mn, Ni, Cu (avoid already heavily studied PtCu-like pairs if possible to ensure novelty).
+
+Two concrete initial sets (already unique relative to common literature pairings and suitable for the database constraints)
+
+- Set A (0.75 Pt + 0.25 Nb for hollow site first; then 0.50 Pt + 0.50 Nb for hollow/site checks)
+  - Metal1 = Pt, Metal2 = Nb, Metal1_Composition = 0.75, Metal2_Composition = 0.25, Site = hollow
+  - Metal1 = Pt, Metal2 = Nb, Metal1_Composition = 0.50, Metal2_Composition = 0.50, Site = hollow
+- Set B (0.75 Ir + 0.25 La; hollow site first; then 0.50 Ir + 0.50 La)
+  - Metal1 = Ir, Metal2 = La, Metal1_Composition = 0.75, Metal2_Composition = 0.25, Site = hollow
+  - Metal1 = Ir, Metal2 = La, Metal1_Composition = 0.50, Metal2_Composition = 0.50, Site = hollow
+- Set C (0.75 Pd + 0.25 Sc; hollow site; then 0.50 Pd + 0.50 Sc)
+  - Metal1 = Pd, Metal2 = Sc, Metal1_Composition = 0.75, Metal2_Composition = 0.25, Site = hollow
+  - Metal1 = Pd, Metal2 = Sc, Metal1_Composition = 0.50, Metal2_Composition = 0.50, Site = hollow
+
+- Set D (0.75 Ru + 0.25 Y; hollow site; then 0.50 Ru + 0.50 Y)
+  - Metal1 = Ru, Metal2 = Y, Metal1_Composition = 0.75, Metal2_Composition = 0.25, Site = hollow
+  - Metal1 = Ru, Metal2 = Y, Metal1_Composition = 0.50, Metal2_Composition = 0.50, Site = hollow
+
+Rationale for the chosen sets
+
+- These pairs push beyond conventional Pt–Cu/Ni/Co families by including Nb, Hf, Zr, Sc, La, and Y as secondary metals, exploring less-charted electronic environments that may yield H_ads near –0.27 eV through d-band modulation and strain effects.
+- The hollow-site focus leverages three-atom interactions that are most sensitive to d-band tuning, increasing the probability of attaining the target adsorption energy.
+- The 0.75/0.25 combinations maximize the influence of the secondary metal on the primary’s surface chemistry, providing a strong test of the hypothesis that the secondary metal can tune H_ads toward the optimum.
+- The 0.50/0.50 combinations serve to identify synergistic pairs where both metals contribute equally to the adsorption environment, potentially stabilizing energies around the target across multiple sites.
+
+Guidance for the intern
+
+- For each candidate, record the adsorption energy at the specified site (prioritizing hollow first), and compute delta = H_ads − (–0.27 eV). Rank candidates by increasing |delta|.
+- Exclude any candidate that has already been tested in the project history; ensure all eight to twelve initial tests are novel.
+- Document the metallurgical rationale for each pair (d-band considerations, possible lattice strain, potential site-blocking effects) to build a concise knowledge base that informs subsequent iterations.
+- After each loop, assess whether results support the hypothesis (i.e., which metal pairs and sites most effectively approach –0.27 eV) and refine the exploration domain accordingly (e.g., if Nb-containing Pt pairs perform best, expand to additional Nb-based combos; if rare-earth second metals show promise, widen that subset while maintaining novelty).
+
+In summary, this hypothesis posits that targeted Pt- and Ir-based bimetallics with carefully chosen secondary metals at hollow sites can approach the optimum H_ads of –0.27 eV, with composition and site geometry guiding the tuning. The proposed initial candidate domain is designed to maximize novelty within the database constraints and to yield actionable insights across 10 iterative loops.

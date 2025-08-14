@@ -1,0 +1,73 @@
+가설 수정 결과: Below is a streamlined, data-driven update to your hypothesis, followed by a concrete, non-duplicate plan you can hand to your intern. I’ve kept the synthesis faithful to the provided results and the database constraints (non-duplicate, hollow/top/bridge adsorption sites, compositions summing to 1.0).
+
+1) Updated hypothesis (Version 4) — grounded in the latest simulation results
+
+- Hollow-site 0.50/50 domain remains the most productive region for approaching E_H ≈ -0.27 eV, with Ir-based hollow pairs showing the strongest, most consistent hits to date.
+  - The only explicitly reported 0.50/50 hollow hit near -0.27 eV is Ir–Ni at about -0.276 eV (Ir–Ni–0.50–0.50–hollow: -0.2756 eV).
+  - Other Ir-based 0.50/50 hollow combinations in the current data either lack a result or do not approach -0.27 as closely as Ir–Ni (e.g., Ir–Zn/Ir–Fe in 0.50/50 hollow have not yet shown a near-target value in the provided results).
+- Rh-based hollow 0.50/50 domain
+  - The 0.75/25 hollow results show occasional proximity to -0.27 eV (e.g., Rh–Zn 0.75/25 hollow ≈ -0.255 eV; Rh–Ni 0.75/25 hollow is strongly off-target at -0.346 eV; Rh–Fe 0.75/25 hollow ≈ -0.323 eV).
+  - 0.50/50 Rh–Ni hollow is not represented with a valid candidate in the current results (tests returned “no candidate” for Rh–Ni 0.50/50 hollow). Thus, Rh–Ni 0.50/50 hollow remains unconfirmed/non-duplicate for exploration, but current evidence suggests it is not a high-probability path unless non-duplicate data exist in your DB.
+- Pt- and Pd-based 0.50/50 hollow domain
+  - The 0.50/50 hollow domain shows few near-target hits; notable near-target hits absent in this domain. Some 0.75/25 hollow cases (e.g., Pt–Cu, Pd–Ni) wander toward -0.27 but with limited reliability.
+  - Pd–Zn 0.50/50 hollow yields a positive E_H (0.2641 eV), i.e., not near target.
+- Site dependence
+  - Hollow remains the most promising site for near-target E_H; top/bridge generally provide broader distributions with fewer near-target hits in the current tested domain.
+- 0.75/25 hollow results
+  - Tend to approach -0.27 eV more often for Ir and Rh variants (e.g., Ir–Zn, Ir–Fe, Rh–Zn) than the 0.50/50 domain, but with lower probability of hitting exactly -0.27 and more variability across metal1/metal2.
+- Bottom-line update
+  - The most robust, non-duplicated near-target candidate in hollow 0.50/50 remains Ir–Ni. Rh-based 0.50/50 hollow candidates look less favorable given current data (with the caveat that untested, non-duplicate Rh–Zn or Rh–Fe 0.50/50 hollow possibilities could alter the picture if present in the DB). Pt/Pd 0.50/50 hollow paths appear less promising in terms of reaching -0.27 eV.
+
+2) Clear, testable predictions from Version 4
+
+- Hollow 0.50/50 with Metal1 ∈ [Ir, Rh] and Metal2 ∈ [Ni, Fe, Zn] will yield E_H within ±0.04 eV of -0.27 eV more often for Ir-based pairs than for Pt/Pd; among Ir-based 0.50/50 hollows, Ir–Ni should give the closest approach to -0.27 eV.
+- Within Ir–X hollow (X ∈ [Ni, Zn, Fe]), Ni will be the strongest candidate if a 0.50/50 hollow Ir–Ni exists (consistent with current Ir–Ni data). Zn and Fe, if present in 0.50/50 hollow, should cluster near -0.27 but with slightly larger deviations (depends on DB entries).
+- Rh-based 0.50/50 hollow hits near -0.27 eV will be rarer and more scattered than Ir-based 0.50/50 hollow hits, assuming the DB contains no new untested Rh–Zn/Rh–Fe 0.50/50 hollow entries.
+- Pt- and Pd-based 0.50/50 hollow combinations will show few to no near-target hits, given current observations.
+- Top and bridge sites should continue to underperform relative to hollow for near-target hits in the current domain, with occasional outliers.
+- 0.75/25 hollow tests can approach -0.27 eV for some Ir/Fe or Ir/Zn and Rh/Zn variants, but with lower probability than the 0.50/50 Ir–Ni pathway.
+
+3) Practical, non-duplicate next steps for the intern (execution-oriented)
+
+- Objective: identify the next non-duplicate hollow 0.50/50 candidates (and, if needed, select non-duplicate 0.75/25 candidates) that exist in the provided DB and have not yet been tested in the specified hollow domain.
+
+- Step 1: Compile a non-duplicate set of hollow 0.50/50 candidates within the updated domain
+  - Target priority (in order of likelihood, based on current data): 
+    - Ir–Zn–0.50–0.50–hollow (if present in DB and not yet tested)
+    - Ir–Fe–0.50–0.50–hollow (if present in DB and not yet tested)
+    - Rh–Zn–0.50–0.50–hollow (if present in DB and not yet tested)
+    - Rh–Fe–0.50–0.50–hollow (if present in DB and not yet tested)
+  - If any of the above entries do exist in the DB and have not been tested in hollow 0.50/50, proceed to test them in the strict hollow 0.50/50 geometry.
+
+- Step 2: Contingent pivots if Step 1 yields no new untested 0.50/50 hollow candidates
+  - Move to 0.75/25 hollow domain with new, non-duplicated pairs that exist in the DB (e.g., Ir–Zn 0.75/25 hollow, Ir–Fe 0.75/25 hollow, Rh–Zn 0.75/25 hollow, etc.), focusing on those not previously tested in 0.75/25 hollow.
+  - If there are still untested 0.50/50 hollow Ir–Ni or Ir–Zn or Ir–Fe variants in DB, re-check whether they truly count as duplicates (i.e., exactly the same Metal1, Metal2, composition, and site). If they are duplicates, skip.
+
+- Step 3: Site-variation tests (non-duplicate entries)
+  - For newly identified Rh–Ni or Ir–Ni 0.50/50 hollow candidates (if the DB later provides non-duplicate variants), consider top or bridge site tests to validate site dependence, but only where non-duplicate entries exist.
+
+- Step 4: Data capture protocol
+  - For every test, record:
+    - E_H (in eV)
+    - Deviation from -0.27 eV: |E_H + 0.27|
+    - Adsorption site (hollow/top/bridge)
+    - Metal1, Metal2
+    - Composition (e.g., 0.50/0.50)
+    - Exact DB entry ID (for traceability)
+    - Any notable anomalies or distribution characteristics (e.g., broad spread, outliers)
+
+- Step 5: Knowledge-base update cadence
+  - After each test, append the result to the knowledge base with a concise note on whether it supports, contradicts, or is inconclusive with respect to Version 4 hypotheses.
+  - Use the new results to drive the next refinement cycle (Iterative Refinement).
+
+- Step 6: Optional compact deliverable
+  - If you want, I can draft a compact, executable plan listing the exact non-duplicate candidate IDs to test next (e.g., Rh–Zn 0.50/50 hollow, Rh–Fe 0.50/50 hollow, Ir–Zn 0.50/50 hollow, Ir–Fe 0.50/50 hollow, etc.), plus a short checklist to ensure consistent documentation and rapid knowledge-base updates. I’ll tailor the IDs precisely to the DB you share.
+
+4) Quick operational notes
+
+- Given the current data, Ir–Ni 0.50/50 hollow is the standout near-target hit; prioritize confirming and expanding the Ir–Ni space only if you identify new, non-duplicate Ir–Ni hollow entries in the DB.
+- Rh-based 0.50/50 hollow candidates appear less promising in the available results; only test them if the DB confirms untested, non-duplicate entries that could alter the trend.
+- Pt/Pd 0.50/50 hollow paths show minimal near-target hits; consider deprioritizing unless a specific non-duplicate Pt/Pd 0.50/50 hollow candidate exists with compelling DB-supported rationale.
+- Keep top/bridge tests as a supplementary validation only for non-duplicate entries that are strong candidates in hollow; the current data suggests hollow dominates for near-target hits.
+
+If you’d like, I can draft the exact, executable candidate IDs for the next round (Rh–Zn 0.50/50 hollow, Rh–Fe 0.50/50 hollow, Ir–Zn 0.50/50 hollow, Ir–Fe 0.50/50 hollow, etc.) once you provide a precise dump or listing of the untested, non-duplicate DB entries. I’ll also provide a tight one-page checklist to accelerate data capture and knowledge-base updates.

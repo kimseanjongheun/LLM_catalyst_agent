@@ -1,0 +1,121 @@
+가설 수정 결과: Thank you — I’ve reviewed the new simulation outputs and updated the hypothesis, evidence, interpretations, and a focused next-plan for the intern. I keep the “no-duplicates / DB-check first” constraints front-and-center.
+
+Summary of new evidence (concise)
+- Pt–Au (0.75:0.25) bridge : Eads = −0.2265 eV → within ±0.05 eV of target (support).
+- Pt–Ag (0.75:0.25) bridge : Eads = −0.2887 eV → within ±0.05 eV (support).
+- Pt–Cu (0.75:0.25) bridge : Eads = −0.2334 eV → within ±0.05 eV (support).
+- Ru–Cu (0.75:0.25) bridge : Eads = −0.2967 eV → within ±0.05 eV (support).
+- Pd–Au (0.75:0.25) bridge : Eads = +0.0327 eV → strongly contradicts expectation (too weak).
+- Pd–Ag (0.75:0.25) bridge : Eads = +0.1106 eV → contradicts (even weaker).
+- Pd–Cu (0.75:0.25) bridge : Eads = −0.0889 eV → contradicts (too weak).
+- Several previously requested entries are absent from DB (many 0.50 hollows, some 0.75 bridges, and some early-TM/top combinations) — intern must check availability before any run.
+
+Interpretation / knowledge accumulated
+- Robust confirmations:
+  - Pt0.75 + late weak partner (Au, Ag, Cu) on bridge sites reliably gives Eads ≈ −0.27 eV (within ±0.05 eV) in this DB.
+  - Ru0.75–Cu0.25 bridge also behaves similarly and is an independent validated family.
+- Pd is an outlier:
+  - All tested Pd0.75–(Au/Ag/Cu) bridge cases produce Eads much less negative than target (even positive in two cases). Thus Pd does not follow the simple “moderately-strong binder + weak partner at 0.75, bridge → ≈ −0.27 eV” rule in this data set.
+  - Likely mechanisms (testable): strong Pd d‑band suppression on alloying with late metals; Au/Ag surface segregation or ensemble dilution of Pd bridge sites; local strain/geometric changes that disfavor bridge adsorption on Pd-containing surfaces.
+- Practical rule refined:
+  - For this DB, the “Pt0.75 (or Ru0.75) + late weak metal (Au/Ag/Cu) on bridge” is a reliable recipe.
+  - Pd-containing alloys require dedicated re-evaluation (different sites, compositions, or alternative partners) — do not assume transferability from Pt behavior.
+- Site trend (qualitative) still holds (top weaker, hollow stronger binding), but pair-specific electronic/ensemble effects can dominate.
+
+Modified, testable primary hypothesis (concise)
+- In the available database, selecting a strong/moderately-strong H binder at ~0.75 surface fraction (Pt or Ru) alloyed with a late weak binder (Au, Ag, Cu) and sampling bridge adsorption sites will reliably yield H adsorption energies near −0.27 ± 0.05 eV. Pd-containing alloys, however, systematically deviate toward weaker H binding in the tested 0.75:0.25 bridge configurations; achieving −0.27 eV with Pd will require different partners, higher Pd fraction or different adsorption sites (top/hollow) and is therefore not expected for Pd0.75–(Au/Ag/Cu) bridge entries in this DB.
+
+Immediate testable subpredictions (DB-checkable)
+- Pt0.75–(Au/Ag/Cu), bridge: Eads within ±0.05 eV (Pt–Au/Ag/Cu combos should be checked; Pt–Au/Ag/Cu 0.75 bridges already largely validated).
+- Ru0.75–Cu0.25 bridge remains near −0.27 eV (validated).
+- Pd0.75–(Au/Ag/Cu) bridge entries will NOT be near −0.27 eV (validated for tested cases). Therefore:
+  - Pd with weak partners at other sites (hollow/top) or different compositions may be needed to approach −0.27 eV — these must be tested explicitly.
+- Rh/Ir/Ni0.75 with Cu/Ag/Au (bridge) may emulate Pt/Ru behavior; test where DB entries exist.
+
+Prioritized, practical plan for the intern (strict rules)
+- BEFORE any run: for each candidate check DB for the exact Metal1–Metal2–composition–site entry. If the entry is absent (“조건을 만족하는 후보가 없습니다”), skip it and log absence. Never re-run any previously-tested entry. Log everything.
+- Reporting template (mandatory): Metal1–Metal2–comp–site : Eads (eV); |Eads + 0.27| (eV); supports/contradicts; short note (convergence/geometry issues and suggested checks).
+
+Priority 1 — Consolidate validated families (do not re-run already-run cases)
+(Must-check existence in DB; if absent, pick next item in same bucket)
+- Pt–Cu (0.50:0.50) hollow — test if present (probe whether hollow compensates lower Pt fraction for Pt–Cu family).
+- Pt–Ag (0.50:0.50) hollow — test only if present (was previously reported absent; re-check in case of DB updates).
+- Ru–Cu (0.50:0.50) bridge AND Ru–Cu (0.50:0.50) hollow — composition dependence for Ru–Cu (note: earlier attempts reported these absent; re-check).
+- Pt–(Au/Ag/Cu) at 0.75 bridge are validated — deprioritize re-runs; instead probe Pt0.75 top and Pt0.50 hollow later (see adaptive rules).
+
+Priority 2 — Resolve Pd anomaly (do not re-run Pd0.75–Au/Ag/Cu bridge—they are tested)
+(If any listed candidate is absent, go to next candidate in bucket)
+- Pd–(Ag/Cu/Au) at 0.50:0.50 hollow and Pd0.50 bridge (if available) — test whether site/composition shift brings Pd nearer to −0.27 eV.
+- Pd–(Ag/Cu/Au) at top site (0.75 or 0.50) — test whether switching to weaker-binding top site or different composition corrects the unexpected weakening.
+- If DB contains higher Pd fractions (e.g., 0.85 or surface terminations richer in Pd), test Pd-rich variants; if not available, mark Pd as deprioritized for this target.
+
+Priority 3 — Expand to alternative strong binders (transferability)
+- Rh0.75–(Cu/Ag/Au) bridge — if entries exist (Rh–Ag 0.75 bridge was earlier reported absent; re-check for Rh–Cu, Rh–Au).
+- Ir0.75–(Cu/Ag) bridge — check (Ir–Au 0.75 bridge was earlier absent; re-check other Ir pairs).
+- Ni0.75–(Cu/Ag) bridge — check if DB contains Ni-based entries.
+Goal: determine if Pt/Ru rule transfers to Rh/Ir/Ni.
+
+Priority 4 — Early TMs sanity check (only if DB entries exist and only one or two tests)
+- One early-TM (V/Cr/Mo/Ti) at 0.50 composition on top site with Au/Ag/Cu — confirm over-binding trend and test top-site mitigation. Only test if entry exists and not previously tried.
+
+Adaptive rules (refinement logic)
+- If Pt0.75 family continues to produce near-target values, shift effort away from redundant Pt0.75 bridges to composition/site permutations (Pt0.50 hollow, Pt0.75 top) and to stability checks.
+- If Pd variations (sites/compositions/higher Pd fraction) cannot approach −0.27 eV after 3 different site/composition tests, deprioritize Pd for the −0.27 target and focus on Ru/Rh/Ir families.
+- If Rh/Ir/Ni reproduce Pt/Ru behavior at 0.75 bridges, expand composition scanning there.
+- Always stop exploring a family if >3 distinct entries in that family are validated (|Eads + 0.27| ≤ 0.05 eV); redirect resources to other families.
+
+Mechanistic follow-ups (if a run contradicts expectations)
+- For any unexpected weak-binding (especially Pd cases), request:
+  - Site-resolved PDOS (projected d‑DOS for surface metal atoms at the adsorption site).
+  - A surface segregation / composition check (is the weak partner enriched at the outermost layer in the relaxed structure?).
+  - Adsorption geometry & bond lengths and surface relaxation analysis (check whether ensemble geometry changed the intended bridge site).
+These can diagnose whether electronic (d‑band shift), ensemble (missing active atoms), or geometric (strain/relaxation) effects cause anomalies.
+
+Updated short knowledge-base (additions)
+- New validated entries:
+  - Pt–Au (0.75) bridge → −0.2265 eV (near-optimal).
+  - Pt–Ag (0.75) bridge → −0.2887 eV (near-optimal).
+  - Pt–Cu (0.75) bridge → −0.2334 eV (near-optimal).
+  - Ru–Cu (0.75) bridge → −0.2967 eV (near-optimal).
+- New negative evidence (Pd anomalies):
+  - Pd–Au (0.75) bridge → +0.0327 eV (unexpectedly weak).
+  - Pd–Ag (0.75) bridge → +0.1106 eV (unexpectedly weak).
+  - Pd–Cu (0.75) bridge → −0.0889 eV (too weak).
+- Several requested 0.50-hollow and some 0.75-bridge entries missing in DB — always verify availability before prescribing.
+
+Concrete instructions to the intern (copy/paste friendly)
+1. For each candidate below, query DB for exact Metal1–Metal2–composition–site. If absent, report “ABSENT” and immediately pick the next candidate from the same priority bucket.
+2. Do not run any of these tested entries again: Pt–Au 0.75 bridge; Pt–Ag 0.75 bridge; Pt–Cu 0.75 bridge; Ru–Cu 0.75 bridge; Pd–(Au/Ag/Cu) 0.75 bridges.
+3. For each new run, return: Metal1–Metal2–comp–site : Eads (eV); deviation |Eads + 0.27|; supports/contradicts; 1-line note (geometry/convergence/segregation flag).
+4. If a run contradicts expectations, attach (if available) the relaxed adsorption geometry and note whether surface composition changed (outermost layer composition), and request PDOS of the surface atoms at the adsorption site.
+
+Suggested candidate list (ordered — check DB first; skip absent entries)
+Priority 1 candidates (consolidation)
+- Pt–Cu (0.50:0.50) hollow — if present
+- Pt–Ag (0.50:0.50) hollow — if present (note earlier absence; re-check)
+- Ru–Cu (0.50:0.50) bridge — if present
+- Ru–Cu (0.50:0.50) hollow — if present
+
+Priority 2 candidates (Pd-focused: test site & composition)
+- Pd–Ag (0.50:0.50) hollow — if present
+- Pd–Cu (0.50:0.50) hollow — if present
+- Pd–Ag (0.75 or 0.50) top — if present
+- Pd–Cu (0.75 or 0.50) top — if present
+- Pd–Au (0.50:0.50) hollow or top — if present
+- Higher-Pd-fraction entries (if DB contains >0.75 fractions for Pd surfaces) — test one such entry at bridge or hollow.
+
+Priority 3 candidates (transferability — Rh/Ir/Ni)
+- Rh–Cu (0.75:0.25) bridge — if present
+- Rh–Ag (0.75:0.25) bridge — if present (was earlier reported absent; re-check)
+- Ir–Cu (0.75:0.25) bridge — if present
+- Ni–Cu (0.75:0.25) bridge — if present
+- Ir–Ag (0.75:0.25) bridge — if present
+
+Priority 4 (one early TM sanity check)
+- Mo–Cu (0.50:0.50) top OR V–Cu (0.50:0.50) top — if present (only one test to confirm overbinding trend)
+
+Would you like me to:
+(A) produce a compact, copy/paste candidate query list that the intern can use to batch-check DB availability (I will mark “MUST-CHECK” entries and alternatives), or
+(B) immediately assume these entries exist and produce a fully ordered run-list (I will annotate which runs are conditional on DB presence)?
+
+I recommend (A): generate the compact availability-check list first so the intern can quickly prune absent entries before any compute is launched. Which do you prefer?

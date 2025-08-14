@@ -1,0 +1,107 @@
+가설 수정 결과: Summary of what I changed (short)
+- Incorporated the full new outputs (Pt–Ir/Pt–Rh bridge & hollow; Pd–Ag hollow; Pd–Au hollow), updated conclusions where they contradict prior expectations (notably Pd–Ag hollow is a hit and Pt–Ir shows strong site dependence), and expanded the “do not resubmit” list to include the newly-tested entries. I tightened hypotheses and the next-test priorities to avoid duplicates and to require a DB pre-check before any submission.
+
+1) Key facts (concise, from the new runs)
+- Pt–Au 0.75:0.25: top −0.2787 eV (hit), bridge −0.2265 eV, hollow −0.2532 eV — site-robust near −0.27 eV.
+- Pt–Ag 0.75:0.25: top −0.2799 eV (hit), bridge −0.2887 eV, hollow −0.3025 eV — robust, slightly stronger at bridge/hollow.
+- Pt–Cu 0.75:0.25: top +0.7323 eV (very weak), bridge −0.2334 eV (hit), hollow −0.1527 eV — strong site dependence.
+- Pt–W: 0.50 hollow ≈ +0.0031 eV, 0.50 top = −0.0980 eV, 0.75 top = −0.2933 eV (hit), 0.75 hollow = +0.1214 eV — top strengthens with Pt fraction; hollow non-monotonic.
+- Co–Pt 0.75:0.25: hollow −0.3057 eV (hit); top/bridge much weaker — hollow improves with Pt fraction.
+- Pd systems: Pd–Au 0.75:0.25 bridge +0.0327 eV, hollow −0.1844 eV; Pd–Ag 0.75:0.25 top +0.2064 eV, bridge +0.1106 eV, hollow −0.2911 eV (hit). Pd alloys can hit by site selection even at Pd-poor compositions.
+- Pt–Ir 0.75:0.25: top −0.4133 eV (strong overbind), bridge −0.1481 eV, hollow −0.1384 eV — large site dependence: top overbinds, bridge/hollow are much less negative.
+- Pt–Rh 0.75:0.25: top −0.0714 eV, bridge −0.1914 eV, hollow −0.1776 eV — site-dependent trend toward more negative values at bridge/hollow but not yet at −0.27 eV.
+
+2) Updated knowledge (concise)
+- Pt diluted with Au/Ag at Pt-rich 0.75:0.25 remains a robust, site-insensitive lever to ΔG_H ≈ −0.27 eV.
+- Pd–Ag (0.75:0.25) hollow is a hit (−0.2911 eV): Pd-based alloys can reach the target at Pd-poor compositions if the correct adsorption ensemble is present.
+- Pt–Ir exhibits extreme site sensitivity: the top ensemble strongly overbinds while bridge/hollow at the same composition are appreciably weaker (not overbinding). Site selection/ensemble must be explicitly mapped for Ir.
+- Pt–Rh moves from weak at top to moderately negative at bridge/hollow; composition tuning could place a site into the target window.
+- Cu/W/Co partners remain powerful tuners but frequently non-monotonic; small composition or ensemble changes can shift ΔG_H by several 0.1 eV.
+
+3) Revised primary hypothesis (concise)
+- Pt diluted by Au or Ag at Pt-rich 0.75:0.25 is a reliable route to ΔG_H ≈ −0.27 eV across ensembles. Pd alloys can also reach the target at Pd-poor compositions provided the correct adsorption ensemble exists (example: Pd–Ag hollow). Neighbors of Pt (Ir, Rh) show large, site-specific deviations: Ir overbinds for top ensembles but bridge/hollow are far less negative; Rh is weak at top but approaches the target at bridge/hollow. Non-monotonic partners (Cu, W, Co) require fine mapping of composition vs site.
+
+4) Refined, testable sub-hypotheses (updated)
+A. Pt–Au / Pt–Ag families
+- H1A: At 0.75:0.25 these families will remain within ±0.05 eV of −0.27 eV on at least two adsorption sites; they are robust to ensemble variation within ±0.10 eV.
+
+B. Pt–Cu family
+- H1B: Bridge sites in Pt–Cu 0.75:0.25 are robust hits; top sites are strongly positive at 0.75:0.25 and should become more negative with increased Pt fraction (if DB compositions allow).
+
+C. Pt–W family
+- H1C: Pt–W top ensembles strengthen monotonically (more Pt → more negative ΔG_H); hollow ensembles are non-monotonic and can flip sign with small composition changes — both must be explicitly mapped where DB compositions exist.
+
+D. Co–Pt family
+- H1D: Co–Pt hollow at Pt-rich compositions is a repeatable hit (seen at 0.75:0.25); there exists a Pt-fraction window where hollow is optimal while top/bridge remain too weak.
+
+E. Pt–Ir / Pt–Rh families (updated)
+- H1E1 (Ir): For Pt–Ir 0.75:0.25, top ensembles will overbind strongly; bridge and hollow will be significantly less negative (often too weak). Therefore Pt–Ir may only be viable if the available surface ensembles avoid top-like Pt ensembles or if composition pushes bridge/hollow toward the target.
+- H1E2 (Rh): Pt–Rh shows site-dependent strengthening from top→bridge/hollow; at some Pt-rich composition (if available) bridge/hollow may reach −0.27 eV — composition sweep needed.
+
+F. Pd–Au / Pd–Ag families (updated)
+- H1F: Pd–Ag hollow at 0.75:0.25 can produce ΔG_H ≤ −0.29 eV (observed); other Pd alloy ensembles will be strongly site-dependent and some may require Pd-rich compositions, but do not assume Pd-poor compositions are always non-performing.
+
+5) Prioritized, no-duplicate next-testing plan (hard constraints: do not resubmit tested candidates; pre-check DB)
+Operational rule (repeat): Before submission the intern MUST query the DB for exact availability of metal pair/composition/site. If exact composition/site is unavailable, choose the nearest available composition and log the substitution explicitly. Never resubmit an exact metal/composition/site already run.
+
+Priority 1 — Exploit the new Pd–Ag hollow hit (map local window)
+Rationale: Pd–Ag hollow (0.75:0.25) is −0.2911 eV — this is a new promising Pd-family hit; map the composition & site window.
+- If available in DB, request Pd–Ag at other compositions (e.g., 0.67:0.33, 0.90:0.10 or any Pd-richer entries), hollow first, then bridge/top. Pre-check DB; do not submit duplicates.
+- If Pd–Ag composition variants are not available, request Pd-rich Pd–Ag entries nearest in DB and test hollow ensemble.
+
+Priority 2 — Refine Pt–Rh composition dependence (bridge/hollow approached target)
+Rationale: Pt–Rh bridge/hollow (0.75:0.25) trend toward the target; composition sweep may capture a hit.
+- If DB contains Pt–Rh at nearby compositions (0.67:0.33, 0.90:0.10, 0.50:0.50), test bridge and hollow first (top is known weak). Only request compositions/sites present in DB; log substitutions.
+
+Priority 3 — Re-assess Pt–Ir ensemble behavior (avoid top ensemble or change composition)
+Rationale: Pt–Ir top overbinds strongly; bridge/hollow are weak — need to know whether composition or ensemble control can yield −0.27 eV.
+- If DB has Pt–Ir at other compositions (e.g., lower Pt fraction), test bridge/hollow and top if available (bridge/hollow expected less negative; composition may tune them).
+- If no other compositions exist, deprioritize Pt–Ir unless surface ensemble selection/adsorbate geometry can be enforced experimentally.
+
+Priority 4 — Local composition/site mapping for non-monotonic partners (Pt–W, Pt–Cu, Co–Pt)
+Rationale: These families showed non-monotonic tuning; test nearest available alternate compositions in DB (0.67:0.33, 0.90:0.10).
+- If DB has Pt–W 0.67/0.90: test top and hollow (one composition at a time).
+- If DB has Pt–Cu 0.67/0.90: test bridge and top.
+- If DB has Co–Pt 0.67/0.90: test hollow only (to map hollow vs Pt fraction).
+
+Strict duplicate avoidance: Do NOT request any of the exact metal/composition/site combinations already tested (see updated tested list below).
+
+6) Required reporting per run (mandatory)
+For every simulation run produce a one-line record with:
+- exact DB ID (metal1–metal2–composition–site as returned by DB),
+- ΔG_H (eV),
+- deviation from −0.27 eV (eV),
+- one-line interpretation linking the result to the hypothesis/sub-hypothesis,
+- if substitution used (nearest composition/site), log what was requested vs what DB provided and why,
+- if candidate is already tested, DO NOT RUN and log the duplicate check.
+
+7) Decision guidance (post-batch)
+- If Pd–Ag composition variants keep hollow ≤ −0.27 eV, promote Pd–Ag hollow to high-priority family for experimental follow-up.
+- If Pt–Rh bridge/hollow reach or cross −0.27 eV at any nearby composition, expand Pt–Rh mapping narrowly (0.05 composition steps if available).
+- If Pt–Ir bridge/hollow remain near −0.14–−0.15 eV and top stays overbound, deprioritize Pt–Ir for HER at accessible compositions.
+- If a narrow composition window yields hits for Pt–W / Pt–Cu / Co–Pt, plan finer composition sampling at that site only (0.05 steps) if DB supports it.
+
+8) One-line carry-forward hypothesis
+- Pt–Au/Ag (0.75:0.25) remain robust routes to ΔG_H ≈ −0.27 eV; Pd–Ag hollow is an unexpected Pd-poor hit indicating Pd alloys can reach the target by ensemble selection; Pt–Ir overbinds for top ensembles while bridge/hollow are significantly weaker; Pt–Rh approaches the target at bridge/hollow and merits composition sweep; Cu/W/Co partners require fine ensemble/composition mapping due to non-monotonic behavior.
+
+9) Updated tested candidates to avoid (do not resubmit)
+(Include previously listed items plus newly completed runs)
+- Pt–Au 0.75:0.25 (top, bridge, hollow)
+- Pt–Ag 0.75:0.25 (top, bridge, hollow)
+- Pt–Cu 0.75:0.25 (top, bridge, hollow)
+- Pt–W 0.50:0.50 (top, hollow)
+- Pt–W 0.75:0.25 (top, hollow)
+- Co–Pt 0.75:0.25 (top, bridge, hollow)
+- Co–Pt 0.50:0.50 hollow
+- Pd–Ag 0.75:0.25 (top, bridge, hollow)
+- Pd–Au 0.75:0.25 (top, bridge, hollow)
+- Pt–Ir 0.75:0.25 (top, bridge, hollow)
+- Pt–Rh 0.75:0.25 (top, bridge, hollow)
+- (Also avoid resubmitting any composition/site that previously returned “no candidate available” unless DB has been updated and pre-check confirms availability.)
+
+Next step — pick output format for the intern
+Would you like:
+A) An ordered job submission list with exact DB-prechecked filenames (I will verify availability and adjust compositions before finalizing), or
+B) A concise Excel-style run-log template (metal1, metal2, comp, site, ΔG_H, deviation, short comment) for the intern to populate?
+
+Pick A or B and I will produce the deliverable.

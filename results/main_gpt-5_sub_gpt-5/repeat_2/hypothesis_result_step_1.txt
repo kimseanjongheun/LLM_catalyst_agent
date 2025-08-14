@@ -1,0 +1,24 @@
+Hypothesis: Tuning H adsorption toward –0.27 eV on bimetallic alloys is most effectively achieved by pairing strong H-binding late transition metals with weak-binding coinage or noble metals and selecting mixed-ensemble sites (bridge/hollow) that expose both metals. Specifically:
+
+1) Strong-binder primary diluted by weak-binder secondary (ensemble averaging):
+- Metal combination: Metal1 ∈ [Ni, Co, Fe, Ru] with Metal2 ∈ [Cu, Ag, Au, Zn]
+- Composition: Metal1_Composition = 0.75, Metal2_Composition = 0.25
+- Site: bridge sites spanning one Metal1 atom and one Metal2 atom (mixed bridge)
+Prediction: The ligand/ensemble effect downshifts the d-band of the strong-binding Metal1 and weakens H binding from too-strong toward –0.27 eV; mixed bridge sites will most frequently yield adsorption energies closest to –0.27 eV in this family.
+
+2) Noble/near-optimal primary strengthened by a small fraction of early strong-binders:
+- Metal combination: Metal1 ∈ [Pt, Pd, Rh, Ir] with Metal2 ∈ [Mo, W]
+- Composition: Metal1_Composition = 0.75, Metal2_Composition = 0.25
+- Site: hollow sites on mixed three-atom ensembles containing both metals
+Prediction: Incorporating Mo/W slightly strengthens H binding on noble-metal surfaces; mixed hollow sites will tune adsorption toward –0.27 eV more effectively than top sites on the noble atom (which remain too weak) or bridges without Mo/W participation.
+
+3) Weak-binder primary requires larger fraction of strong-binder and higher-coordination sites:
+- Metal combination: Metal1 ∈ [Cu, Ag, Au, Zn] with Metal2 ∈ [Ni, Co, Fe, Ru, Mo, W]
+- Composition: Metal1_Composition = 0.50, Metal2_Composition = 0.50
+- Site: hollow sites involving at least one Metal2 atom
+Prediction: Increasing the fraction of the strong-binder and using hollow sites compensates for intrinsically weak H binding on coinage/post-transition primaries, pulling adsorption energies down toward –0.27 eV.
+
+Cross-cutting, testable site trend across the database:
+- For mixed-metal surfaces, mixed bridge sites will most often be closest to –0.27 eV, followed by mixed hollow sites; top sites on coinage primaries will generally be too weak, while top sites on strong-binder primaries will often be too strong.
+
+These statements are testable within the database by filtering allowed Metal1/Metal2 pairs, the two composition options (0.75/0.25 and 0.50/0.50), and the three site types to find entries whose predicted H adsorption energies cluster nearest –0.27 eV, with priority given to the site/composition regimes specified above.

@@ -1,0 +1,63 @@
+가설 수정 결과: Revised hypothesis (v2) based on the new simulation data
+
+What held:
+- Site trend is reasonable: hollow remains the strongest H-binding site class for these fcc-like bimetallics (consistent with needing bridge to weaken slightly when hollow is just a bit too strong).
+- 25% coinage dilution of Pt-group hosts can place ΔG_H near the −0.27 eV target at hollow sites for certain diluents:
+  - Pt–Ag (0.75/0.25, hollow: −0.3025 eV), Pt–Au (−0.2532 eV), Pd–Ag (−0.2911 eV), Rh–Cu (−0.2303 eV) all fall within ±0.05 eV of the target.
+
+What needs correction/refinement:
+- Diluents are not interchangeable. For noble/late-4d hosts (Pt, Pd), Cu over-weakens hollow-site H binding at 25% dilution, while Ag and Au are better tuners.
+  - Pt–Cu (0.75/0.25, hollow: −0.1527 eV) and Pd–Cu (−0.1589 eV) are too weak, contradicting the original expectation that 25% Cu would land in −0.32 to −0.22 eV.
+  - Relative weakening effect (on hollow) for Pt host appears Cu > Au > Ag (Cu gives the weakest binding; Ag maintains the strongest among coinage diluents).
+- For strong 3d hosts (Ni, Co), 25% Cu does not sufficiently weaken hollow-site binding; even 50% Cu for Co remains slightly too strong:
+  - Ni–Cu (0.75/0.25, hollow: −0.3830 eV), Co–Cu (−0.3832 eV) are too strong; Co–Cu (0.50/0.50, hollow: −0.3274 eV) weakens by only ~0.056 eV from 0.75→0.50, smaller than the originally posited 0.1–0.2 eV.
+  - Therefore, tuning Ni/Co with Cu requires either higher Cu fractions (>0.5) and/or moving to weaker sites (bridge/top).
+
+Updated, testable statements:
+- Pt/Pd hosts:
+  - 25% Ag or Au dilution is optimal at hollow; when ΔG_H is slightly too strong at hollow (e.g., Pt–Ag, Pd–Ag), bridge should tune toward −0.27 eV by +0.02 to +0.08 eV.
+  - 25% Cu over-weakens; avoid Pt–Cu and Pd–Cu at hollow for targeting −0.27 eV. If forced to use Pt–Cu/Pd–Cu, increasing the strong-metal fraction beyond 0.75 (if available) would be needed; changing to bridge/top will only weaken further.
+- Rh host:
+  - 25% Cu already places hollow near target; modest strengthening (beyond hollow) would require higher Rh content (if available) or different coinage diluent (Ag predicted to strengthen vs Cu at the same loading).
+- Ni/Co hosts with Cu:
+  - 25% Cu is insufficient; 50% Co–Cu hollow is still slightly too strong. Bridge should land closer to −0.27 eV; top could overshoot to too weak.
+  - Composition-induced weakening from 0.75→0.50 on hollow is modest (~0.06 eV for Co–Cu), smaller than initially assumed; site choice is a more effective lever here than further equiatomic dilution.
+
+Knowledge accumulated from these runs:
+- Pt-Ag 0.75 hollow: −0.3025 eV (slightly strong; bridge likely optimal)
+- Pt-Au 0.75 hollow: −0.2532 eV (slightly weak; already within ±0.05; no site available stronger than hollow)
+- Pt-Cu 0.75 hollow: −0.1527 eV (too weak; Cu over-weakens Pt at hollow)
+- Pd-Ag 0.75 hollow: −0.2911 eV (slightly strong; bridge likely optimal)
+- Pd-Cu 0.75 hollow: −0.1589 eV (too weak; same trend as Pt)
+- Rh-Cu 0.75 hollow: −0.2303 eV (slightly weak; near target)
+- Ni-Cu 0.75 hollow: −0.3830 eV (too strong)
+- Co-Cu 0.75 hollow: −0.3832 eV (too strong)
+- Co-Cu 0.50 hollow: −0.3274 eV (still slightly strong; composition effect smaller than expected)
+
+Next experiments for the intern (no duplicates; choose from listed pairs; adjust if database availability differs)
+Goal: Nudge near-miss systems onto ΔG_H ≈ −0.27 eV and validate site-scaling.
+
+Priority set A: tune slightly-too-strong hollow cases by moving to bridge
+- Pt-Ag-0.75-0.25-bridge
+- Pd-Ag-0.75-0.25-bridge
+- Pt-Au-0.75-0.25-bridge (diagnostic; may move away from target but quantifies site shift magnitude on Pt–Au)
+
+Priority set B: weaken too-strong Ni/Co–Cu hollow via site
+- Co-Cu-0.50-0.50-bridge
+- Co-Cu-0.50-0.50-top
+- Ni-Cu-0.75-0.25-bridge
+- Ni-Cu-0.75-0.25-top
+- If available: Ni-Cu-0.50-0.50-bridge (the hollow at 0.50 was unavailable; bridge may still exist)
+
+Exploratory (only if present in the database; do not duplicate prior runs)
+- Rh-Ag-0.75-0.25-hollow (hypothesis: stronger vs Rh–Cu at same loading; may bring −0.2303 eV closer to −0.27 via increased binding strength)
+- Pt-Ag-0.50-0.50-bridge (if hollow at 0.50 is too weak, bridge may recover toward target; helps map composition–site interplay)
+
+How results will refine the hypothesis:
+- If Pt-Ag/Pd-Ag bridge at 0.75 lands at −0.27 ± 0.02 eV, we will codify a practical rule: for noble hosts, use Ag/Au at 25% and select bridge when hollow is −0.30 ± 0.02 eV.
+- If Co–Cu 0.50 bridge gives −0.27 ± 0.03 eV, we will emphasize site over composition as the primary tuning lever for 3d-coinage systems.
+- If Ni–Cu 0.75 bridge remains too strong (< −0.33 eV), we will expand the search to higher Cu content or consider Ag as the diluent (database permitting).
+
+Summary of the revised working model:
+- Preferred diluents depend on the host: Cu is too weakening for Pt/Pd at 25% on hollow; Ag and Au are effective tuners. For Ni/Co, 25% Cu is insufficient; site choice (bridge/top) is essential and equiatomic may still need site tuning.
+- Expect hollow > bridge > top in binding strength; use bridge to nudge slightly-too-strong hollows toward −0.27 eV; use top cautiously to avoid overshooting to too weak.

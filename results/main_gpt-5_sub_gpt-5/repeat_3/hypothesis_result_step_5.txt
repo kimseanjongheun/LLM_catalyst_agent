@@ -1,0 +1,58 @@
+가설 수정 결과: Revised hypothesis (v4), grounded in the new results
+
+Key corrections/updates to v3:
+- Pd–W: Equiatomic hollow is near-optimal, not overbinding. Pd–W-0.50/0.50-hollow = −0.2766 eV, while Pd–W-0.50/0.50-bridge = −0.657 eV. Thus, at 0.50/0.50 the site hierarchy flips: hollow is much weaker than bridge. The prior rule “higher coordination at 0.50/0.50 overbinds” is overgeneralized—bridge does, hollow does not.
+- Pd–W composition–site coupling is non-monotonic. At Pd-rich (0.75/0.25), site sensitivity is weak (top ≈ hollow, both slightly too strong). At 0.50/0.50, site sensitivity is strong and inverted (hollow ≫ weaker than bridge). We hypothesize a convex composition dependence for hollow with a minimum (weakest binding) near equiatomic, and re-strengthening toward the W-rich extreme.
+- Co–Mo: The strong site bifurcation is reaffirmed. Top is too weak (positive), bridge/hollow overbind across compositions tested; unlikely to hit −0.27 eV within available entries.
+- Ir–Au: Coordination compensation holds (0.75/0.25 hollow near target, top too weak). Database coverage still caps composition tuning.
+
+Updated site/composition logic:
+- S–R binaries (S ∈ [Pd, Co], R ∈ [W, Mo]):
+  - 0.50/0.50 bridge systematically overbinds (e.g., Pd–W = −0.657 eV; Co–Mo = −0.483 eV).
+  - Pd–W: 0.75/0.25 shows weak site sensitivity; 0.50/0.50 shows strong site inversion with hollow weakened to near thermoneutral. Composition primarily sets the baseline; site can either modulate weakly (Pd-rich) or dominate (equiatomic).
+  - Co–Mo: Top too weak; bridge/hollow too strong across tested compositions; deprioritize for target.
+- Strong S diluted with coinage (Ir–Au): Hollow rescues binding at fixed composition; further composition tuning likely to reach −0.27 eV, but is DB-limited.
+
+Refined, testable predictions (updated ranges):
+- Pd–W:
+  - 0.50/0.50-hollow (observed): −0.277 eV (near-optimal).
+  - 0.25/0.75-hollow (if present): re-strengthening expected, ≤ −0.40 eV.
+  - 0.25/0.75-top (if present): −0.35 to −0.55 eV.
+  - 0.75/0.25-bridge (if present): −0.34 to −0.42 eV (slightly stronger than hollow at same composition).
+- Co–Mo:
+  - 0.25/0.75-top (if present): ≥ +0.25 eV (weak).
+  - 0.25/0.75-hollow (if present): ≤ −0.60 eV (strong).
+- Coinage dilution generalization (if entries exist):
+  - Rh–Au-0.75/0.25-hollow: −0.28 to −0.36 eV.
+  - Ir–Ag-0.75/0.25-hollow: −0.30 to −0.38 eV.
+
+Knowledge accumulated this iteration:
+- Discovery: Pd–W at equiatomic composition exhibits a hollow-site “soft spot” that weakens H* adsorption to near thermoneutral, despite the bridge dramatically overbinding at the same composition. Hence, “higher coordination strengthens binding” is pair- and composition-specific.
+- Confirmation: Co–Mo maintains extreme site bifurcation (top weak, multi-fold strong) across compositions tested.
+- Constraint: Ir–Au coordination-compensation remains valid but is bottlenecked by DB coverage.
+
+Guidance to the intern: next candidates to probe (no duplicates; query only if present)
+Do not repeat any previously tested entries:
+- Ir–Au-0.75/0.25-top; Ir–Au-0.75/0.25-hollow
+- Pd–W-0.75/0.25-top; Pd–W-0.75/0.25-hollow; Pd–W-0.50/0.50-bridge; Pd–W-0.50/0.50-hollow
+- Co–Mo-0.50/0.50-top/bridge/hollow; Co–Mo-0.75/0.25-top/hollow
+
+Priority A: Consolidate around the Pd–W optimum and map the convexity
+1) Pd–W-0.25/0.75-hollow (Metal1 = Pd) — predicted ≤ −0.40 eV.
+2) Pd–W-0.25/0.75-top (Metal1 = Pd) — predicted −0.35 to −0.55 eV.
+
+Priority B: Close the Co–Mo branch (for completeness)
+3) Co–Mo-0.25/0.75-top (Metal1 = Co) — predicted ≥ +0.25 eV.
+4) Co–Mo-0.25/0.75-hollow (Metal1 = Co) — predicted ≤ −0.60 eV.
+
+Priority C: Test generality of “coinage dilution + hollow” beyond Ir–Au
+5) Rh–Au-0.75/0.25-hollow (Metal1 = Rh) — predicted −0.28 to −0.36 eV.
+6) Ir–Ag-0.75/0.25-hollow (Metal1 = Ir) — predicted −0.30 to −0.38 eV.
+
+How these tests will falsify v4:
+- If Pd–W-0.25/0.75-hollow does not re-strengthen (< −0.40 eV) and instead remains ≈ −0.28 to −0.35 eV, the proposed convex composition dependence for hollow is invalid; site weakening may persist into W-rich regimes.
+- If Pd–W-0.25/0.75-top is not substantially stronger than −0.33 eV, the assumption that W-rich compositions generally strengthen binding at all sites is incorrect.
+- If Rh–Au or Ir–Ag hollows (C5–C6) lie outside −0.28 to −0.38 eV (e.g., >0 eV or ≪ −0.40 eV), the “coinage dilution + high coordination” principle does not generalize; coinage identity and specific electronic/ensemble effects must be reweighted.
+- If Co–Mo-0.25/0.75-top/hollow do not maintain the weak/strong split, Co–Mo’s site response is more composition-dependent than inferred.
+
+Note: We have identified a near-optimal catalyst already in the database: Pd–W-0.50/0.50-hollow (−0.2766 eV). Further tests above are to validate generality and refine design rules.

@@ -1,0 +1,57 @@
+가설 수정 결과: Here’s a data-informed update to your hypothesis based on the latest hollow-site results at 0.75/0.25 composition.
+
+1) Updated concise hypothesis (with current hollow data)
+- In hollow geometries at 0.75/0.25, near-target H-Eads (within −0.32 to −0.22 eV) are observed for a limited subset of motifs:
+  - Ni-centered hollows: Ni-Co (−0.2831 eV), Ni-Fe (−0.2996 eV), Ni-Au (−0.2788 eV)
+  - Pd-containing hollow: Pd-Ni (−0.2528 eV)
+  - Pt-containing hollow: Pt-Ag (−0.3025 eV)
+- Pt-based hollows with other partners (Pt-Ni, Pt-Fe, Pt-Cu, Pt-Co, Pt-Os, Pt-La, etc.) generally do not fall within the near-target window in the current data (e.g., Pt-Ni −0.1822 eV, Pt-Fe −0.1122 eV, Pt-Cu −0.1527 eV).
+- The near-target behavior appears to arise from hollow-ensemble effects:
+  - Ni-centered three-atom ensembles (Ni-Co, Ni-Fe) and Ni’s cooperative environment are robust for near-target energies.
+  - Pd-Ni shows a Pd-like tuning that places H-Eads into the window.
+  - Pt-Ag–type ensemble tuning contributes to Pt-based near-target hollows; other Pt–metal combinations do not show similar near-target synergy in this dataset.
+- Bottom line: near-target hollows are dominated by Ni-Co, Ni-Fe, Ni-Au, Pd-Ni, and Pt-Ag motifs. Pt-only hollows or Pt-hetero motifs beyond Pt-Ag do not reliably reach the window in the current dataset.
+
+2) Modified, testable predictions (updated)
+- Prediction A (hollow-site focus, updated):
+  - Near-target hollows at 0.75/0.25: Ni-Co, Ni-Fe, Ni-Au, Pd-Ni, Pt-Ag.
+  - Pt-based hollows other than Pt-Ag remain outside the window.
+- Prediction B (Pt-based hollow behavior):
+  - Pt-based hollow 0.75/0.25 combinations other than Pt-Ag will not achieve within ±0.05 eV of −0.27 eV (e.g., Pt-Ni ≈ −0.18 eV, Pt-Fe ≈ −0.11 eV, Pt-Cu ≈ −0.15 eV).
+- Prediction C (composition sensitivity around the target):
+  - Moving away from 0.75/0.25 for Pd-based alloys with Ni is expected to reduce the fraction of near-target entries; Ni-containing hollows (Ni-Co, Ni-Fe) and Pt-Ag synergy suggest some persistence if the hollow ensemble remains favorable, but non-duplicate data is needed to confirm.
+- Prediction D (mechanistic rationale):
+  - Near-target H-Eads in Ni-containing hollows arise from Ni-centered three-atom ensemble effects; Pd-Ni shows Pd-like tuning; Pt-Ag–type ensemble tuning is essential for Pt-based near-target hollows. Pt-only hollows lacking these ensemble configurations are unlikely to hit the window.
+
+3) Rationale (brief)
+- The latest results narrow the near-target “sweet spot” to a small set of motifs, dominated by Ni-centered ensembles and Pt-Ag synergy, with Pd-Ni as a reliable alternative path. This supports a hollow-ensemble mechanism rather than a broad, composition-wide trend.
+
+4) Revised operational guidance for the intern (focused iteration plan)
+- Non-duplicate exploration within the database
+  - Step 1: Identify hollow 0.75/0.25 entries for the same metal pairs but at other adsorption sites (top, bridge). If such entries exist, compare their H-Eads to hollow results to assess site robustness of the near-target trend.
+  - Step 2: Look for additional 0.75/0.25 hollow entries that exist but have not been tested (including different metal pair orders). Test only non-duplicate entries.
+  - Step 3: If no new 0.75/0.25 hollow candidates exist in the dataset, check nearby compositions (e.g., 0.60/0.40 or 0.50/0.50) for Pd-based alloys with Ni and for Ni-based ensembles with other metals—only if those entries exist and are non-duplicate.
+  - Step 4: For each new candidate, ensure site = hollow, composition sums to 1.0; record metal1/metal2 identities and order, site, H-Eads, and distance from −0.27 eV (±0.05 eV).
+  - Step 5: Maintain strict non-duplication; any candidate tested must be new relative to prior hollow-topology tests in the database.
+  - Step 6: Knowledge accumulation
+    - Record H-Eads, site, metal identities, and composition; compare with existing hollow entries and any top/bridge data to quantify hollow-site advantages and ensemble-specific effects.
+    - Flag near-target entries (within ±0.05 eV) and deviations.
+  - Step 7: Use updated results to refine mechanistic rationale and steer future exploration toward Ni-containing hollow motifs and Pt-Ag–type synergies, or other ensembles that reproduce hollow-ensemble benefits.
+  - Step 8: Maintain a running log of near-target vs far-from-target combinations and site preferences to drive future hypothesis refinement.
+
+5) Knowledge capture and next steps (summary)
+- Current near-target hollow 0.75/0.25 results include:
+  - Ni-Co (−0.2831 eV), Ni-Fe (−0.2996 eV), Ni-Au (−0.2788 eV)
+  - Pd-Ni (−0.2528 eV)
+  - Pt-Ag (−0.3025 eV)
+- Pt-based hollows other than Pt-Ag are not near-target; Ni-Ag is not near-target; Pt-Ag is the standout Pt-based near-target motif.
+- The hollow environment appears especially favorable for Ni-containing motifs and Pt-Ag–type synergy; Pd-Ni remains a robust near-target path.
+- Future iterations should systematically test new, non-duplicate hollow 0.75/0.25 entries that extend these motifs, and, if needed, nearby compositions to further validate the ensemble-based mechanism.
+
+6) Concrete next-step request (draft candidate set)
+- I can draft a precise set of 5–8 non-duplicate candidate entries for the next intern iteration (using DB-available combinations and sites) with explicit decision criteria and expected energy windows.
+- To tailor this precisely and avoid duplicates, please provide one of the following:
+  - The list of hollow 0.75/0.25 entries not yet tested for top/bridge in your DB, or
+  - A confirmation of which 0.75/0.25 hollow entries exist for top/bridge so I can avoid duplicates and propose truly new candidates.
+
+Would you like me to draft the precise 5–8 candidate set now? If yes, please provide one of the two options above. If you’d prefer, I can also propose an initial conservative set of candidates (based on the existing DB) and we will explicitly check for duplicates before execution.

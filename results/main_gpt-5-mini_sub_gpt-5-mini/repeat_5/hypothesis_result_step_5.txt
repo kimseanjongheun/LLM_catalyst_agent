@@ -1,0 +1,39 @@
+가설 수정 결과: Updated hypothesis (specific, testable)
+
+Primary revised hypothesis
+- When alloying a strong H‑binding metal (Pt, Pd, Ni, Ru, Rh, Ir) with a weaker H‑binding partner (Au, Ag, Cu, Zn, Cd, Hg) at surface‑enriched compositions (strong:weak ≈ 0.75:0.25), ligand and ensemble effects will generally shift ΔE_H toward the Sabatier optimum (ΔE_H ≈ −0.27 eV) on bridge and hollow sites, while top sites are markedly more sensitive and can show either near‑optimal shifts or very large destabilizations depending on the local ensemble (i.e., identity and position of weak atoms). This site dependence is metal‑pair specific and reproducible within ±0.05–0.12 eV for robust pairs, but can produce destabilizations > +0.3 eV (and even > +0.7 eV) for anomalous top ensembles.
+
+Specific, testable sub‑statements (numeric, actionable)
+1) Pt0.75–Au0.25 and Pt0.75–Ag0.25:
+   - Prediction: top, bridge, and hollow will all fall within ±0.05 eV of −0.27 eV on the same surface model/adsorption geometries used here.
+   - Test: re‑runs with identical slab/adsorption settings should reproduce ΔE_H(top,bridge,hollow) ∈ [−0.32, −0.22] eV.
+
+2) Pt0.75–Cu0.25:
+   - Prediction: bridge (and likely hollow) sites will be near‑optimal: ΔE_H ∈ [−0.35, −0.15] eV; the top site can be strongly destabilized (ΔE_H ≥ +0.5 eV, observed +0.732 eV) if Cu atoms occupy/participate in the top adsorption ensemble.
+   - Test: (a) map top/bridge/hollow; (b) re‑optimize Pt–Cu top with full relaxation and alternative initial H positions — if topology is physical, ΔE_H(top) will remain > +0.5 eV; if artifact, H will relax to bridge/hollow and ΔE_H(top) will move toward the bridge/hollow range.
+
+3) Pd0.75–Au0.25:
+   - Prediction: top will be strongly destabilized (ΔE_H ≳ +0.30 eV), while hollow will recover toward optimal (ΔE_H ≈ −0.18 to −0.30 eV); bridge may remain weakly destabilized or near‑zero.
+   - Test: measure ΔE_H at top/bridge/hollow; further, if the top anomaly is due to Au surface enrichment, increasing Au fraction to 0.50:0.50 should move ΔE_H(top) more negative by ≥ 0.15 eV (contingent on DB availability of 0.50:0.50 entries).
+
+4) Pd0.75–Ag0.25:
+   - Prediction: top/bridge show smaller positive shifts than Pd–Au (ΔE_H(top) ≈ +0.15 to +0.25 eV), while hollow will be near‑optimal (ΔE_H ≈ −0.29 eV).
+   - Test: verify Pd–Ag hollow within ±0.05 eV of −0.27 and top/bridge remain < +0.30 eV.
+
+5) Ni0.75–Au0.25 (emerging finding):
+   - Prediction: hollow site will be near‑optimal (ΔE_H ≈ −0.28 eV); bridge may be weakly destabilized (ΔE_H ≈ +0.10 eV).
+   - Test: confirm Ni–Au hollow ΔE_H ∈ [−0.33, −0.23] eV and bridge/top > 0.0 eV if observed.
+
+6) Generalizable rule for strong–weak pairs at 0.75:0.25:
+   - Prediction: hollow and bridge sites will more reliably approach −0.27 eV (typical deviation ≤ 0.12 eV) across different strong‑weak pairs; top sites will show the largest variance and are the primary locus of anomalies (either strong stabilization or large destabilization), especially when the weak metal appears in the immediate adsorption ensemble.
+   - Test: for any new strong–weak 0.75:0.25 candidate in the DB, ΔE_H(hollow/bridge) will usually be closer to −0.27 than ΔE_H(top); if not, inspect local ensemble/segregation.
+
+Practical corollaries (for running and interpreting simulations)
+- Any large positive ΔE_H at a top site (≥ +0.3 eV) should trigger immediate geometry/adsorption re‑inspection (alternate initial H positions, full slab relaxation) before concluding a chemical anomaly.
+- When DB lacks 0.50:0.50 entries, composition‑dependence hypotheses (e.g., whether raising weak‑metal fraction corrects or exacerbates top anomalies) remain conditional and must be tested only when validated entries exist.
+- Candidates flagged near the optimum (|ΔE_H + 0.27| ≤ 0.10) should be promoted to higher‑fidelity calculations (denser k‑mesh / thicker slab / larger surface cell) to confirm.
+
+Short rationale (why this is different from the original)
+- Iteration‑2 confirms Pt–Au and Pt–Ag robustness across all sites, but added evidence shows two distinct, reproducible classes of site anomalies: (A) Pd–Au top destabilization that hollow sites recover from, and (B) extreme Pt–Cu top destabilization while bridge/hollow remain near‑optimal. Ni–Au hollow also emerges as a promising near‑optimal site. The revised hypothesis quantifies these behaviors and makes them directly testable.
+
+Do you want me to (a) check DB availability now for the iteration‑3 prioritized tests (so we can produce a DB‑validated runlist without duplicates), or (b) produce exact simulator input strings assuming availability?

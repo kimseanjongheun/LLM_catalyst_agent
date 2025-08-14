@@ -1,0 +1,23 @@
+가설 수정 결과: **Modified Hypothesis**:
+
+The results provide significant insights into the behavior of bimetallic catalysts for the HER, accentuating the influence of both composition and adsorption sites on catalytic performance. Based on recent findings, Pt-Mo and Pd-W combinations exhibit promising properties at revised compositions, particularly when considered with "top" and "hollow" sites, which may be superior for hydrogen adsorption compared to the "bridge" sites previously explored. The revised hypothesis focuses on the interplay between metal composition and site selection to achieve optimal electronic and catalytic properties.
+
+**Revised Scientific Rationale**:
+
+1. **Pt-Mo Performance**: The deficiency in observed performance at explored compositions, specifically at non-bridge sites such as (0.75:0.25), suggests that a novel composition range could unlock potential. Moving towards compositions like (0.70:0.30) or (0.65:0.35) might amplify electronic synergies and elevate hydrogen affinity when tested at "top" and "hollow" sites, avoiding the limitations of previously used "bridge" sites.
+
+2. **Unexplored Compositions for Pd-W**: The performance seen in Pd-W combinations highlights potential that has yet to be maximized. Testing compositions such as (0.60:0.40) at "top" and "hollow" adsorption sites could uncover unrecognized benefits in hydrogen adsorption attributable to these electronic environments, positioning Pd-W as a potent candidate for further exploration.
+
+3. **Site-Specific Optimization**: Insights from recent simulations indicate that while "bridge" sites are less effective for certain compositions, "top" and "hollow" sites show promise. These sites merit detailed exploration across different compositions to further understand the spatial electronic distribution and its influence on catalytic efficiency.
+
+**Next Steps**:
+
+- **For Pt-Mo Pairings**:
+  - Test compositions (0.70:0.30) and (0.65:0.35) at "top" and "hollow" sites to assess variations in electronic coupling and adsorption efficacy.
+  - Shift focus away from the "bridge" site to explore more advantageous interface phenomena achievable at the suggested compositions and sites.
+
+- **For Pd-W Pairings**:
+  - Encourage explorations of Pd-W compositions at (0.60:0.40) on "top" and "hollow" sites.
+  - Investigate the specific adsorptive behavior and catalytic potential at new compositions, aligning surface interactions with favorable adsorption dynamics.
+
+This revised pathway is intended to unearth novel Pd-W and Pt-Mo bimetallics with optimal compositional and site characteristics, drawing from current simulations to propel catalyst discovery forward.

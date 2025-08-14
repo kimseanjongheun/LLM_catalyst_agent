@@ -1,0 +1,2 @@
+main_agent_input_tokens,main_agent_output_tokens,main_agent_total_tokens,sub_agent_input_tokens,sub_agent_output_tokens,sub_agent_total_tokens,total_tokens
+3326,1416,4742,2505,1359,3864,8606

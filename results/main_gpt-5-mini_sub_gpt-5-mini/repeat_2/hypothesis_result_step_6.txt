@@ -1,0 +1,14 @@
+가설 수정 결과: Revised concise hypothesis
+
+Noble–non‑noble alloying can produce near‑optimal ΔE_H ≈ −0.27 eV, but only inside very narrow, pair‑, composition‑, adsorption‑site‑ and surface‑layer‑specific windows. The present dataset confirms that noble‑rich, hollow‑site configurations of Pd–Ni and Ir–Fe lie within that window, while many other pairs (especially with early TMs on the surface) overbind or underbind strongly — therefore each metal pair must be mapped individually for composition, site and ordering rather than assuming uniform noble enrichment.
+
+Key evidence from the new simulations (representative values)
+- Confirmed near‑optimal noble‑rich hollow cases: Pd–Ni (0.75:0.25)@hollow = −0.2528 eV; Ir–Fe (0.75:0.25)@hollow = −0.2624 eV; Ni–Pd (0.75:0.25)@hollow = −0.2474 eV (ordering/site affect magnitude but remain near target).
+- Same pair, different site/order matters: Pd–Ni(0.75:0.25)@bridge = −0.0559 eV (much weaker), showing site sensitivity.
+- Strong ordering asymmetry (Pt–V): Pt‑surface configurations give modest adsorption (Pt‑V 0.75:0.25@bridge = −0.1703 eV; Pt‑V 0.50:0.50@bridge = −0.0403 eV), whereas V‑surface (V‑Pt 0.75:0.25@hollow) severely overbinds = −0.9927 eV.
+- Early‑TM partners often drive overbinding: Ag–Re (0.50:0.50@bridge) = −0.6132 eV; Ag–Mo (0.50:0.50@hollow) = −0.6029 eV; V–Pt above. But composition/site can mitigate: Au–W 0.50:0.50@top = −0.1419 eV (contrast Au–W 0.75:0.25@top = −0.3924 eV).
+- Some combinations underbind: Cu–Co (0.75:0.25@top) = +0.1312 eV; Au–Ti (0.75:0.25@top) = +0.2225 eV.
+
+Implication for next iterations
+- Continue focused pairwise mapping (composition × site × ordering) for promising pairs (Pd–Ni, Ir–Fe) and for ambiguous asymmetric pairs (Pt–V) to locate robust synthesis windows.
+- Deprioritize blanket noble enrichment strategies; prioritize targeted exploration of ordering and site effects for each pair.

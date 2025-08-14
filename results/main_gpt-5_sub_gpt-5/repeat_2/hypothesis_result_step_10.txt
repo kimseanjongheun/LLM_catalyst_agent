@@ -1,0 +1,78 @@
+가설 수정 결과: Modified hypothesis (integrating this batch)
+
+1) Ag as a site-amplifying host for 3d metals at 50/50: confirmed and generalized to Fe; amplitude ranking emerges
+- Confirmations:
+  - Ag–Fe 0.50/0.50 bridge = −0.2784 eV (in-window); hollow = +0.0201 eV (slightly positive).
+  - Ag–Ni 0.50/0.50 bridge = −0.2908 (in-window); hollow = +0.0247.
+  - Ag–Co 0.50/0.50 bridge = −0.2370 (slightly weak); hollow = +0.0440.
+- Refined rule:
+  - At 0.50/0.50, Ag host inverts site preference for 3d: bridge sits near target (Ni ≈ Fe ≈ −0.28 to −0.29; Co slightly weak), hollow is weak/positive. Expect this to extend to Cr/Mn if present.
+  - At 0.75/0.25 with Ag as minority dopant (3d–Ag), the split is large and reversed: hollow is too strong (Ni/Co ≈ −0.37 eV), bridge too weak/positive (≈ +0.07 to +0.12 eV). Predict the same for Fe–Ag.
+
+2) Coinage(+Pd) + W: 50/50 hollow is the robust sweet spot; W dilution over-strengthens; bridges unusably strong
+- 50/50 hollow in-window/near-window: Ag–W (−0.268), Pd–W (−0.277), Cu–W (−0.282). Au–W is an outlier (weak, +0.0418).
+- W dilution to 0.25 on coinage (+Pd) sharply strengthens hollow: Ag–W (−0.580), Cu–W (−0.543), Au–W (−0.353), Pd–W (−0.362).
+- Bridges are far too strong at 50/50 (e.g., Ag–W −0.723; Cu–W −0.747; Pd–W −0.657; Rh–W −0.578; Au–W −0.658) and remain too strong even upon W dilution (Ag–W 0.75/0.25 bridge −0.551).
+- Maintain: Use 50/50 hollow for Ag/Cu/Pd+W; avoid bridges and avoid W-diluted hollow.
+
+3) 4d-in-coinage can be ensemble-dominated/site-insensitive
+- Ru–Cu 0.75/0.25: hollow vs bridge differ by ~0.012 eV (−0.3088 vs −0.2967). Expect similarly small site splits for select 4d-in-coinage (e.g., Ru–Ag if present); do not assume hollow advantage.
+
+4) Noble + W is pair-specific; Ir–W is a consistent exception
+- Ir–W 0.50/0.50: bridge (−0.215) weaker than hollow (−0.350); at 0.75/0.25, hollow weakens further (−0.167). Other nobles (Pd/Rh/Cu/Ag/Au) show bridges much stronger than hollow. Treat Ir–W separately.
+
+5) Mo remains highly host- and site-contingent with steep composition slopes on coinage
+- Cu–Mo: 50/50 hollow near-target (−0.297); 50/50 bridge overshoots (−0.581); 0.75/0.25 hollow too weak (−0.059).
+- Ag–Mo: 50/50 hollow too strong (−0.603); 0.75/0.25 hollow extremely weak (+0.851) → very steep slope.
+- Pt–Mo: at 0.75/0.25, hollow slightly positive (+0.038) and bridge modestly strengthens (−0.066) but cannot reach target there; 50/50 entries appear absent in DB.
+- Ir–Mo: 50/50 hollow/bridge both too strong (−0.373/−0.429); 0.75/0.25 hollow weakens (−0.160).
+- Implication: On coinage hosts, Mo requires tight composition control; bridges often over-strengthen and do not reliably “rescue” weak hollows on Pt near 0.75/0.25.
+
+6) Au is not Ag-like for 3d at 50/50
+- Au–Fe 0.50/0.50: hollow very weak (+0.320), bridge only moderately strengthened (−0.124), well short of target. Expect Au–Ni/Au–Co 50/50 bridges to be similarly too weak compared to Ag analogs.
+
+Knowledge accumulated this round
+- Ag–Fe at 50/50: bridge in-window (−0.278), hollow slightly positive (+0.020) → validates Ag-driven site inversion across Ni/Co/Fe.
+- 3d–Ag at 0.75/0.25: massive site-split confirmed; hollow too strong (~−0.37), bridge too weak (~+0.07 to +0.12).
+- 3d–Cu at 0.75/0.25 behaves analogously (Ni/Co–Cu): hollow too strong (~−0.38), bridge near-zero/weak.
+- Coinage(+Pd)+W: 50/50 hollow robustly targets; W dilution over-strengthens hollow; bridges greatly over-strengthen.
+- Ir–W remains an exception: bridge weaker than hollow at 50/50; hollow weakens at 0.75/0.25.
+- Mo shows extreme host and composition sensitivity; coinage hosts show very steep slopes.
+
+Refined, testable rules to hit ΔG_H ≈ −0.27 ± 0.03 eV
+- Primary routes:
+  1) Coinage(+Pd)+W at 50/50 hollow (Ag–W, Pd–W, Cu–W). Avoid bridges and W-diluted hollows.
+  2) 3d-in-Ag at 50/50 via site inversion (bridge): validated for Ni and Fe (in-window) and near-target for Co.
+  3) Cu–Mo 50/50 hollow is near the lower edge of the window (−0.297); high sensitivity cautions.
+- Secondary cautions:
+  - 3d–Ag at 0.75/0.25: hollow too strong, bridge too weak → not viable.
+  - Au–3d at 50/50: bridges too weak to mimic Ag’s behavior.
+  - Mo requires host-specific tuning; bridges on coinage often over-strengthen; Pt bridges too weak to rescue at 0.75/0.25.
+
+Guidance for next tests (all new; no duplicates; flip metal order if the requested orientation is missing; if still absent in DB, skip)
+
+Priority A — Extend and close the 3d–Ag inversion map
+- Fe–Ag, 0.75/0.25, hollow. Prediction: −0.34 to −0.40 eV. Purpose: confirm the strong-hollow leg of the split for Fe–Ag, matching Ni/Co–Ag.
+- Fe–Ag, 0.75/0.25, bridge. Prediction: +0.05 to +0.12 eV. Purpose: confirm the weak-bridge leg for Fe–Ag.
+
+Priority B — Test whether Au can ever approximate Ag’s bridge advantage at 50/50
+- Au–Ni, 0.50/0.50, bridge. Prediction: −0.18 to −0.10 eV. Purpose: quantify Au’s weaker bridge strengthening vs Ag–Ni (−0.291).
+- Au–Co, 0.50/0.50, bridge. Prediction: −0.15 to −0.05 eV. Purpose: check if any Au–3d bridge approaches the window (likely still too weak).
+
+Priority C — Generalize Ag–3d 50/50 to earlier 3d (if present)
+- Ag–Cr, 0.50/0.50, bridge. Prediction: −0.30 to −0.24 eV. Purpose: test extension of Ag host site inversion to Cr.
+- Ag–Cr, 0.50/0.50, hollow. Prediction: +0.00 to +0.10 eV. Purpose: confirm hollow remains weak/positive at 50/50.
+
+Priority D — Probe site-insensitivity for 4d-in-Ag (if present)
+- Ru–Ag, 0.75/0.25, hollow. Prediction: −0.31 to −0.29 eV.
+- Ru–Ag, 0.75/0.25, bridge. Prediction: −0.30 to −0.28 eV.
+Purpose: assess whether Ru–Ag mirrors Ru–Cu’s small site split.
+
+Success metrics for this round
+- 3d–Ag at 0.75/0.25 (Fe–Ag): reproduce large, reversed site split (hollow too strong, bridge too weak).
+- Au–3d 50/50 bridges (Au–Ni/Au–Co): quantify shortfall versus Ag benchmarks; determine if any approach −0.27 ± 0.03 eV.
+- Ag–Cr 50/50: verify Ag’s 50/50 bridge-in-window/hollow-weak pattern beyond Ni/Co/Fe.
+- Ru–Ag 0.75/0.25: observe ≤0.02 eV site split if ensemble-dominated.
+
+Rationale
+- We doubled down on two proven design spaces (Ag–3d at 50/50 bridge; coinage(+Pd)+W at 50/50 hollow) and now tighten generality checks: complete 3d–Ag behavior by adding Fe at 0.75/0.25, test earlier 3d (Cr) at 50/50, and examine whether Au can ever replicate Ag’s bridge advantage. In parallel, we expand the “site-insensitive 4d-in-coinage” motif beyond Ru–Cu. These tests are minimal, non-duplicative, and high-information for refining our rules.

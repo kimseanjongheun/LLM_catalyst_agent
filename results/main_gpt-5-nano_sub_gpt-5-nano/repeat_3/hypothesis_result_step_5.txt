@@ -1,0 +1,57 @@
+가설 수정 결과: Thanks for sharing the detailed simulation output. I’ve updated the hypothesis to reflect the latest data and laid out a concrete, non-duplicate iteration plan that targets the next high-potential directions while staying within the database constraints.
+
+Updated hypothesis (data-informed)
+- Hollow geometry remains the dominant lever for steering H adsorption toward −0.27 eV, but the optimal tuning window is narrow and strongly dependent on both Metal1 and Metal2 identities. Site-specificity is crucial: hollow is typically more sensitive to d-band and lattice perturbations than top/bridge, and small compositional shifts can swing H_ads by tens of meV.
+- Ir-based hollow catalysts continue to offer the strongest near-target potential, but only for select second metals and within tight composition windows. The clearest near-target hollow result remains Ir–La (−0.2888 eV). Other Ir-based hollows (e.g., Ir–Nb, Ir–Hf, Ir–Zr) drift away from the target by tens of meV, underscoring sensitivity to d-band and lattice.
+- Pd-based hollows show occasional near-target tendencies (e.g., Pd–Zr hollow at −0.2777 eV). Several Pd hollows (e.g., Pd–Sc, Pd–La, Pd–Hf) are farther from target and/or vary with composition.
+- Pt-based hollows remain less competitive for achieving −0.27 eV in the current dataset; several Pt-based 0.75/0.25 candidates remain below target. Pt-based hollows should be deprioritized unless a mechanistic justification or a new second-metal set emerges from the data.
+- The 0.50/50 regime can land near target in some cases (e.g., Pd–Sc 0.50/50, Ir–Nb 0.50/0.50), but overall results are not systematically near −0.27 eV. Treat 0.50/50 as a boundary-mapping path rather than the primary route to the target.
+- The strongest near-target signal remains a two-pronged pathway: (1) deepen Ir-based hollow screening with carefully chosen second metals, and (2) broaden Pd hollow screening to include additional second metals that can nudge H_ads toward −0.27 eV. The Pd–Zr hollow result should motivate exploring Pd–Y and related second metals to map a more robust near-target region.
+
+Iteration 2: new, non-duplicate candidate domain (8 new tests proposed)
+Important: Before running simulations, verify each candidate against the database to ensure it is a non-duplicate (Metal1–Metal2, composition, site in hollow). If any candidate already exists in the DB, substitute with the next non-duplicate option from the same family or switch to a different site within the same metal pair.
+
+Proposed non-duplicate tests (8 total), focused on near-target, non-duplicate site variants
+- Ir–La–0.75–0.25–top hollow
+  Rationale: Test whether shifting the adsorption site away from hollow for the Ir–La pair nudges H_ads toward the target or reveals different synergistic effects with La’s lattice/electronic perturbation.
+- Ir–La–0.75–0.25–bridge
+  Rationale: Bridge site for Ir–La to probe site-selective electronic perturbations and assess consistency with hollow results.
+- Pd–Zr–0.75–0.25–top
+  Rationale: Extend the promising Pd–Zr hollow result by examining the top site to evaluate site sensitivity and potential further tuning toward −0.27 eV.
+- Pd–Zr–0.75–0.25–bridge
+  Rationale: Bridge site for Pd–Zr to complete the three-site comparison and map site-dependent shifts.
+- Pd–Y–0.75–0.25–top
+  Rationale: Test Pd–Y in a different adsorption site to see if Y’s size/electronic perturbation can further approach the target on a non-hollow site.
+- Pd–Y–0.75–0.25–bridge
+  Rationale: Bridge site for Pd–Y to gauge site-specific d-band/lattice effects with Y.
+- Ir–Nb–0.75–0.25–top
+  Rationale: Although Ir–Nb hollow is in the dataset, test the top site for this pair to probe site dependence and potential path toward target.
+- Ir–Nb–0.75–0.25–bridge
+  Rationale: Bridge site for Ir–Nb to complete the site-triage for this promising Ir-based pair.
+
+Notes and how to proceed if any candidate is a duplicate
+- If any of the eight candidates already exist in the DB (same Metal1–Metal2, composition, and site), substitute with the next non-duplicate candidate within the Ir-based hollow/near-target family or Pd-based hollow family, prioritizing:
+  - Other second metals that already show partial near-target trends (e.g., those with moderate d-band offsets or lattice perturbations similar to Nb, Hf, Zr, La, Sc, Y).
+  - Other site variants (top, bridge) for the same Ir-based or Pd-based pair that are not duplicates in the DB.
+
+Data collection and decision framework for the intern
+- Primary metric: H_ads at the hollow site (primary site for comparisons). If possible, collect H_ads at top and bridge for the same candidate to quantify site sensitivity.
+- Secondary metric: delta = H_ads − (−0.27 eV). Rank by absolute delta to identify the candidates closest to the target.
+- Knowledge capture: For each candidate, note electronic (d-band center shifts) and structural (lattice mismatch) rationales, plus any expected site-blocking or synergistic interactions in the hollow, top, and bridge environments.
+- Non-duplicate discipline: Before simulating, perform a DB cross-check to confirm non-duplication. If in doubt, flag for a quick DB verification and choose the next non-duplicate option.
+- Decision logic after results:
+  - If Ir-based hollow candidates (e.g., Ir–La, Ir–Nb, Ir–Sc, Ir–Y with hollow) show movement toward −0.27 eV, broaden the Ir-focused hollow screening within 0.75/0.25 (and extend to additional second metals in the DB) while prioritizing d-band and lattice combinations that align with the target.
+  - If Pd-based hollows (e.g., Pd–Zr, Pd–Y, Pd–La, Pd–Sc) trend toward the target on any site, extend Pd hollow screening to include additional second metals with compatible d-band offsets and lattice perturbations.
+  - If Pt hollows remain distant from target, deprioritize Pt in hollow tests unless a mechanistic rationale or new second-metal pairing arises from the DB data.
+
+How this informs the next cycle
+- If Ir–La hollow remains the strongest near-target example and nearby Ir-based second metals (e.g., Sc, Nb, Y) show promise, widen the Ir-focused hollow screening within the 0.75/0.25 regime to include additional second metals from the DB that plausibly shift the d-band and lattice toward −0.27 eV.
+- If Pd–Zr hollow continues to approach the target, extend Pd hollow exploration to include Pd–Y and other second metals that pair well with Pd in hollow geometry, aiming to map a robust near-target region rather than a single hit.
+- If Pt hollows stay distant from target, deprioritize Pt in hollow unless a new mechanistic justification emerges from the data.
+
+Practical notes for the intern
+- Maintain a live knowledge log: capture unexpected trends (e.g., site-specific anomalies, anti-hydrogen effects, or cross-metal synergistic interactions).
+- Use the eight proposed site-variant candidates as a scaffold; replace any duplicates with the next non-duplicate option from the database.
+- I’m happy to tailor the eight candidates further once you report the DB check results and any observed site-specific patterns in the interim runs.
+
+If you’d like, I can provide a compact one-page checklist for the eight tests (with H_ads per site, delta, and a short metallurgical rationale) to streamline the intern’s data capture.

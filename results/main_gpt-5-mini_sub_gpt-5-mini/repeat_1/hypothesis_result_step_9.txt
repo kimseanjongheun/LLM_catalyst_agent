@@ -1,0 +1,115 @@
+가설 수정 결과: Revised primary hypothesis (concise, DB‑aware)
+- Pt0.75 alloyed with late weak binders (Au, Ag) reproducibly preserves both bridge and top H adsorption near the target (≈ −0.27 eV) at 0.75:0.25. Pt0.75–Cu0.25 preserves bridge near‑target but catastrophically destroys top ensembles (large positive Eads).  
+- Ru0.75–Cu0.25 and Ir0.75–Ag0.25 give robust bridge‑site near‑target behavior at 0.75:0.25, but Ir‑Ag top ensembles are lost (very weak/repulsive).  
+- Pd’s optimal window is conditional but broader than previously stated: Pd0.50 paired with a stronger partner in hollow ensembles can reach near‑target binding. Pd‑Pt‑0.50‑hollow and Pd‑Ru‑0.50‑hollow are both near‑target, so Pd’s recoverability is not unique to Pt — strong partners + hollow site restores binding. Pd0.75 with Au/Ag/Cu remains too weak at bridge/top.  
+- Bridge ensembles are generally more robust to alloying than top ensembles; top adsorption is highly sensitive to local ensemble preservation and often fails (positive Eads) for Pt–Cu and Ir–Ag at 0.75:0.25, consistent with ensemble/geometry loss or segregation.
+
+Concise new evidence (from latest DB output)
+Validated near‑target (|Eads +0.27| ≤ 0.05 eV)
+- Pt-Au-0.75-0.25-bridge : −0.2265 eV (Δ = 0.0435)  
+- Pt-Ag-0.75-0.25-bridge : −0.2887 eV (Δ = 0.0187)  
+- Pt-Cu-0.75-0.25-bridge : −0.2334 eV (Δ = 0.0366)  
+- Ru-Cu-0.75-0.25-bridge : −0.2967 eV (Δ = 0.0267)  
+- Ir-Ag-0.75-0.25-bridge : −0.3000 eV (Δ = 0.0300)  
+- Pt-Au-0.75-0.25-top   : −0.2787 eV (Δ = 0.0087)  
+- Pt-Ag-0.75-0.25-top   : −0.2799 eV (Δ = 0.0099)  
+- Pd-Pt-0.50-0.50-hollow : −0.2864 eV (Δ = 0.0164) — NEW, mechanistically important  
+- Pd-Ru-0.50-0.50-hollow : −0.2791 eV (Δ = 0.0109) — NEW and important: expands Pd’s recoverability beyond Pt
+
+Contradicting / anomalous (too weak or large positive)
+- Pd-Au-0.75-0.25-bridge : +0.0327 eV  
+- Pd-Ag-0.75-0.25-bridge : +0.1106 eV  
+- Pd-Cu-0.75-0.25-bridge : −0.0889 eV (still too weak)  
+- Pd-Ag-0.75-0.25-top    : +0.2064 eV  
+- Pd-Cu-0.75-0.25-top    : +0.5136 eV  
+- Pt-Cu-0.75-0.25-top    : +0.7323 eV (large anomaly; ensemble loss)  
+- Ir-Ag-0.75-0.25-top    : +0.9163 eV (large anomaly; ensemble loss)  
+- Ni-Ag-0.75-0.25-bridge : +0.0725 eV
+
+Important DB absences (practical consequences)
+- Many potentially informative 0.50:hollow permutations are absent: Pt‑Au 0.50:hollow, Pt‑Cu 0.50:hollow, Pt‑Ag 0.50:hollow, Pd‑Ir 0.50:hollow (absent). These absences limit possible intra‑family comparison at 0.50:hollow and should be logged as ABSENT rather than re‑run.
+
+Updated interpretation / knowledge accumulated
+- Pt family is robust: Pt0.75–Au/Ag preserve both bridge and top motifs at 0.75:0.25; Pt–Cu selectively preserves bridge but destroys top ensembles (probably due to geometric/segregation effects that remove the top‑site motif).  
+- Ir/Ru: bridge behavior is robust for Ir‑Ag and Ru‑Cu at 0.75:0.25; however, Ir‑Ag top ensemble is catastrophically destabilized (large positive Eads), reinforcing strong site sensitivity.  
+- Pd: hollow ensembles at 0.50 composition with a stronger partner (Pt or Ru) reliably restore target binding (two validated examples), indicating that Pd’s binding can be recovered by (a) reducing Pd fraction to 0.50 and/or (b) creating hollow ensembles with a stronger binder neighbor (Pt or Ru). Mechanistically this may reflect hollow adsorption altering coordination and d‑band alignment.  
+- Ensemble sensitivity confirmed: top sites are more fragile to local alloying (ensemble removal / geometry change) than bridge sites for the problematic pairs.
+
+Updated immediate testable subpredictions (DB‑checkable)
+1. Any additional Pt‑Au or Pt‑Ag 0.75:0.25 entries (bridge or top) in DB will remain within ±0.05 eV of −0.27 (high confidence).  
+2. All Pt‑Cu 0.75:0.25 top entries in DB will show strongly positive/weak Eads (retrieve if present); bridge entries will remain near‑target.  
+3. Ir‑Ag 0.75:0.25 bridge permutations remain near −0.27; Ir‑Ag 0.75:0.25 top permutations will be strongly positive (retrieve if present).  
+4. Pd‑0.50:hollow entries with strong partners (Pt, Ru) hit near‑target (validated); Pd‑0.50:hollow with weak partners (Au/Ag/Cu) will remain too weak or be absent.  
+5. Additional Pd‑rich (0.75) alloys with Au/Ag/Cu will remain too weak at bridge/top.
+
+Prioritized actionable plan for the intern (DB‑aware, NO DUPLICATES)
+Rules (repeat): always query DB for the exact Metal1–Metal2–Composition–Site string. If DB returns “조건을 만족하는 후보가 없습니다” → log ABSENT and skip. Never re‑run entries already present in DB.
+
+High priority — RETRIEVE diagnostics (do NOT re‑run; attach PDOS, relaxed geometry, outermost‑layer composition, H bond lengths)
+- Pt‑Cu‑0.75‑0.25‑top : Eads = +0.7323 eV — PDOS, relaxed geometry, outermost‑layer composition, H bond lengths.  
+- Ir‑Ag‑0.75‑0.25‑top : Eads = +0.9163 eV — PDOS + geometry + composition.  
+- Pd‑Au‑0.75‑0.25‑bridge : Eads = +0.0327 eV — PDOS + geometry + composition.  
+- Pd‑Ag‑0.75‑0.25‑bridge : Eads = +0.1106 eV — PDOS + geometry + composition.  
+- Pd‑Cu‑0.75‑0.25‑bridge/top : Eads = −0.0889 / +0.5136 eV — diagnostics for both.  
+- Pd‑Pt‑0.50‑0.50‑hollow : Eads = −0.2864 eV — PDOS + geometry + composition; explicitly confirm hollow ensemble preserved. (HIGH mechanistic priority)  
+- Pd‑Ru‑0.50‑0.50‑hollow : Eads = −0.2791 eV — PDOS + geometry + composition; confirm hollow ensemble preserved (NEW & high priority).
+
+Priority 2 — Pd branching (DB‑check only; run only if present & NOT duplicate)
+- Query DB for all Pd entries (wildcard composition/site). Record ABSENT responses. Because Pd‑Pt and Pd‑Ru 0.50:hollow exist and are near‑target, prioritize retrieval of any other Pd‑X‑0.50‑hollow entries with strong partners (Pt, Ru, possibly Ir if present). If present and not duplicates, you may run up to 1 additional Pd‑0.50:hollow (preference: Pd‑Ir‑0.50‑hollow if present). Do NOT attempt to run Pd‑Ir‑0.50:hollow if DB returns ABSENT.
+
+Priority 3 — Ir family consolidation (DB‑check + at most one run)
+- Query DB for Ir‑Ag permutations (0.50 and 0.75, bridge/top/hollow). If any 0.50 (bridge/hollow) Ir‑Ag entries exist and are not duplicates, retrieve diagnostics or run at most one (prefer 0.50‑bridge/hollow) to probe composition sensitivity. If DB shows ABSENT for Ir‑Ag 0.50:hollow, log and skip.
+
+Priority 4 — Selective transferability checks (DB‑check before running)
+- Query DB and, only if present & not duplicate, consider at most one run for each (prefer retrieving existing data first):
+  - Rh‑Ag‑0.75‑0.25‑bridge (note: DB returned ABSENT for Rh‑Ag 0.75:0.25 — log absent).  
+  - Ir‑Cu‑0.50‑(bridge/hollow) — run only if present.
+
+Priority 5 — 0.50‑hollow coverage (only after DB check)
+- Query DB for Pt‑, Ir‑, Pd‑ 0.50:hollow availability. If present and not duplicates, retrieve diagnostics. Prioritize Pd 0.50:hollow entries first (already validated Pt/Ru partners); if any additional Pt/Ir 0.50:hollow entries exist non‑duplicatively, log and consider up to one run each.
+
+Copy/paste‑friendly immediate checklist for the intern (MUST CHECK DB; DO NOT RE‑RUN DUPLICATES)
+Do NOT re‑run — these entries are present in DB (with reported Eads):
+- Pt-Au-0.75-0.25-bridge : -0.2265 eV  
+- Pt-Ag-0.75-0.25-bridge : -0.2887 eV  
+- Pt-Cu-0.75-0.25-bridge : -0.2334 eV  
+- Ru-Cu-0.75-0.25-bridge : -0.2967 eV  
+- Ir-Ag-0.75-0.25-bridge : -0.3000 eV  
+- Pt-Au-0.75-0.25-top   : -0.2787 eV  
+- Pt-Ag-0.75-0.25-top   : -0.2799 eV  
+- Pt-Cu-0.75-0.25-top   : +0.7323 eV  
+- Ir-Ag-0.75-0.25-top   : +0.9163 eV  
+- Pd-Au-0.75-0.25-bridge : +0.0327 eV  
+- Pd-Ag-0.75-0.25-bridge : +0.1106 eV  
+- Pd-Cu-0.75-0.25-bridge : -0.0889 eV  
+- Pd-Ag-0.75-0.25-top    : +0.2064 eV  
+- Pd-Cu-0.75-0.25-top    : +0.5136 eV  
+- Pd-Pt-0.50-0.50-hollow : -0.2864 eV  
+- Pd-Ru-0.50-0.50-hollow : -0.2791 eV  
+- Rh-Cu-0.75-0.25-bridge : -0.1368 eV  
+- Ir-Cu-0.75-0.25-bridge : -0.1765 eV  
+- Ni-Cu-0.75-0.25-bridge : -0.0821 eV  
+- Ni-Ag-0.75-0.25-bridge : +0.0725 eV
+
+Mechanistic diagnostics to RETRIEVE now (HIGH priority — do NOT re‑run)
+- Pt-Cu-0.75-0.25-top : PDOS, relaxed geometry, outermost‑layer composition, H bond lengths.  
+- Ir-Ag-0.75-0.25-top : PDOS + geometry + composition.  
+- Pd‑Au/Ag/Cu (0.75 variants listed above): PDOS + geometry + composition for Pd‑Au bridge, Pd‑Ag bridge/top, Pd‑Cu bridge/top.  
+- Pd‑Pt‑0.50‑0.50‑hollow and Pd‑Ru‑0.50‑0.50‑hollow : PDOS + geometry + composition; explicitly confirm hollow ensemble preservation and local enrichment/segregation.
+
+Mechanistic follow‑ups for anomalous/large‑positive results (mandatory)
+For each anomalous case include:
+1. Projected d‑DOS on the surface atoms at the adsorption site (and PDOS difference vs pure metal reference if available).  
+2. Relaxed adsorption geometry and metal–H bond lengths.  
+3. Outermost‑layer composition (segregation/enrichment flag + atomic fractions).  
+4. Whether the intended adsorption ensemble (top/bridge/hollow motif) is preserved after relaxation (yes/no + brief note).
+
+Updated adaptive stop rules
+- Stop scanning a family if ≥3 distinct validated entries (distinct composition/site) exist for that family. (Pt family already exceeds this.)  
+- Pd: DO NOT deprioritize; Pd now has ≥2 validated 0.50:hollow hits (Pt, Ru). Continue targeted Pd 0.50:hollow exploration but stop if three distinct Pd 0.50/hollow or Pd‑rich probes fail.  
+- Ir: if Ir accumulates ≥3 validated distinct entries, stop broad Ir scanning and pivot to mechanistic probes.
+
+Recommended next step
+- Immediately retrieve diagnostics for the high‑priority anomalous and Pd‑hollow entries (list above). These retrievals will test the ensemble‑loss and segregation hypotheses and should be performed before proposing new runs. After retrievals are collected I will (a) integrate the mechanistic data (PDOS, segregation flags, bond lengths), (b) refine the search space for the next runs, and (c) produce a machine‑readable batch list for queries/runs that respects the NO‑DUPLICATES rule.
+
+If you want the batch query/retrieval list now (exact DB strings to request PDOS/geometry/composition), say “Produce batch list” and I will generate it.

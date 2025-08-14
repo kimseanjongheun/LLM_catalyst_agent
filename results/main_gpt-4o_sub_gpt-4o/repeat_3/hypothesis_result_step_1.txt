@@ -1,0 +1,15 @@
+**Hypothesis**: 
+
+Combining metals with contrasting electronic properties, such as noble and transition metals, could yield bimetallic alloys with optimal H adsorption energies for the hydrogen evolution reaction (HER). Specifically, pairing a noble metal like Pt or Pd with a more reactive transition metal such as Mo or W, could lead to synergistic effects at the surface that stabilize H adsorption at energies closer to -0.27 eV. Focusing on bimetallic compositions with high diversity in electronic affinity could tune the electronic environment at the adsorption sites, particularly at the "bridge" sites, where electronic coupling between the metals is maximized.
+
+**Scientific Rationale**:
+
+1. **Synergistic Effects**: Noble metals are known for their stability and catalytic activity, while transition metals often provide active sites and improve the electronic properties of the alloy. These combined effects at specific sites can modulate the adsorption energy of hydrogen.
+
+2. **Electronic Tuning**: By strategically selecting metals with differing electronegativities and electron configurations, the overall electronic environment can be tailored to alter the energy landscape for hydrogen adsorption, potentially bringing it closer to the desired -0.27 eV.
+
+3. **Site Selection**: Previous studies suggest "bridge" adsorption sites can effectively leverage the interactions between two adjacent metal atoms, maximizing the influence of the bimetallic combination on adsorption energy.
+
+4. **Composition Variability**: Testing variations in metal composition (e.g., 0.75 Metal1 and 0.25 Metal2, or 0.50 each) will allow for optimization, as the balance between the two metals' contributions can critically affect HER performance.
+
+By methodically evaluating novel Pt-Mo, Pt-W, Pd-Mo, and Pd-W combinations, especially focusing on the "bridge" site with varied compositions, we can identify candidates with promising hydrogen adsorption characteristics conducive to HER.

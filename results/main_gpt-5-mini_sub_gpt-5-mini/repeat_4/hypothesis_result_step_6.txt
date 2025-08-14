@@ -1,0 +1,95 @@
+가설 수정 결과: Here is the revised, concise package (A–F) updated with the latest simulation outputs and corresponding adjustments to the working hypothesis and next-test plan.
+
+A. Short summary of what changed (new / important measured values)
+- Newly measured entries to add (not in prior KB):
+  - Pt–Re–0.75–top: −0.3615 eV (Δ = −0.0915 eV)  
+  - Pt–Ru–0.75–hollow: −0.0976 eV (Δ = +0.1724 eV)  
+  - Pd–Ru–0.75–top: −0.1311 eV (Δ = +0.1389 eV)  
+  - Pd–W–0.50–hollow: −0.2766 eV (Δ = −0.0066 eV)
+- Confirmed outliers (ΔEads < −0.50 eV): Pt–W–0.50–bridge = −0.5967 eV; Pd–W–0.50–bridge = −0.6570 eV; Pd–Re–0.50–bridge = −0.5347 eV.
+- Reinforced patterns and new insights:
+  - Pt–W 0.75 top remains near-optimal. W-family alloys remain highly site- and composition-sensitive.
+  - Re strongly shifts adsorption to stronger binding for both Pd and Pt (Pd–Re and Pt–Re show strong top-site binding).
+  - Ru: Pt–Ru 0.75 top is near-optimal; Pt–Ru hollow is noticeably weaker, indicating site-selective benefit for Pt on Ru.
+  - Pd–W equimolar hollow (Pd–W 0.50 hollow ≈ −0.277 eV) is essentially optimal — an important exception to the “avoid equimolar” blanket for bridge sites.
+
+B. Refined, testable hypothesis (concise)
+- W-based alloys are still highest priority, but usability depends strongly on (i) noble metal identity (Pt vs Pd), (ii) exact composition, and (iii) adsorption site:
+  - Pt–W: Pt-rich top sites (~0.75 Pt) remain near-optimal. Increasing Pt fraction should nudge ΔEads modestly toward target; small dilution from 0.75 produces non-linear change and may pass through a weak-top regime near 0.50 Pt while bridge sites can become severe over-bind.
+  - Pd–W: Pd yields stronger binding than Pt at comparable compositions; Pd–W bridge sites over-bind at 0.50 and Pd–W 0.75 top is already more negative than Pt–W 0.75 top. However, Pd–W 0.50 hollow is nearly optimal — hollow sites at equimolar composition can mitigate the bridge over-binding.
+- Re increases binding strength for both Pd and Pt top sites (Pd–Re and Pt–Re 0.75 top are strongly negative); avoid Re unless stronger-than-target binding is acceptable or unless composition/site moves binding back toward target.
+- Ru favors Pt more than Pd for top-site adsorption (Pt–Ru 0.75 top ≈ −0.2495 eV; Pd–Ru 0.75 top weaker at −0.1311 eV). Pt–Ru hollow weakens considerably relative to Pt–Ru top.
+- Operational testable predictions:
+  1. Increasing Pt/Pd fraction from 0.75 → 0.875 at top sites for Pt–W and Pd–W will shift ΔEads by ~0.02–0.05 eV (direction depends on metal; Pt likely toward slightly stronger binding, Pd likely further negative).
+  2. Equimolar bridge sites (0.50:0.50) for W and Re are high risk for strong over-binding; avoid equimolar bridge tests unless probing outlier physics.
+  3. Pd–W 0.50 hollow near −0.277 eV suggests equimolar hollow can be acceptable; hollow-site scans at equimolar composition should be prioritized to find stable near-optimal alternatives to top sites.
+  4. Pt–Ru remains a promising alternate to Pt–W for Pt-rich top-site adsorption; explore slight shifts around 0.75.
+
+C. Knowledge-base update (exact facts to record)
+(Record these exact measured-value lines with Δ relative to −0.27 eV.)
+
+Add these exact measured lines:
+
+- Pt–Re–0.75–top: −0.3615 eV (Δ = −0.0915 eV)  
+- Pt–Ru–0.75–hollow: −0.0976 eV (Δ = +0.1724 eV)  
+- Pd–Ru–0.75–top: −0.1311 eV (Δ = +0.1389 eV)  
+- Pd–W–0.50–hollow: −0.2766 eV (Δ = −0.0066 eV)
+
+(Keep previously recorded measured and not-found entries as they are for traceability.)
+
+D. Prioritized, no-duplicate set of next tests for the intern (strict rules + test list)
+Important reminder (intern must follow exactly):
+- Do not request any candidate that appears in the KB above (measured or recorded not-found). No duplicates.
+- For each candidate: first check DB. If not present, return exactly: “조건을 만족하는 후보가 없습니다” and move on.
+- For each successful DB return: produce one-line result in the exact reporting format (see E). Tag OUTLIER if ΔEads > +0.20 eV or ΔEads < −0.50 eV.
+- Tag each run filename Metal1–Metal2–composition–site and append to the tested-candidates file.
+
+Priority rationale:
+- Map the narrow top-site window around 0.75 Pt/Pd for W alloys (0.625 and 0.875 probes) to capture non-linear composition dependence seen previously.
+- Given Pd–W 0.50 hollow ≈ optimal, include more fine-grained Pt/Pd–W top scans and one Pt–Re high-Pt scan (since Re increases binding for both Pt and Pd).
+- Also test Pt–Ru at a slightly higher Pt fraction to see whether Pt–Ru can be tuned to the target.
+
+Requested candidate list (new — none are duplicates of measured/not-found entries in KB):
+
+1) Pt–W, Composition 0.875:0.125, Site = top  
+   - Why: test whether moving to 0.875 Pt-rich tightens/shifts top-site ΔEads toward −0.27.
+
+2) Pd–W, Composition 0.875:0.125, Site = top  
+   - Why: Pd-specific trend at higher noble-metal fraction; compare with Pt–W 0.875.
+
+3) Pt–W, Composition 0.625:0.375, Site = top  
+   - Why: probe slight dilution from 0.75 to map non-linearity and slope.
+
+4) Pd–W, Composition 0.625:0.375, Site = top  
+   - Why: Pd analog to (3) to compare slopes for Pd–W vs Pt–W.
+
+5) Pt–Re, Composition 0.875:0.125, Site = top  
+   - Why: Re strongly increases binding; test if increasing Pt fraction mitigates over-binding at Pt–Re.
+
+6) Pt–Ru, Composition 0.875:0.125, Site = top  
+   - Why: Pt–Ru 0.75 top is promising; test whether making it slightly more Pt-rich tunes ΔEads closer to target.
+
+Notes:
+- If any candidate is not present in DB, return “조건을 만족하는 후보가 없습니다” (exact string) and move to next candidate — do NOT substitute with previously tested entries.
+- If the DB uses different discretization (e.g., 0.72/0.78) around 0.75, the intern should prioritize the closest available fractions to 0.625/0.875 in the order listed.
+- Stop after this batch and return results in exact format (E).
+
+E. Reporting format (strict)
+- Return results in the same order requested, one line per candidate exactly as:
+  Metal1–Metal2–composition–site: ΔEads (eV); Δfrom_target = (ΔEads − (−0.27)) eV; [flag if OUTLIER or “not found”]
+- Example lines (format template):
+  - Pt–W–0.875–top: −0.287 eV; Δ = −0.017 eV
+  - Pd–W–0.875–top: 조건을 만족하는 후보가 없습니다
+  - Pd–W–0.625–top: −0.315 eV; Δ = −0.045 eV
+
+F. Immediate next-step instruction to intern (concise)
+- Implement DB checks and run the six candidates above in the order listed. For each:
+  1. Query DB; if not present return exactly “조건을 만족하는 후보가 없습니다”.
+  2. If present, run and return one-line record in the exact format from E.
+  3. Tag files with Metal1–Metal2–composition–site and append to the shared tested-candidates file to prevent duplicates.
+  4. Flag OUTLIERs per the rule.
+- After completion, send me the one-line results in order plus the updated tested-candidates file.
+
+Would you like the exact DB queries (one per candidate) the intern should run, or the pre-filled tested-candidates spreadsheet template? Reply “queries” or “spreadsheet.”
+
+My recommendation: “queries” (so I can provide exact DB queries for each of the six candidates).

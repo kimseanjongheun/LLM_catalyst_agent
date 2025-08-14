@@ -1,0 +1,29 @@
+Main hypothesis (concise)
+- Within the provided bimetallic database, alloys in which a late, noble-like transition metal (Pt or Pd) is the primary surface-exposed species (Metal1) will be able to be tuned—by choice of Metal2, composition (0.75/0.25 or 0.50/0.50) and adsorption site (top, bridge, hollow)—to yield H adsorption energies near the target −0.27 eV. Specifically: (A) Pt- or Pd-rich alloys with modest fractions (25%) of early / more electropositive transition metals (Mo, W, V, Cr, Ti, Nb, Ta) will weaken overly strong H binding on hollow/bridge sites and therefore produce adsorption energies within ±0.1 eV of −0.27 eV on top or bridge sites; (B) equimolar (0.50/0.50) late–late pairs (Pt–Ni, Pt–Co, Pd–Ni, Pd–Co, Pt–Cu) at bridge sites will offer ensemble and electronic compensation that places H adsorption near −0.27 eV; (C) hollow sites will generally bind H more strongly (more negative ΔEads) than top sites for the same alloy composition, so hollow-site candidates that are too noble-rich must be diluted with early transition metals to reach −0.27 eV.
+
+Why this is testable and scientifically motivated
+- Electronic (d-band) and ensemble effects: Metal1 determines the identity of the atom first encountered by H (top-site probing), while Metal2 and its fraction alter the local ensemble and electronic structure (d-band center and coordination), shifting ΔEads. Pt and Pd have d-band characteristics that sit near optimal HER binding and are highly tunable by alloying.
+- Geometric coordination: Top sites probe single-atom character and are easier to tune via electronic alloying (likely milder shifts), whereas bridge/hollow sites involve multi-atom interactions and tend to strengthen adsorption; this gives a rational lever to tune ΔEads across the three site types.
+- Composition degrees of freedom (0.75/0.25 vs 0.50/0.50) provide discrete but strong changes in ensemble abundance and electronic structure, enabling systematic exploration across 10 iterative loops.
+
+Specific, testable predictions (to be evaluated and refined across iterations)
+1. Pt(Metal1, 0.75)–Mo/W/V/Cr/Ti/Nb/Ta(Metal2, 0.25), evaluated at top and bridge sites, will yield H adsorption energies within ±0.1 eV of −0.27 eV for at least 2–4 alloy combinations in the database.
+2. Pd(Metal1, 0.75)–Mo/W/V/Cr(Ta, 0.25) at top sites will show similar tunability toward −0.27 eV, but with slightly weaker binding compared with the analogous Pt-rich alloys (i.e., ΔEads less negative by ~0.05–0.15 eV).
+3. Equimolar (0.50/0.50) Pt–Ni, Pt–Co, Pd–Ni, Pd–Co, and Pt–Cu at bridge sites will include candidates with ΔEads ≈ −0.27 eV (±0.1 eV) because electronic and ensemble effects compensate to reduce over-binding relative to noble-metal pure sites.
+4. For any candidate that overbinds on hollow sites (ΔEads << −0.27 eV), switching to either (a) top site for the same alloy or (b) increasing the fraction of the early-metal component (i.e., choose the 0.75 early : 0.25 late composition where available with the early metal as Metal1) will move ΔEads closer to −0.27 eV.
+
+Planned 10-iteration screening strategy (brief)
+- Iterations 1–3: Screen Pt- and Pd-rich (Metal1 = Pt or Pd, composition 0.75/0.25) alloys with the listed early transition Metal2 (Mo, W, V, Cr, Ti, Nb, Ta) at top and bridge sites. Rank by ΔEads proximity to −0.27 eV; collect top 5–10 candidates.
+- Iterations 4–6: Screen equimolar (0.50/0.50) late–late pairs (Pt–Ni, Pt–Co, Pd–Ni, Pd–Co, Pt–Cu) at bridge and top sites; prioritize those nearest −0.27 eV.
+- Iteration 7: Re-evaluate hollow-site adsorption for the best top/bridge performers; identify how site geometry shifts ΔEads.
+- Iterations 8–9: Use patterns discovered (e.g., which Metal2 elements systematically weaken/strengthen binding) to explore adjacent entries in the database (new Metal2 choices or swapped Metal1/M2 roles, always avoiding duplicates).
+- Iteration 10: Compile all candidates whose ΔEads is closest to −0.27 eV (top performers across sites/compositions) for deeper DFT follow-up.
+
+Key measurable outcomes that would support or falsify the hypothesis
+- Support: Identification of multiple (≥3) unique bimetallic entries in the database whose H adsorption energies fall within ±0.1 eV (or at least ±0.2 eV) of −0.27 eV following the compositional and site trends predicted above.
+- Falsify / revise: If Pt- or Pd-rich alloys systematically cannot be tuned within ±0.2 eV of −0.27 eV across all tested Metal2 partners and sites, or if the observed site trend (hollow > bridge > top in binding strength) is reversed across many entries, then the mechanistic assumptions about ensemble/electronic control will need revision and the search space must be broadened (e.g., include non-noble primary metals or different Metal2 families available in the database).
+
+Immediate next step (actionable)
+- Begin Iteration 1: extract all database entries with Metal1 = Pt or Pd, Metal1_Composition = 0.75 (Metal2_Composition = 0.25), and Site ∈ [top, bridge]. Rank by H adsorption energy proximity to −0.27 eV and report the top 10 unique candidates (no duplicates). Use the results to validate or refine the predictions above.
+
+I will adopt this hypothesis as the working framework and update it after you or the intern provides the first iteration results.

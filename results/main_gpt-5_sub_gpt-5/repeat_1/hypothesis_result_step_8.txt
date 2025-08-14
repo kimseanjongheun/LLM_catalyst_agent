@@ -1,0 +1,84 @@
+가설 수정 결과: Revised hypothesis (v8)
+
+What held (strengthened)
+- Pd + coinage: Non-hollow sites are unusable (severe destabilization); hollow is the only viable site. Pd–Ag hollow remains the only Pd+coinage case near target, others are too weak.
+- Pt + Ag/Au: Site shifts are modest and can be non-monotonic; the top site can slightly outperform hollow (e.g., Pt–Au). This remains an effective, site-tunable family near −0.27 eV.
+- 3d host + Cu (Ni–Cu, Co–Cu at 0.75 3d): Hollow overbinds (~−0.383 eV) while bridge/top are greatly weakened; site switching cannot rescue.
+- Cu host: Co diluent tunes hollow toward the target in the Cu-rich regime; Ni diluent makes hollow too weak as Cu fraction increases.
+
+What changed (refinements and additions)
+- Pt–Cu is confirmed as an exception to the “coinage on Pt = small shift” rule. At Pt0.75Cu0.25, hollow is far too weak and non-hollow is catastrophically destabilized (top unbound). Treat Cu on Pt like a 3d-type destabilizer for non-hollow ensembles.
+- Ru–Cu added to the landscape: Ru0.75Cu0.25 hollow overbinds (−0.3088 eV). Hypothesis: shifting toward the Cu-rich side will weaken ΔG_H* toward −0.27 at hollow; non-hollow will likely destabilize strongly (pattern seen for Pd/Rh + coinage and Cu hosts with 3d diluents).
+- Rh–Cu nuance: At Rh0.75Cu0.25, hollow is slightly weak (−0.2303). Increasing Rh fraction should strengthen toward −0.27, but DB coverage of alternative sites is limited; composition tuning (if available) is the only lever.
+
+Updated, testable statements (anchor at 0.75/0.25 where available)
+- Pt host:
+  - Pt–Ag: top (−0.2799) ≈ target; bridge/hollow slightly stronger.
+  - Pt–Au: top (−0.2787) outperforms hollow (−0.2532); non-monotonic ladder persists.
+  - Pt–Cu and Pt–Ni: hollow too weak; non-hollow severely destabilized; avoid.
+- Pd host:
+  - Pd–Ag: hollow −0.2911 (slightly strong but acceptable); non-hollow unusable.
+  - Pd–Cu and Pd–Au: hollow too weak; non-hollow much weaker; avoid.
+- Rh host:
+  - Rh–Cu: hollow −0.2303 (slightly weak); bridge weaker; top unavailable. Only composition left as a lever.
+  - Rh–Ag/Au: hollow too strong; no site rescue in DB.
+  - Rh–Ni: hollow too strong; no alternative sites.
+- Cu host:
+  - Cu–Co(0.75) hollow −0.2801 (near-optimal, Cu-rich regime promising).
+  - Cu–Ni: hollow too weak in Cu-rich regime; avoid.
+- Ru host:
+  - Ru–Cu(0.75) hollow −0.3088 (too strong). Expect Cu enrichment to weaken toward −0.27 at hollow.
+
+Knowledge accumulated (facts to record)
+- Pt–Cu(0.75): h −0.1527; b −0.2334; t +0.7323; Δh→t +0.8850 eV (extreme top destabilization).
+- Pt–Ag(0.75): t −0.2799; b −0.2887; h −0.3025 (small, near-target shifts).
+- Pt–Au(0.75): t −0.2787; h −0.2532; b −0.2265 (non-monotonic with top ≈ target).
+- Pd–Ag(0.75): h −0.2911; b 0.1106; t 0.2064 (non-hollow catastrophic).
+- Pd–Au(0.75): h −0.1844; b 0.0327; t 0.3551 (non-hollow catastrophic).
+- Rh–Cu(0.75): h −0.2303; b −0.1368 (top unavailable).
+- Rh–Ag(0.75): h −0.3546 (too strong); Rh–Au(0.75): h −0.4237 (far too strong).
+- Rh–Ni(0.75): h −0.3461 (too strong).
+- 3d host + Cu at 0.75: Ni–Cu h −0.3830; Co–Cu h −0.3832; non-hollow greatly weakened (e.g., Co–Cu b −0.0342; t +0.5649).
+- Cu host + Co: Cu–Co(0.75) h −0.2801 (near-optimal).
+- Cu host + Ni: Cu–Ni h −0.1902 at Cu0.75; −0.1212 at equiatomic (monotonic weakening with increasing Cu).
+- Ru–Cu(0.75): h −0.3088 (new overbinding anchor on Ru host).
+- Ir–Ag/Au(0.75) top: strongly positive (H unbound), reinforcing that early 5d + coinage top-sites are poor for H.
+
+Refined working model
+- Site sensitivity is highly alloy- and ensemble-specific with strong host/diluent asymmetry.
+  - Pt hosts:
+    - Ag/Au: modest, sometimes non-monotonic shifts; top can slightly strengthen vs hollow and sit near −0.28. Composition offers fine-tuning.
+    - Cu/3d: hollow tends to be too weak; non-hollow can be severely destabilized (tops may become unbound). Avoid for HER near −0.27.
+  - Pd + coinage: coinage-rich non-hollow ensembles drastically destabilize H. Hollow is the only viable site; modest composition tuning around Pd–Ag can reach the target.
+  - Cu hosts:
+    - Co diluent is an effective composition lever in Cu-rich regime at hollow (≈−0.27 achievable). Non-hollow is strongly weakened (bridge/top poor).
+    - Ni diluent over-weakens hollow as Cu increases; Cu-rich Cu–Ni is unfavorable.
+  - 3d host + Cu diluent (Ni–Cu, Co–Cu at 0.75 3d): hollow overbinds while non-hollow over-weakens; not site-tunable; composition must flip to Cu-host side.
+  - Rh systems: hollow with coinage is too strong; with Cu slightly weak at Rh0.75; with Ni too strong. Lack of alternative sites in DB limits tuning; only composition remains.
+  - Ru–Cu: Ru-rich hollow overbinds; expect Cu enrichment to move ΔG_H* toward −0.27, with non-hollow likely too weak.
+
+Practical guidance (current best)
+- Cu–Co(0.75) hollow: −0.2801 eV (adopt; closest Cu-based).
+- Pt–Ag(0.75) top: −0.2799 eV (adopt).
+- Pt–Au(0.75) top: −0.2787 eV (adopt).
+- Pt–Au(0.75) hollow: −0.2532 eV (use where slightly weaker binding is desired).
+- Pd–Ag(0.75) hollow: −0.2911 eV (slightly strong but acceptable; avoid site switching).
+
+Next steps for the intern (DB-constrained; strictly no duplicates)
+- Primary: Cu–Co hollow, Cu-rich tuning
+  - Query DB for Cu–Co at hollow with Cu fraction 0.70–0.90 (e.g., 0.70/0.30, 0.80/0.20, 0.85/0.15). Run only entries present and not previously simulated. Aim to move −0.2801 toward −0.270 ± 0.01 eV.
+- Secondary: Pt–Ag and Pt–Au top-site fine-tuning
+  - Query DB for Pt–Ag and Pt–Au at top with Pt fraction 0.70–0.85. Simulate only new, available entries to nudge ΔG_H* to −0.270.
+- Pd–Ag hollow tuning
+  - Query DB for Pd–Ag at hollow with Pd fraction 0.70–0.85. Target weakening from −0.2911 toward −0.270 while avoiding non-hollow sites.
+- Ru–Cu hollow rescue
+  - Query DB for Ru–Cu at hollow with increasing Cu fraction (Cu 0.60–0.90, including Cu–Ru formulations). Select only available, non-duplicate entries to weaken from −0.3088 toward −0.270.
+- Rh–Cu hollow (only if present)
+  - If DB contains higher Rh fractions (e.g., Rh 0.80–0.90) at hollow, test to strengthen from −0.2303 toward −0.270. Avoid non-hollow (missing/weak).
+- Optional mechanistic probes (only if in DB and not yet run)
+  - Pt–Ag and Pt–Au: bridge at nearby compositions to map the site ladder around the optimal top site.
+  - Cu–Co: bridge/top at a slightly different Cu-rich composition (e.g., Cu ≈ 0.80) to quantify the robustness of non-hollow weakening on Cu hosts.
+
+Reminder
+- Adhere to DB availability; do not simulate any candidate already tested in the provided results.
+- Report back ΔG_H* with site and composition; note any non-monotonicities in site ladders (Δh→b→t) to refine the ensemble-based model.

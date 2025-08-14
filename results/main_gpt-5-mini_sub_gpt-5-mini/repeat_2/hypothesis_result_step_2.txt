@@ -1,0 +1,70 @@
+가설 수정 결과: Revised concise hypothesis (one line)
+- Noble + non‑noble alloying still tunes H adsorption toward −0.27 eV, but the composition and site effects are strongly pair‑dependent: noble enrichment usually weakens H binding, and top < bridge < hollow in binding strength remains generally true, however the magnitude and even direction of shifts depend on the specific non‑noble partner and local ensemble/site interactions — therefore an effective search must prioritize pair‑specific permutations (sites and compositions) rather than assume uniform, monotonic trends across all pairs.
+
+What we learned from the simulation (measured results)
+- Pd–Ni (0.75:0.25), bridge: ΔE_H = −0.0559 eV (|Δ − (−0.27)| = 0.214 eV) — too weak.
+- Pt–V (0.75:0.25), bridge: ΔE_H = −0.1703 eV (|Δ| = 0.0997 eV) — promising (within ±0.10 eV).
+- Au–W (0.75:0.25), top: ΔE_H = −0.3924 eV (|Δ| = 0.122 eV) — somewhat overbinding relative to target.
+- Ag–Re (0.50:0.50), bridge: ΔE_H = −0.6132 eV (|Δ| = 0.343 eV) — strong overbinding (early metal dominated).
+- Ag–Mo (0.50:0.50), hollow: ΔE_H = −0.6029 eV (|Δ| = 0.333 eV) — similar strong overbinding.
+- Cu–Co (0.75:0.25), top: ΔE_H = +0.1312 eV (|Δ| = 0.401 eV) — too weak (H not bound enough).
+- Au–Ti (0.75:0.25), top: ΔE_H = +0.2225 eV (|Δ| = 0.4925 eV) — very weak binding / overshoot.
+
+Key empirical patterns and mechanistic interpretation
+1. Pair dependence is strong: examples show the non‑noble partner can dominate adsorption energetics (Ag–Mo/Re very negative), and noble enrichment does not guarantee a consistent shift magnitude across all pairs (compare Pt–V vs Pd–Ni both 0.75:0.25).
+2. Composition effect holds qualitatively but is not strictly monotonic across all pairs — i.e., increasing noble fraction tends to weaken binding but the shift magnitude varies by pair and site.
+3. Site ordering (hollow strongest, top weakest) is broadly observed (Ag–Mo hollow very negative; Cu–Co top positive), but top sites can both underbind and, in some pairs, remain more negative than the target (Au–W top is more negative than −0.27). Therefore top/bridge/hollow only predict direction, not absolute proximity to −0.27 eV.
+4. Bridge sites can be the sweet spot for some pairs (Pt–V bridge is closest so far), so do not over‑prioritize top only.
+5. Database gaps: several requested tuples were not present (messages “조건을 만족하는 후보가 없습니다”), so candidate availability must be checked before selection.
+
+Modified testable predictions (updated)
+1. Noble enrichment will usually reduce |ΔE_H| (weaken binding) compared to the 50:50 composition for a given pair, but exceptions will occur when the non‑noble partner produces strong ensemble or electronic effects.
+2. For promising pairs (Pt–V, Pd–Ni, Au–W), bridge sites are likely to be competitive and must be tested alongside top/hollow; top sites are not guaranteed to be closest to −0.27 eV.
+3. Early/oxophilic non‑noble partners (Mo, Re, W) frequently produce overbinding (ΔE_H << −0.27 eV), particularly at hollow/bridge sites; to reach −0.27 eV with these partners we likely need higher noble fractions and/or low‑coordination sites (top) — but even then some pairs (Au–W) can still overbind at top.
+4. Mid‑row non‑nobles (V, Ni, Co) show more favourable tunability; expect more candidates near −0.27 eV here.
+5. Given current database availability, achieving multiple high‑performers (±0.05 eV) within 10 iterations is still possible but less likely than originally stated; expect a small number of promising candidates (±0.10 eV) unless additional permutations exist in the DB.
+
+Immediate knowledge base update (to record)
+- Entries measured (7), with ΔE_H and distance to −0.27 eV (listed above).
+- Classification: Pt–V (promising, ±0.10), Au–W (near but slightly overbinding), Pd–Ni (too weak), Ag–Mo/Re (overbinding), Cu–Co & Au–Ti (underbinding).
+- Note: Several requested tuples unavailable in DB (log these exact missing tuples for future planning).
+
+Actionable next steps for the intern (Iteration 2 — prioritized, follow the “no duplicates” rule)
+1. First step (mandatory): Query the database for availability of all permutations (for these pairs) before simulation attempts. For each metal pair below, check these 6 permutations: (0.75 top, 0.75 bridge, 0.75 hollow, 0.50 top, 0.50 bridge, 0.50 hollow) and report which are present. Only simulate existing tuples; do not attempt missing tuples.
+
+2. Priority list to simulate (ordered): attempt these new, non‑duplicate tuples if present in DB — test each until resources for iteration are used (aim for ~10 new simulations this iteration).
+- High priority (exploit promising family members)
+  a. Pt–V: test any remaining site/composition permutations (especially 0.50:0.50 bridge/hollow/top and Pt–V 0.75 top/hollow if present). Rationale: Pt–V (0.75 bridge) is currently the best single hit; map neighbors.
+  b. Pd–Ni: test remaining sites/compositions (particularly other sites at 0.75:0.25 and 0.50:0.50 bridge/hollow) if available. Rationale: Pd–Ni 0.75 bridge is weak but may have a bridge/hollow/composition that approaches −0.27.
+  c. Au–W: test bridge and hollow for 0.75 and 0.50 compositions (if in DB). Rationale: Au–W top is slightly overbinding — other sites/compositions may land closer.
+
+- Medium priority (explore corrective permutations)
+  d. Cu–Co: test bridge/hollow at 0.75 and 0.50 (to see if stronger binding sites produce ΔE_H nearer −0.27). Rationale: top was too weak (positive).
+  e. Ag–Re and Ag–Mo: test top sites and 0.75:0.25 compositions if present (to attempt noble enrichment / low‑coordination site to reduce overbinding). Rationale: currently overbinding at 0.50 hollow/bridge.
+
+- Exploratory (diversify if slots remain)
+  f. Test Pd–Co or Pt–Ni permutations (0.75 and 0.50, all sites) if present — these combine noble metals with mid‑row partners that may be more tunable than early TMs.
+  g. If database lacks any permutations above, pick chemically nearby pairs that are present (e.g., replace Re with W or Ni with Co) rather than re-testing previously measured exact tuples.
+
+3. For each simulation run, record and return immediately: Metal1, Metal2, composition, site, ΔE_H, and |ΔE_H − (−0.27 eV)|. Flag any entry within ±0.05 eV as “high‑performing” and within ±0.10 eV as “promising.” Also log any “조건을 만족하는 후보가 없습니다” (not in DB) responses.
+
+4. Selection rules reminder (must follow):
+- Do not simulate any exact Metal1–Metal2–composition–site tuple that has already been measured.
+- If a requested tuple is absent from DB, choose the next‑highest priority tuple (per list above) or a chemically adjacent pair; before simulating, report availability check.
+- Keep at least ~25% of the iteration’s candidates chemically novel (not just permutations of the same pair) to avoid overfitting.
+
+How this changes the iterative plan
+- Early iterations (2–4) should focus more on mapping site/composition permutations of the promising families (Pt–V, Pd–Ni, Au–W, Cu–Co) rather than wide broad sampling of many new families, because pair dependence is strong and small changes produced large shifts here.
+- Maintain a smaller but strategic exploratory fraction (≥25% new pairs per iteration) to avoid missing different families that might be better behaved (e.g., Pd–Co, Pt–Ni).
+- If repeated DB unavailability limits permutations, increase exploration of chemically adjacent pairs that are present in DB.
+
+Contingency triggers (when to change search strategy)
+- If Pt–V and other mapped permutations fail to produce candidates within ±0.10 eV after 6–7 new permutations, revert to broader exploration across additional metal families (include Re, Ru, Zr, Hf if present).
+- If site dependence appears small (<0.05 eV shifts across sites for multiple pairs), shift emphasis to composition mapping and/or consider alloy surface models (ensemble effects) if available in DB.
+
+Short concluding statement (one line)
+- Keep the noble/non‑noble pairing strategy but prioritize pair‑specific mapping (sites + compositions) because the non‑noble partner and local site geometry drive large, non‑uniform shifts in ΔE_H; next iteration should map all available permutations of Pt–V, Pd–Ni, Au–W, Cu–Co, Ag–Mo/Re (availability permitting) and then expand from there.
+
+If you want, I will now:
+- (A) Draft the explicit list of up to ~10 exact tuples to attempt next (but I will first check DB availability messages to avoid proposing impossible entries), or
+- (B) Send the intern the availability‑check query template to run, collect the present tuples, and then produce a fully validated simulation list for Iteration 2. Which do you prefer?

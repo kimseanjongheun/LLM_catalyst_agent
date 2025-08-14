@@ -1,0 +1,24 @@
+가설 수정 결과: **Knowledge Accumulation:**
+
+1. **Suboptimal Pt-Mo Performance**: At (0.75:0.25) and different sites, Pt-Mo shows weak adsorption energy (e.g., -0.0665 eV at bridge, 0.0375 eV at hollow) indicating inadequate catalyst behavior for HER due to insufficient hydrogen adsorption capabilities.
+
+2. **Insights on Pd-W**: Compositions like (0.75:0.25) and (0.50:0.50) are explored at various sites with mixed results. The performance at hollow sites (-0.3618 eV for Pd-W) suggests some potential but remains unoptimized likely due to suboptimal site occupancy and composition.
+
+3. **Rejection of Bridge Sites**: Consistently poor results across different bimetallic combinations (Pt-Mo, Pt-W, Pd-Mo, Pd-W) at bridge sites indicate unsuitability for effective hydrogen adsorption, necessitating a focus shift to alternative sites like top and hollow.
+
+**Hypothesis Refinement:**
+
+**Refined Hypothesis:**
+The intermetallic synergy adjusting Pt-Mo and Pd-W compositions away from traditional stoichiometries, specifically maximizing differential adsorption potential at "top" and "hollow" sites, may unlock enhanced catalytic activity for HER. We propose that moving towards alternative compositions such as Pt-Mo (0.70:0.30) and (0.65:0.35), alongside Pd-W (0.60:0.40), preferentially evaluated at "top" and "hollow" sites, will better support favorable electronic structures and energy states conducive to hydrogen adsorption.
+
+**Next Steps Guided for Intern:**
+
+1. **Pt-Mo Alloy Exploration**:
+   - Test compositions of (0.70:0.30) and (0.65:0.35) on "top" and "hollow" sites.
+   - Identify and detail electronic interactions at these compositions which may encourage improved hydrogen binding despite previous poor performance at bridge sites.
+
+2. **Pd-W Alloy Optimization**:
+   - Analyze Pd-W composition of (0.60:0.40) at "top" and "hollow" sites.
+   - These sites are strategically hypothesized to facilitate better adhesion states and energy alignments, optimizing adsorption energy to support HER.
+
+This focused exploration aims to unlock previously undiscovered potential in Pt-Mo and Pd-W combinations by circumventing historically ineffective site strategies and probing fresh compositional landscapes.

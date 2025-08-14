@@ -1,0 +1,66 @@
+가설 수정 결과: Updated hypothesis (specific, testable)
+
+When alloying a strong H-binding metal (Pt, Pd, Ni, Ru, Rh, Ir) with a weaker H-binding partner (Au, Ag, Cu, Zn, Cd, Hg) at surface-enriched compositions, ligand/ensemble effects generally tune ΔE_H toward the optimal −0.27 eV — but metal- and site-specific offsets (and sometimes abrupt deviations) are important. The new data refine that general statement as follows:
+
+1) Pt family (confirmed)
+- Pt–Au and Pt–Ag at 0.75:0.25 (top) reproducibly give ΔE_H ≈ −0.28 eV. Hypothesis: for Pt0.75–X0.25 (X = Au, Ag) the top and bridge sites will remain within ±0.10 eV of −0.27; hollow will be more negative by ~0.05–0.15 eV.
+- Testable prediction: Pt0.75–Cu0.25 (top) will bind H stronger than Pt0.75–Au0.25(top) by ~0.05–0.20 eV (i.e., ΔE_H ≈ −0.35 to −0.23 eV); bridge/hollow will be stronger than top.
+
+2) Pd–Au is an anomalous outlier
+- Observation: Pd0.75–Au0.25 (top) = +0.3551 eV (large, unexpected weakening).
+- Revised hypothesis: the Pd–Au pair shows an Au-driven upward shift in ΔE_H at Pd0.75–Au0.25(top) that is larger than for other strong/weak pairs. This shift is likely driven by either (a) Au surface segregation/ensemble formation that destabilizes H adsorption on Pd top sites, or (b) a Pd-specific electronic interaction with Au that raises the H adsorption energy.
+- Testable predictions:
+  - For Pd0.75–Au0.25, bridge and hollow sites will be measurably more negative (stronger-binding) than the anomalous top value, but they may still be substantially weaker than −0.27 (i.e., bridge/hollow could lie anywhere from ≈ +0.10 to −0.30 eV).
+  - Pd0.50–Au0.50 (if available) will move ΔE_H more negative than +0.3551 by at least ~0.15–0.30 eV if the anomaly is due to surface Au enrichment at 0.75:0.25; if not, Pd–Au may be anomalous across compositions.
+  - Pd0.75–Ag0.25 will not reproduce the full Pd–Au anomaly: expect Pd0.75–Ag0.25(top) to be more negative than Pd0.75–Au0.25(top) by ≳0.20 eV.
+
+3) Site and composition sampling remain essential, but emphasis differs by metal family
+- For Pt-family alloys, coarser sampling (0.75:0.25 top/bridge ± select 0.50:0.50) is generally sufficient to find near-optimal ΔE_H.
+- For Pd-containing alloys, dense sampling across sites (top/bridge/hollow) and compositions (0.75:0.25 and 0.50:0.50 where available) is required because of potential Au-specific or composition-dependent anomalies.
+
+Knowledge updates from iteration-1 (concise)
+- Confirmed: Pt0.75–Au0.25(top) ΔE_H = −0.2787 eV; Pt0.75–Ag0.25(top) ΔE_H = −0.2799 eV.
+- Critical counterexample: Pd0.75–Au0.25(top) ΔE_H = +0.3551 eV — requires treating Pd–Au as a distinct class.
+- Many 0.50:0.50 candidates requested for iteration-2 are absent from the DB — therefore a DB-availability check must precede any new proposal.
+
+Immediate, specific next experiments for intern (iteration-2) — DB check first; no duplicates
+
+Instructions (must follow before running simulations)
+1. Verify DB availability for each candidate below. If a candidate is absent, report the absence and apply the substitution rules (listed after the list) and obtain approval before running DFT.
+2. Do not re-run any candidate already simulated in iteration-1 (no duplicates).
+3. For each returned calculation, report one-line entries: Metal1–Metal2–composition–site: ΔE_H (eV); and note if H migrated or if major reconstruction/convergence issues occurred.
+4. Flag anything with |ΔE_H + 0.27| ≤ 0.10.
+
+Priority runlist (focused, avoids duplicates)
+- Pt-family (confirm site dependence; test Cu partner)
+  - Pt–Au–0.75–0.25: bridge, hollow
+  - Pt–Ag–0.75–0.25: bridge, hollow
+  - Pt–Cu–0.75–0.25: top, bridge
+
+Rationale: Pt0.75–Au/Ag top validated; site sampling for the same composition will quantify robustness; Pt–Cu 0.75:0.25 tests the effect of a stronger weak-binder at the same composition class.
+
+- Pd-family (probe Pd–Au anomaly and Ag contrast)
+  - Pd–Au–0.75–0.25: bridge, hollow
+  - Pd–Ag–0.75–0.25: top, bridge
+
+Rationale: The anomalous Pd0.75–Au0.25(top) mandates site sampling at the same composition and a Pd–Ag control to see if the effect is Au-specific.
+
+Fallback/substitution rules (strict)
+- If any above 0.75:0.25 candidate is absent, try the same metal pair at any other composition that exists in the DB (but only if that particular composition/site pair was not in iteration-1). Report any substitution before running.
+- If neither the 0.75 nor the 0.50 composition exists for a pair, substitute the weak-binder metal with the nearest neighbor in the weak-binder series (Au ↔ Ag ↔ Cu) that is present in the DB, keeping the same composition and site.
+- Never substitute to a metal pair that was simulated in iteration-1; always choose a completely new, DB-present candidate.
+
+Concrete, testable iteration-2 predictions (to validate)
+- At least one of Pt–(Au,Ag) at 0.75:0.25 bridge/hollow will still lie within ±0.10 eV of −0.27 (because the Pt-family is robust).
+- Pt–Cu–0.75:0.25(top) will be stronger-binding (more negative) than Pt–Au–0.75:0.25(top) by ~0.05–0.20 eV (i.e., near −0.35 to −0.23 eV).
+- For Pd–Au at 0.75:0.25, bridge/hollow will shift ΔE_H by at least −0.15 eV relative to the +0.3551 eV top value; if bridge/hollow remain positive (weaker), then the Pd–Au anomaly is likely robust across sites and compositions and Pd–Au should be de-prioritized for HER.
+
+Data recording (format)
+- One-line per result: Metal1–Metal2–composition–site: ΔE_H (eV); |ΔE_H + 0.27|; convergence/geometry notes.
+- Mark candidates with |ΔE_H + 0.27| ≤ 0.10 for immediate higher-fidelity follow-up.
+
+Decision point for you
+- I can now (a) check the database for availability of the priority runlist above and return a DB-validated runlist (recommended), or (b) proceed to produce exact simulator input strings assuming availability. Which do you prefer?
+
+Concise summary sentence of modification
+Pt–Au and Pt–Ag at 0.75:0.25 (top) validate the tuning concept, but Pd–Au at 0.75:0.25(top) is a clear, large counterexample; therefore iterate 2 should prioritize site sampling at 0.75:0.25 for both Pt- and Pd-families (adding Pt–Cu0.75 tests), but run only DB-available, non-duplicate candidates — I will check the DB now if you want a validated runlist.

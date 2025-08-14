@@ -1,0 +1,67 @@
+가설 수정 결과: Primary revised hypothesis — iteration‑5 (updated, specific, testable)
+
+Core statement
+- For 0.75:0.25 bimetallic surface alloys formed by pairing a “strong” H‑binding metal (Pt, Pd, Ni, Ru, Rh, Ir) with a “weak” partner (Au, Ag, Cu, Zn, Cd, Hg), adsorption at bridge and hollow sites is the most consistently reliable route to the Sabatier optimum (ΔE_H ≈ −0.27 eV). Top sites show the largest ensemble sensitivity and are the principal source of both near‑optimal values and extreme destabilization.
+
+Quantitative, testable sub‑statements (updated using the supplied simulation results)
+
+1) Pt0.75–Au0.25 (measured: top −0.2787, bridge −0.2265, hollow −0.2532 eV)
+   - Prediction: repeat runs (same settings) will reproduce each site within ±0.04 eV of the reported values; all three sites will lie in [−0.32, −0.22] eV. If any repeat deviates by >0.05 eV, inspect slab/ensemble.
+
+2) Pt0.75–Ag0.25 (measured: top −0.2799, bridge −0.2887, hollow −0.3025 eV)
+   - Prediction: under identical settings all three sites will lie in [−0.33, −0.24] eV. This alloy is robust; if any site is within |ΔE_H +0.27| ≤ 0.06, escalate to high‑fidelity + ensemble sampling.
+
+3) Pt0.75–Cu0.25 (measured: top +0.7323, bridge −0.2334, hollow −0.1527 eV)
+   - Prediction: bridge will remain near‑optimal (ΔE_H ∈ [−0.28, −0.19] eV), hollow will remain weak (≈ [−0.20, −0.12] eV), and top will be strongly destabilized (ΔE_H ≥ +0.30 eV). Any top result ≥ +0.30 eV must be labeled “ensemble‑sensitivity” and re‑run (full slab relaxation + ≥3 initial H placements + alternative local ensembles).
+
+4) Pd0.75–Au0.25 (measured: top +0.3551, bridge +0.0327, hollow −0.1844 eV)
+   - Prediction: top is reproducibly destabilized (ΔE_H ≥ +0.30 eV); hollow will lie in [−0.30, −0.15] eV; bridge will be near zero (ΔE_H ∈ [−0.05, +0.10] eV). Increasing Au fraction toward 0.50 (only if DB entries exist) is predicted to shift top by ≈ −0.10 to −0.20 eV.
+
+5) Pd0.75–Ag0.25 (measured: top +0.2064, bridge +0.1106, hollow −0.2911 eV)
+   - Prediction: hollow is near‑optimal (ΔE_H ∈ [−0.33, −0.26] eV); top/bridge will be modestly positive (top ≈ +0.15–+0.25 eV; bridge ≈ +0.05–+0.15 eV). Reproducibility target ±0.06 eV.
+
+6) Ni0.75–Au0.25 (measured: bridge +0.0996, hollow −0.2788; top not present in DB)
+   - Prediction: hollow reproducibly near −0.28 eV (ΔE_H ∈ [−0.33, −0.23] eV); bridge slightly positive (~ +0.08–+0.12 eV). Running Ni0.75–Au0.25‑top is required to determine top behavior; if top ≥ +0.30 eV, treat as ensemble‑sensitive.
+
+7) Ir‑containing pairs
+   - Ir0.75–Ag0.25‑bridge (measured −0.3000 eV): bridge is a near‑optimal candidate (ΔE_H within 0.03 eV of −0.27). Escalate to high‑fidelity + ensemble sampling.
+   - Ir0.75–Cu0.25‑bridge (measured −0.1765 eV): placed on the weak side; other sites/compositions should be checked before discarding.
+
+8) Outlier (hollow overbinding) rule
+   - Empirical: Ru0.75–Au0.25‑hollow = −0.3909 eV and Ni0.75–Ag0.25‑hollow = −0.3703 eV. Testable rule: some strong–weak pairs produce hollow overbinding beyond ≈ −0.36 eV. Any hollow ≤ −0.36 eV must be re‑run at higher fidelity (thicker slab, denser k‑mesh) and with ensemble sampling before acceptance.
+
+9) General reproducibility bounds (statistical rule)
+   - For robust strong–weak pairs, bridge/hollow ΔE_H values are typically within ±0.12 eV of −0.27 eV. Top sites have the largest variance and account for both modest systematic shifts (Pd‑based +0.1–+0.3 eV) and extreme destabilizations (observed Pt–Cu top ≥ +0.7 eV).
+
+Operational rules (confirmed / unchanged)
+- Any top ΔE_H ≥ +0.30 eV: label “ensemble‑sensitivity” and re‑run with full slab relaxation + ≥3 H initial placements; if still ≥ +0.50 eV, accept as genuine ensemble chemistry.
+- Any hollow ΔE_H ≤ −0.36 eV: re‑run with higher fidelity (thicker slab, denser k‑mesh) + ensemble sampling.
+- Candidates within |ΔE_H +0.27| ≤ 0.10: escalate to high‑fidelity + ensemble sampling prior to experimental recommendation.
+- Do not infer composition (0.50:0.50) trends without DB entries at that composition.
+
+New facts and patterns recorded from the simulation
+- Confirmed robustness: Pt–Au and Pt–Ag give tightly clustered ΔE_H across sites near −0.27 eV.
+- Confirmed extreme top destabilization: Pt–Cu top = +0.7323 eV (bridge/hollow still near‑optimal).
+- Pd–Au shows top destabilization (≥ +0.35 eV) while hollow compensates toward near‑optimal.
+- Ru–Au and Ni–Ag hollows are confirmed as overbinding outliers (≤ −0.37 to −0.39 eV).
+- Ir–Ag‑bridge (−0.30 eV) is an additional promising candidate.
+
+Short scientific rationale for update
+- New data tighten the reproducibility bounds for Pt‑based strong–weak pairs and confirm the top‑site ensemble‑sensitivity hypothesis via extreme Pt–Cu and Pd–Au top destabilizations. Bridge/hollow remain statistically reliable for reaching the Sabatier optimum, with a small number of hollow outliers requiring high‑fidelity confirmation.
+
+Prioritized next actions for the intern (no duplicates; label re‑runs appropriately)
+- New DB‑request (not duplicating existing entries): Ni‑Au‑0.75‑0.25‑top — purpose: complete site map and test top ensemble behavior.
+- Re‑optimize (ensemble‑sensitivity / high‑fidelity) for anomalies:
+  - Pt‑Cu‑0.75‑0.25‑top — label “ensemble‑sensitivity”: full slab relaxation + ≥3 H starts + alternate local ensembles.
+  - Ru‑Au‑0.75‑0.25‑hollow — higher‑fidelity (thicker slab, denser k‑mesh) + ensemble sampling.
+  - Ni‑Ag‑0.75‑0.25‑hollow — same higher‑fidelity protocol.
+- Promote to high‑fidelity + ensemble sampling (candidates already within the Sabatier window):
+  - Pt‑Au‑0.75‑0.25 (all sites)
+  - Pt‑Ag‑0.75‑0.25 (all sites)
+  - Ir‑Ag‑0.75‑0.25‑bridge (also sample missing sites)
+
+If you prefer, I can now:
+(a) Check DB availability to produce a DB‑validated, non‑duplicative runlist for the prioritized tests, or
+(b) Produce exact simulator input strings for the prioritized runs (marking which are new and which are re‑optimizations).
+
+Which next step do you want?

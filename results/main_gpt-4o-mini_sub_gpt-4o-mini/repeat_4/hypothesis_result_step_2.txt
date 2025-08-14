@@ -1,0 +1,28 @@
+가설 수정 결과: ### Revised Hypothesis Formation
+
+Based on the simulation results, it's clear that the initial hypotheses require refinement to align more closely with the observed outcomes, especially regarding the influence of specific metal combinations and their performance at different adsorption sites.
+
+**Revised Hypothesis 1**:
+While noble metals do show promise in stabilizing hydrogen adsorption, not all noble/less noble combinations yield favorable results. Thus, we propose that specific noble metal combinations (e.g., Pd and Ir) in conjunction with less noble metals (e.g., Cu and Ag) will achieve a broader range of H adsorption energies, with the aim of approaching –0.27 eV. This hypothesis acknowledges that certain noble metals may not interact well with specific less noble metals, as seen in the high H adsorption energies for Ir-Ag and Pd-Cu.
+
+**Revised Hypothesis 2**:
+The range of alloy compositions should allow for more granular support of our target H adsorption energy. Specifically, compositions closer to 0.25 for less noble metals may enhance electronic interactions and optimize active site characteristics. Future combinations should reduce the noble metal proportion to better fine-tune catalytic performance and investigate effects at lower ratios.
+
+**Revised Hypothesis 3**:
+The preference for adsorption site geometry seems to be case-specific rather than universally applicable, as different combinations yielded varying optimal results. Future efforts will involve pairing well-performing metals with their corresponding favorable geometry to better identify their impact on H adsorption energy. In the current test, both the bridge and hollow sites showed promising results for some pairs (e.g., Ir-Ag at the bridge site). 
+
+### Proposed Testing Candidates for Next Iteration
+
+Given the need to explore new bimetallic combinations that have not been simulated yet, I propose a set of candidates based on the revised hypotheses:
+
+1. **Pd-Ag (0.75 - 0.25) - Sites: Top, Bridge, Hollow**
+2. **Pt-Cu (0.75 - 0.25) - Sites: Top, Bridge, Hollow**
+3. **Ir-Cu (0.75 - 0.25) - Sites: Top, Bridge, Hollow**
+4. **Ru-Cu (0.75 - 0.25) - Sites: Top, Bridge, Hollow**
+5. **Rh-Ag (0.75 - 0.25) - Sites: Bridge, Hollow**
+
+### Justification
+
+These new candidates emphasize variations in noble and less noble metals with compositions leaning towards a higher proportion of noble metals. This approach aims to evaluate if specific pairings improve the overall catalytic performance in HER while allowing for a nuanced exploration of geometrical effects through distinct adsorption sites.
+
+The intern should implement these combinations and closely monitor the resultant H adsorption energies while documenting any unexpected trends. Insights gained can lead to further refinement of our hypotheses and guide our research toward discovering optimal catalysts.

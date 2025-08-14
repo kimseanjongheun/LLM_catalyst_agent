@@ -1,0 +1,39 @@
+Hypothesis (scientific and testable)
+
+Primary hypothesis
+- The H adsorption free energy on bimetallic alloys from this database can be tuned to the optimal target of ≈ −0.27 eV by combining a moderately strong H-binding transition metal (Pt, Pd, Ru, Rh, Ir, Ni) with a weaker-binding noble or late metal (Au, Ag, Cu, Zn, Cd) and by selecting the appropriate surface site and alloy composition. Specifically, Pt- or Pd-containing alloys at Pt/Pd-rich compositions (Metal1_Composition = 0.75) will approach −0.27 eV on bridge sites, while the same pairs at equiatomic composition (0.50/0.50) or with weaker-binding second metals will require hollow sites to reach −0.27 eV. Conversely, strongly binding early transition metals (e.g., V, Cr, Mn, W, Mo, Ti) will generally produce Eads(H) more negative than −0.27 eV unless diluted by a high fraction (≥ 0.50) of a weak-binding partner and probed at top sites.
+
+Rationale (mechanistic basis)
+- d‑band electronic tuning: Mixing a strong-binding metal with a weak-binding metal shifts the d‑band center of the surface atoms and thereby tunes H adsorption energy. Moderately strong binders (Pt, Pd, Ru, Rh, Ir, Ni) mixed with late/noble metals reduce binding strength toward the optimal value.
+- Geometric coordination: Adsorption site coordination increases binding strength in the order top < bridge < hollow (hollow most negative). Thus the same alloy composition can be tuned toward −0.27 eV by choosing a less (top) or more (hollow) coordinated site.
+- Composition control: Increasing the molar fraction of the strong-binding metal makes adsorption more negative; increasing the weak-binding partner pushes Eads less negative. Using the two allowed compositions (0.75/0.25 and 0.50/0.50) provides a coarse but effective tuning knob.
+
+Specific, testable predictions (can be checked against the database)
+1. Pt–Au, Pt–Ag, and Pt–Cu alloys:
+   - Pt0.75–Au0.25 or Pt0.75–Ag0.25 at bridge sites will tend to have Eads(H) near −0.27 eV.
+   - Pt0.50–Au0.50 or Pt0.50–Ag0.50 will require hollow sites to reach similar Eads values (hollow compensates for weaker Pt fraction).
+2. Pd–Au and Pd–Cu pairs:
+   - Pd-rich (0.75/0.25) bridge sites and Pd-equiatomic hollow sites will produce Eads(H) closer to −0.27 eV than either metal alone.
+3. Ru–Cu, Rh–Ag, Ir–Au:
+   - Mid-to-strong binders paired with weak binders at 0.75 strong-metal composition on bridge sites will fall close to the target; at 0.50 composition, hollow sites may be required.
+4. Strong early transition metals (V, Cr, Mn, W, Mo):
+   - Even at 0.50/0.50 composition, hollow or bridge sites will likely be too negative (< −0.27 eV). For these metals to approach −0.27 eV, choose top sites and pair with the weakest binders (Au, Ag, Cu) at 0.50 strong-metal fraction.
+5. Site hierarchy as a tuning rule:
+   - If a candidate at one composition/site is more negative than −0.27 eV, shift to a lower coordination site (bridge → top) or increase the fraction of weak binder to move Eads up (less negative). If a candidate is less negative than −0.27 eV, go to higher coordination (top → bridge → hollow) or increase the strong-metal fraction.
+
+Operational plan for the 10 iterative loops (how to test the hypothesis)
+- Iteration strategy: In each of 10 loops, test a focused set (e.g., 8–12) of previously untested alloy/site/composition entries drawn from the families above. Always avoid repeating any exact Metal1–Metal2–composition–site candidate.
+- Prioritization metric: rank candidates by absolute deviation |Eads(H) + 0.27 eV|; prioritize the smallest deviations for follow-up.
+- Adaptive refinement: Use early-loop outcomes to (a) confirm the site hierarchy and composition trends, (b) narrow promising metal pairs, and (c) expand exploration to adjacent pairs (e.g., Pt→Pd or Au→Ag) when trends indicate benefit.
+- Documentation: For each tested candidate record Metal1, Metal2, composition, site, Eads(H), and a short note on whether the result supports or contradicts each sub-hypothesis. Accumulate these observations to update the choice of pairs in subsequent loops.
+
+Testable success criteria (stop/continue rules)
+- Identify ≥ 10 distinct bimetallic candidates across the 10 loops with |Eads(H) + 0.27 eV| ≤ 0.05 eV (high-performing set), or
+- If none meet that tolerance by loop 6, adapt the selection rules (e.g., shift emphasis to Pd- and Ru-based pairs or favor different sites) and continue iterating.
+
+Deliverables to the intern
+- For each loop provide a list of new, non-duplicated candidates to evaluate (Metal1, Metal2, composition, site) drawn from the prioritized families above.
+- After each loop return the Eads(H) values and let me evaluate which sub-hypotheses hold and which require expansion or revision.
+
+Summary statement
+- By combining electronic (choice of metal pair and composition) and geometric (adsorption site) tuning we can systematically target an H adsorption energy of ≈ −0.27 eV in this bimetallic database. The most promising starting families are Pt–(Au,Ag,Cu), Pd–(Au,Cu), and Ru/Rh–(Cu,Ag) with composition and site selected according to the site-composition tuning rules described above.

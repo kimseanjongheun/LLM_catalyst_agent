@@ -1,0 +1,40 @@
+가설 수정 결과: **Revised Hypothesis:**
+"Bimetallic catalysts comprising platinum (Pt) as the primary metal and alternative secondary metals such as molybdenum (Mo) or ruthenium (Ru) at varying composition ratios will exhibit hydrogen adsorption energies that may align with the target of -0.27 eV, as the recent simulation results indicate previously tested candidates with Ni and Co led to suboptimal performance."
+
+### Rationale:
+- **Metal Selection**: Molybdenum (Mo) and ruthenium (Ru) are strategically chosen due to their favorable electronic properties and potential interactions with Pt, which may enhance reactivity compared to previously investigated metals like Ni and Co. 
+- **Composition Ratios**: We will evaluate specific ratios of Pt and the secondary metals (Mo and Ru) to determine the impact on electronic interactions that could drive optimal hydrogen adsorption energies.
+- **Adsorption Sites**: Testing various adsorption sites (top, bridge, hollow) will provide insights into the mechanisms behind the HER performance for these configurations.
+
+### Next Steps for Testing:
+With the new simulation results in mind, we will focus on new configurations for Pt with Mo and Ru, avoiding compositions previously tested while ensuring comprehensive exploration within the proposed framework.
+
+### Suggested New Compositions:
+1. **60% (Pt) / 40% (Mo)** (new)
+2. **60% (Pt) / 40% (Ru)** (new)
+3. **55% (Pt) / 45% (Mo)** (new)
+4. **55% (Pt) / 45% (Ru)** (new)
+
+### Suggested Candidates for Testing:
+#### 1. **60% (Pt) / 40% (Mo)**:
+- Pt-Mo-0.60-0.40-top
+- Pt-Mo-0.60-0.40-bridge
+- Pt-Mo-0.60-0.40-hollow
+
+#### 2. **60% (Pt) / 40% (Ru)**:
+- Pt-Ru-0.60-0.40-top
+- Pt-Ru-0.60-0.40-bridge
+- Pt-Ru-0.60-0.40-hollow
+
+#### 3. **55% (Pt) / 45% (Mo)**:
+- Pt-Mo-0.55-0.45-top
+- Pt-Mo-0.55-0.45-bridge
+- Pt-Mo-0.55-0.45-hollow
+
+#### 4. **55% (Pt) / 45% (Ru)**:
+- Pt-Ru-0.55-0.45-top
+- Pt-Ru-0.55-0.45-bridge
+- Pt-Ru-0.55-0.45-hollow
+
+### Conclusion:
+By focusing on these configurations, we expect to gain insights into the interactions of Pt with Mo and Ru, potentially uncovering highly effective bimetallic catalysts for the hydrogen evolution reaction (HER). Please ensure to avoid any compositions previously tested to maintain the novelty of our exploration. Feel free to explore additional candidates within this range if you identify scientifically valid configurations through your simulations.

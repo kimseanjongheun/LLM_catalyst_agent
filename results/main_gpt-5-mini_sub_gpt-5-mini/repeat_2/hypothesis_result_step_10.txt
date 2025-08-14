@@ -1,0 +1,47 @@
+가설 수정 결과: Summary of how the new simulation results change the previous (already‑tightened) hypothesis
+- The core claim still stands: near‑optimal ΔE_H ≈ −0.27 eV is reachable in noble–non‑noble bimetallics, but the allowed windows are very narrow and highly pair‑ and configuration‑dependent.
+- The new dataset quantifies the variability more clearly and shows both smaller and larger effects than originally summarized. Site and ordering shifts are often O(0.1–0.25 eV), composition steps of 0.25 can give anything from small (~0.05 eV) to large (~0.25 eV) shifts depending on the pair, and exposing early transition metals can produce extreme overbinding (up to ≈ −1.0 eV).
+
+Concise revised hypothesis (final)
+- Near‑optimal ΔE_H ≈ −0.27 eV is achievable in noble–non‑noble bimetallics but only inside very narrow, pair‑ and configuration‑specific windows (composition × adsorption site × surface ordering). Typical windows are narrower than the coarse 0.25 composition step and are often unique to a metal pair. Hollow sites with noble‑rich compositions (75:25) are a recurring sweet spot for some pairs (Pd–Ni, Ir–Fe), but other pairs require different composition/site/order (e.g., Ir–Ni at 50:50 hollow; Ni–Pd 50:50). Site changes (hollow→bridge/top) and flipping which metal is surface‑exposed usually weaken binding by ~0.1–0.25 eV; exposing early TMs can instead cause extreme overbinding (≈ −0.6 to −1.0 eV). Composition steps of ~0.25 can move ΔE_H by up to ~0.25 eV for some pairs but often less; therefore exhaustive identification of a pair’s sweet spot requires scanning both orderings and all three adsorption sites in addition to composition.
+
+Key empirical facts from the latest simulation (representative examples)
+- Near‑optimal/close hits (ΔE_H ≈ −0.27 eV):
+  - Ir–Ni 50:50 hollow = −0.2756 eV
+  - Pd–Ni 75:25 hollow = −0.2528 eV
+  - Ni–Pd 50:50 hollow = −0.2947 eV
+  - Ir–Fe 75:25 hollow = −0.2624 eV
+- Typical site/order shifts (examples):
+  - Pd–Ni 75:25 hollow −0.2528 eV → bridge −0.0559 eV (Δ ≈ +0.197 eV weaker)
+  - Ni–Pd 75:25 hollow −0.2474 eV → bridge −0.1012 eV (Δ ≈ +0.146 eV)
+  - Pt–V 75:25: top (Pt‑exposed) +0.3617 eV → hollow (Pt‑exposed) −0.1188 eV → V‑exposed hollow −0.9927 eV (ordering+site span >1.3 eV)
+- Strong overbinders when early TMs are surface‑exposed:
+  - V–Pt 75:25 hollow (V‑exposed) = −0.9927 eV
+  - Ag–Re 50:50 bridge = −0.6132 eV
+  - Ag–Mo 50:50 hollow = −0.6029 eV
+  - Ir–Ti 50:50 hollow = −0.5217 eV
+- Composition sensitivity (example):
+  - Au–W top: 75:25 = −0.3924 eV vs 50:50 = −0.1419 eV (Δ ≈ +0.2505 eV)
+- Underbinding examples:
+  - Pt–V 75:25 top (Pt‑exposed) = +0.3617 eV
+  - Cu–Co 75:25 top = +0.1312 eV
+- Dataset gaps matter: many requested configurations were not present (entries flagged "조건을 만족하는 후보가 없습니다"), so conclusions should be limited to available entries.
+
+Updated, testable predictions (refinements for the next iteration)
+1. For any given metal pair present in the database, a coarse scan at 0.25 composition intervals across top/bridge/hollow and both orderings will typically expose at most one narrow composition×site×order window that approaches ΔE_H ≈ −0.27 eV (window width often ≲0.05–0.1 eV); many pairs will have no such window in the sampled grid.
+2. Noble‑rich 75:25 hollow is a recurring sweet spot for a subset of pairs (confirmed: Pd–Ni, Ir–Fe), but other pairs commonly need different composition or ordering (confirmed: Ir–Ni 50:50 hollow; Ni–Pd 50:50 hollow).
+3. Changing adsorption site from hollow → bridge/top usually weakens binding by ~0.1–0.25 eV for many noble–non‑noble pairs (examples above), so a hollow result near −0.27 eV will often lose the sweet‑spot if only bridge/top is used.
+4. Reversing which element is surface‑exposed typically shifts ΔE_H by ~0.1–0.25 eV for many noble‑noble/noble‑non‑noble pairs, but if reversing exposes an early TM the shift can be massive (up to ≈ −1.0 eV).
+5. Composition steps of 0.25 can move ΔE_H by anywhere between ~0.05 and ~0.25 eV depending on the pair (Au–W is an example of the large end). So coarse 0.25 scans will find candidate windows but finer composition sampling (e.g., 0.1 steps) will be needed to localize the sweet spot for promising pairs.
+6. Because site and ordering effects sometimes exceed composition effects, identification of a true sweet spot requires sampling both orderings and all three adsorption sites in combination with composition scanning.
+
+Practical search strategy (short)
+- Coarse first pass: for each new pair available in the database, test both orderings × compositions [0.75:0.25, 0.50:0.50, 0.25:0.75] × sites [hollow, bridge, top]. This typically identifies whether a candidate sweet window exists.
+- If a pair shows a promising value within ≈0.15 eV of −0.27 eV, follow up with finer composition increments (0.05–0.10) and confirm both orderings and all sites.
+- Avoid configurations with early TM surface‑exposure unless the goal is to study overbinding mechanisms; they frequently give extreme overbinding and are rarely optimal for HER.
+
+Would you like me to:
+(a) propose the next specific, non‑duplicative set of candidates for the intern to simulate (I will choose only configurations not yet in the database and focus on promising pairs and informative edge cases), or
+(b) produce a concise, prioritized map of metal×composition×site combinations to refine (so the intern can sample efficiently)?
+
+Tell me (a) or (b) and I will prepare the next, database‑constrained plan (ensuring no duplicates).

@@ -1,0 +1,89 @@
+가설 수정 결과: Thank you — the new simulation outputs change the picture substantially. Below I (a) summarize the key new findings, (b) give an updated, testable hypothesis, (c) record updated knowledge-base facts, and (d) give a prioritized, no-duplicate set of next tests for the intern (with clear DB checks and reporting rules).
+
+A. Concise summary of new simulation outcomes (what changed)
+- New, important results:
+  - Pt–W 0.50:0.50, top = −0.0980 eV (much less negative than Pt–W 0.75 top = −0.2933 eV)
+  - Pt–W 0.50:0.50, bridge = −0.5967 eV (very strongly binding)
+  - Pd–W 0.50:0.50, bridge = −0.6570 eV (very strongly binding)
+  - Pd–V 0.75:0.25, top = +0.2423 eV (very weak, but less extreme than Pt–V top = +0.3617 eV)
+- Several previously requested entries were absent from DB (same as earlier: e.g., Pt–W 0.75 bridge, Pt–Mo 0.75 top, Pd–W 0.50 top, etc.), and the run properly reported these “조건을 만족하는 후보가 없습니다”.
+
+B. How these results modify the previous hypothesis (refined, testable)
+Refined hypothesis (concise):
+- W as Metal2 is the most promising family member, but the Pt/Pd–W system shows strong, non-monotonic composition dependence and very strong site sensitivity:
+  - Pt–W (0.75:0.25) top ≈ −0.29 eV (near −0.27), but moving to 0.50:0.50 changes behavior drastically: top → −0.098 eV (weaker binding), bridge → −0.597 eV (over-binding). Thus composition and adsorption site can push ΔEads in opposite directions and appear non-linear.
+- Mo/Cr/V partners at Pt/Pd-rich (0.75:0.25) compositions mostly produce far-too-weak binding at tested sites; modest dilution (to 0.50:0.50) was not shown to rescue these in available DB trials and may or may not help depending on site.
+- Pd vs Pt differences are metal2- and site-dependent; no universal sign change should be assumed. For W, Pd–W 0.75 top was slightly more negative than Pt–W 0.75 top; at 0.50 bridge both Pt and Pd are strongly over-binding.
+
+Testable predictions (for next iterations)
+1. The Pt/Pd–W system has a narrow composition/site window around Pt/Pd-rich top sites (likely around 0.75:0.25) that yields near-optimal ΔEads (≈ −0.27). Moving composition toward equimolar tends to (a) either weaken top-site binding (less negative) or (b) produce very strong bridge-site binding (more negative), so expect strong non-monotonic behavior with composition and site.
+2. Hollow sites (not yet tested) may also show strong deviations from top-site behavior for W-containing alloys — potentially either over-binding or under-binding — so hollow-site tests are a high priority.
+3. For Mo/Cr/V, at present 0.75:0.25 tests are far from target; switching site or increasing Pt/Pd fraction (if available in DB) is required to try to recover near −0.27. Expect many Pt/Pd–(Mo/Cr/V) entries at 0.75:0.25 to remain >+0.15 eV from target unless site/composition change is large.
+
+C. Knowledge-base update (facts from the recent run)
+- Pt–W (0.75:0.25), top: −0.2933 eV (close to −0.27)
+- Pt–W (0.50:0.50), top: −0.0980 eV (much weaker than 0.75:0.25 top)
+- Pt–W (0.50:0.50), bridge: −0.5967 eV (very strong binding)
+- Pd–W (0.75:0.25), top: −0.3276 eV (also close to −0.27, slightly stronger than Pt–W 0.75 top)
+- Pd–W (0.50:0.50), bridge: −0.6570 eV (very strong binding)
+- Pt–Mo (0.75:0.25), bridge: −0.0665 eV (weak)
+- Pd–Mo (0.75:0.25), top: −0.0555 eV (weak)
+- Pt–Cr (0.75:0.25), bridge: −0.0852 eV (weak)
+- Pt–V (0.75:0.25), top: +0.3617 eV (very weak)
+- Pd–V (0.75:0.25), bridge: −0.1044 eV (weak)
+- Pd–V (0.75:0.25), top: +0.2423 eV (weak)
+- Absent/Not-in-DB entries (examples returned): Pt–Mo (0.75 top), Pt–W (0.75 bridge), Pd–W (0.50 top), Pt–Cr (0.75 top), Pt–Mo (0.50 bridge), Pd–Mo (0.50 top), Pd–Ti (0.75 top).
+
+D. Practical guidance / Iteration-2 priorities for the intern (strict rules + test list)
+Important rules (must follow):
+- Do not re-run any candidate already present in the knowledge base above. Absolute no-duplicates.
+- For each requested candidate: first check DB. If candidate not present, return “not found” (조건을 만족하는 후보가 없습니다) and do not substitute with a previously tested variant.
+- Always return: exact ΔEads (eV), composition, site, and Δrelative = ΔEads − (−0.27) in the response.
+- Keep filenames/records with full tags (Metal1–Metal2–composition–site) to prevent accidental duplicates.
+
+Priority rationale: Given the strong composition/site nonlinearity for W, focus on filling gaps in site space (hollow) and testing whether composition higher than 0.75 or intermediate values exist in DB. Also probe site dependence for V/Cr where some sites were missing.
+
+Target candidate list (only request runs that are not already tested; these are all new relative to the runs above). Before running each, check DB; if not present, report not-found and move to next.
+
+1) Pt–W, Composition 0.75:0.25, Site = hollow
+   - Why: top at 0.75 was near optimal; bridge at 0.75 not present in DB earlier. Hollow is untested and could be the decisive site that is either slightly too strong or slightly too weak. High priority.
+
+2) Pd–W, Composition 0.75:0.25, Site = hollow
+   - Why: Pd–W 0.75 top is near optimal but slightly stronger; a hollow-site measurement will show whether Pd–W has a similarly narrow window as Pt–W. High priority.
+
+3) Pt–W, Composition 0.50:0.50, Site = hollow
+   - Why: 0.50 top and bridge gave very different, extreme values; hollow at 0.50 will show whether the extreme bridge over-binding generalizes to hollow (likely) or whether hollow is milder.
+
+4) Pd–W, Composition 0.50:0.50, Site = top
+   - Why: Pd–W 0.50 top was previously reported as not found in DB — but if present now (or if previously skipped), test it. This is to compare with Pt–W 0.50 top = −0.0980 eV. (If Pd–W 0.50 top truly not in DB, report “not found” and skip.)
+
+5) Pt–V, Composition 0.75:0.25, Site = bridge and / or hollow (run bridge first)
+   - Why: Pt–V top = +0.3617 eV (very weak). Pd–V bridge = −0.1044 eV. Test Pt–V bridge to see whether site changes can salvage V as Metal2 at Pt-rich composition.
+
+6) Pd–V, Composition 0.50:0.50, Site = top (if present)
+   - Why: Pd–V 0.75 top = +0.2423 eV; moving to 0.50 may change toward stronger binding. If not present, report not-found.
+
+7) Pt–Cr, Composition 0.75:0.25, Site = top (if present)
+   - Why: Pt–Cr 0.75 bridge = −0.0852; top was previously “not found” in DB. If present now, top will test site lever for Cr.
+
+Notes on this list:
+- These are the minimum, focused tests to resolve the W composition-site nonlinearity and to probe whether site change rescues V/Cr. I intentionally prioritized hollow-site measurements and bridging tests we lacked.
+- I deliberately did NOT request any of the seven already-tested candidates (Pt–Mo 0.75 bridge, Pt–W 0.75 top, Pt–V 0.75 top, Pt–Cr 0.75 bridge, Pd–Mo 0.75 top, Pd–W 0.75 top, Pd–V 0.75 bridge, nor the 0.50 variants already returned). No duplicates.
+
+E. What I want reported back (format)
+- For each candidate (in the same order requested), return a single-line record:
+  Metal1–Metal2–composition–site: ΔEads (eV); Δfrom_target = (ΔEads − (−0.27)) eV; if not in DB return “not found”.
+- Example: Pt–W–0.75–hollow: −0.307 eV; Δ = −0.037 eV
+- Also flag any unexpected outliers (e.g., ΔEads > +0.2 eV or < −0.5 eV) so I can re-prioritize.
+
+F. Post-run evaluation plan
+- If Pt/Pd–W hollow/top at 0.75 remains within ±0.1 eV of −0.27, mark W as high-priority and then (only if DB contains) explore intermediate compositions (0.625, 0.875) for top sites.
+- If hollow/other sites at 0.75 are strongly over-binding (<< −0.4 eV) or under-binding (>> −0.1 eV), then the useful window for W will be constrained to Pt/Pd-rich top sites only; I will then propose exploring other late–late pairings (if present) or alloy surface morphology (if DB includes surface ensembles).
+- If any Pt/Pd–V/Cr/Mo entries approach −0.27 after site/composition change, expand their exploration; otherwise deprioritize those early metals at tested compositions.
+
+Immediate action for the intern (concise)
+- Run the 7 candidate tests above, but only if present in DB; for candidates not found, return “not found” and do not substitute a previously-tested candidate.
+- Return results in the one-line format specified.
+- Ensure every run has a unique tag Metal1–Metal2–composition–site.
+
+If you want, I will prepare an automated spreadsheet template (with the tested-candidates block pre-filled) that enforces “no duplicates” and computes Δ from −0.27 eV automatically — say “yes” and I’ll produce that next.

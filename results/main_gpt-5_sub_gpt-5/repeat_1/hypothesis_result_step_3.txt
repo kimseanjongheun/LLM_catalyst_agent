@@ -1,0 +1,69 @@
+가설 수정 결과: Revised hypothesis (v3) based on the new simulation data
+
+What held
+- Site ordering still trends hollow > bridge > top in binding strength, but the magnitude of the site-induced shift is highly alloy- and ensemble-dependent.
+- Coinage diluent effect on Pt hollow remains Cu > Au > Ag in weakening strength: Pt–Cu (too weak) > Pt–Au (slightly weak) > Pt–Ag (slightly strong).
+
+What changed (key corrections)
+- Site shifts are not uniform:
+  - Modest for Pt–Ag/Au at 0.75: hollow→bridge weakens only by ~0.01–0.03 eV.
+  - Very large for Pd–Ag and Ni–Cu (≥0.30 eV), indicating that bridge/top sites can sample coinage-rich ensembles that dramatically weaken H binding.
+- Pd–Ag: the bridge site is dramatically too weak (+0.40 eV shift from hollow), invalidating the earlier assumption that bridge would gently tune hollow toward −0.27 eV for Pd hosts.
+- Rh host: Ag at 25% strengthens relative to Cu as predicted, but overshoots to too strong at hollow (−0.3546 eV). Thus, for Rh, Cu is the better 25% diluent if hollow is the working site; Ag may require moving to weaker sites.
+
+Updated, testable statements
+- Pt host (0.75/0.25):
+  - Pt–Ag: Hollow is slightly strong (−0.3025); bridge shift is too small (−0.2887). Top is the likely lever to reach −0.27.
+  - Pt–Au: Hollow (−0.2532) is already within ±0.05 eV of the target; bridge/top only move further away. Accept hollow.
+  - Avoid Pt–Cu at 25% (hollow −0.1527 is far too weak).
+- Pd host (0.75/0.25):
+  - Pd–Ag hollow (−0.2911) is usable and close to target. Bridge is much too weak (+0.1106). Top is likely weak as well; if tested, treat as diagnostic rather than optimization.
+  - Avoid Pd–Cu at 25% (hollow −0.1589 too weak).
+- Rh host (0.75/0.25):
+  - Rh–Cu hollow (−0.2303) is slightly weak; cannot be strengthened by moving to bridge/top. If stronger binding is needed, adjust composition (if available). 
+  - Rh–Ag hollow (−0.3546) is too strong; moving to bridge may tune toward −0.27.
+- Ni/Co hosts with Cu:
+  - Ni–Cu 0.75 bridge overshoots to very weak (−0.0821), showing site change can induce >0.3 eV weakening. Top for Ni–Cu 0.75 is unavailable; 0.50 entries were unavailable, limiting tunability in the current DB.
+  - Co–Cu 0.75 hollow is strong (−0.3832); 0.50 hollow (−0.3274) remains strong and 0.50 bridge/top not in DB. Testing 0.75 bridge/top (if available) is the viable path; expect large weakening similar to Ni–Cu.
+
+Knowledge accumulated (new facts and patterns)
+- Pt–Ag 0.75: hollow −0.3025; bridge −0.2887 (Δ = +0.0138 eV)
+- Pt–Au 0.75: hollow −0.2532; bridge −0.2265 (Δ = +0.0267 eV)
+- Pd–Ag 0.75: hollow −0.2911; bridge +0.1106 (Δ = +0.4017 eV; bridge samples Ag-rich ensembles → very weak H)
+- Ni–Cu 0.75: hollow −0.3830; bridge −0.0821 (Δ = +0.3009 eV; bridge severely weakens)
+- Rh–Ag 0.75 hollow: −0.3546 (stronger than Rh–Cu −0.2303 by −0.1243 eV at same loading)
+- Reinforced diluent order on Pt at hollow: Cu (weakest, −0.1527) > Au (−0.2532) > Ag (strongest, −0.3025).
+
+Refined working model
+- Site sensitivity is alloy-specific: on Pt-based alloys the bridge shift is small (~0.02 eV), while on Pd–Ag and Ni–Cu it can exceed 0.3–0.4 eV due to coinage-rich bridge ensembles.
+- Practical guidance:
+  - Pt host: use Ag/Au at 25%. If hollow is −0.30 ± 0.02 (Pt–Ag), use top to approach −0.27. If hollow is −0.25 (Pt–Au), keep hollow.
+  - Pd host: use Ag at 25% and keep hollow; avoid bridge/top.
+  - Rh host: Cu at 25% is near/weak at hollow; Ag at 25% is too strong at hollow—bridge may rescue.
+  - Ni/Co–Cu: expect large site-induced weakening; for Co–Cu, 0.75 bridge/top may be the only available tuning levers; Ni–Cu appears DB-limited.
+
+Next experiments for the intern (no duplicates; within observed database pairs; skip combos previously reported unavailable)
+Priority A (targeting −0.27 eV)
+- Pt-Ag-0.75-0.25-top
+  Rationale: hollow is −0.3025 (slightly strong) and bridge shift was too small; top likely nudges toward −0.27 without the huge overshoot seen on Pd–Ag.
+- Rh-Ag-0.75-0.25-bridge
+  Rationale: hollow −0.3546 too strong; bridge should weaken toward target.
+- Co-Cu-0.75-0.25-bridge
+  Rationale: hollow −0.3832 too strong; 0.50 bridge/top unavailable; test 0.75 bridge to assess whether it lands near −0.27 or overshoots.
+
+Priority B (diagnostics to map site-scaling/ensembles; run if available)
+- Co-Cu-0.75-0.25-top
+  Rationale: bracket the site ladder; if bridge overshoots, top will quantify the full range for Co–Cu.
+- Pd-Ag-0.75-0.25-top
+  Rationale: bridge was anomalously weak; top will clarify whether Pd–Ag top also samples Ag-rich ensembles.
+- Rh-Cu-0.75-0.25-bridge
+  Rationale: quantify site shifts on Rh–Cu; though not likely to improve toward −0.27, it helps calibrate Rh-site scaling.
+
+How these results will refine the hypothesis
+- If Pt–Ag top at 0.75 lands at −0.27 ± 0.03, we will codify: for Pt hosts, 25% Ag at top is the corrective lever when hollow is ~−0.30 and bridge shift is insufficient.
+- If Rh–Ag bridge approaches −0.27, we will establish: for Rh hosts, Ag at 25% requires the bridge site, whereas Cu works at hollow.
+- If Co–Cu 0.75 bridge/top overshoot dramatically (as Ni–Cu), we will emphasize that for 3d–coinage systems, site changes can be nonlinearly large; optimization may require intermediate ensembles (e.g., mixed-bridge motifs) or different diluents if present in the DB.
+
+Notes to avoid unavailable/duplicate cases
+- Do not re-request any “no candidate exists” combinations previously returned (e.g., Co–Cu 0.50 bridge/top; Ni–Cu 0.75 top; Pt–Ag 0.50 bridge; etc.).
+- All proposed candidates above are new (not previously simulated) and respect the pairs present in the returned database.

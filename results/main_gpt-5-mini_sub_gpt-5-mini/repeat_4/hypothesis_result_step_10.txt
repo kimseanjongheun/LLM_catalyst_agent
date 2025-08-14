@@ -1,0 +1,140 @@
+가설 수정 결과: Updated Hypothesis Package (A–F) — incorporating the latest simulation outputs
+
+A. Short summary of what changed (new / important measured values and DB availability notes)
+- Newly measured (not previously in KB) — add these lines:
+  - Pt–Re–0.50–top: −0.1729 eV (Δ = +0.0971 eV) — measured in this run; weaker (more positive) than Pt–Re–0.75.
+- Confirm and keep the previously listed new measurements from the run (these were returned by the DB/sim and should remain in KB): (I list them succinctly — they were reported already by you and confirmed by the simulation)
+  - Pt–Mo–0.75–bridge: −0.0665 eV (Δ = +0.2035 eV)  
+  - Pt–V–0.75–top: +0.3617 eV (Δ = +0.6317 eV)  
+  - Pd–V–0.75–top: +0.2423 eV (Δ = +0.5123 eV)  
+  - Pt–Cr–0.75–bridge: −0.0852 eV (Δ = +0.1848 eV)  
+  - Pd–Mo–0.75–top: −0.0555 eV (Δ = +0.2145 eV)  
+  - Pd–V–0.75–bridge: −0.1044 eV (Δ = +0.1656 eV)  
+  - Pd–Ru–0.75–bridge: −0.2430 eV (Δ = +0.0270 eV)  
+  - Pt–V–0.75–bridge: −0.1703 eV (Δ = +0.0997 eV)  
+  - Pt–W–0.50–hollow: +0.0031 eV (Δ = +0.2731 eV)  
+  - Pt–Re–0.75–top: −0.3615 eV (Δ = −0.0915 eV)  
+  - Co–W–0.75–top: +0.0727 eV (Δ = +0.3427 eV)  
+  - Pt–W–0.75–top: −0.2933 eV (Δ = −0.0233 eV)  
+  - Pd–W–0.75–top: −0.3276 eV (Δ = −0.0576 eV)  
+  - Pt–W–0.50–top: −0.0980 eV (Δ = +0.1720 eV)  
+  - Pt–W–0.50–bridge: −0.5967 eV (Δ = −0.3267 eV) — strong-binding outlier  
+  - Pd–W–0.50–bridge: −0.6570 eV (Δ = −0.3870 eV) — strong-binding outlier  
+  - Pt–W–0.75–hollow: +0.1214 eV (Δ = +0.3914 eV) — weak-binding outlier  
+  - Pd–W–0.75–hollow: −0.3618 eV (Δ = −0.0918 eV)  
+  - Pd–Re–0.75–top: −0.3943 eV (Δ = −0.1243 eV)  
+  - Pd–Re–0.50–bridge: −0.5347 eV (Δ = −0.2647 eV) — strong-binding outlier  
+  - Pt–Ru–0.75–top: −0.2495 eV (Δ = +0.0205 eV)  
+  - Pt–Ru–0.75–hollow: −0.0976 eV (Δ = +0.1724 eV)  
+  - Pd–Ru–0.75–top: −0.1311 eV (Δ = +0.1389 eV)  
+  - Au–W–0.75–top: −0.3924 eV (Δ = −0.1224 eV)  
+  - Ir–W–0.75–top: +0.0541 eV (Δ = +0.3241 eV) — weak outlier  
+  - Cu–W–0.50–hollow: −0.2817 eV (Δ = −0.0117 eV)  
+  - Pd–W–0.50–hollow: −0.2766 eV (Δ = −0.0066 eV)  
+  - Pt–Nb–0.75–top: +0.2007 eV (Δ = +0.4707 eV) — weak outlier  
+  - Pd–Hf–0.75–top: +0.5669 eV (Δ = +0.8369 eV) — weak outlier  
+  - Pt–Zn–0.75–bridge: −0.2581 eV (Δ = +0.0119 eV)
+
+- DB availability notes from this run:
+  - Several of the queries from the prior planned batch returned “조건을 만족하는 후보가 없습니다” (not found) — specifically for many Pt–Zn and Pt–Ru at 0.50, Pd–Re–0.50–top, Cu–W–0.50–top, Pd–W–0.50–top, Pd–Ti etc. This confirms that DB coverage is patchy; a robust strategy must first enumerate which (composition,site) entries exist for each metal pair before requesting a simulation.
+
+- Reinforced / updated patterns (key insights after the new measurement Pt–Re–0.50–top):
+  - Re fraction strongly controls top-site binding: Pt–Re–0.75–top = −0.3615 eV (over-binding) vs Pt–Re–0.50–top = −0.1729 eV (too weak). A moderate change in Re fraction (0.75 → 0.50) produced a ~+0.1886 eV shift toward weaker adsorption — large, non-linear effect.
+  - W-containing systems remain the best route toward −0.27 eV, but site/composition sensitivity is extreme and asymmetric (bridge sites at ~0.50 frequently over-bind catastrophically; hollow & top behavior depends on noble metal).
+  - Pd–W is generally stronger-binding than Pt–W at the same discretized fraction (confirmed again).
+  - Cu–W hollow (0.50) and Pd–W hollow (0.50) again are near-target and robust to small differences — these are high-priority candidates.
+  - Zn is confirmed as a gentle diluent at bridge (Pt–Zn–0.75–bridge ~ −0.258 eV); however the DB does not appear to contain the requested Pt–Zn–top entries (not found), so exploration of Zn at other composition/site combinations must be driven by DB enumeration.
+
+B. Refined, testable hypothesis (concise)
+- Core hypothesis (updated): W-containing bimetallics and selective diluents (Zn, Cu) remain the most promising routes to the −0.27 eV target, but small discrete composition steps and adsorption-site identity produce very large, non-linear shifts in ΔEads. Re is a powerful, composition-sensitive binder: moderate Re fractions (0.50) swing Pt–Re from over-binding (0.75) to under-binding (0.50). Therefore, tuning near the target requires either (a) select W–noble pairs with the correct site (Pd–W or Pt–W hollow/top depending on noble metal and fraction) or (b) use gentler diluents (Zn/Cu) in top/bridge/hollow sites where DB entries exist. Avoid bridge sites at ~0.50 W–noble compositions (consistent over-binding). Avoid V/Hf/Nb unless weak-binding is the explicit goal.
+- Specific, testable predictions (revised):
+  1. For Pt–Re the optimum discretized DB bin (0.50 vs 0.75) jumps across the target: Pt–Re–0.75 over-binds (−0.3615), Pt–Re–0.50 under-binds (−0.1729). Therefore a discretized optimum likely does not exist between DB bins — instead seek alternative knobs (different site, different second element) rather than fractional interpolation.
+  2. Pd–W hollow at 0.50 and Cu–W hollow at 0.50 will remain within ±0.02 eV of target across repeat calculations (robust candidates).
+  3. Pt–Zn (bridge at 0.75) is near-target; if Pt–Zn top or hollow entries exist in DB they will be within ±0.05 eV of target or shift modestly toward weaker binding (Zn dilutes Pt binding gently).
+  4. Bridge sites at equimolar W–noble compositions will continue to be dangerous — expect ΔEads < −0.50 eV for several combinations and must be avoided.
+  5. Adding small Re fraction (<0.25) to Pt–W or Pd–W might tune Pt–W top from −0.293 to nearer −0.27 without over-binding — test only if such small-fraction entries exist in DB.
+
+C. Knowledge-base update (exact facts to record)
+- Add the newly measured exact line:
+  - Pt–Re–0.50–top: −0.1729 eV (Δ = +0.0971 eV)
+- Confirm addition of all measured values from the last run (these were returned by the DB/simulation — add them to KB if not already present). (I repeat them here so they can be copy-pasted into KB):
+  - Pt–Mo–0.75–bridge: −0.0665 eV (Δ = +0.2035 eV)  
+  - Pt–V–0.75–top: +0.3617 eV (Δ = +0.6317 eV)  
+  - Pd–V–0.75–top: +0.2423 eV (Δ = +0.5123 eV)  
+  - Pt–Cr–0.75–bridge: −0.0852 eV (Δ = +0.1848 eV)  
+  - Pd–Mo–0.75–top: −0.0555 eV (Δ = +0.2145 eV)  
+  - Pd–V–0.75–bridge: −0.1044 eV (Δ = +0.1656 eV)  
+  - Pd–Ru–0.75–bridge: −0.2430 eV (Δ = +0.0270 eV)  
+  - Pt–V–0.75–bridge: −0.1703 eV (Δ = +0.0997 eV)  
+  - Pt–W–0.50–hollow: +0.0031 eV (Δ = +0.2731 eV)  
+  - Pt–Re–0.75–top: −0.3615 eV (Δ = −0.0915 eV)  
+  - Co–W–0.75–top: +0.0727 eV (Δ = +0.3427 eV)  
+  - Pt–W–0.75–top: −0.2933 eV (Δ = −0.0233 eV)  
+  - Pd–W–0.75–top: −0.3276 eV (Δ = −0.0576 eV)  
+  - Pt–W–0.50–top: −0.0980 eV (Δ = +0.1720 eV)  
+  - Pt–W–0.50–bridge: −0.5967 eV (Δ = −0.3267 eV)  
+  - Pd–W–0.50–bridge: −0.6570 eV (Δ = −0.3870 eV)  
+  - Pt–W–0.75–hollow: +0.1214 eV (Δ = +0.3914 eV)  
+  - Pd–W–0.75–hollow: −0.3618 eV (Δ = −0.0918 eV)  
+  - Pd–Re–0.75–top: −0.3943 eV (Δ = −0.1243 eV)  
+  - Pd–Re–0.50–bridge: −0.5347 eV (Δ = −0.2647 eV)  
+  - Pt–Ru–0.75–top: −0.2495 eV (Δ = +0.0205 eV)  
+  - Pt–Ru–0.75–hollow: −0.0976 eV (Δ = +0.1724 eV)  
+  - Pd–Ru–0.75–top: −0.1311 eV (Δ = +0.1389 eV)  
+  - Au–W–0.75–top: −0.3924 eV (Δ = −0.1224 eV)  
+  - Ir–W–0.75–top: +0.0541 eV (Δ = +0.3241 eV)  
+  - Cu–W–0.50–hollow: −0.2817 eV (Δ = −0.0117 eV)  
+  - Pd–W–0.50–hollow: −0.2766 eV (Δ = −0.0066 eV)  
+  - Pt–Nb–0.75–top: +0.2007 eV (Δ = +0.4707 eV)  
+  - Pd–Hf–0.75–top: +0.5669 eV (Δ = +0.8369 eV)  
+  - Pt–Zn–0.75–bridge: −0.2581 eV (Δ = +0.0119 eV)
+
+- Add a DB-availability log entry for the session: list of explicit "not found" queries returned by the intern (so future planning avoids futile requests). Record the exact strings that returned “조건을 만족하는 후보가 없습니다” in the session log.
+
+D. Prioritized, no-duplicate set of next tests for the intern (strict rules + revised test list)
+Rationale for revision:
+- Several requested 0.50/0.75 queries were absent in DB. To avoid repeated "not found" responses, the next batch will first enumerate available composition/site bins for each high-priority metal pair, then request simulations only for unmeasured candidates that the DB confirms exist. This removes blind 0.50/0.75 guesses and avoids duplicates.
+
+Priority plan (two-step procedure per metal pair; do not submit any candidate that is already recorded in KB):
+
+Step 1 — Enumerate DB availability (for each metal pair, ask DB to list exact (composition,site) entries available). Do this for the following metal pairs, in order:
+  A) Pt–Re  
+  B) Pt–W  
+  C) Pd–W  
+  D) Pt–Zn  
+  E) Cu–W
+
+Step 2 — From the enumerated list returned by DB for each pair, run DFT/simulation only on the highest-priority, untested candidate(s) (i.e., those composition/site combinations that DB confirms exist but are not present in KB). Priority within each pair:
+  - Pt–Re: choose untested Pt–Re entries at compositions/sites nearest to top-site behavior (prefer top then hollow then bridge) — but do not re-run any already in KB (Pt–Re–0.75–top and Pt–Re–0.50–top are recorded).
+  - Pt–W: prioritize Pt–W entries at composition bins and sites that have not yet been measured (if Pt–W–0.75–top already measured, prefer Pt–W–0.75–hollow if not in KB — but Pt–W–0.75–hollow already measured; choose any untested Pt–W entries DB provides, excluding measured ones).
+  - Pd–W: prioritize hollow and top at 0.50/0.75 where DB has entries and KB does not; avoid 0.50–bridge (over-binding).
+  - Pt–Zn: if top-site entries exist in DB (they were “not found” earlier), run them; else select other sites present (e.g., hollow) that are not in KB.
+  - Cu–W: prioritize top-site if present (we previously had Cu–W–0.50–hollow measured); if top not available, enumerate available Cu–W composition/site bins and pick untested hollow/top entries.
+
+Important operational rules for intern (strict):
+- For each metal pair above, first run a DB enumeration query that lists all available (composition,site) entries for that metal pair. Return the enumeration results (exact strings) before running any simulations for that pair.
+- From the enumeration, select up to two highest-priority untested candidates per pair (never select a candidate already in KB or already tested in this session).
+- For each selected candidate, run the simulation and report results in the exact single-line reporting format (section E below).
+- If enumeration shows no available untested entries for a pair, return exactly: “조건을 만족하는 후보가 없습니다” for that pair and move to next pair.
+- Append every tested filename to the tested-candidates file as before.
+
+Why this change:
+- Avoids repeating not-found queries, adheres to DB discretization, and ensures no-duplicate selection.
+
+E. Reporting format (strict) — unchanged
+- For each tested candidate, after the DB-enumeration step and simulation, return exactly one line in this format:
+  Metal1–Metal2–composition–site: ΔEads (eV); Δfrom_target = (ΔEads − (−0.27)) eV; [flag if OUTLIER or “not found”]
+- If enumeration reveals no available entries for a requested metal pair at all, return: “조건을 만족하는 후보가 없습니다” (exactly).
+- Tag OUTLIERs per rule: ΔEads > +0.20 eV OR ΔEads < −0.50 eV.
+
+F. Immediate next-step instruction to intern (concise)
+- Execute the two-step priority plan in section D.
+  1) For each metal pair (Pt–Re, Pt–W, Pd–W, Pt–Zn, Cu–W), run a DB enumeration query to list available composition & site entries. Return the enumeration output.
+  2) From that enumeration, pick up to two untested candidates (not present in KB) per pair and run simulations. For each simulated candidate, return a single-line result in the exact format from section E.
+  3) If enumeration yields no available entries for a pair, return exactly “조건을 만족하는 후보가 없습니다”.
+  4) Append every tested candidate name to the tested-candidates file and include the updated file with results.
+
+Notes for the PI (concise)
+- The key experimental take-away from this run is that Re fraction is a very coarse but very powerful lever — 0.75→0.50 changed Pt–Re top-site by ~+0.19 eV. Because DB bins are coarse (0.75/0.50), interpolation is not available; therefore the practical path to the target is either to (a) use different second elements/different sites with more gradual tuning (Zn, Cu, W–hollow), or (b) combine small-fraction Re entries if DB contains 0.25 bins (check enumeration). The revised operational plan emphasizes DB enumeration first to avoid blind “not found” queries.
+
+If you approve, I will issue the enumeration + simulation batch to the intern now (Pt–Re → Pt–W → Pd–W → Pt–Zn → Cu–W) and collect the exact enumeration outputs and up to two new simulation results per pair.

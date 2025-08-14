@@ -1,0 +1,217 @@
+가설 수정 결과: Done — I modified the hypothesis package to exactly reflect the simulation output you provided, tightened the testable statements, and produced a prioritized, no-duplicate next-testing plan that enforces a DB pre-check. Summary below — tell me whether you want (A) the run-log CSV pre-filled (after I do the DB pre-check) or (B) for me to pre-filter now and return an ordered list of exact DB IDs ready for submission. I recommend Option B (pre-filter now).
+
+1) One-line modified primary hypothesis
+- Pt diluted by Au/Ag at Pt-majority (~0.75:0.25) is a robust lever to reach ΔG_H ≈ −0.27 eV across multiple sites; Pd-majority Pd–Ag hollow, Co–Pt hollow and Pt–W (Pt-majority top) are additional Pd/Co/W windows that can hit or approach −0.27 eV; Pt–Cu, Pt–Ir and Pt–Rh show strong site- and order-dependence and require composition/order sweeps.
+
+2) Key facts extracted (exact DB_ID → value from your batch)
+- Pt-Au-0.75-0.25-top: −0.2787 eV
+- Pt-Au-0.75-0.25-bridge: −0.2265 eV
+- Pt-Au-0.75-0.25-hollow: −0.2532 eV
+- Pt-Ag-0.75-0.25-top: −0.2799 eV
+- Pt-Ag-0.75-0.25-bridge: −0.2887 eV
+- Pt-Ag-0.75-0.25-hollow: −0.3025 eV
+- Pt-Cu-0.75-0.25-top: +0.7323 eV (very weak)
+- Pt-Cu-0.75-0.25-bridge: −0.2334 eV
+- Pt-Cu-0.75-0.25-hollow: −0.1527 eV
+- Cu-Pt-0.75-0.25-top: −0.1344 eV
+- Cu-Pt-0.75-0.25-bridge: −0.1127 eV
+- Pd-Ag-0.75-0.25-top: +0.2064 eV
+- Pd-Ag-0.75-0.25-bridge: +0.1106 eV
+- Pd-Ag-0.75-0.25-hollow: −0.2911 eV
+- Pt-W-0.50-0.50-top: −0.0980 eV
+- Pt-W-0.50-0.50-hollow: +0.0031 eV
+- Pt-W-0.50-0.50-bridge: −0.5967 eV (strong overbind)
+- Pt-W-0.75-0.25-top: −0.2933 eV
+- Pt-W-0.75-0.25-hollow: +0.1214 eV
+- W-Pt-0.75-0.25-top: +0.0454 eV
+- Co-Pt-0.75-0.25-top: −0.0205 eV
+- Co-Pt-0.75-0.25-bridge: −0.0893 eV
+- Co-Pt-0.75-0.25-hollow: −0.3057 eV
+- Co-Pt-0.50-0.50-hollow: −0.1002 eV
+- Pt-Ir-0.75-0.25-top: −0.4133 eV (overbind)
+- Pt-Ir-0.75-0.25-bridge: −0.1481 eV
+- Pt-Ir-0.75-0.25-hollow: −0.1384 eV
+- Ir-Pt-0.50-0.50-bridge: −0.1903 eV
+- Ir-Pt-0.50-0.50-hollow: −0.2310 eV
+- Ir-Pt-0.75-0.25-bridge: −0.1732 eV
+- Pt-Rh-0.75-0.25-top: −0.0714 eV
+- Pt-Rh-0.75-0.25-bridge: −0.1914 eV
+- Pt-Rh-0.75-0.25-hollow: −0.1776 eV
+- Pt-Rh-0.50-0.50-bridge: −0.1831 eV
+- Pt-Rh-0.50-0.50-hollow: −0.2240 eV
+- Pd-Au-0.75-0.25-top: +0.3551 eV
+- Pd-Au-0.75-0.25-bridge: +0.0327 eV
+- Pd-Au-0.75-0.25-hollow: −0.1844 eV
+- Ag-Pd-0.75-0.25-hollow: +0.6595 eV
+- Ag-Pd-0.50-0.50-hollow: +0.0398 eV
+- Ag-Pd-0.75-0.25-bridge: +0.1797 eV
+- Rh-Pt-0.75-0.25-bridge: −0.1716 eV
+- Cu-Pt-0.75-0.25-bridge: −0.1127 eV
+- Cu-Pt-0.75-0.25-top: −0.1344 eV
+- Ir-Pt-0.50-0.50-bridge: −0.1903 eV
+- Ir-Pt-0.50-0.50-hollow: −0.2310 eV
+- Au-Pt-0.75-0.25-top: −0.2302 eV
+- Ag-Pt-0.75-0.25-hollow: +0.7195 eV
+- Ir-Pt-0.75-0.25-bridge: −0.1732 eV
+- Pd-Cu-0.75-0.25-hollow: −0.1589 eV
+- Pt-Ru-0.75-0.25-bridge: −0.1532 eV
+- Pt-Re-0.75-0.25-hollow: −0.1985 eV
+- Pd-Ru-0.75-0.25-hollow: −0.1667 eV
+- Ir-Re-0.50-0.50-bridge: −0.0352 eV
+- Co-Ni-0.75-0.25-hollow: −0.3428 eV
+
+Also: many requested 0.50 compositions or specific sites returned “조건을 만족하는 후보가 없습니다” — DB coverage is uneven for several common composition/site combinations.
+
+3) Updated patterns / new insights (concise)
+- Order/majority matters: metal1 (the first metal in DB IDs) strongly controls ΔG_H; reversing the order often flips sign or magnitude (e.g., Pd–Ag vs Ag–Pd; Pt–W vs W–Pt; Pt–Cu vs Cu–Pt; Pt–Au vs Au–Pt).
+- Pt-majority Au/Ag is robust: Pt-Au and Pt-Ag at Pt 0.75 produced several values clustered near −0.27 eV across top/bridge/hollow (consistent, low ensemble spread).
+- Pd–Ag is hollow-specific: Pd-Ag-0.75-0.25-hollow is a confirmed Pd-majority hit (−0.2911 eV); Pd-majority is required — Ag-majority entries are positive.
+- Site flips are strong for Pt–Cu and others: Pt–Cu top is extremely weak (+0.7323 eV) while Pt–Cu bridge is near target (−0.2334 eV).
+- Pt–W bridges are dangerous outliers: Pt-W-0.50-0.50-bridge = −0.5967 eV (strong overbinding); Pt-majority top at 0.75 moves toward target (−0.2933 eV).
+- Co–Pt hollow and Co–Ni hollow are noteworthy strong-binding windows (Co-Pt-0.75-0.25-hollow = −0.3057 eV; Co-Ni-0.75-0.25-hollow = −0.3428 eV) — consider stability checks.
+- Pt–Ir: Pt-majority top overbinds (−0.4133 eV); Ir-majority or Ir-first entries (Ir-Pt 0.50) reduce binding strength toward the target (hollow −0.2310 eV).
+- DB coverage gaps: many 0.50 compositions or requested site entries were missing — must pre-check.
+
+4) Revised, testable primary hypothesis (concise)
+- Pt-majority (≈0.75) alloys with Au or Ag consistently yield ΔG_H near −0.27 eV across sites and are the highest-priority, robust computational leads; Pd-majority Pd–Ag hollow and Co-majority hollows are secondary validated leads; Pt–W, Pt–Cu and Pt–Ir require careful site/composition/order mapping due to non-monotonic and strong site effects.
+
+5) Refined, testable sub-hypotheses
+A. Pt–Au / Pt–Ag
+- H1A1: Pt–Au and Pt–Ag at Pt 0.75 will have at least one site within ±0.05 eV of −0.27; expect ensemble spread ≤ 0.10 eV across top/bridge/hollow.
+- H1A2: Au–Pt and Ag–Pt reversals will yield systematically different ΔG_H (often less favorable/positive) — always compare both orders when available.
+
+B. Pd–Ag / Ag–Pd
+- H1B: Pd-majority hollow (Pd fraction ~0.67–0.90) will remain ≤ −0.28 to −0.30 eV; Ag-majority will be positive/weak. Map compositions around 0.67–0.90.
+
+C. Pt–Cu / Cu–Pt
+- H1C: Pt-majority bridge ensembles (~0.67–0.80) will be near-neutral/mild binding; Pt-majority top will be weak. Cu-majority entries will be weaker and qualitatively different.
+
+D. Pt–W
+- H1D1: W-rich bridge ensembles create extreme overbinding (ΔG_H ≤ −0.50 eV).
+- H1D2: Increasing Pt fraction moves some top ensembles toward −0.27 (observed at 0.75); test available compositions carefully and avoid W-rich bridges in neutral-binding screens.
+
+E. Pt–Ir / Ir–Pt
+- H1E: Pt-majority top overbinds; Ir-first / Ir-majority compositions reduce binding to acceptable range — sweep order/composition if DB supports.
+
+F. Pt–Rh
+- H1F: Pt–Rh shows monotonic strengthening from top→bridge→hollow; reducing Pt fraction from 0.75 to 0.50 moves hollow closer to −0.27; test intermediate Pt fractions if available.
+
+G. Co–Pt & Co–Ni
+- H1G: Co-majority hollows (Co–Pt and Co–Ni at ~0.75 Co) reliably produce strong binding near −0.30 to −0.34 eV — include chemical stability checks (possible subsurface H or reconstruction artifacts).
+
+H. Miscellaneous lower-priority
+- H1H: Pt–Ru, Pt–Re, Pd–Ru produced moderate binding (−0.15 to −0.20 eV) in this batch; treat as lower-priority tunable windows.
+
+6) Prioritized next-testing plan (rules + candidate windows)
+Rules (mandatory)
+- DB pre-check: Intern MUST query the DB for exact metal1–metal2–A:B–site before submission. If exact ID absent, pick the nearest available unique DB ID and log substitution. DO NOT submit runs for IDs listed in the DO-NOT-RESUBMIT list below.
+- No duplicate submissions: never submit any exact DB ID already returned in this batch.
+- Flag extreme values: any run with |ΔG_H| > 0.45 eV must include a note about possible chemical instability or simulation artifact.
+- Use the one-line reporting format (below) for each run.
+
+Priority 1 — Confirm Pt-majority Au/Ag robustness (high priority, small ensemble spread)
+- Map Pt-Au and Pt-Ag around Pt ≈ 0.67–0.85 if DB has them (top/bridge/hollow). If DB only has 0.75 entries, run multiple site checks for reproducibility.
+
+Priority 2 — Map Pd–Ag hollow window
+- Sweep Pd fraction near 0.67–0.90 for hollow ensembles (Pd-majority hollow confirmed). Only after confirming hollow reproducibility, probe bridge/top.
+
+Priority 3 — Validate Co hollows and Co–Ni
+- Check Co-Pt and Co-Ni hollows at Co-majority 0.67–0.85 to confirm strong-binding reproducibility and evaluate chemical stability signals.
+
+Priority 4 — Pt–W controlled mapping (avoid bridges unless deliberately investigating strong binders)
+- Focus on Pt-majority top/hollow at 0.67–0.80; treat any W-rich bridge runs as deliberate stress tests.
+
+Priority 5 — Pt–Cu site mapping
+- Investigate Pt-majority bridge near 0.67–0.80 (expected near-target) and retain Pt-majority top as a diagnostic for site-flip behavior.
+
+Priority 6 — Ir–Pt and Pt–Rh composition/order sweeps
+- Explore Ir-first compositions (Ir–Pt 0.50–0.67) for bridge/hollow; refine Pt–Rh in intermediate compositions (avoid re-running exact 0.50/0.75 IDs from this batch).
+
+Suggested example requests (INTERN MUST PRE-CHECK DB first; do not submit these if DB_check_available?=N)
+- Pt-Au-0.67-0.33-top/bridge/hollow (if present)
+- Pt-Ag-0.67-0.33-bridge/hollow
+- Pd-Ag-0.67-0.33-hollow; Pd-Ag-0.90-0.10-hollow
+- Co-Pt-0.67-0.33-hollow
+- Co-Ni-0.67-0.33-hollow
+- Pt-W-0.67-0.33-top; Pt-W-0.67-0.33-hollow (avoid bridge)
+- Pt-Cu-0.67-0.33-bridge
+- Ir-Pt-0.67-0.33-hollow/bridge
+- Pt-Rh-0.67-0.33-hollow
+
+7) Mandatory one-line report format for each new run
+DB_ID | ΔG_H (eV) | deviation from −0.27 (eV) | one-line interpretation linking to hypothesis | substitution log (requested vs DB-provided) | duplicate-check note
+
+8) Decision guidance (post-next-batch)
+- If Pt–Au/Ag Pt-0.75 values reproduce across sites, prioritize experimental synthesis of Pt–Ag (Pt-majority) and Pt–Au (Pt-majority).
+- If Pd–Ag hollow is reproducible and stable across Pd fractions, promote Pd–Ag hollow to experimental verification.
+- If Pt–W 0.50 bridge remains ≤ −0.50 eV, mark W-rich bridges as excluded for neutral-binding campaigns.
+- If Co hollows are reproducible but show signs of instability/artifacts, run additional diagnostics before experimental selection.
+
+9) One-line carry-forward hypothesis
+- Pt–Au/Ag at Pt ≈ 0.75 are robust computational leads near −0.27 eV; Pd–Ag hollow and Co-majority hollows are validated secondary leads; Pt–W bridges and Pt–Cu site flips represent high-variance behaviors that need tight composition/site mapping.
+
+10) DO-NOT-RESUBMIT — Exact DB IDs returned in this batch (unique list)
+Pt-Au-0.75-0.25-top
+Pt-Au-0.75-0.25-bridge
+Pt-Au-0.75-0.25-hollow
+Pt-Ag-0.75-0.25-top
+Pt-Ag-0.75-0.25-bridge
+Pt-Ag-0.75-0.25-hollow
+Pt-Cu-0.75-0.25-top
+Pt-Cu-0.75-0.25-bridge
+Pt-Cu-0.75-0.25-hollow
+Cu-Pt-0.75-0.25-top
+Cu-Pt-0.75-0.25-bridge
+Pd-Ag-0.75-0.25-top
+Pd-Ag-0.75-0.25-bridge
+Pd-Ag-0.75-0.25-hollow
+Pd-Au-0.75-0.25-top
+Pd-Au-0.75-0.25-bridge
+Pd-Au-0.75-0.25-hollow
+Pt-W-0.50-0.50-top
+Pt-W-0.50-0.50-hollow
+Pt-W-0.50-0.50-bridge
+Pt-W-0.75-0.25-top
+Pt-W-0.75-0.25-hollow
+W-Pt-0.75-0.25-top
+Co-Pt-0.75-0.25-top
+Co-Pt-0.75-0.25-bridge
+Co-Pt-0.75-0.25-hollow
+Co-Pt-0.50-0.50-hollow
+Pt-Ir-0.75-0.25-top
+Pt-Ir-0.75-0.25-bridge
+Pt-Ir-0.75-0.25-hollow
+Ir-Pt-0.50-0.50-bridge
+Ir-Pt-0.50-0.50-hollow
+Ir-Pt-0.75-0.25-bridge
+Pt-Rh-0.75-0.25-top
+Pt-Rh-0.75-0.25-bridge
+Pt-Rh-0.75-0.25-hollow
+Pt-Rh-0.50-0.50-bridge
+Pt-Rh-0.50-0.50-hollow
+Rh-Pt-0.75-0.25-bridge
+Ag-Pd-0.75-0.25-hollow
+Ag-Pd-0.50-0.50-hollow
+Ag-Pd-0.75-0.25-bridge
+W-Pt-0.75-0.25-top
+Cu-Pt-0.75-0.25-bridge
+Cu-Pt-0.75-0.25-top
+Ir-Pt-0.75-0.25-bridge
+Au-Pt-0.75-0.25-top
+Ag-Pt-0.75-0.25-hollow
+Pd-Cu-0.75-0.25-hollow
+Pt-Ru-0.75-0.25-bridge
+Pt-Re-0.75-0.25-hollow
+Pd-Ru-0.75-0.25-hollow
+Ir-Re-0.50-0.50-bridge
+Co-Ni-0.75-0.25-hollow
+
+(Intern: treat any of these strings as already tested — do not resubmit.)
+
+11) Run-log template reminder (intern MUST pre-check DB before submission)
+- Columns: Requested_metal1 | Requested_metal2 | Requested_comp | Requested_site | DB_check_available? (Y/N) | DB_provided_ID | If_substituted (Y/N) | Substitution_log | ΔG_H | Deviation_from_-0.27 | Short_comment | Duplicate_check_passed? | Notes
+
+12) My recommended next action
+- I recommend Option B: pre-filter now — I will query the DB for the priority candidate windows above and return an ordered list of exact, available DB IDs (no duplicates) ready for submission, flagging any unavailable IDs and proposing nearest substitutions. After that you can choose to (A) have me pre-fill the CSV with those confirmed IDs or (B) submit runs.
+
+Which do you want me to do now? Option B (pre-filter now — recommended) or Option A (pre-fill CSV after you run DB pre-check)?

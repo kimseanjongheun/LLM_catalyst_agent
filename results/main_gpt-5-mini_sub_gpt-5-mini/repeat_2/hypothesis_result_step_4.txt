@@ -1,0 +1,16 @@
+가설 수정 결과: Revised concise hypothesis
+Noble–non‑noble alloying can achieve the target ΔE_H ≈ −0.27 eV, but only within narrow, pair‑, composition‑ and site‑specific windows. In the present data Pd–Ni and Ir–Fe (both at noble‑rich compositions on hollow sites) stand out as near‑optimal, while Pt–V is tunable but did not reach the target in the tested points. Early‑TM partners (Mo, Re, W) generally produce excessive overbinding with coinage/noble partners, though composition and adsorption site can moderate that effect — therefore systematic per‑pair mapping of site and composition windows (not a uniform noble‑enrichment assumption) is required.
+
+Key evidence from the simulation
+- Pd–Ni(0.75:0.25)@hollow = −0.2528 eV (very close to −0.27 eV).
+- Ir–Fe(0.75:0.25)@hollow = −0.2624 eV (within the target window).
+- Pt–V shows strong site/composition dependence but did not hit the target in tested points (best was Pt–V(0.75:0.25)@bridge = −0.1703 eV; Pt–V(0.75:0.25)@top = +0.3617 eV).
+- Early‑TM partners give large overbinding: Ag–Re(0.50:0.50)@bridge = −0.6132 eV, Ag–Mo(0.50:0.50)@hollow = −0.6029 eV, Au–W(0.75:0.25)@top = −0.3924 eV — but note Au–W(0.50:0.50)@top = −0.1419 eV, showing composition/site can mitigate overbinding.
+
+Practical implications / next focus (for the next iteration)
+- Prioritize fine mapping of Pd–Ni and Ir–Fe around noble‑rich compositions and hollow sites to define the composition window width and sensitivity to small composition shifts and neighboring adsorption sites.
+- For Pt–V, perform a systematic site sweep and finer composition sampling (keeping track of bridge vs hollow vs top) because Pt–V shows strong site‑dependent tuning but the tested points missed the target.
+- De‑prioritize broad screening of early‑TM partners with coinage metals unless focusing on specific composition/site combinations that are shown to soften binding (because many tested points are strongly overbinding).
+- Avoid assuming uniform noble enrichment; instead target narrow per‑pair composition bands and explicit site mapping.
+
+If you want, I will (a) convert this into a prioritized list of new candidate windows for the intern to test (ensuring no duplicates with already-tested entries), or (b) prepare a short experimental plan for composition/site sampling density around Pd–Ni and Ir–Fe. Which would you prefer?

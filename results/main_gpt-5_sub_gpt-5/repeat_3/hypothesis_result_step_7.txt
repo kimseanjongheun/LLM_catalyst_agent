@@ -1,0 +1,86 @@
+가설 수정 결과: Revised hypothesis (v6), grounded in the new results
+
+Core claims (updated):
+- Pd–W shows strong composition–site antagonism that is Metal1/termination sensitive:
+  - Hollow-site binding is minimized near equiatomic Pd–W (−0.2766 eV) but re-strengthens dramatically toward W-rich when W dominates the surface environment (W–Pd-0.75/0.25-hollow = −0.8916 eV). 
+  - In contrast, top-site binding weakens with W-rich termination (W–Pd-0.75/0.25-top = +0.312 eV), while Pd-rich Pd–W-0.75/0.25-top/hollow are moderately too strong (−0.328 to −0.362 eV) with small site splitting. Thus, hollow and top respond oppositely to increasing W, and Metal1 (surface termination/ensemble) is decisive.
+- Co–Mo maintains a robust, composition-insensitive site bifurcation, intensified when the early T-metal leads:
+  - Co–Mo-0.50/0.50: top weak positive (+0.191 eV), bridge/hollow strongly negative (−0.483/−0.593 eV).
+  - Co–Mo-0.75/0.25: top +0.215 eV, hollow −0.525 eV; Mo–Co-0.75/0.25: top +0.053 eV, hollow −0.844 eV. Near-target windows are unlikely within DB.
+- Coinage dilution + high coordination is not universal; site ordering is pair-specific:
+  - Ir–Au (0.75/0.25): hollow moderates to −0.312 eV and top is too weak (+0.362 eV), consistent with “coinage dilution + hollow.”
+  - Ir–Ag (0.75/0.25): top is extremely weak (+0.916 eV), bridge is weaker than hollow (−0.300 vs −0.346 eV). Site ordering is hollow < bridge << top, contradicting a “bridge > hollow” expectation.
+  - Rh–Au (0.75/0.25): hollow overbinds (−0.424 eV); DB lacks top/bridge here, but current evidence suggests limited site-relief.
+
+Key corrections/updates to v5:
+- Pd–W: W-rich does not generally strengthen top sites; instead, top weakens (can become positive) while hollow overbinds strongly. The “higher coordination strengthens binding” shorthand is composition- and termination-dependent.
+- Ir–Ag: Bridge is not stronger than hollow at 0.75/0.25; top is far weaker than anticipated. Revise the coordination-compensation motif for this pair.
+- Co–Mo: Bifurcation persists and intensifies when Mo leads (Mo–Co), reinforcing deprioritization within the current DB.
+
+Refined, testable predictions (updated ranges):
+- Pd–W (W-rich with Metal1 = Pd):
+  - 0.25/0.75-hollow: ≤ −0.70 eV (re-strengthening vs −0.277 at 0.50/0.50).
+  - 0.25/0.75-top: 0.00 to +0.25 eV (weak/near non-binding).
+  - 0.25/0.75-bridge: ≤ −0.80 eV.
+- W–Pd (termination check at equiatomic):
+  - 0.50/0.50-hollow: −0.45 to −0.75 eV.
+  - 0.50/0.50-top: −0.10 to +0.20 eV.
+  - 0.50/0.50-bridge: ≤ −0.70 eV.
+- Co–Mo (W-rich analog):
+  - 0.25/0.75-top: +0.05 to +0.30 eV.
+  - 0.25/0.75-hollow: ≤ −0.70 eV.
+  - 0.25/0.75-bridge: ≤ −0.55 eV.
+- Ir–Ag (composition mapping at sites):
+  - 0.50/0.50-top: +0.40 to +0.80 eV; 0.50/0.50-bridge: −0.20 to −0.45 eV.
+  - 0.25/0.75-hollow: −0.40 to −0.55 eV; bridge: −0.20 to −0.40 eV; top: ≥ +0.80 eV.
+- Rh–Au (seek site relief at other compositions):
+  - 0.50/0.50-top: −0.05 to −0.25 eV; 0.50/0.50-bridge: −0.40 to −0.65 eV.
+  - 0.25/0.75-top: 0.00 to −0.20 eV; hollow: −0.45 to −0.70 eV.
+
+How these tests will falsify v6:
+- If Pd–W-0.25/0.75-top remains strongly binding (≤ −0.30 eV), top-site weakening toward W-rich is not general; termination/ensemble assumptions must be revised.
+- If Pd–W-0.25/0.75-hollow is not much stronger than equiatomic (> −0.45 eV), hollow re-strengthening is weaker than posited or highly termination-dependent.
+- If W–Pd-0.50/0.50-top is not weak/near-zero, termination alone cannot explain site antagonism; alternate ensemble explanations are needed.
+- If Ir–Ag bridge surpasses hollow in strength at other compositions, the revised site ordering is invalid.
+- If Co–Mo-0.25/0.75-top drifts toward thermoneutral/negative, a narrow near-optimal window exists and the system should be reconsidered.
+
+Knowledge accumulated this iteration:
+- Pd–W: Equiatomic hollow is near-thermoneutral (−0.2766 eV); Pd-rich 0.75/0.25 top/hollow are modestly too strong; W-rich termination (W–Pd-0.75/0.25) produces extreme hollow overbinding (−0.8916 eV) with weak top (+0.312 eV). Metal1/termination strongly affects site response.
+- Co–Mo and Mo–Co: Persistent, strong site bifurcation; Mo-leading hollow is very strong (down to −0.844 eV) with top weak positive, confirming poor prospects within DB.
+- Ir–Ag (0.75/0.25): top extremely weak (+0.916 eV), hollow stronger than bridge (−0.346 vs −0.300 eV); the coordination-compensation expectation fails.
+- Rh–Au (0.75/0.25): hollow overbinds (−0.424 eV); top/bridge absent; limited potential for site relief inferred but not confirmed.
+- Ir–Au (0.75/0.25): hollow near target (−0.312 eV), top too weak (+0.362 eV); DB coverage limits further tuning.
+
+Guidance to the intern: next candidates to probe (no duplicates; query only if present; skip any known-absent)
+Priority A – Map Pd–W convexity and termination effects:
+1) Pd–W-0.25/0.75-hollow (Metal1 = Pd).
+2) Pd–W-0.25/0.75-top (Metal1 = Pd).
+3) Pd–W-0.25/0.75-bridge (Metal1 = Pd).
+4) W–Pd-0.50/0.50-hollow (Metal1 = W).
+5) W–Pd-0.50/0.50-top (Metal1 = W).
+6) W–Pd-0.50/0.50-bridge (Metal1 = W).
+
+Priority B – Close Co–Mo:
+7) Co–Mo-0.25/0.75-top (Metal1 = Co).
+8) Co–Mo-0.25/0.75-hollow (Metal1 = Co).
+9) Co–Mo-0.25/0.75-bridge (Metal1 = Co).
+
+Priority C – Test Ir–Ag composition dependence at sites:
+10) Ir–Ag-0.50/0.50-top (Metal1 = Ir).
+11) Ir–Ag-0.50/0.50-bridge (Metal1 = Ir).
+12) Ir–Ag-0.25/0.75-hollow (Metal1 = Ir).
+13) Ir–Ag-0.25/0.75-top (Metal1 = Ir).
+14) Ir–Ag-0.25/0.75-bridge (Metal1 = Ir).
+
+Priority D – Seek site relief in Rh–Au (if present at other compositions):
+15) Rh–Au-0.50/0.50-top (Metal1 = Rh).
+16) Rh–Au-0.50/0.50-bridge (Metal1 = Rh).
+17) Rh–Au-0.25/0.75-top (Metal1 = Rh).
+18) Rh–Au-0.25/0.75-bridge (Metal1 = Rh).
+19) Rh–Au-0.25/0.75-hollow (Metal1 = Rh).
+
+Rationale:
+- Priority A resolves whether hollow convexity (minimum near 0.50) coexists with top-site weakening toward W-rich and how strongly termination controls both.
+- Priority B confirms Co–Mo’s lack of an accessible window.
+- Priority C quantifies Ir–Ag’s deviation from coordination-compensation across composition.
+- Priority D probes whether Rh–Au can be rescued by composition or site when hollow overbinds.

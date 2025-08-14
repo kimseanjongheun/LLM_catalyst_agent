@@ -1,0 +1,72 @@
+가설 수정 결과: Summary of what the simulation actually delivered
+- Tested entries and ΔEads (eV):
+  - Pt-Mo (0.75:0.25), bridge: −0.0665  (Δ from target −0.27 eV = +0.2035 eV)
+  - Pt-W  (0.75:0.25), top:    −0.2933  (Δ = −0.0233 eV) — within ±0.1 eV of −0.27
+  - Pt-V  (0.75:0.25), top:     +0.3617  (Δ = +0.6317 eV) — much too weak
+  - Pt-Cr (0.75:0.25), bridge: −0.0852  (Δ = +0.1848 eV)
+  - Pd-Mo (0.75:0.25), top:    −0.0555  (Δ = +0.2145 eV)
+  - Pd-W  (0.75:0.25), top:    −0.3276  (Δ = −0.0576 eV) — within ±0.1 eV of −0.27
+  - Pd-V  (0.75:0.25), bridge: −0.1044  (Δ = +0.1656 eV)
+- Several requested entries were not found in the database (reported as “조건을 만족하는 후보가 없습니다”), e.g., Pt–Mo–top; Pt–W–bridge; Pd–Ti–top, etc.
+
+How these results support / contradict the original hypothesis
+- Supported:
+  - The core idea that Pt/Pd-rich alloys can be tuned toward −0.27 eV is partially supported: two tested Pt/Pd-rich entries (Pt–W top and Pd–W top) already fall within ±0.1 eV.
+  - Site sensitivity is evident: top vs bridge (and likely hollow) matters strongly — Pt–V top was extremely weak, while bridge site data for Mo/Cr are substantially less negative than target.
+- Contradicted / needs revision:
+  - The prediction that Pd-rich alloys would be systematically weaker-binding (ΔEads less negative by ~0.05–0.15 eV vs Pt-rich analogs) is not supported for W: Pd–W(top) (−0.3276) binds slightly stronger than Pt–W(top) (−0.2933) by ≈0.034 eV (opposite sign). The dataset is small so no universal Pt vs Pd rule should be assumed.
+  - Early metals Mo and Cr (and V at least in some sites) weaken H binding substantially more than was expected at Pt/Pd-rich composition and, for these tested sites, mostly produce values far from −0.27 eV (Δ > +0.16 eV). Thus the expectation that 25% early-metal dilution would routinely tune Pt/Pd to within ±0.1 eV is overly optimistic for many early metals.
+  - Bridge-site behavior in tested entries (Mo/Cr bridges) yielded ΔEads much less negative than −0.27, so the simple ordering “hollow > bridge > top” as a universal lever should be treated as a trend, not a strict rule for all metal pairs.
+
+Refined hypothesis (concise, testable)
+- Within the provided database, Pt- and Pd-rich alloys can reach near-optimal H adsorption energies, but the effectiveness is strongly element-specific: W as Metal2 is especially promising at Pt/Pd-rich top sites (both Pt–W and Pd–W (0.75:0.25) top sites already approach −0.27 eV), whereas Mo, Cr and V (in the tested site/composition combinations) tend to over-weaken binding and are less likely to hit −0.27 eV at 0.75:0.25 unless site or composition are changed. Pd does not reliably give weaker binding than Pt; sign and magnitude of the Pt vs Pd shift depend on Metal2 and site. Therefore prioritize W-containing alloys and explore composition/site variations for Mo/Cr/V rather than assuming uniform, modest tuning behavior across all early metals.
+
+Updated specific predictions (to be tested in the next iterations)
+1. Pt–W and Pd–W remain highest-priority: changing composition toward equimolar (0.50:0.50) will move ΔEads by at most ~0.05–0.15 eV (unknown sign) and may hit −0.27 at bridge or top; expect at least one of the Pt–W or Pd–W 0.50:0.50 entries (top or bridge) to be within ±0.1–0.2 eV of −0.27.
+2. For Mo and Cr partners: moving from Metal1 = Pt/Pd (0.75) to equimolar or switching adsorption site to top (if bridge was tested) may strengthen binding (make ΔEads more negative) and possibly bring some entries closer to −0.27 — but this is uncertain; expect most 0.75:0.25 Pt/Pd–(Mo/Cr/V) bridge/top entries to remain > +0.15 eV away from target unless composition/site are altered.
+3. V as Metal2 appears risky for top sites at Pt-rich 0.75:0.25 (very weak binding observed); V may be salvageable only by (a) changing to bridge/hollow sites (if available) or (b) increasing Pt/Pd fraction (if the database allows 0.9:0.1 entries) or (c) switching metal roles — expect many Pt/Pd–V entries at 0.75:0.25 to be far from −0.27.
+
+Knowledge base updates (facts/patterns from current results)
+- W (Metal2) + Pt/Pd (Metal1, 0.75) at top site: ΔEads ≈ −0.29 to −0.33 eV → close to target.
+- Mo (Metal2) + Pt/Pd (Metal1, 0.75) at tested sites (bridge/top): ΔEads ≈ −0.055 to −0.066 eV → significantly weaker binding than target.
+- Cr (Metal2) at bridge with Pt (0.75) gives ΔEads ≈ −0.085 eV → also weaker.
+- V (Metal2) with Pt (0.75) top gave a positive ΔEads (0.36 eV) — extremely weak; Pd–V bridge was −0.104 eV (weak).
+- Pd vs Pt: no single sign rule; Pd–W was slightly stronger-binding than Pt–W in current samples.
+
+Practical guidance for the intern — focused next steps (Iteration 2)
+- Priority: focus on W-containing alloys and composition/site sensitivity; follow-up tests should be drawn only from entries not already tested and only if present in the database. Avoid re-submitting any of the seven tested candidates above.
+- Proposed candidate list to request (no duplicates of tested entries). If any candidate is not present in the DB, skip and report immediately — do not substitute with variants we already tested.
+
+  1. Pt–W, Composition 0.50:0.50, Sites: top and bridge  — test both sites.
+     - Reason: Pt–W(0.75) top is near target; equimolar may tune binding slightly and reveal site dependence.
+  2. Pd–W, Composition 0.50:0.50, Sites: top and bridge
+     - Reason: analogous to Pt–W; check whether Pd→weaker or stronger at 0.50:0.50 and how site affects ΔEads.
+  3. Pt–Cr, Composition 0.75:0.25, Site: top
+     - Reason: bridge was −0.0852 (too weak); comparing top will test the site lever for Cr.
+  4. Pd–V, Composition 0.75:0.25, Site: top
+     - Reason: Pd–V bridge = −0.1044; Pt–V top = +0.3617; testing Pd–V top will reveal whether V's top-site behavior depends strongly on Metal1.
+  5. Pt–Mo, Composition 0.50:0.50, Site: bridge (and top if available)
+     - Reason: Pt–Mo bridge (0.75:0.25) was −0.0665 (too weak). Equimolar Pt–Mo may shift ΔEads more negative toward −0.27; test bridge first.
+  6. Pd–Mo, Composition 0.50:0.50, Site: top
+     - Reason: Pd–Mo top (0.75:0.25) = −0.0555; test whether equimolar strengthens binding.
+
+- For each submitted candidate: return the exact ΔEads, and explicitly flag any candidate not present in the DB (the earlier run returned several “조건을 만족하는 후보가 없습니다”; treat these as unavailable and report them).
+- Important constraints to the intern:
+  - Never re-run any of the previously returned candidates (the seven values listed above) — they are already tested.
+  - If a requested candidate is not in the DB, do not attempt to guess; report “not found” and optionally try the other site/composition for the same pair if it hasn’t been tested yet.
+  - Keep track of composition and site explicitly in filenames/records to avoid accidental duplicates.
+
+Why this next set is scientifically justified
+- W showed the most promising behavior in the first iteration; small composition/site changes are likely to be the most efficient path toward additional near-target entries.
+- For Mo/Cr/V, the first tests indicate over-weakening at 0.75:0.25; testing equimolar compositions or switching site (bridge↔top) tests whether ensemble dilution or reduced coordination can restore stronger binding.
+- Comparing Pt vs Pd at 0.5:0.5 for W will illuminate whether the small Pt/Pd differences observed are systematic or composition-dependent.
+
+Planned evaluation after Iteration 2
+- If Pt/Pd–W (0.50:0.50) entries remain within ±0.1–0.2 eV of −0.27, mark W as a high-priority Metal2 and explore neighboring metal family members (e.g., Mo/W neighboring elements only if present in DB).
+- If equimolar Mo/Cr shift ΔEads closer to −0.27, expand Mo/Cr exploration to other sites; if not, deprioritize Mo/Cr at these compositions and refocus on W and selected late–late pairs (next iteration).
+- Continue logging all outcomes to the knowledge base and revise the hypothesis iteratively.
+
+Concise immediate action for you / the intern
+- Run the six candidate tests listed above (skip any not in DB and report which are missing). Return ΔEads with site & composition labeled. Then I will update the hypothesis and next recommended tests based on those results.
+
+If you want, I can also prepare an automated checklist or spreadsheet template the intern can fill that enforces “no duplicates” and automatically computes Δ from −0.27 eV.

@@ -1,0 +1,47 @@
+Hypothesis (specific, testable)
+
+When a strong H-binding transition metal (group: Pt, Pd, Ni, Ru, Rh, Ir) is alloyed with a weak H-binding metal (group: Au, Ag, Cu, Zn, Cd, Hg) at controlled surface-enriching compositions (Metal1:Metal2 = 0.75:0.25 or 0.50:0.50), the combined ligand and ensemble effects will shift the H adsorption energy (ΔE_H) toward the optimal value of −0.27 eV. Specifically:
+
+1. Binary alloys with Metal1 as a strong binder and Metal2 as a weaker binder will produce ΔE_H values that can be tuned continuously between the pure-metal endpoints by changing composition; 0.75:0.25 compositions will more reliably produce intermediate ΔE_H values close to −0.27 eV than pure metals or extreme dilutions.
+2. Adsorption site strongly modulates ΔE_H in the order hollow (strongest binding) > bridge > top (weakest binding); therefore, for a given alloy composition that binds too strongly at hollow sites, the corresponding bridge or top site will be closer to −0.27 eV, and vice versa.
+3. Combinations of a strong binder with early/strongly d-band-shifting metals (e.g., Mo, W, V, Ta, Hf) will often shift ΔE_H more strongly (toward stronger binding) than combinations with noble weak-binders; hence noble-weak partners (Au, Ag, Cu) are more likely to yield ΔE_H ≈ −0.27 eV at 0.75:0.25 or 0.50:0.50 compositions.
+4. Therefore, the highest density of catalysts with |ΔE_H − (−0.27 eV)| ≤ 0.05–0.10 eV will be found among:
+   - Strong/weak pairs (Pt-, Pd-, Ni-, Ru-based) alloyed with Au, Ag, Cu, Zn, Cd, at 0.75:0.25 and 0.50:0.50 compositions,
+   - Surveyed across top, bridge, and hollow sites, with an expectation that top and bridge sites on 0.75:0.25 strong/weak alloys will most frequently land closest to −0.27 eV.
+
+Testable predictions (explicit)
+- Pt0.75–Au0.25 (top) and Pd0.75–Au0.25 (top) will produce ΔE_H within ±0.1 eV of −0.27 eV more often than Pt0.75–Mo0.25 (same site).
+- For a given alloy such as Ni0.50–Au0.50, the bridge site ΔE_H will be more negative (stronger binding) than the top site by a predictable margin (hollow > bridge > top), so if the hollow site is −0.5 eV, the bridge or top may fall near −0.27 eV.
+- Alloys where Metal2 is an early transition (Mo, W, V, Ta) will tend to push ΔE_H more negative than alloys with noble/late weak binders; thus these should be sampled but deprioritized if the goal is to reach −0.27 eV.
+
+Iterative screening plan (10 loops) — concise operational rules
+- Iterations 1–3: Focus on strong binder (Metal1 ∈ [Pt, Pd, Ni, Ru, Rh, Ir]) combined with weak binders (Metal2 ∈ [Au, Ag, Cu, Zn, Cd, Hg]); test both compositions (0.75/0.25 and 0.50/0.50) and all three sites. Prioritize top and bridge sites when hollow is predicted too strong.
+- Iterations 4–6: Expand to strong binder + early transition partners (Mo, W, V, Ta, Hf) to sample stronger-binding shifts; explore compositions and sites to find cases that relax toward −0.27 eV.
+- Iterations 7–8: Explore less-common pairs that combine two intermediate binders (e.g., Ni–Co, Co–Fe, Pd–Ru) at both compositions and all sites to seek fine tuning.
+- Iterations 9–10: Revisit promising chemical families from earlier iterations with denser sampling around the compositions/sites that produced ΔE_H nearest −0.27 eV (no duplicate candidates allowed — each evaluated candidate must be new).
+
+Selection/prioritization metric
+- For each candidate returned by screening, compute |ΔE_H − (−0.27 eV)| and prioritize smallest values.
+- Compile all candidates with |ΔE_H + 0.27| ≤ 0.10 eV after each iteration for further analysis and higher-fidelity DFT follow-up.
+
+Scientific rationale (mechanistic basis)
+- Ligand and ensemble effects in bimetallics shift the d-band center of surface atoms; alloying a strong binder with a weaker binder lowers the d-band center and weakens H binding, enabling tuning toward an optimal ΔE_H.
+- Site coordination changes adsorption orbital overlap: hollow sites coordinate to three metal atoms and usually bind H strongest; bridge and top progressively reduce coordination and weaken binding. Sampling all three sites is therefore essential to find the site that yields ΔE_H ~ −0.27 eV for each alloy.
+- Composition (0.75:0.25 vs 0.50:0.50) both changes the ensemble probability of particular local atom ensembles and shifts the ligand effect; 0.75:0.25 provides a dominant host atom with controlled modification by the minority species—useful for tuning adsorption without creating completely new surface chemistry.
+
+Initial candidate set to start iteration 1 (suggested, distinct and testable)
+- Pt0.75–Au0.25 (top, bridge, hollow)
+- Pd0.75–Au0.25 (top, bridge)
+- Pt0.75–Ag0.25 (top, bridge)
+- Ni0.50–Au0.50 (top, bridge, hollow)
+- Ru0.75–Cu0.25 (top, bridge)
+- Pd0.50–Cu0.50 (top)
+
+(These are starting examples; each will be treated as unique candidates — do not retest them later. Subsequent iterations will explore other pairs/compositions/sites according to the plan above.)
+
+How outcomes will be used
+- After each iteration, record which metal classes, compositions, and sites produced ΔE_H values closest to −0.27 eV; update the hypothesis if systematic deviations are observed (e.g., if early-transition partners unexpectedly produce near-optimal values, broaden search among those classes).
+- Compile a running knowledge base of successful combinations and trends (metal pair, composition, site, ΔE_H) to inform the next iteration and to prioritize candidates for DFT validation.
+
+Summary sentence
+By systematically combining strong H-binding metals (Pt, Pd, Ni, Ru, Rh, Ir) with weaker binders (Au, Ag, Cu, Zn, Cd) at 0.75:0.25 and 0.50:0.50 compositions and sampling top/bridge/hollow sites, we can tune ΔE_H via ligand and ensemble effects to converge on the target −0.27 eV; the densest population of near-optimal catalysts is expected among top/bridge sites of 0.75:0.25 strong/weak alloys, while early-transition partners should be sampled more sparsely to map stronger-binding regimes.

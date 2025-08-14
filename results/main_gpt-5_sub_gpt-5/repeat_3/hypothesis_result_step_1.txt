@@ -1,0 +1,26 @@
+Hypothesis: Targeting −0.27 eV H adsorption can be systematically achieved by pairing a strong-binding late transition metal with a weaker-binding coinage/early transition metal and selecting compositions/sites that maximize ligand and strain tuning while avoiding over-strong multi-atom ensembles. Specifically:
+
+- Composition effect: 0.50/0.50 alloys will maximize hetero-bridge interfaces, typically moderating H binding toward −0.27 eV. When the strong-binding metal is very H-affine (Ru, Rh, Ir), a 0.75/0.25 dilution with a weak-binding partner will best weaken H adsorption on top sites of the strong metal toward the target.
+- Site effect:
+  - Top on the stronger-binding component (as Metal1) will generally weaken excessively strong binding just enough when alloyed with a weak-binding partner.
+  - Bridge at mixed (Metal1–Metal2) interfaces in 0.50/0.50 alloys will often be closest to −0.27 eV because it averages the electronic influence of both metals without the overbinding typical of hollow.
+  - Hollow on strong-binding–rich alloys tends to overshoot more negative than −0.27 eV and should be de-prioritized; hollow can be used to strengthen adsorption only when the top/bridge sites are too weak (e.g., on coinage-metal–rich surfaces).
+- Metal-pair logic:
+  - Start from strong-binding set S = [Ru, Rh, Ir, Pt, Pd, Ni, Co] and weak-binding/moderating set W = [Cu, Ag, Au, Zn] plus early refractory moderators R = [Mo, W, Ta, Nb, Ti].
+  - S–W at 0.50/0.50: prioritize bridge (S–W) and top on S; expect E_H* ≈ −0.27 eV.
+  - Very strong binders (Ru, Rh, Ir) with W at 0.75(S)/0.25(W): prioritize top on S; expect E_H* ≈ −0.27 eV, bridge slightly weaker binding (less negative).
+  - S–R at 0.50/0.50: prioritize bridge (S–R) and, where needed, hollow on mixed ensembles to temper Mo/W’s strong binding through ligand effects; expect approach to −0.27 eV if R introduces compressive strain/downshifts S d-band without creating overly strong threefold ensembles.
+
+Testable, specific predictions to guide selection:
+- Pt–Cu and Pt–Ni at 0.50/0.50: top on Pt and bridge at Pt–M interfaces will yield E_H* in the −0.22 to −0.32 eV window; hollow likely too strong (more negative) when Pt-rich.
+- Pd–Mo and Pd–W at 0.50/0.50: bridge at Pd–Mo/Pd–W interfaces will moderate Mo/W’s strong binding; top on Pd will be slightly weaker (less negative) than −0.27 eV, hollow slightly stronger (more negative).
+- Ru–Cu and Rh–Ag at 0.75/0.25 with top on Ru/Rh will weaken from overly negative values toward ≈ −0.27 eV; bridge at 0.50/0.50 also promising but hollow likely too strong on Ru/Rh-rich.
+- Ir–Au at 0.50/0.50 or 0.75/0.25 with top on Ir should tune Ir’s binding down toward −0.27 eV; bridge at Ir–Au may land closest to the target.
+- Ni–Mo and Co–Mo at 0.50/0.50: bridge on mixed sites expected to moderate to ≈ −0.27 eV; top on Ni/Co may be slightly weaker, hollow on mixed sites slightly stronger.
+
+Operational guidance for subsequent iterations:
+- Prioritize unique S–W and S–R pairs as above, enforce 0.50/0.50 for interface-dominant bridge sampling; use 0.75(S)/0.25(W) for top-on-S tuning when S is very strong (Ru, Rh, Ir).
+- For each new pair, rank sites to test in order: bridge (hetero) > top on S > hollow (only if top/bridge deviate from target in the weak direction).
+- Always set Metal1 to the metal intended as the adsorption atom for top-site tests (e.g., Metal1 = Pt in top-Pt evaluations) to reflect the database definition that adsorbates first encounter Metal1.
+
+This hypothesis is falsifiable: if bridge sites in 0.50/0.50 S–W and S–R alloys do not cluster near −0.27 eV, or if 0.75(S)/0.25(W) top-on-S sites for Ru/Rh/Ir remain too negative, we will pivot toward increasing W content or switching to Pd/Pt-based systems and/or leveraging hollow on weak-binding–rich surfaces.

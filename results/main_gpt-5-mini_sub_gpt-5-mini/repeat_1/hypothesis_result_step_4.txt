@@ -1,0 +1,130 @@
+가설 수정 결과: Updated hypothesis and plan (concise, DB‑aware)
+
+Revised primary hypothesis
+- In the current DB, alloys with a strong/moderately-strong H binder at ~0.75 surface fraction (Pt, Ru, Ir) alloyed with a late weak binder (Au, Ag, Cu) sampled at bridge sites reliably produce H adsorption energies near −0.27 ± 0.05 eV. Pd-containing alloys systematically deviate toward much weaker H binding in the tested configurations (both bridge and top), and therefore achieving −0.27 eV with Pd will require different partners, higher Pd surface fraction, or different adsorption sites (e.g., hollow) — do not assume Pt/Ru transferability to Pd. Transferability to other late strong binders (Rh, Ni) is selective and must be checked case-by-case.
+
+Concise summary of new evidence (from the latest simulation output)
+- Validated, near-target (|Eads +0.27| ≤ 0.05 eV):
+  - Pt–Au 0.75 bridge : −0.2265 eV (|Δ| = 0.0435 eV)
+  - Pt–Ag 0.75 bridge : −0.2887 eV (|Δ| = 0.0187 eV)
+  - Pt–Cu 0.75 bridge : −0.2334 eV (|Δ| = 0.0366 eV)
+  - Ru–Cu 0.75 bridge : −0.2967 eV (|Δ| = 0.0267 eV)
+  - Ir–Ag 0.75 bridge : −0.3000 eV (|Δ| = 0.0300 eV) — NEW validation (important)
+- Contradicting / anomalous (weaker than target; Pd notably bad):
+  - Pd–Au 0.75 bridge : +0.0327 eV
+  - Pd–Ag 0.75 bridge : +0.1106 eV
+  - Pd–Cu 0.75 bridge : −0.0889 eV
+  - Pd–Ag 0.75 top : +0.2064 eV
+  - Pd–Cu 0.75 top : +0.5136 eV
+- Partial/weak matches (not within ±0.05 eV):
+  - Rh–Cu 0.75 bridge : −0.1368 eV (too weak)
+  - Ir–Cu 0.75 bridge : −0.1765 eV (too weak)
+  - Ni–Cu 0.75 bridge : −0.0821 eV (too weak)
+- Many requested 0.50-hollow and some 0.75-bridge candidates are absent in the DB (several “조건을 만족하는 후보가 없습니다”).
+
+Interpretation / knowledge accumulated
+- Robust family rule extended: Pt0.75 + (Au/Ag/Cu) and Ru0.75–Cu0.25 bridge families remain validated. Ir0.75–Ag0.25 bridge now joins this validated set — implies the recipe extends beyond Pt/Ru to at least Ir when paired with Ag.
+- Transferability is selective: Rh0.75 and Ni0.75 with Cu/Ag/Au do not automatically reproduce Pt/Ru performance (Rh–Cu, Ir–Cu, Ni–Cu are too weak), so the partner identity matters beyond just “late weak metal.”
+- Pd is a clear outlier: across bridge and top sites (and across Au/Ag/Cu partners at 0.75 fraction) Pd alloys give much weaker adsorption — likely causes: (i) electronic d‑band suppression upon alloying, (ii) surface segregation / ensemble dilution of Pd active sites, or (iii) geometry/relaxation effects removing intended bridge ensembles. Pd behavior now appears systematically unfavorable for the −0.27 target in the tested entries.
+- Site trend holds qualitatively (top weaker, hollow stronger) but alloy-specific electronic and ensemble effects can dominate.
+
+Immediate testable subpredictions (DB‑checkable)
+- Any additional Pt0.75–(Au/Ag/Cu) bridges in DB will be within ±0.05 eV of −0.27 (but do NOT re-run already-tested entries).
+- Additional Ir0.75–Ag0.25 bridge-like entries will also be near −0.27 eV; probe Ir–Ag composition/site permutations to confirm family.
+- Pd0.75–(Au/Ag/Cu) at bridge and top will not reach −0.27 eV (validated). Pd may approach −0.27 only at hollow sites, at lower/higher Pd fractions, or with different partners — these are the only viable Pd strategies to test.
+- Rh0.75 and Ni0.75 families are unlikely to replicate Pt/Ru results with Cu partners (based on Rh–Cu and Ni–Cu results) — but Rh/Ir with Ag may be promising (Ir–Ag succeeded).
+
+Prioritized actionable plan for the intern (strict DB rules: check availability first; NO duplicates)
+- ALWAYS: For each requested candidate, query DB for exact Metal1–Metal2–composition–site. If DB response = “조건을 만족하는 후보가 없습니다” (ABSENT), immediately log ABSENT and pick the next candidate of that priority bucket. Never re-run entries already present in the simulation output.
+- Reporting template (mandatory): Metal1–Metal2–comp–site : Eads (eV); |Eads + 0.27| (eV); supports/contradicts; 1-line note (convergence / geometry / segregation flag).
+- If a run contradicts expectations (especially for Pd or unexpected weak binding), attach: relaxed adsorption geometry, outermost-layer composition (segregation flag), and request PDOS of the surface atoms at the adsorption site (if available).
+
+Priority 1 — Consolidate validated families (check DB first; do not re-run validated entries)
+- Focus: composition/site permutations for Pt and Ir families and any missing Pt/Ru composition data.
+  1. Pt–(Au/Ag/Cu) at 0.75 bridge are validated → deprioritize re-runs.
+  2. Check for Pt–(Au/Ag/Cu) 0.75 top and Pt–(Au/Ag/Cu) 0.50 hollow (if present) — BUT do not run any Pt0.75 bridge cases already present.
+  3. Ir–Ag (other compositions/sites): check IR–Ag 0.50 hollow and Ir–Ag 0.75 top (if present) to probe composition/site sensitivity for the new Ir–Ag family.
+  4. If Ru–Cu 0.50 entries are present (they were reported absent before), test both bridge and hollow to get composition dependence (check DB first).
+
+Priority 2 — Resolve Pd anomaly (do not re-run Pd0.75–Au/Ag/Cu bridge or Pd0.75 top — already tested)
+- Test (only if present and NOT in the DB already):
+  1. Pd–(Au/Ag/Cu) 0.50 hollow — check whether hollow produces stronger binding.
+  2. Pd–(Au/Ag/Cu) 0.50 bridge — see composition effect.
+  3. Higher‑Pd fraction entries (if DB contains Pd > 0.75 surface fractions / terminations): test one Pd‑rich variant at bridge/hollow.
+  4. If none of the Pd permutations exist in DB, mark Pd deprioritized for the −0.27 target in this DB after 3 failed Pd variants.
+
+Priority 3 — Transferability validation (Rh/Ir/Ni families)
+- Based on current results:
+  1. Expand Ir family because Ir–Ag succeeded: check Ir–Au/Ir–Cu permutations only if present (Ir–Au 0.75 bridge was absent previously; check DB).
+  2. For Rh and Ni, only test if DB entries exist for 0.75 bridge with Ag/Au (not Cu first, since Rh–Cu and Ni–Cu were too weak). Test at most 1–2 Rh/Ir/Ni permutations to evaluate transferability.
+  3. Do not re-run Rh–Cu 0.75 bridge (already present).
+
+Priority 4 — Early‑TM sanity check (only one or two tests and only if present)
+- If exactly one early-TM (e.g., Mo or V) 0.50 top with Au/Ag/Cu exists, run one check to confirm the strong overbinding trend on top sites. Skip if absent.
+
+Adaptive stop rules (unchanged but sharpened)
+- Stop exploring a family if >3 distinct validated entries (|Eads + 0.27| ≤ 0.05 eV) exist for that family; redirect to other families. With the new Ir–Ag validation, both Pt and Ir families are approaching “validated” status.
+- If Pd fails to approach −0.27 after testing up to 3 distinct site/composition permutations, deprioritize Pd for this target in this DB.
+
+Mechanistic follow-ups (mandatory when runs contradict expectation)
+- For any unexpected weak-binding case (especially Pd and weak Rh/Ir/Cu cases), request:
+  1. Projected d‑DOS (PDOS) on the surface atoms participating in the adsorption site.
+  2. Relaxed adsorption geometry and metal–H bond lengths.
+  3. Outer-layer element composition (segregation check).
+  4. Surface relaxations / ensemble site atom count (is the intended bridge ensemble preserved?).
+These diagnostics will let us distinguish electronic (d‑band), ensemble (missing active atoms), and geometric (strain/relaxation) causes.
+
+Updated short knowledge-base (additions from latest run)
+- Validated near-target entries:
+  - Pt–Au (0.75 bridge) → −0.2265 eV
+  - Pt–Ag (0.75 bridge) → −0.2887 eV
+  - Pt–Cu (0.75 bridge) → −0.2334 eV
+  - Ru–Cu (0.75 bridge) → −0.2967 eV
+  - Ir–Ag (0.75 bridge) → −0.3000 eV (NEW)
+- Negative evidence (Pd anomaly and weaks):
+  - Pd–Au (0.75 bridge) → +0.0327 eV
+  - Pd–Ag (0.75 bridge) → +0.1106 eV
+  - Pd–Cu (0.75 bridge) → −0.0889 eV
+  - Pd–Ag (0.75 top) → +0.2064 eV
+  - Pd–Cu (0.75 top) → +0.5136 eV
+  - Rh–Cu (0.75 bridge) → −0.1368 eV
+  - Ir–Cu (0.75 bridge) → −0.1765 eV
+  - Ni–Cu (0.75 bridge) → −0.0821 eV
+
+Concrete next-step candidate checklist for the intern (copy/paste friendly; MUST CHECK DB before running; skip ABSENT)
+- Do NOT run these (already present): Pt–Au 0.75 bridge; Pt–Ag 0.75 bridge; Pt–Cu 0.75 bridge; Ru–Cu 0.75 bridge; Ir–Ag 0.75 bridge; Pd–(Au/Ag/Cu) 0.75 bridge; Pd–(Ag/Cu) 0.75 top; Rh–Cu 0.75 bridge; Ir–Cu 0.75 bridge; Ni–Cu 0.75 bridge.
+- Candidate checks (in order; check DB, if ABSENT → log and go to next):
+
+Priority 1 (composition/site permutations for validated families)
+1. Pt–Au (0.75) top — MUST-CHECK
+2. Pt–Ag (0.75) top — MUST-CHECK
+3. Pt–Cu (0.75) top — MUST-CHECK
+4. Pt–Au (0.50:0.50) hollow — MUST-CHECK
+5. Pt–Ag (0.50:0.50) hollow — MUST-CHECK (was reported absent earlier; re-check)
+6. Ir–Ag (0.50:0.50) hollow — MUST-CHECK
+7. Ir–Ag (0.75) top — MUST-CHECK
+8. Ru–Cu (0.50:0.50) bridge — MUST-CHECK (was reported absent earlier; re-check)
+9. Ru–Cu (0.50:0.50) hollow — MUST-CHECK (re-check if DB updated)
+
+Priority 2 (Pd anomaly resolution)
+10. Pd–Ag (0.50:0.50) hollow — MUST-CHECK
+11. Pd–Cu (0.50:0.50) hollow — MUST-CHECK
+12. Pd–Au (0.50:0.50) hollow — MUST-CHECK
+13. Pd–Ag (0.50) bridge — MUST-CHECK
+14. Pd–Cu (0.50) bridge — MUST-CHECK
+15. One Pd‑rich (>0.75 surface Pd) entry (if DB contains) — MUST-CHECK
+
+Priority 3 (selective transferability)
+16. Ir–Au (0.75) bridge — MUST-CHECK (was reported absent earlier; re-check)
+17. Rh–Ag (0.75) bridge — MUST-CHECK (re-check)
+18. Ni–Ag (0.75) bridge — MUST-CHECK
+19. Ir–Cu (0.50) hollow — MUST-CHECK
+
+Priority 4 (single early‑TM sanity check, only if present)
+20. Mo–Cu (0.50) top OR V–Cu (0.50) top — MUST-CHECK (pick one if present)
+
+Would you like:
+(A) a compact machine‑readable batch query list (marked ABSENT alternatives) for the intern to run first to prune DB availability (recommended), or
+(B) to assume availability and produce a strict ordered run list now (risking many ABSENT hits)?
+
+Recommendation: (A). I will produce the batch query list (compact, copy/paste) if you confirm.

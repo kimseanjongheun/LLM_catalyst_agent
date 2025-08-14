@@ -1,0 +1,63 @@
+첫번째 그림: workflow에 대한 설명 → 각 과정이 어떻게 구성이 되고, 프롬프팅, 결과에 대해 서술
+
+→ 율리시 그룹 아래 논문의 피규어를 참고
+
+https://arxiv.org/pdf/2402.04379
+
+https://arxiv.org/pdf/2410.16658
+
+ppt로 그려도 좋다. excalidraw도 가능
+
+두번째 그림: success rate
+
+각각의 user prompt에 따른 양상 보이기(아래 ‘initial 가설’ 참조)
+
+vs. random choice(아마 linear)
+
+아래는 일단 보류
+
+search space를 iteration마다 어떻게 탐방하는가?
+
+넓은 space를 탐방?
+
+원하는 threshold 사이에 수렴하는 형태도 괜찮을듯
+
+element의 가격도 같이 줘서, initial guess에서 “가격이 싸고, 좋은 촉매를 찾아라”
+
+world metal price라는 사이트에서 가격 가져올 수 있다.
+
+가격-성능의 trade-off line의 변화 양상 관찰
+
+pareto plot 이라고 한다.
+
+세 번째 그림: reasoning plot
+
+→ step별 가설에 대한 critic agent 추가 → 이후 확장 가능성
+
+조성에 대한 
+
+랜덤 선택과의 비교. success ratio를 비교하는 것 
+
+네 번째 그림: 여러 모델들을 비교하는 plot. 우선 open ai 모델들만 해보자. 4o, 4o-mini,  5, 5-mini 이렇게 4가지를 해보자
+
+→ 얘도 descriptor를 만들어 보자. 앞선 resoning, success ratio를 참고해서 만들면 좋을 것 같다.
+
+여러 metric들을 시험해보자. reasoning에 대한 metric, 샘플 개수를 늘리자. reasoning factor로 기존 metric 사용 → 가설 update 성능을 보기 위한 것
+
+그리고 success ratio에 대한 metric도 따로 정의해보자. ‘가격(토큰 수) vs 성공율 or 찾은 후보 개수’
+
+→ 가격 책정 방법 조사하기(입력, 출력, 캐싱?)
+
+https://platform.openai.com/docs/pricing → api 별 가격이 나와있다.
+
+→ 가설 문장에 대한 attention 시각화를 보이면 좋을듯. 근데 실현 가능한 지는 확인해봐야 한다.
+
+→ 가설에서 중요한 부분 위주로 프롬프트 예시 figure를 넣긴 할듯
+
+novelty에 대한 metric: 
+
+initial 가설 차이
+
+1번: 사람의 가설 추가 ‘ex. Cu를 넣어서 만들어라’ → 이것들에 따른 양상 차이를 봐도 괜찮을듯
+
+2번: 완전히 GPT based 가설

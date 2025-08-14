@@ -1,0 +1,52 @@
+가설 수정 결과: **Revised Hypothesis:**
+"**Bimetallic catalysts comprising platinum (Pt) as the primary metal and alternative secondary metals such as molybdenum (Mo) or ruthenium (Ru) at varying composition ratios will exhibit hydrogen adsorption energies that may align with the target of -0.27 eV, as prior simulations with Ni and Co have demonstrated suboptimal performance.**"
+
+**Rationale:**
+- **Metal Selection**: Our exploration will now highlight Mo and Ru, known for their electronic properties, as beneficial secondary metals to enhance the interactions with Pt, as previous tests with Ni and Co have yielded unsatisfactory outcomes.
+  
+- **Composition Ratios**: A spectrum of Pt and secondary metal ratios (70%/30% and 65%/35%) will be scrutinized to discern any beneficial electronic interactions and improve hydrogen adsorption properties.
+
+- **Adsorption Sites**: Focusing on various adsorption sites (top, bridge, hollow) remains crucial for understanding the underlying mechanisms driving the HER performance.
+
+### Next Steps for Testing:
+
+Based on the simulated results you provided and ensuring that we adhere to the directive of selecting novel candidates, I propose the following modifications. In particular, we will remove ratios that have been previously tested (especially involving 75%/25% which included Mo and Ru) and add some new combinations as follows:
+
+1. **Focus on Primary Metal**: Pt
+2. **New Secondary Metals for Exploration**:
+   - Molybdenum (Mo)
+   - Ruthenium (Ru)
+
+3. **Suggested New Compositional Ratios**:
+   - **60% (Pt) / 40% (Mo)**
+   - **60% (Pt) / 40% (Ru)**
+   - **55% (Pt) / 45% (Mo)**
+   - **55% (Pt) / 45% (Ru)**
+
+4. **Adsorption Sites**: Evaluate combinations for all three key sites: top, bridge, and hollow.
+
+### Candidates to Test:
+I suggest the following configurations to ensure that we explore only new candidates and enrich our knowledge base:
+
+1. **60% (Pt) / 40% (Mo) at all three sites**:
+   - Pt-Mo-0.60-0.40-top
+   - Pt-Mo-0.60-0.40-bridge
+   - Pt-Mo-0.60-0.40-hollow
+
+2. **60% (Pt) / 40% (Ru) at all three sites**:
+   - Pt-Ru-0.60-0.40-top
+   - Pt-Ru-0.60-0.40-bridge
+   - Pt-Ru-0.60-0.40-hollow
+
+3. **55% (Pt) / 45% (Mo) at all three sites**:
+   - Pt-Mo-0.55-0.45-top
+   - Pt-Mo-0.55-0.45-bridge
+   - Pt-Mo-0.55-0.45-hollow
+
+4. **55% (Pt) / 45% (Ru) at all three sites**:
+   - Pt-Ru-0.55-0.45-top
+   - Pt-Ru-0.55-0.45-bridge
+   - Pt-Ru-0.55-0.45-hollow
+
+### Conclusion:
+By focusing on these modified ratios for Pt with Mo and Ru, I believe we can uncover significantly novel insights into their performance for HER. Please ensure that all candidates are new and unexplored based on our prior database, and encourage flexibility within this framework to allow further exploration that respects the scientific validity of past results.

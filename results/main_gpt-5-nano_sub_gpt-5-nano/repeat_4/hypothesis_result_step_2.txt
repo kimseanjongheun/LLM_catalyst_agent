@@ -1,0 +1,37 @@
+가설 수정 결과: Thanks for sharing the simulation results. They provide clear guidance to update the hypothesis.
+
+Bottom-line from the results
+- Hollow-site E_H values near -0.27 eV do appear for some hollow 0.50/50 combinations, but not with Pt-group primary metals in a uniform way. Specifically, Ir and Rh as Metal1 at 0.50/50 show near-target E_H values with several Metal2 choices (e.g., Ni, Fe, Zn), whereas Pt and Pd at 0.50/50 hollow rarely hit the target.
+- The best near -0.27 eV hollow results observed at 0.50/50 are for:
+  - Ir as Metal1 with Ni/Fe/Zn as Metal2 (e.g., Ir-Ni -0.2756, Ir-Fe -0.2624, Ir-Zn -0.2648).
+  - Rh with Zn (Rh-Zn -0.2554) and Rh with Cu/others show more dispersion (Rh-Cu -0.2303; Rh-Ni -0.3461 at 0.75/25, not 0.50/50).
+- Pd-Zn at 0.50/50 hollow yields a positive E_H (0.2641 eV), i.e., not near the optimum.
+- There are no 0.50/50 hollow candidates for Pt that hit near -0.27 eV in the tested subset, and several Pt-based 0.75/25 values lie away from the target.
+
+Modified hypothesis (Version 2)
+- The optimum E_H near -0.27 eV in hollow sites is strongly metal-identity dependent and is most reliably achieved for hollow 0.50/50 combinations when the primary metal is Ir or Rh (Pt-group) rather than Pt or Pd.
+- Specifically, hollow-site 0.50/50 Pt-group primary metals with second metals Ni, Fe, or Zn (Metal1 ∈ [Ir, Rh]; Metal2 ∈ [Ni, Fe, Zn]) tend to cluster around -0.27 eV, with deviations within roughly ±0.04 eV. This trend is more robust for Ir than for Rh (though Rh with Zn is already close, and Rh with Cu is less consistent).
+- Pt-based and Pd-based 0.50/50 hollow-site combinations are less likely to approach -0.27 eV; when they do, it is not as consistent across second metals. Pd-Zn at 0.50/50 is an outlier (positive E_H).
+- Top and bridge sites continue to show broader distributions and fewer near-target values than hollow sites, but there are some promising outliers in top/bridge for certain pairs; overall, hollow remains the most reliable geometry for approaching -0.27 eV in the currently explored domain.
+- A 0.75/25 composition can still yield near -0.27 eV for some Ir/Fe or Ir/Zn and related Rh permutations, but with lower probability than 0.50/50 for the Ir/Rh family. Pt/Pd 0.75/25 combinations generally deviate more from -0.27 eV than the 0.50/50 Ir/Rh cases.
+
+Clear testable predictions from Version 2
+- Hollow-site 0.50/50 combos with Metal1 ∈ [Ir, Rh] and Metal2 ∈ [Ni, Fe, Zn] will show E_H values within ±0.04 eV of -0.27 eV more frequently than 0.50/50 combos with Pt or Pd as Metal1.
+- Within the 0.50/50 hollow-site domain for Ir and Rh, Ni/Fe/Zn will give the tightest clustering near -0.27 eV; Cu or Zn with Rh may be slightly more dispersed than with Ir.
+- Top and bridge sites will continue to exhibit broader distributions, with a comparatively lower fraction of near-target E_H values than hollow sites for Ir/Rh 0.50/50 with Ni/Fe/Zn.
+- For 0.75/25 hollow-site candidates, expect a reduction in near-target hits versus 0.50/50, but still some hits for Ir/Fe and Ir/Zn; Pt/Pd 0.75/25 will be less favorable overall.
+
+Guidance for the intern (updated strategic plan)
+- Focused, non-duplicate exploration (new candidates only) inside the revised domain:
+  - Hollow-site 0.50/50: Metal1 ∈ [Ir, Rh]; Metal2 ∈ [Ni, Fe, Zn]. If any of these exact pairs have already been tested in 0.50/50 hollow in your database, skip duplicates and choose any untested Ir/Rh pair within the same metal2 set (e.g., if Ir-Ni 0.50/50 is already tested, test Ir-Fe 0.50/50 hollow or Ir-Zn 0.50/50 hollow, etc.).
+  - Hollow-site 0.50/50 with Pt or Pd as Metal1 and any of Cu/Ni/Co/Fe/Zn as Metal2 (that is not already tested at 0.50/50 hollow) to confirm lack of near-target values (these serve as important controls).
+  - Optional: a small, non-duplicate set of top/bridge tests for newly identified Ir/Rh 0.50/50 hollow candidates to validate site-dependence predictions.
+- 0.75/25 controls:
+  - Test a small, non-duplicate subset of Ir/Fe and Ir/Zn (and Rh/Zn, depending on database availability) at 0.75/25 hollow to quantify the predicted drift away from -0.27 eV relative to 0.50/50.
+- Data capture (consistent, concise): record E_H, deviation from -0.27 eV, site, Metal1, Metal2, and composition; note anomalies (outliers, unusually broad distributions, or metal-pair–specific patterns).
+- Use results to further refine the hypothesis toward a broader, composition- and site-aware picture. If Ir/Rh with Ni/Fe/Zn at 0.50/50 continues to dominate the near-target hits, consider scanning adjacent second-metal members within the allowed set and possibly slight composition tunings (e.g., 0.60/0.40 or 0.40/0.60) to map the sensitivity surface.
+
+Operational takeaway
+- The updated hypothesis shifts away from a Pt-group–centric 0.50/50 hollow-site optimum. Ir and Rh hollow 0.50/50 candidates with Ni/Fe/Zn are the most promising near -0.27 eV, with Pt/Pd 0.50/50 hollow being less favorable in this dataset. Top/bridge sites remain less predictive for hitting the target energy.
+
+If you’d like, I can draft a compact, executable plan listing the exact non-duplicate candidate IDs to test next, aligned with these updated predictions.

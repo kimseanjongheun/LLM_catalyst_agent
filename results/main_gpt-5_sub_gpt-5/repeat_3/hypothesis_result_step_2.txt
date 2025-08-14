@@ -1,0 +1,70 @@
+가설 수정 결과: Revised hypothesis (v2), grounded in the new results
+
+Key corrections to the original assumptions:
+- S–R bridges at 0.50/0.50 are much too strong. Pd–W-0.50-bridge (−0.657 eV) and Co–Mo-0.50-bridge (−0.483 eV) show that mixed bridge coordination with early refractory metals (Mo, W) overbinds significantly more than predicted. Therefore, bridge on S–R at 0.50 should be deprioritized for targeting −0.27 eV.
+- Coinage dilution of very strong binders can over-weaken top sites. Ir–Au-0.75-top gave +0.362 eV, indicating that Au’s ligand/segregation effects suppress Ir’s H* binding far more than anticipated at top sites. Thus, top-on-Ir at 0.75 Ir/0.25 Au should be deprioritized; higher coordination (bridge/hollow) is needed to strengthen adsorption back toward −0.27 eV.
+
+Updated site/composition logic:
+- For S–R binaries (S = Pd, Ni, Co; R = Mo, W):
+  - Do not expect 0.50/0.50 bridge to cluster near −0.27 eV; it is typically too negative.
+  - To approach −0.27 eV, reduce coordination and increase S fraction:
+    - Primary: top on S at 0.75(S)/0.25(R).
+    - Secondary: bridge at 0.75(S)/0.25(R) only if top remains too weak.
+    - Hollow generally overshoots to too negative on S–R; use only if top sites are too weak (unlikely here).
+- For very strong S with coinage W (Ir–Au shown):
+  - Top on S at 0.75(S)/0.25(Au) can become too weak (positive). To strengthen toward −0.27 eV, increase coordination at the same composition:
+    - Primary: bridge at 0.75(S)/0.25(Au).
+    - Secondary: hollow at 0.75(S)/0.25(Au) if bridge is still too weak.
+    - If composition flexibility exists, 0.50/0.50 with top on S may strengthen relative to 0.75/0.25, but bridge is likely closer than top.
+
+Refined, testable predictions for the observed pairs:
+- Ir–Au:
+  - 0.75/0.25 bridge should strengthen adsorption relative to top and move toward the −0.27 eV window (anticipated −0.15 to −0.35 eV).
+  - 0.75/0.25 hollow will be more negative than bridge; use if bridge remains too weak.
+  - 0.50/0.50 top on Ir will be stronger (more negative) than 0.75/0.25 top and may also approach the target, but hedge that bridge may still be optimal.
+- Co–Mo:
+  - 0.50/0.50 top on Co should be weaker than the observed bridge (expected shift +0.15 to +0.25 eV relative to bridge), potentially in the −0.30 to −0.35 eV range; still somewhat strong but closer.
+  - 0.75/0.25 top on Co should further weaken toward −0.27 eV; 0.75/0.25 bridge remains risky for overbinding but could land near −0.35 to −0.45 eV.
+- Pd–W:
+  - 0.75/0.25 top on Pd is preferred to weaken from the very strong 0.50/0.50 bridge; expect −0.35 to −0.55 eV depending on local ensemble dilution.
+  - 0.50/0.50 hollow is likely even more negative than bridge and generally not advised unless probing trends.
+
+Knowledge accumulated from this iteration:
+- Mixed bridge sites with early refractory partners (Mo, W) at 0.50/0.50 overbind substantially; ensemble effects dominate over simple electronic averaging.
+- Au exerts a stronger-than-expected downshift on Ir top sites at 0.75/0.25, pushing E_H* into the weak-binding regime (+0.36 eV). Increasing coordination (bridge/hollow) is necessary to recover target-strength adsorption.
+- Database coverage is sparse for some originally prioritized S–W pairs (Pt–Cu, Pt–Ni) and for Pd–Mo; however, Ir–Au, Co–Mo, and Pd–W are present and should anchor our next, database-constrained exploration.
+
+Guidance to the intern: next candidates to probe (no duplicates; restrict to database-available entries)
+Only query candidates that exist in the database; skip any unavailable. Do not repeat the already tested:
+- Pd–W-0.50-0.50-bridge
+- Ir–Au-0.75-0.25-top
+- Co–Mo-0.50-0.50-bridge
+
+Within the three confirmed pairs, prioritize in this order:
+
+Ir–Au (goal: strengthen from too-weak top at 0.75/0.25):
+1) Ir–Au-0.75-0.25-bridge
+2) Ir–Au-0.75-0.25-hollow
+3) Ir–Au-0.50-0.50-top (Metal1 = Ir)
+
+Co–Mo (goal: weaken from too-strong bridge at 0.50/0.50):
+1) Co–Mo-0.50-0.50-top (Metal1 = Co)
+2) Co–Mo-0.75-0.25-top (Metal1 = Co)
+3) Co–Mo-0.75-0.25-bridge
+
+Pd–W (goal: weaken from too-strong bridge at 0.50/0.50):
+1) Pd–W-0.75-0.25-top (Metal1 = Pd)
+2) Pd–W-0.75-0.25-bridge
+3) Pd–W-0.50-0.50-top (Metal1 = Pd), only if present; hollow at 0.50/0.50 is expected to be too strong and is low priority.
+
+How these tests will falsify v2:
+- If Ir–Au-0.75-bridge remains weak (positive E_H*), then coinage weakening cannot be compensated by coordination and we must either increase Ir content beyond 0.75 or abandon Ir–Au in favor of Rh–Cu/Ag (if present).
+- If Co–Mo-0.75-top still overbinds (< −0.40 eV), S–R top-site dilution is insufficient; we will pivot to Pd–Mo/Pd–W top sites or introduce coinage moderators where available.
+- If Pd–W-0.75-top still lands near −0.55 eV, then W’s ligand/strain effects on Pd top are too strong and we should deprioritize Pd–W entirely.
+
+Operational notes:
+- Always set Metal1 to the intended adsorption atom for top-site tests.
+- Maintain priority: for Ir–Au use higher coordination to strengthen; for Co–Mo and Pd–W use top on S and higher S fraction to weaken.
+- Continue avoiding hollow on S–R unless other sites are too weak.
+
+This revised hypothesis emphasizes: avoid 0.50/0.50 bridge on S–R due to overbinding; strengthen Ir–Au via coordination rather than composition; and prefer top on S with increased S fraction to moderate Mo/W.

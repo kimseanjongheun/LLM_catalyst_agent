@@ -1,0 +1,63 @@
+가설 수정 결과: Great. I’ve reviewed the simulation results and updated the hypothesis accordingly. Below is a concise synthesis, followed by a concrete, non-duplicate next-step plan for your intern, including 10 new candidate tests and how we will track and judge them.
+
+Updated hypothesis and interpretation (based on the result set)
+- Hollow-site performance with Pt-group M1 in 0.75/0.25 compositions remains centered around a mild underbinding region (~ –0.15 to –0.18 eV) for Cu, Ni, Fe, Nb, and does not reliably reach ΔG_H* ≈ –0.27 eV in this subspace. This confirms the prior observation that the target window is not accessible in this specific hollow subspace with Pt-group M1.
+- When Pt is the M2 partner (i.e., non-Pt M1 in 0.75/0.25 with Pt as M2), many combinations show strong overbinding (e.g., Nb-Pt, Ti-Pt, Zr-Pt, V-Pt in hollow 0.75/0.25), yielding ΔG_H* far below –0.27 eV (roughly –0.55 to –1.05 eV). This suggests that Pt as M2 in this subspace tends to destabilize the desired near–0.27 eV window unless very specific geometric/electronic conditions apply.
+- Two near-target observations exist in the current results: Ir-Zn and Rh-Zn (hollow, 0.75/0.25) yield ΔG_H* around –0.2648 and –0.2554 eV, respectively. These point to a possible rare, Zn-containing M2 partner with certain M1 (Rh or Ir) that can nudge ΔG_H* toward the target, albeit not robustly across the full hollow domain tested so far.
+- Descriptive rule emerging from results: hollow-site cooperative bonding that positions a minority second metal next to a Pt-group M1 tends to underbind H relative to the –0.27 eV target. Reaching –0.27 eV likely requires either (i) changing the M1 identity away from Pt-group in the 0.75/0.25 domain or (ii) identifying a rarely cooperative M1/M2 pair (potentially non-Pt M1 with a Zn- or Ir/Rh-containing M2) that can push ΔG_H* closer to the target. If the hollow-domain space remains unfruitful, shift the objective toward a robust hollow window around –0.15 to –0.20 eV with careful search for outliers among non-Pt M1 combinations.
+
+Guidance for the intern: focused next iteration plan (non-duplicate candidates)
+- Core strategy: explore entirely new Metal1/Metal2 pairs that are not yet tested in hollow configurations, within the allowed set, at either 0.75/0.25 or 0.50/0.50 compositions. Prioritize hollow as the primary site, but be prepared to test top/bridge if hollow stalls.
+- Rationale: the newly observed near-target instances (Ir-Zn, Rh-Zn) encourage targeted testing of additional non-Pt M1 with Zn or with other M2 partners that may approach –0.27 eV, while avoiding well-known Pt-group 0.75/0.25 hollow combinations that overbind.
+- Practical constraint: avoid any candidate that duplicates a test already present in the results you shared.
+
+Proposed 10 new hollow-site candidates (non-duplicate; verify in database before running)
+Note: These are designed to be new relative to the results you posted. Please verify non-duplication against the database before proceeding.
+
+1) Nb as Metal1, Ni as Metal2, 0.75/0.25 hollow
+2) Nb as Metal1, Co as Metal2, 0.75/0.25 hollow
+3) Nb as Metal1, Cu as Metal2, 0.75/0.25 hollow
+4) Ti as Metal1, Co as Metal2, 0.75/0.25 hollow
+5) Ti as Metal1, Cu as Metal2, 0.75/0.25 hollow
+6) Ti as Metal1, Fe as Metal2, 0.75/0.25 hollow
+7) Zr as Metal1, Cu as Metal2, 0.75/0.25 hollow
+8) Zr as Metal1, Co as Metal2, 0.75/0.25 hollow
+9) V as Metal1, Ni as Metal2, 0.75/0.25 hollow
+10) V as Metal1, Co as Metal2, 0.75/0.25 hollow
+
+Rationale for these choices
+- Move away from Pt-group M1 at 0.75/0.25 to probe whether non-Pt M1 (Nb, Ti, Zr, V) with diverse M2 partners can tune the adsorption ensemble toward the target without the overbinding observed when Pt sits as M2.
+- Include combinations with Ni/Co/Cu as M2 to sample a spectrum of d-band interactions and ensemble effects in hollow geometry.
+- Maintain hollow as the prioritized site to preserve the adsorption triangle concept, while staying ready to test top/bridge if hollow results remain unrewarding.
+- These 10 candidates are intended to be new and non-duplicate; however, please confirm against the database to avoid any inadvertent repetition.
+
+Data logging and decision criteria (post-iteration)
+- For each candidate, record:
+  - Metal1, Metal2
+  - Metal1_Composition (0.75)
+  - Metal2_Composition (0.25)
+  - Site (hollow preferred)
+  - ΔG_H*
+  - Distance to target window: within ±0.03 eV (highly favorable), ±0.05 eV (near), ±0.10 eV (moderate)
+- After 10 iterations, summarize:
+  - How many hollow-site candidates fall within ±0.05 eV of –0.27 eV
+  - Whether any top/bridge results approach the window (and by how much)
+  - Which metal pairs trend toward favorable ΔG_H* (smallest |ΔG_H* + 0.27|)
+  - Any unexpected “outlier” winners that approach the window
+- If hollow hits are scarce, consider a targeted expansion:
+  - Broaden Metal2 choices within the allowed database
+  - Consider keeping 0.50/0.50 domain for a subset of new M1/M2 pairs
+  - Reassess whether to test some non-Pt M1 combinations with Pt as M2 if the domain suggests potential for mild redirection toward the target
+
+Operational notes
+- Do not repeat any candidate already tested in hollow with the specified compositions.
+- Validate each candidate against the database constraints: Metal1_Composition ∈ [0.75, 0.50], Metal2_Composition = 1 – Metal1_Composition, Site ∈ [hollow, top, bridge] with hollow prioritized.
+- Maintain a knowledge-base log of new patterns: which metal identities and compositions tend to move ΔG_H* toward or away from –0.27 eV, and any notable outliers.
+
+Next steps
+- Proceed with the 10 new hollow-site tests (after confirming non-duplication in the database).
+- After results are available, reassess the hypothesis:
+  - If several hollow candidates move toward –0.27 eV within ±0.05 eV, refine the exploration to the promising region and intensify sampling there.
+  - If hollow remains unable to approach –0.27 eV, embrace the revised objective toward a robust hollow window around –0.15 to –0.20 eV and continue hunting targeted outliers among non-Pt M1 combinations (as per the rule emerging from results).
+
+If you’d like, I can help draft a concrete testing plan with exact data schema and a quick script template to automatically log ΔG_H*, distance to window, and decision flags after each run.

@@ -1,0 +1,40 @@
+Hypothesis (primary)
+- Bimetallic alloys that pair a hydrogen-strong-binding transition metal (e.g., Ni, Co, Fe, W, Mo) with a more noble, hydrogen-weaker-binding partner (e.g., Pt, Pd, Au, Ag, Cu) can be compositionally tuned (50:50 and 75:25) and selected by adsorption site (top, bridge, hollow) to produce H adsorption energies that approach the target ΔG_H ≈ −0.27 eV. Specifically, increasing the fraction of the noble (weaker-binding) metal or selecting adsorption at lower-coordinate sites (top) will weaken H binding; conversely, increasing the fraction of the stronger-binding metal or using higher-coordination sites (hollow) will strengthen H binding. By systematic exploration across 10 iterative loops, these alloy + composition + site degrees of freedom will reveal many high-performing candidates whose H adsorption energies cluster near −0.27 eV.
+
+Rationale and mechanistic basis
+- Ligand and ensemble effects: Mixing a noble metal with a more reactive metal shifts the d-band center and modifies local ensembles, allowing continuous tuning of H adsorption strength rather than binary behavior of the pure metals. Noble partners (Pt, Pd, Au, Ag, Cu) lower H affinity; reactive partners (Ni, Co, Fe, W, Mo, Cr, Mn, Re) increase H affinity.
+- Composition control: Changing molar fraction (0.75/0.25 or 0.50/0.50) tunes the average electronic structure and local coordination probabilities; 75:25 provides incremental tuning away from the dominant pure-metal behavior while 50:50 maximizes alloying effects and ensemble diversity.
+- Site dependence: Adsorption geometry strongly modulates ΔG_H. Top sites typically bind H more weakly than bridge or hollow on the same alloy surface due to lower coordination and different hybridization, so site selection is a fast lever to hit −0.27 eV.
+- Predictable directionality: Adding noble metal or selecting top sites will move ΔG_H upward (less negative); adding reactive metal or selecting hollow sites will move ΔG_H downward (more negative). This allows targeted, monotonic tuning toward −0.27 eV.
+
+Specific, testable sub-hypotheses (to guide iterations)
+1. Noble-diluted Pt/Pd alloys:
+   - Pt(A):Pt-M (M = Au, Ag, Cu, Pd) at 75:25 and 50:50, evaluated at top sites, will weaken H adsorption relative to Pt pure and will produce several candidates with ΔG_H within ±0.05 eV of −0.27 eV.
+2. Reactive-host alloys with noble promoters:
+   - Ni-, Co-, Fe-based hosts alloyed with Pt or Pd (50:50 and 75:25) will produce candidates whose ΔG_H can be moved from strongly negative toward −0.27 eV; bridge sites will likely show stronger binding than top and hollow strongest—use composition and site to fine-tune.
+3. Late–early transition pairs for intermediate binding:
+   - Pairing late noble metals (Pt/Pd) with early, more oxophilic/d-electron-deficient metals (W, Mo, Re, Hf, Zr) at 50:50 and 75:25 and probing bridge/hollow may produce stronger-binding variants that can be weakened by increasing noble fraction or choosing top sites to reach −0.27 eV.
+4. Underexplored combinations:
+   - Alloys involving Ru, Rh, Ir with moderate diluents (Ag, Au, Cu) will produce fine control around −0.27 eV because these metals sit near optimal binding; scanning both compositions and all three site types will yield multiple hits.
+5. Site-specific tuning:
+   - For any promising alloy composition, moving adsorption from hollow → bridge → top will shift ΔG_H in a predictable weaker direction, enabling post-selection tuning without changing composition.
+
+Practical testing plan across 10 iterative loops (high-level)
+- Iterations 1–3: Focus on Pt/Pd-centered families diluted with Au, Ag, Cu at both 75:25 and 50:50; sample top and bridge sites first (noble-dilution hypothesis).
+- Iterations 4–5: Explore Ni/Co/Fe hosts alloyed with Pt/Pd and with Ag/Au diluents at both compositions; sample top/bridge/hollow to find which geometry brings ΔG_H to −0.27 eV.
+- Iterations 6–7: Investigate Pt/Pd combined with early TMs (W, Mo, Re, Hf) at both compositions; prioritize bridge and hollow for stronger binding, use top for fine adjustment.
+- Iterations 8–9: Test Ru/Rh/Ir families mixed with Cu/Ag/Au and with Ni/Co; probe all sites to exploit near-optimal native binding of Ru/Rh.
+- Iteration 10: Survey remaining promising pairs identified in prior loops but at the alternate composition and unexplored site(s) to maximize chance of hitting ΔG_H ≈ −0.27 eV.
+
+Success criteria and data recording
+- Primary metric: absolute deviation |ΔG_H − (−0.27 eV)|; candidates within ±0.05 eV are “high-performing” and prioritized for further analysis.
+- Secondary metrics: diversity of metal pairs achieving the target (avoid overconcentration on one family), composition/site dependence trends.
+- Mandatory: no duplicate candidates across iterations; each loop must propose only previously untested metal pair + composition + site combinations.
+- Record: metal pair, composition, site, ΔG_H, directionality relative to pure-metal endpoints, and any unexpected trend (nonmonotonic behavior, site inversion effects).
+
+Expected outcomes and contingencies
+- Expect multiple high-performing alloys primarily among Pt/Pd–noble dilutions, Ni/Co hosts with Pt promoters, and Ru/Rh mixed systems. If initial trends contradict directionality (e.g., dilution unexpectedly strengthens binding), broaden search to alternative partners in database (e.g., include Tc, Nb, Ta, La) and prioritize additional site types before changing composition granularity.
+- Use accumulated results to refine which metal classes (noble vs reactive vs early TMs) and which adsorption sites most reliably approach −0.27 eV and concentrate subsequent iterations there.
+
+Summary (concise)
+- Testable hypothesis: systematic pairing of stronger-binding and weaker-binding metals, combined with composition (75:25 and 50:50) and choice of adsorption site (top, bridge, hollow), allows directional and predictable tuning of ΔG_H so that many distinct bimetallic candidates in the provided database will reach the target ΔG_H ≈ −0.27 eV over 10 iterative screening loops. The search should start with Pt/Pd-centered mixtures with noble diluents and proceed to Ni/Co hosts and Ru/Rh families, always varying adsorption site to exploit geometric tuning.

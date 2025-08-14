@@ -1,0 +1,111 @@
+가설 수정 결과: Thank you — I updated the hypothesis and next steps to reflect the actual simulation outputs you attached. Below I (1) summarize the new, concrete facts from the runs, (2) state the revised knowledge and primary hypothesis, (3) give refined, testable sub-hypotheses, and (4) propose a prioritized, no-duplicate next-testing plan with clear operational instructions for the intern.
+
+1) Key facts from the new simulations (concise)
+- Pt–Au (0.75:0.25): top −0.2787 eV (hit), bridge −0.2265 eV (near target), hollow −0.2532 eV (near hit). Robust across sites.
+- Pt–Ag (0.75:0.25): top −0.2799 eV (hit), bridge −0.2887 eV, hollow −0.3025 eV. Robust; slightly more negative on bridge/hollow.
+- Pt–Cu (0.75:0.25): top +0.7323 eV (very weak), bridge −0.2334 eV (hit), hollow −0.1527 eV (too weak). Very strong site dependence; top anomalous.
+- Pt–W:
+  - 0.50:0.50 hollow ≈ +0.0031 eV (near 0 eV)
+  - 0.50:0.50 top = −0.0980 eV
+  - 0.75:0.25 top = −0.2933 eV (hit)
+  - 0.75:0.25 hollow = +0.1214 eV (non-hit)
+  => Top becomes more negative with increased Pt fraction; hollow shows non-monotonic behavior.
+- Co–Pt:
+  - 0.75:0.25 hollow = −0.3057 eV (hit)
+  - 0.75:0.25 top = −0.0205 eV; bridge = −0.0893 eV (both too weak)
+  - 0.50:0.50 hollow = −0.1002 eV
+  => Hollow becomes stronger (more negative) with increasing Pt fraction here.
+- Pd systems:
+  - Pd–Au (0.75:0.25) top = +0.3551 eV (weak), bridge = +0.0327 eV (near 0 eV)
+  - Pd–Ag (0.75:0.25) top = +0.2064 eV
+  => Pd–Au/Ag are not Pt-analogues at these compositions/sites.
+
+2) Knowledge accumulated (concise)
+- Noble dilution (Pt + Au/Ag at 0.75:0.25) is a robust, site-insensitive lever producing ΔG_H ≈ −0.27 eV.
+- Some diluents (Cu, W, Co) are powerful but non-monotonic levers: small changes in composition or adsorption site can flip ΔG_H by several tenths of eV.
+- Pt–W and Co–Pt show composition-dependent trends at top vs hollow sites that are not strictly monotonic across sites — top tends to follow increasing Pt fraction toward stronger binding, but hollow behavior can reverse or be non-monotonic.
+- Pd alloys do not generally mimic Pt at the same compositions/sites; raising Pd fraction is necessary to move Pd-based alloys into the negative ΔG_H regime.
+
+3) Revised primary hypothesis (concise)
+- Noble-dilution of a Pt-rich surface with Au or Ag around 75:25 remains a robust route to ΔG_H ≈ −0.27 eV across top/bridge/hollow. By contrast, early/late transition metal partners (Cu, W, Co) can give large, site-specific and composition-dependent swings; these require fine-grained mapping (site + composition) because simple monotonic rules do not hold.
+
+4) Updated, testable sub-hypotheses
+A. Pt–Au and Pt–Ag families
+- H1A (revised): Pt–Au and Pt–Ag will remain within ±0.05 eV of −0.27 eV at 0.75:0.25 across sites. Small composition changes (0.67:0.33 or 0.90:0.10) at the top site will produce ΔG_H shifts smaller than ~0.08 eV in magnitude (i.e., these families are composition-robust near 75:25).
+
+B. Pt–Cu family
+- H1B (revised): Pt–Cu displays strong site-selectivity. Bridge sites in Pt-rich models give near-target ΔG_H at 0.75:0.25 and are likely the most robust route; top sites at 0.75 are unusable (very weak), but increasing Pt fraction may recover useful top-site binding (testable).
+
+C. Pt–W family
+- H1C (revised): Pt–W shows a Pt-fraction-dependent trend on top sites (more Pt → more negative ΔG_H). Hollow sites exhibit non-monotonic or opposite trends; therefore both top and hollow must be probed across compositions to understand the ensemble effect.
+
+D. Co–Pt family
+- H1D (revised): Co–Pt hollow site is a viable hit at 0.75:0.25; decreasing Co (increasing Pt) is likely to make hollow binding more negative (seen from 0.50 to 0.75), while top/bridge remain too weak. There may be a composition window where hollow is optimally tuned.
+
+E. Pd–Au family (targeted)
+- H1E (new): Increasing Pd fraction in Pd–Au alloys (toward Pd-rich) will shift bridge-site ΔG_H more negative; a Pd–Au composition richer in Pd may achieve the −0.27 eV target at bridge sites.
+
+5) Concrete, prioritized next-testing plan (no duplicates; check DB before submission)
+Operational rule reminder: before submitting any job, check DB for exact composition/site availability. If exact composition is unavailable, substitute the nearest composition and log the substitution explicitly. Do not re-run any candidate already tested (list of tested candidates appended after this plan).
+
+Priority 1 — Pt–Au and Pt–Ag composition robustness (top site first)
+- Pt–Au 0.90:0.10, top
+- Pt–Au 0.67:0.33, top
+- Pt–Ag 0.90:0.10, top
+- Pt–Ag 0.67:0.33, top
+Reason: confirm composition robustness and search for any composition that slightly improves on −0.27 eV.
+
+Priority 2 — Pt–Cu bridge-focused sweep and top probe
+- Pt–Cu 0.90:0.10, bridge
+- Pt–Cu 0.67:0.33, bridge
+- Pt–Cu 0.90:0.10, top (exploratory; tests whether top-site anomaly is mitigated by higher Pt fraction)
+Reason: bridge site already showed a hit at 0.75:0.25; test whether it persists or improves with higher Pt, and whether top can be rescued.
+
+Priority 3 — Pt–W top/hollow mapping (to capture non-monotonic hollow behavior)
+- Pt–W 0.90:0.10, top
+- Pt–W 0.67:0.33, top
+- Pt–W 0.90:0.10, hollow (to see if hollow reverses again at high Pt)
+Reason: top moved strongly negative with increasing Pt; hollow behaved non-monotonically — need larger composition span.
+
+Priority 4 — Co–Pt hollow composition mapping
+- Co–Pt 0.67:0.33, hollow
+- Optional (if DB available): Co–Pt 0.90:0.10, hollow (to test higher Pt fraction trend)
+Reason: 0.75 hollow is a hit; see whether reducing Co or further increasing Pt tunes ΔG_H toward −0.27 without overshooting.
+
+Priority 5 — Pd–Au bridge toward Pd-rich
+- Pd–Au 0.90:0.10, bridge (or nearest available Pd-rich composition)
+Reason: 0.75:0.25 bridge ≈ +0.0327 eV; raising Pd fraction may bring it more negative toward −0.27 eV.
+
+Reporting requirements for each run (hard)
+- For each submitted job: record metal1–metal2–composition–site, ΔG_H (eV), deviation from −0.27 eV, and one-line interpretation (linking the result to site/composition ensemble hypothesis).
+- If a requested composition/site is unavailable, substitute the nearest DB composition/site and explicitly log the substitution.
+
+Decision guidance after each batch
+- If Pt–Au/Ag composition sweep remains within ±0.05 eV across tested compositions, deprioritize further composition sweeps and shift to mechanistic probes (surface segregation, ensemble statistics).
+- If Pt–Cu bridge hits persist across compositions (and top remains unusable), raise Pt–Cu bridge to high-priority mechanistic study (ensemble geometry, segregation).
+- If Pt–W shows consistent top-site movement with Pt fraction, map finer Pt fractions (e.g., 0.80, 0.85) at top only; if hollow remains non-monotonic, include surface structure/ensemble analysis.
+
+6) Carrying-forward, one-line hypothesis
+- Pt diluted with Au/Ag near 75:25 is a robust route to ΔG_H ≈ −0.27 eV across sites; Cu, W, and Co partners give powerful but non-monotonic, site-dependent tuning and therefore require composition+site mapping to locate narrow windows that hit the HER optimum.
+
+7) Tested candidates to avoid (from current batch)
+(Do not resubmit any of these)
+- Pt–Au 0.75:0.25 top/bridge/hollow
+- Pt–Au 0.50:0.50 (attempts reported as unavailable)
+- Pt–Ag 0.75:0.25 top/bridge/hollow
+- Pt–Ag 0.50:0.50 (attempts reported as unavailable)
+- Pt–Cu 0.75:0.25 top/bridge/hollow
+- Pt–W 0.50:0.50 top/hollow
+- Pt–W 0.75:0.25 top/hollow
+- Pd–Ag 0.75:0.25 top
+- Pd–Au 0.75:0.25 top/bridge
+- Pd–Au 0.50:0.50 (attempted unavailable)
+- Co–Pt 0.75:0.25 top/bridge/hollow
+- Co–Pt 0.50:0.50 hollow
+(Also note multiple availability errors for 0.50:0.50 compositions in your log.)
+
+Would you like me to
+- (A) prepare an ordered job submission list with exact filenames and a pre-check against the DB (I will verify availability and adjust compositions before finalizing), or
+- (B) produce the concise Excel-style run log template (metal1, metal2, comp, site, ΔG_H, deviation, short comment) for the intern to use?
+
+Pick A or B and I’ll prepare the next deliverable and the exact submission file names (if A, I will check DB availability first).

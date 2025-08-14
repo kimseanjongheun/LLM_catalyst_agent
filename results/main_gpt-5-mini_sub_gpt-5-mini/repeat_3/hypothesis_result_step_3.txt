@@ -1,0 +1,101 @@
+가설 수정 결과: Summary of what the new simulations actually showed (key facts)
+- Robust Pt–noble dilution hits:
+  - Pt–Au (0.75:0.25): top −0.2787 eV, bridge −0.2265 eV, hollow −0.2532 eV — all within or very near the ±0.05 eV success window around −0.27 eV (top is the best).
+  - Pt–Ag (0.75:0.25): top −0.2799 eV, bridge −0.2887 eV, hollow −0.3025 eV — also all within ±0.05 eV (slightly more negative on bridge/hollow).
+- Strong site-dependent flips for Pt–Cu:
+  - Pt–Cu (0.75:0.25): top +0.7323 eV (very weak), bridge −0.2334 eV (within ±0.05 eV), hollow −0.1527 eV (too weak). Conclusion: top is anomalously weak, while bridge gives a hit.
+- Pt–W is composition- and site-sensitive:
+  - Pt–W (0.50:0.50, hollow) ≈ +0.0031 eV (near 0 eV), but Pt–W (0.75:0.25, top) = −0.2933 eV (a hit), and Pt–W (0.75:0.25, hollow) = +0.1214 eV (non-hit). Increasing Pt fraction + using top site produced a hit.
+- Pd-based pairs are less Pt-like:
+  - Pd–Au (0.75:0.25): top +0.3551 eV (weak), bridge +0.0327 eV (near 0 eV) — not a good match to −0.27 eV.
+  - Pd–Ag (0.75:0.25): top +0.2064 eV (weak).
+- Co–Pt shows strong site dependence:
+  - Co–Pt (0.75:0.25): bridge −0.0893 eV (too negative), top −0.0205 eV (too negative), hollow −0.3057 eV (within ±0.05 eV — a hit).
+
+What this means — knowledge accumulated (concise)
+- The “noble dilution” lever (diluting Pt with Au or Ag at 75:25) is very robust across top/bridge/hollow — Pt–Au and Pt–Ag at 0.75:0.25 consistently produce near-target ΔG_H.
+- Site and composition effects can flip trends and are metal-pair specific:
+  - Cu as a diluent is not universally “weakening” — for Pt–Cu the top site is extremely weak, but bridge site restores binding to the target. Ensemble/segregation effects likely make top ensembles Cu-rich (weak).
+  - W behaves as an early-TM whose effect depends sharply on composition and site; increasing Pt fraction and choosing top site produced a hit.
+  - Co–Pt hollow is a hit while top/bridge are too strongly binding — again, site geometry/ensemble differences dominate.
+- Pd alloys (Pd–Au, Pd–Ag) are not simply Pt-analogues; Pd–Au/Ag at 0.75:0.25 tend to give overly weak adsorption at top sites.
+
+Revised primary hypothesis (concise)
+- Mixing a hydrogen-strong host with a noble or more noble partner remains a valid tuning strategy, but the effect is highly pair-specific and controlled by local ensembles (which depend on site and composition). In practice:
+  - Pt diluted with Au or Ag at 75:25 is a robust path to ΔG_H ≈ −0.27 eV across sites.
+  - Cu, W, and Co partners can produce either extreme weakening or strengthening depending strongly on site and composition — they are powerful but non-monotonic levers (i.e., small composition/site changes can flip ΔG_H sign).
+- Therefore focus on empirical mapping of site dependence at a few accessible compositions (75:25 and neighboring compositions) per metal pair rather than relying on monotonic rules.
+
+Updated, testable sub-hypotheses
+A. Pt–Au and Pt–Ag families
+- H1A: Pt–Au and Pt–Ag at 0.75:0.25 will remain within ±0.05 eV of −0.27 eV for top/bridge/hollow (already supported). Small composition changes (toward 0.90:0.10 or 0.67:0.33) will shift ΔG_H by < 0.08 eV; extremes may push beyond the ±0.05 window but not by large amounts.
+
+B. Pt–Cu family
+- H1B: Pt–Cu alloys show strong site-selectivity: top sites in Pt-rich surface models can be Cu-dominated and produce much weaker adsorption; bridge sites expose Pt ensembles that can restore binding to the target. Therefore, Pt–Cu bridge at higher Pt fractions will be a robust route to near-target ΔG_H; top sites are likely to be non-usable for HER.
+
+C. Pt–W family
+- H1C: Pt–W behavior depends strongly on Pt fraction and site: increasing Pt fraction (toward 0.75 or higher) and selecting top sites moves ΔG_H negative toward −0.27 eV; hollow sites at the same composition may still be too weak.
+
+D. Co–Pt family
+- H1D: Co–Pt 0.75:0.25 hollow provides a viable hit; top and bridge are too strongly binding. Changing composition toward more Pt will likely weaken adsorption further (move ΔG_H less negative).
+
+Concrete next-testing plan (no duplicates; verify DB availability before launching)
+Rationale: map composition sensitivity around hits, and probe the anomalous site-dependence seen for Pt–Cu, Pt–W, and Co–Pt. Before running any job, the intern must check the DB for exact composition/site availability; if the exact composition is unavailable, select the closest available composition for that pair (e.g., 0.90/0.10, 0.67/0.33) and record the substitution. Do not resubmit a tested candidate.
+
+Priority job list (new, untested candidates — do NOT run any that are in the tested-results list above)
+
+1) Rapid composition sweep around Pt–Au and Pt–Ag hits (top site first)
+- Pt–Au 0.90:0.10, top
+- Pt–Au 0.67:0.33, top
+- Pt–Ag 0.90:0.10, top
+- Pt–Ag 0.67:0.33, top
+Scientific reasoning: confirm robustness to composition changes and search for slight improvements vs. 0.75:0.25.
+
+2) Focused site/composition mapping for Pt–Cu (because of the anomalous top result)
+- Pt–Cu 0.90:0.10, bridge
+- Pt–Cu 0.67:0.33, bridge
+Scientific reasoning: bridge gave a hit at 0.75; test whether higher Pt fraction stabilizes the bridge-based hit and whether an optimal composition exists.
+
+3) Pt–W composition sensitivity (we found 0.75 top is a hit)
+- Pt–W 0.90:0.10, top
+- Pt–W 0.67:0.33, top
+Scientific reasoning: test whether moving Pt fraction improves or degrades ΔG_H relative to the 0.75:0.25 top hit.
+
+4) Co–Pt composition mapping around the hollow hit
+- Co–Pt 0.67:0.33, hollow (or closest available)
+Scientific reasoning: hollow at 0.75 gave −0.3057 eV (a hit). Reduce Co fraction to see whether ΔG_H moves toward −0.27 or overshoots.
+
+5) Pd–Au bridge-focused test (Pd–Au bridge was near 0 eV; check higher Pd fraction)
+- Pd–Au 0.90:0.10, bridge (or nearest available)
+Scientific reasoning: Pd–Au 0.75 bridge ≈ +0.0327 eV; increasing Pd fraction will likely push binding more negative; test whether a Pd–Au composition gives the −0.27 eV target.
+
+Operational rules for the intern (hard requirements)
+- Always check DB availability before submitting. If the exact composition/site is missing, substitute only with the nearest composition or an alternative site for the same pair and log the substitution explicitly.
+- Do not submit any candidate that appears in this tested-results list (I'll attach the tested list below). Any substitution must be a new, previously untested metal-pair/composition/site combination.
+- Report for each run: metal1–metal2–composition–site, ΔG_H (eV), deviation from −0.27 eV, and a one-line interpretation (e.g., “stronger than Pt by X eV / bridge produced hit whereas top did not”).
+- Priority order: section 1 (Pt–Au/Ag composition sweep) first, then section 2 (Pt–Cu bridge), then Pt–W, then Co–Pt and Pd–Au.
+
+Tested combinations to avoid (from current simulation batch)
+- Pt–Au (0.75:0.25) top/bridge/hollow
+- Pt–Ag (0.75:0.25) top/bridge/hollow
+- Pt–Cu (0.75:0.25) top/bridge/hollow
+- Pt–W (0.50:0.50) hollow; Pt–W (0.75:0.25) top/hollow
+- Pd–Ag (0.75:0.25) top
+- Pd–Au (0.75:0.25) top/bridge
+- Co–Pt (0.75:0.25) top/bridge/hollow
+
+Success criteria and decision thresholds (unchanged + clarifications)
+- Primary success: |ΔG_H + 0.27| ≤ 0.05 eV.
+- Secondary success: a pair that yields ΔG_H values from different sites that straddle −0.27 eV (i.e., one site > −0.27 and another < −0.27) is high-value because it indicates fine-tunable ensembles.
+- Decision thresholds:
+  - If composition sweep around Pt–Au/Ag keeps ΔG_H within ±0.05 eV, deprioritize further exploration of those families and shift resources toward mechanistic probes (segregation, surface ensemble statistics).
+  - If Pt–Cu bridge hits persist across compositions, raise Pt–Cu bridge to high priority; if they fail, mark Pt–Cu as unpredictable and deprioritize.
+
+Short carrying-forward hypothesis statement (one line)
+- Noble-dilution of Pt with Au/Ag at ~75:25 is a robust route to ΔG_H ≈ −0.27 eV across sites; metals like Cu, W, Co act as strong, composition- and site-sensitive levers that can produce either over-weakening or over-strengthening depending on ensemble/site — therefore proceed by empirical mapping of composition and site for each promising pair, prioritizing composition sweeps around current hits.
+
+Would you like me to
+- (A) prepare an ordered job list with exact filenames/formats for the intern to submit (I will pre-check DB availability before finalizing), or
+- (B) produce a brief Excel-style log template for runs (metal1, metal2, comp, site, ΔG_H, deviation, comment)?
+
+Which do you prefer?
